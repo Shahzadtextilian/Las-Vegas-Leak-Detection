@@ -371,6 +371,59 @@ export const PageRenderer: React.FC<PageRendererProps> = ({
               </div>
             </section>
 
+            {/* GOOGLE MAPS EMBED & LOCAL NAP SECTION */}
+            {page.showMap && (
+              <section className="bg-white rounded-2xl p-6 sm:p-8 border border-slate-200 shadow-xs space-y-5">
+                <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+                  <div>
+                    <div className="flex items-center gap-1.5 text-xs font-bold text-[#1E70B8] uppercase tracking-wider font-display mb-1">
+                      <MapPin className="w-4 h-4 text-amber-500" />
+                      <span>Verified Dispatch Location & Service Area</span>
+                    </div>
+                    <h3 className="text-xl sm:text-2xl font-bold text-slate-900 font-display">
+                      Spring Valley Coordination Desk
+                    </h3>
+                  </div>
+                  <div className="text-xs text-slate-600 sm:text-right">
+                    <span className="font-semibold text-slate-900 block font-mono">6875 Groveview Ln</span>
+                    <span>Las Vegas, NV 89103 (Spring Valley)</span>
+                  </div>
+                </div>
+
+                <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
+                  Centrally located in Spring Valley, our mobile dispatch desk coordinates rapid on-call routing for water, gas, slab, and swimming pool leak emergencies across Clark County, NV.
+                </p>
+
+                {/* Embedded Responsive Google Map */}
+                <div className="w-full h-80 sm:h-96 rounded-xl overflow-hidden border border-slate-200 shadow-inner bg-slate-100">
+                  <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d228.32573332633928!2d-115.24263393980249!3d36.10665393950978!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c8c718b3b90839%3A0x478991a6983539e5!2s6875%20Groveview%20Ln%2C%20Las%20Vegas%2C%20NV%2089103%2C%20USA!5e0!3m2!1sen!2sve!4v1791569926749!5m2!1sen!2sve"
+                    width="100%"
+                    height="100%"
+                    style={{ border: 0 }}
+                    allowFullScreen={false}
+                    loading="lazy"
+                    referrerPolicy="strict-origin-when-cross-origin"
+                    title="Spring Valley Leak Detection Location - 6875 Groveview Ln, Las Vegas, NV 89103"
+                    className="w-full h-full"
+                  />
+                </div>
+
+                <div className="flex flex-wrap items-center justify-between gap-3 pt-2 text-xs text-slate-500 border-t border-slate-100">
+                  <div className="flex items-center gap-2">
+                    <span className="w-2 h-2 rounded-full bg-emerald-500"></span>
+                    <span>Dispatched Mobile Coverage: Spring Valley, The Lakes, Spanish Trail, Summerlin South & Rhodes Ranch</span>
+                  </div>
+                  <a
+                    href={PHONE_HREF}
+                    className="text-[#1E70B8] hover:underline font-bold"
+                  >
+                    Call (725) 313-0108 for Dispatch →
+                  </a>
+                </div>
+              </section>
+            )}
+
             {/* FINAL URGENT CONVERSION CTA BANNER */}
             <section className="p-8 rounded-2xl bg-linear-to-br from-[#0F2942] to-slate-900 text-white space-y-6 shadow-xl">
               <div className="max-w-2xl space-y-2">
@@ -381,7 +434,7 @@ export const PageRenderer: React.FC<PageRendererProps> = ({
                   Need Immediate Help With {page.name}?
                 </h3>
                 <p className="text-sm text-slate-300 leading-relaxed">
-                  Avoid catastrophic water damage to your Dallas property. Our dispatch team connects you with an on-call licensed plumbing professional in minutes.
+                  Avoid catastrophic water, gas, slab, or pool damage to your Spring Valley property. Our dispatch team connects you with an on-call licensed leak detection contractor in minutes.
                 </p>
               </div>
 

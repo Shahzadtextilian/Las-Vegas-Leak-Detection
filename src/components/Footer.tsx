@@ -194,6 +194,15 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
               </li>
               <li>
                 <a
+                  href="/privacy-policy/"
+                  onClick={(e) => { e.preventDefault(); onNavigate('privacy-policy'); }}
+                  className="hover:text-white transition-colors text-amber-400 font-medium"
+                >
+                  Privacy Policy
+                </a>
+              </li>
+              <li>
+                <a
                   href="/sitemap.xml"
                   target="_blank"
                   rel="noreferrer"

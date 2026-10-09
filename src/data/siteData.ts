@@ -41,6 +41,7 @@ export interface PageContent {
   relatedServices?: { title: string; slug: string; description: string }[];
   relatedLocations?: { name: string; slug: string; context: string }[];
   schemaType: string;
+  showMap?: boolean;
 }
 
 export const PHONE_NUMBER = "(725) 313-0108";
@@ -164,7 +165,8 @@ export const sitePages: Record<string, PageContent> = {
       { name: "Summerlin South", slug: "summerlin-south", context: "Master-planned residential community leak dispatch." },
       { name: "Rhodes Ranch", slug: "rhodes-ranch", context: "Golf course communities and modern slab homes." }
     ],
-    schemaType: "LocalBusiness"
+    schemaType: "LocalBusiness",
+    showMap: true
   },
 
   // 2. SERVICE 1: WATER LEAK DETECTION
@@ -1107,6 +1109,102 @@ export const sitePages: Record<string, PageContent> = {
       { name: "The Lakes", slug: "the-lakes", context: "Waterfront community." },
       { name: "Spanish Trail", slug: "spanish-trail", context: "Gated estate community." }
     ],
-    schemaType: "ContactPage"
+    schemaType: "ContactPage",
+    showMap: true
+  },
+
+  // 15. PRIVACY POLICY PAGE
+  "privacy-policy": {
+    slug: "privacy-policy",
+    urlPath: "/privacy-policy/",
+    type: "about",
+    name: "Privacy Policy",
+    navTitle: "Privacy Policy",
+    metaTitle: "Privacy Policy | Spring Valley Leak Detection & Repair",
+    metaDescription: "Privacy Policy for Spring Valley Leak Detection & Repair at 6875 Groveview Ln, Las Vegas, NV 89103. Learn how referral dispatch data is collected and protected.",
+    primaryKeyword: "Spring Valley Leak Detection privacy policy",
+    secondaryKeywords: [
+      "leak detection referral privacy policy",
+      "6875 Groveview Ln privacy Las Vegas",
+      "dispatch phone communication policy"
+    ],
+    semanticEntities: [
+      "Telephone Consumer Protection Act (TCPA)",
+      "Consumer data protection protocols",
+      "Third-party independent contractor referral data routing",
+      "Nevada consumer privacy regulations"
+    ],
+    h1: "Privacy Policy for Spring Valley Leak Detection & Repair",
+    heroKicker: "Effective Date: October 2026 • 6875 Groveview Ln, Las Vegas, NV",
+    heroSubheadline: "This Privacy Policy describes how Spring Valley Leak Detection & Repair collects, uses, and safeguards information when you visit our website or contact our 24/7 dispatch desk.",
+    directAnswer: "Spring Valley Leak Detection & Repair operates from 6875 Groveview Ln, Las Vegas, NV 89103 as a referral and emergency dispatch service. We collect only necessary contact and property information (name, telephone number, address, and leak description) to connect you directly with independent, licensed leak detection contractors in Clark County, Nevada.",
+    sections: [
+      {
+        heading: "1. Information We Collect for Referral Dispatch",
+        subheading: "Data gathered to coordinate emergency and diagnostic services",
+        paragraphs: [
+          "When you contact our dispatch desk by calling (725) 313-0108 or submitting an online dispatch intake form, we collect personal information you voluntarily provide, including your full name, telephone number, service address (in Spring Valley or greater Las Vegas), email address, and details regarding your water, gas, slab, or pool leak emergency.",
+          "We do not collect sensitive financial data such as credit card numbers or banking details through our website. Any billing or payment transactions are handled directly between you and the independent contractor performing the on-site diagnostic or repair service."
+        ]
+      },
+      {
+        heading: "2. How We Use Your Information",
+        subheading: "Purpose of data processing and contractor routing",
+        paragraphs: [
+          "The primary purpose of collecting your information is to facilitate the referral and dispatch process. Specifically, we use your details to: (a) determine the nature of your leak emergency; (b) identify an available, on-call independent contractor licensed by the Nevada State Contractors Board (NSCB) servicing your specific neighborhood; (c) transfer your contact details to that contractor so they can call you with arrival estimates and emergency shutoff instructions; and (d) follow up on customer satisfaction.",
+          "We never sell, rent, or trade your personal information to third-party marketing brokers or unrelated commercial advertisers."
+        ]
+      },
+      {
+        heading: "3. Communications & Telephone Disclosure (TCPA)",
+        subheading: "Consent to receive calls and text messages for dispatch coordination",
+        paragraphs: [
+          "By providing your telephone number through our contact forms or by placing an inbound call to (725) 313-0108, you expressly consent to receive telephone calls and transactional SMS/text messages from our dispatch coordinators and independent licensed plumbing and leak detection contractors regarding your service request.",
+          "Standard carrier message and data rates may apply. You may opt out of future non-emergency text communications at any time by replying 'STOP' or by contacting our dispatch office."
+        ]
+      },
+      {
+        heading: "4. Third-Party Independent Contractors Disclosure",
+        subheading: "Understanding the referral data transfer",
+        paragraphs: [
+          "Spring Valley Leak Detection & Repair operates as a marketing referral and dispatch coordinator. To fulfill your request for water, gas, slab, or pool leak detection and repair, your contact and property information will be shared with an independent third-party contractor.",
+          "Once your information is provided to the independent contractor, their handling of your data is governed by their independent privacy practices and contractual standards."
+        ]
+      },
+      {
+        heading: "5. Cookies & Automated Website Analytics",
+        subheading: "Standard web browsing technologies",
+        paragraphs: [
+          "Our website uses standard technical cookies and anonymous analytics to understand site performance, visitor navigation paths, and page responsiveness. These cookies do not collect personally identifiable information and can be disabled through your browser settings."
+        ]
+      },
+      {
+        heading: "6. Contact Information for Privacy Concerns",
+        subheading: "How to reach our coordination office",
+        paragraphs: [
+          "If you have questions regarding this Privacy Policy or wish to request the deletion or correction of your contact records, please contact our office at: Spring Valley Leak Detection & Repair, 6875 Groveview Ln, Las Vegas, NV 89103, Phone: (725) 313-0108."
+        ]
+      }
+    ],
+    faqs: [
+      {
+        question: "Is my personal phone number sold to marketing lists?",
+        answer: "No. Your phone number is strictly used to route your emergency leak request to an on-call independent contractor in Spring Valley and to communicate arrival ETAs."
+      },
+      {
+        question: "How do I request deletion of my service intake record?",
+        answer: "You can request deletion of your contact records by calling our coordination office at (725) 313-0108 or by writing to 6875 Groveview Ln, Las Vegas, NV 89103."
+      }
+    ],
+    relatedServices: [
+      { title: "Water Leak Detection & Repair", slug: "water-leak-detection", description: "Potable supply line leak diagnostics." },
+      { title: "Slab Leak Detection & Repair", slug: "slab-leak-detection", description: "Concrete slab foundation diagnostics." },
+      { title: "Swimming Pool Leak Detection", slug: "pool-leak-detection", description: "Pool shell and plumbing line testing." }
+    ],
+    relatedLocations: [
+      { name: "Spring Valley Center", slug: "spring-valley-center", context: "Central core area." },
+      { name: "The Lakes", slug: "the-lakes", context: "Waterfront community." }
+    ],
+    schemaType: "WebPage"
   }
 };

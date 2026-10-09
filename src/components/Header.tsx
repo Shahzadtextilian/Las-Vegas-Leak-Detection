@@ -20,12 +20,12 @@ export const Header: React.FC<HeaderProps> = ({
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const services = [
-    { title: 'Water Leak Detection', slug: 'water-leak-detection' },
+    { title: 'Water Leak Detection & Repair', slug: 'water-leak-detection' },
+    { title: 'Slab Leak Detection & Repair', slug: 'slab-leak-detection' },
+    { title: 'Pool Leak Detection & Repair', slug: 'pool-leak-detection' },
     { title: 'Gas Leak Detection & Repair', slug: 'gas-leak-detection' },
-    { title: 'Slab Leak Detection', slug: 'slab-leak-detection' },
-    { title: 'Swimming Pool Leak Detection', slug: 'pool-leak-detection' },
     { title: 'Underground & Yard Pipe Leaks', slug: 'underground-leak-detection' },
-    { title: '24/7 Emergency Leak Repair', slug: 'emergency-leak-repair' },
+    { title: '24/7 Emergency Leak Dispatch', slug: 'emergency-leak-repair' },
   ];
 
   const locations = [

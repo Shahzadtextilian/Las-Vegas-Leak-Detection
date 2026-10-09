@@ -137,6 +137,17 @@ export function generateSchemaForPage(page: PageContent) {
         "closes": "23:59"
       }
     });
+  } else if (page.slug === 'privacy-policy') {
+    schemas.push({
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": page.metaTitle,
+      "description": page.metaDescription,
+      "url": pageUrl,
+      "mainEntity": {
+        "@id": `${DOMAIN_URL}/#organization`
+      }
+    });
   } else if (page.type === 'about') {
     schemas.push({
       "@context": "https://schema.org",

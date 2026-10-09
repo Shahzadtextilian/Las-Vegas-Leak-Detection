@@ -291,6 +291,7 @@ export const SeoAuditModal: React.FC<SeoAuditModalProps> = ({
                   <li>/rhodes-ranch/ (Rhodes Ranch & SW Vegas)</li>
                   <li>/about/ (Referral Model & NSCB Standards)</li>
                   <li>/contact/ (Dispatch Desk & 6875 Groveview Ln)</li>
+                  <li>/privacy-policy/ (Privacy Policy & TCPA Disclosures)</li>
                 </ul>
               </div>
 
