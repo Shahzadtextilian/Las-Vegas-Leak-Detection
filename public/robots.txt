@@ -1,0 +1,7 @@
+# robots.txt for Spring Valley Leak Detection & Repair
+# Domain: https://www.springvalleyleakdetection.com
+
+User-agent: *
+Allow: /
+
+Sitemap: https://www.springvalleyleakdetection.com/sitemap.xml
