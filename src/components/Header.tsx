@@ -1,19 +1,17 @@
 import React, { useState } from 'react';
 import { PHONE_NUMBER, PHONE_HREF, BRAND_NAME, BUSINESS_ADDRESS } from '../data/siteData';
-import { Phone, ChevronDown, Menu, X, Sparkles, MapPin } from 'lucide-react';
+import { Phone, ChevronDown, Menu, X, Sparkles, MapPin, BookOpen } from 'lucide-react';
 
 interface HeaderProps {
   currentSlug: string;
   onNavigate: (slug: string) => void;
   onOpenAudit: () => void;
-  onOpenDispatch: () => void;
 }
 
 export const Header: React.FC<HeaderProps> = ({
   currentSlug,
   onNavigate,
   onOpenAudit,
-  onOpenDispatch,
 }) => {
   const [servicesOpen, setServicesOpen] = useState(false);
   const [locationsOpen, setLocationsOpen] = useState(false);
@@ -25,7 +23,7 @@ export const Header: React.FC<HeaderProps> = ({
     { title: 'Pool Leak Detection & Repair', slug: 'pool-leak-detection' },
     { title: 'Gas Leak Detection & Repair', slug: 'gas-leak-detection' },
     { title: 'Underground & Yard Pipe Leaks', slug: 'underground-leak-detection' },
-    { title: '24/7 Emergency Leak Dispatch', slug: 'emergency-leak-repair' },
+    { title: '24/7 Emergency Leak Diagnostics', slug: 'emergency-leak-repair' },
   ];
 
   const locations = [
@@ -38,18 +36,18 @@ export const Header: React.FC<HeaderProps> = ({
 
   return (
     <>
-      {/* Top Notification Bar - Urgent Dispatch Status */}
+      {/* Top Notification Bar */}
       <div className="bg-slate-900 text-slate-200 text-xs py-2 px-4 border-b border-slate-800">
         <div className="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-2">
           <div className="flex items-center gap-2">
             <span className="inline-block w-2 h-2 rounded-full bg-emerald-400"></span>
-            <span className="font-medium text-slate-100">Spring Valley Dispatch Desk:</span>
-            <span className="text-slate-300">Independent NSCB-licensed leak specialists on call in Clark County, NV</span>
+            <span className="font-medium text-slate-100">Spring Valley Emergency Line:</span>
+            <span className="text-slate-300">Licensed NSCB leak specialists on call in Clark County, NV</span>
           </div>
           <div className="flex items-center gap-4">
             <span className="text-slate-400 hidden md:inline">
               <MapPin className="w-3.5 h-3.5 inline mr-1 text-amber-400" />
-              6875 Groveview Ln, Las Vegas, NV 89103
+              {BUSINESS_ADDRESS.streetAddress}, {BUSINESS_ADDRESS.addressLocality}, {BUSINESS_ADDRESS.addressRegion} {BUSINESS_ADDRESS.postalCode}
             </span>
             <button
               onClick={onOpenAudit}
@@ -59,45 +57,46 @@ export const Header: React.FC<HeaderProps> = ({
               <Sparkles className="w-3.5 h-3.5" />
               <span>SEO & Schema Auditor</span>
             </button>
-            <span className="text-slate-600 hidden sm:inline">|</span>
-            <span className="text-slate-300 hidden sm:inline">Avg Arrival: 30–60 Min</span>
           </div>
         </div>
       </div>
 
-      {/* Top Bar Contract: Zone 1 (Brand) — Zone 2 (4–5 Nav links) — Zone 3 (Primary Action) */}
-      <header className="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-slate-200 shadow-xs">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between gap-8">
+      {/* Main Header Bar */}
+      <header className="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-slate-200 transition-all">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between gap-4">
           
-          {/* ZONE 1: Brand Wordmark */}
-          <div className="shrink-0 flex items-center gap-3">
+          {/* ZONE 1: Identity & Brand Anchor */}
+          <div className="flex items-center gap-4 shrink-0">
             <a
               href="/"
               onClick={(e) => {
                 e.preventDefault();
                 onNavigate('');
               }}
-              className="flex items-center gap-3 text-slate-900 group"
+              className="flex items-center gap-3 group"
+              aria-label="Spring Valley Leak Detection & Repair - Home"
             >
-              <div className="w-10 h-10 rounded-xl bg-[#0F2942] flex items-center justify-center text-white shadow-xs group-hover:bg-[#1E70B8] transition-colors">
+              <div className="w-10 h-10 rounded-xl bg-linear-to-br from-[#0F2942] to-[#1E70B8] flex items-center justify-center text-white font-black shadow-sm group-hover:scale-105 transition-transform">
                 <svg className="w-6 h-6" viewBox="0 0 48 48" fill="none">
-                  <path d="M24 10C24 10 14 21.5 14 27.5C14 33.02 18.48 37.5 24 37.5C29.52 37.5 34 33.02 34 27.5C34 21.5 24 10 24 10Z" fill="#38BDF8"/>
-                  <circle cx="33" cy="15" r="4" fill="#D97706"/>
+                  <path d="M24 8C24 8 12 21 12 28C12 34.6274 17.3726 40 24 40C30.6274 40 36 34.6274 36 28C36 21 24 8 24 8Z" fill="#38BDF8"/>
+                  <path d="M24 14C24 14 16 23.5 16 28.5C16 32.9183 19.5817 36.5 24 36.5C28.4183 36.5 32 32.9183 32 28.5C32 23.5 24 14 24 14Z" fill="#FFFFFF" fillOpacity="0.85"/>
+                  <circle cx="21" cy="25" r="2" fill="#0284C7"/>
                 </svg>
               </div>
+
               <div className="leading-tight">
-                <span className="block text-base sm:text-lg font-extrabold tracking-tight text-slate-950 font-display">
+                <span className="font-extrabold text-base sm:text-lg text-slate-900 tracking-tight block font-display">
                   Spring Valley Leak Detection
                 </span>
                 <span className="block text-xs font-semibold text-[#1E70B8] tracking-wider uppercase">
-                  Water • Gas • Slab • Pool
+                  Water • Slab • Pool • Gas
                 </span>
               </div>
             </a>
           </div>
 
-          {/* ZONE 2: 4-5 Clean Nav Links */}
-          <nav className="hidden lg:flex items-center gap-7 text-sm font-medium text-slate-700">
+          {/* ZONE 2: Clean Nav Links */}
+          <nav className="hidden lg:flex items-center gap-6 xl:gap-7 text-sm font-medium text-slate-700">
             <a
               href="/"
               onClick={(e) => {
@@ -170,14 +169,26 @@ export const Header: React.FC<HeaderProps> = ({
             </div>
 
             <a
-              href="/about/"
+              href="/how-it-works/"
               onClick={(e) => {
                 e.preventDefault();
-                onNavigate('about');
+                onNavigate('how-it-works');
               }}
-              className={`hover:text-[#1E70B8] transition-colors whitespace-nowrap shrink-0 ${currentSlug === 'about' ? 'text-[#1E70B8] font-bold' : ''}`}
+              className={`hover:text-[#1E70B8] transition-colors whitespace-nowrap shrink-0 ${currentSlug === 'how-it-works' || currentSlug === 'about' ? 'text-[#1E70B8] font-bold' : ''}`}
             >
               How It Works
+            </a>
+
+            <a
+              href="/blog/"
+              onClick={(e) => {
+                e.preventDefault();
+                onNavigate('blog');
+              }}
+              className={`hover:text-[#1E70B8] transition-colors whitespace-nowrap shrink-0 flex items-center gap-1.5 ${currentSlug === 'blog' || currentSlug.startsWith('blog/') ? 'text-[#1E70B8] font-bold' : ''}`}
+            >
+              <span>Blog</span>
+              <span className="text-[10px] bg-amber-100 text-amber-900 font-bold px-1.5 py-0.2 rounded-full">New</span>
             </a>
 
             <a
@@ -202,7 +213,7 @@ export const Header: React.FC<HeaderProps> = ({
                 <Phone className="w-3.5 h-3.5" />
               </div>
               <div className="text-left">
-                <span className="block text-[10px] text-slate-300 font-normal leading-none">24/7 Leak Dispatch Line</span>
+                <span className="block text-[10px] text-slate-300 font-normal leading-none">24/7 Emergency Line</span>
                 <span className="font-mono font-bold tracking-tight text-white">{PHONE_NUMBER}</span>
               </div>
             </a>
@@ -210,7 +221,7 @@ export const Header: React.FC<HeaderProps> = ({
             {/* Mobile Hamburger Button */}
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="lg:hidden p-2 text-slate-700 hover:text-slate-900 rounded-lg hover:bg-slate-100"
+              className="lg:hidden p-2 text-slate-700 hover:text-slate-900 rounded-lg hover:bg-slate-100 cursor-pointer"
               aria-label="Toggle navigation menu"
             >
               {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
@@ -220,9 +231,9 @@ export const Header: React.FC<HeaderProps> = ({
 
         {/* Mobile Navigation Drawer */}
         {mobileMenuOpen && (
-          <div className="lg:hidden border-t border-slate-200 bg-white px-4 pt-3 pb-6 space-y-4 max-h-[80vh] overflow-y-auto">
+          <div className="lg:hidden border-t border-slate-200 bg-white px-4 pt-3 pb-6 space-y-4 max-h-[85vh] overflow-y-auto">
             <div className="space-y-1">
-              <div className="text-xs font-semibold text-slate-400 uppercase tracking-wider px-3 py-1">Navigation</div>
+              <div className="text-xs font-semibold text-slate-400 uppercase tracking-wider px-3 py-1">Main Pages</div>
               <button
                 onClick={() => { onNavigate(''); setMobileMenuOpen(false); }}
                 className="w-full text-left px-3 py-2 text-base font-medium text-slate-800 hover:bg-slate-50 rounded-lg"
@@ -230,21 +241,28 @@ export const Header: React.FC<HeaderProps> = ({
                 Overview (Home)
               </button>
               <button
-                onClick={() => { onNavigate('about'); setMobileMenuOpen(false); }}
+                onClick={() => { onNavigate('how-it-works'); setMobileMenuOpen(false); }}
                 className="w-full text-left px-3 py-2 text-base font-medium text-slate-800 hover:bg-slate-50 rounded-lg"
               >
-                How Dispatch Works & Licensing
+                How It Works (5-Step Diagnostic)
+              </button>
+              <button
+                onClick={() => { onNavigate('blog'); setMobileMenuOpen(false); }}
+                className="w-full text-left px-3 py-2 text-base font-medium text-slate-800 hover:bg-slate-50 rounded-lg flex items-center justify-between"
+              >
+                <span>Blog & Educational Guides</span>
+                <span className="text-xs bg-amber-100 text-amber-900 font-bold px-2 py-0.5 rounded-full">New</span>
               </button>
               <button
                 onClick={() => { onNavigate('contact'); setMobileMenuOpen(false); }}
                 className="w-full text-left px-3 py-2 text-base font-medium text-slate-800 hover:bg-slate-50 rounded-lg"
               >
-                Contact & Address (6875 Groveview Ln)
+                Contact & NAP (6875 Groveview Ln)
               </button>
             </div>
 
             <div className="space-y-1 border-t border-slate-100 pt-2">
-              <div className="text-xs font-semibold text-slate-400 uppercase tracking-wider px-3 py-1">Target Leak Services</div>
+              <div className="text-xs font-semibold text-slate-400 uppercase tracking-wider px-3 py-1">Leak Services</div>
               {services.map((s) => (
                 <button
                   key={s.slug}
@@ -275,13 +293,13 @@ export const Header: React.FC<HeaderProps> = ({
                 className="w-full text-center py-3 bg-[#0F2942] text-white font-bold rounded-xl flex items-center justify-center gap-2"
               >
                 <Phone className="w-4 h-4 text-amber-400" />
-                <span>Call {PHONE_NUMBER}</span>
+                <span>Call 24/7: {PHONE_NUMBER}</span>
               </a>
               <button
-                onClick={() => { onOpenDispatch(); setMobileMenuOpen(false); }}
+                onClick={() => { onNavigate('contact'); setMobileMenuOpen(false); }}
                 className="w-full text-center py-2.5 border border-slate-300 text-slate-700 font-medium rounded-xl text-sm"
               >
-                Submit Dispatch Intake Online
+                View Map & Contact Form
               </button>
             </div>
           </div>

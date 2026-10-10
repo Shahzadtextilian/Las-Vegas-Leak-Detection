@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { PageContent, PHONE_NUMBER, PHONE_HREF, BRAND_NAME } from '../data/siteData';
+import { PageContent, PHONE_NUMBER, PHONE_HREF, BRAND_NAME, BUSINESS_ADDRESS } from '../data/siteData';
 import {
   Phone,
   ShieldCheck,
@@ -13,33 +13,60 @@ import {
   ArrowRight,
   Droplets,
   Wrench,
-  Sparkles
+  Sparkles,
+  Mail,
+  Send,
+  BookOpen
 } from 'lucide-react';
 import { SidebarDispatchForm } from './SidebarDispatchForm';
 
 interface PageRendererProps {
   page: PageContent;
   onNavigate: (slug: string) => void;
-  onOpenDispatch: () => void;
   onOpenAudit: () => void;
 }
 
 export const PageRenderer: React.FC<PageRendererProps> = ({
   page,
   onNavigate,
-  onOpenDispatch,
   onOpenAudit,
 }) => {
   const [openFaq, setOpenFaq] = useState<number | null>(0);
+
+  // Contact form state on contact page
+  const [contactForm, setContactForm] = useState({
+    fullName: '',
+    phone: '',
+    email: '',
+    serviceType: 'Water Leak Detection & Repair',
+    address: '',
+    message: ''
+  });
+  const [contactSubmitted, setContactSubmitted] = useState(false);
+  const [contactErrors, setContactErrors] = useState<Record<string, string>>({});
 
   const toggleFaq = (idx: number) => {
     setOpenFaq(openFaq === idx ? null : idx);
   };
 
+  const handleContactSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    const errs: Record<string, string> = {};
+    if (!contactForm.fullName.trim()) errs.fullName = 'Full name is required';
+    if (!contactForm.phone.trim() || contactForm.phone.length < 10) {
+      errs.phone = 'Valid 10-digit phone number is required';
+    }
+    if (Object.keys(errs).length > 0) {
+      setContactErrors(errs);
+      return;
+    }
+    setContactErrors({});
+    setContactSubmitted(true);
+  };
+
   // Helper to render text with contextual in-paragraph links
   const renderParagraphWithLinks = (text: string) => {
-    // We replace specific phrases with contextual links to provide genuine semantic internal linking
-    const linkReplacements: { phrase: string; slug: string; customText?: string }[] = [
+    const linkReplacements: { phrase: string; slug: string }[] = [
       { phrase: 'leak detection in Spring Valley', slug: '' },
       { phrase: 'Spring Valley leak detection', slug: '' },
       { phrase: 'local leak specialists in Spring Valley', slug: '' },
@@ -64,9 +91,8 @@ export const PageRenderer: React.FC<PageRendererProps> = ({
       { phrase: 'Rhodes Ranch', slug: 'rhodes-ranch' },
     ];
 
-    // Find the first matching phrase in this paragraph that is not the current page itself
     for (const item of linkReplacements) {
-      if (item.slug === page.slug) continue; // Don't self-link
+      if (item.slug === page.slug) continue;
 
       const regex = new RegExp(`\\b(${item.phrase})\\b`, 'i');
       const match = text.match(regex);
@@ -115,7 +141,11 @@ export const PageRenderer: React.FC<PageRendererProps> = ({
               <>
                 <span className="mx-2 text-slate-300">/</span>
                 <span className="text-slate-400 capitalize">
-                  {page.type === 'service' ? 'Leak Services' : page.type === 'location' ? 'Spring Valley Service Areas' : 'Information'}
+                  {page.type === 'service'
+                    ? 'Leak Services'
+                    : page.type === 'location'
+                    ? 'Spring Valley Service Areas'
+                    : 'Information'}
                 </span>
                 <span className="mx-2 text-slate-300">/</span>
                 <span className="text-slate-900 font-semibold" aria-current="page">
@@ -135,7 +165,7 @@ export const PageRenderer: React.FC<PageRendererProps> = ({
             {/* Left Column: Heading & Value Proposition */}
             <div className="lg:col-span-7 flex flex-col justify-center">
               
-              {/* Quiet Kicker (Zero-Pill Discipline) */}
+              {/* Quiet Kicker */}
               <div className="text-xs font-bold text-[#1E70B8] uppercase tracking-wider mb-2 flex items-center gap-1.5 font-display">
                 <span className="w-2 h-2 rounded-full bg-amber-500"></span>
                 <span>{page.heroKicker}</span>
@@ -151,7 +181,7 @@ export const PageRenderer: React.FC<PageRendererProps> = ({
                 {page.heroSubheadline}
               </p>
 
-              {/* Direct Answer Box (AI Overview & Featured Snippet Optimization) */}
+              {/* Direct Answer Box */}
               <div className="p-4 sm:p-5 rounded-2xl bg-amber-50/60 border border-amber-200/80 mb-8">
                 <div className="flex items-start gap-3">
                   <div className="p-1.5 rounded-lg bg-amber-500/20 text-amber-900 shrink-0 mt-0.5">
@@ -176,17 +206,18 @@ export const PageRenderer: React.FC<PageRendererProps> = ({
                 >
                   <Phone className="w-5 h-5 text-amber-400 group-hover:scale-110 transition-transform" />
                   <div className="text-left leading-tight">
-                    <span className="block text-xs text-slate-300 font-normal">Call Now For Immediate Dispatch</span>
+                    <span className="block text-xs text-slate-300 font-normal">Call 24/7 For Rapid Assistance</span>
                     <span className="font-mono text-lg font-bold">{PHONE_NUMBER}</span>
                   </div>
                 </a>
 
                 <button
-                  onClick={onOpenDispatch}
+                  onClick={() => onNavigate('contact')}
                   className="px-6 py-4 rounded-xl bg-white border border-slate-300 hover:border-slate-400 text-slate-800 font-bold text-sm flex items-center justify-center gap-2 hover:bg-slate-50 transition-colors cursor-pointer"
                 >
-                  <span>Request Online Dispatch</span>
-                  <ArrowRight className="w-4 h-4 text-slate-500" />
+                  <MapPin className="w-4 h-4 text-amber-600" />
+                  <span>Contact & Location</span>
+                  <ArrowRight className="w-4 h-4 text-slate-400" />
                 </button>
               </div>
 
@@ -194,11 +225,11 @@ export const PageRenderer: React.FC<PageRendererProps> = ({
               <div className="mt-6 pt-5 border-t border-slate-100 flex flex-wrap items-center gap-y-2 gap-x-6 text-xs text-slate-500">
                 <span className="flex items-center gap-1.5">
                   <ShieldCheck className="w-4 h-4 text-emerald-600" />
-                  Nevada NSCB Licensed Independent Contractors
+                  Nevada NSCB Licensed Plumbing & Leak Specialists
                 </span>
                 <span className="flex items-center gap-1.5">
                   <Clock className="w-4 h-4 text-[#1E70B8]" />
-                  24/7/365 Rapid On-Call Dispatch
+                  24/7/365 Emergency Service
                 </span>
                 <span className="flex items-center gap-1.5">
                   <MapPin className="w-4 h-4 text-amber-600" />
@@ -208,7 +239,7 @@ export const PageRenderer: React.FC<PageRendererProps> = ({
 
             </div>
 
-            {/* Right Column: High-Impact Featured Asset */}
+            {/* Right Column: Featured Image Asset */}
             <div className="lg:col-span-5 flex flex-col justify-center">
               <div className="relative rounded-2xl overflow-hidden border border-slate-200 shadow-md bg-slate-900 group">
                 {page.featuredImage ? (
@@ -229,10 +260,9 @@ export const PageRenderer: React.FC<PageRendererProps> = ({
                   </div>
                 )}
 
-                {/* Subtle Image Scrim with Caption */}
                 <div className="absolute inset-x-0 bottom-0 bg-linear-to-t from-slate-950/90 via-slate-950/40 to-transparent p-4 text-white text-xs">
                   <div className="font-medium text-slate-200">
-                    {page.imageCaption || "Dispatched independent mobile units carry diagnostic tools for same-day repair."}
+                    {page.imageCaption || "Mobile diagnostic units carry electronic acoustic & thermal locators for same-day service."}
                   </div>
                 </div>
               </div>
@@ -249,7 +279,8 @@ export const PageRenderer: React.FC<PageRendererProps> = ({
           {/* Main Article Body (8 Columns) */}
           <main className="lg:col-span-8 space-y-12">
             
-            {page.sections.map((section, sIdx) => (
+            {/* Standard Page Sections */}
+            {page.sections && page.sections.length > 0 && page.sections.map((section, sIdx) => (
               <section key={sIdx} className="bg-white rounded-2xl p-6 sm:p-8 border border-slate-200 shadow-xs space-y-5">
                 <div>
                   <h2 className="text-xl sm:text-2xl font-bold text-slate-900 tracking-tight font-display">
@@ -299,6 +330,219 @@ export const PageRenderer: React.FC<PageRendererProps> = ({
               </section>
             ))}
 
+            {/* DEDICATED CONTACT & NAP SECTION (If contact page) */}
+            {page.type === 'contact' && (
+              <section className="bg-white rounded-2xl p-6 sm:p-8 border border-slate-200 shadow-xs space-y-6">
+                <div>
+                  <div className="flex items-center gap-1.5 text-xs font-bold text-[#1E70B8] uppercase tracking-wider font-display mb-1">
+                    <Mail className="w-4 h-4" />
+                    <span>Send a Direct Message</span>
+                  </div>
+                  <h3 className="text-xl sm:text-2xl font-bold text-slate-900 font-display">
+                    Schedule an Inspection or Request a Quote
+                  </h3>
+                  <p className="text-xs sm:text-sm text-slate-500 mt-1">
+                    Fill out the form below and a licensed leak specialist will respond promptly. For active floods or gas odors, call <a href={PHONE_HREF} className="text-[#1E70B8] font-bold underline font-mono">{PHONE_NUMBER}</a> immediately.
+                  </p>
+                </div>
+
+                {contactSubmitted ? (
+                  <div className="p-6 bg-emerald-50 border border-emerald-200 rounded-2xl text-center space-y-3">
+                    <div className="w-12 h-12 bg-emerald-100 text-emerald-600 rounded-full flex items-center justify-center mx-auto">
+                      <CheckCircle className="w-7 h-7" />
+                    </div>
+                    <h4 className="text-lg font-bold text-emerald-950 font-display">
+                      Message Received Successfully
+                    </h4>
+                    <p className="text-sm text-emerald-800 max-w-md mx-auto">
+                      Thank you, {contactForm.fullName}. Our team at 6875 Groveview Ln has received your inquiry for {contactForm.serviceType}. A specialist will call <strong className="font-mono">{contactForm.phone}</strong> shortly.
+                    </p>
+                    <button
+                      onClick={() => setContactSubmitted(false)}
+                      className="text-xs text-[#1E70B8] hover:underline font-bold pt-2 block mx-auto"
+                    >
+                      Send Another Message
+                    </button>
+                  </div>
+                ) : (
+                  <form onSubmit={handleContactSubmit} className="space-y-4" noValidate>
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                      <div>
+                        <label className="block text-xs font-semibold text-slate-700 mb-1">
+                          Full Name *
+                        </label>
+                        <input
+                          type="text"
+                          placeholder="Your full name"
+                          value={contactForm.fullName}
+                          onChange={(e) => setContactForm({ ...contactForm, fullName: e.target.value })}
+                          className={`w-full px-3 py-2 text-sm rounded-xl border ${
+                            contactErrors.fullName ? 'border-red-500 bg-red-50/30' : 'border-slate-300'
+                          } focus:outline-none focus:border-[#1E70B8]`}
+                        />
+                        {contactErrors.fullName && (
+                          <span className="text-[11px] text-red-600 mt-0.5 block">{contactErrors.fullName}</span>
+                        )}
+                      </div>
+
+                      <div>
+                        <label className="block text-xs font-semibold text-slate-700 mb-1">
+                          Phone Number *
+                        </label>
+                        <input
+                          type="tel"
+                          placeholder="(702) 555-0199"
+                          value={contactForm.phone}
+                          onChange={(e) => setContactForm({ ...contactForm, phone: e.target.value })}
+                          className={`w-full px-3 py-2 text-sm font-mono rounded-xl border ${
+                            contactErrors.phone ? 'border-red-500 bg-red-50/30' : 'border-slate-300'
+                          } focus:outline-none focus:border-[#1E70B8]`}
+                        />
+                        {contactErrors.phone && (
+                          <span className="text-[11px] text-red-600 mt-0.5 block">{contactErrors.phone}</span>
+                        )}
+                      </div>
+                    </div>
+
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                      <div>
+                        <label className="block text-xs font-semibold text-slate-700 mb-1">
+                          Email Address (Optional)
+                        </label>
+                        <input
+                          type="email"
+                          placeholder="name@example.com"
+                          value={contactForm.email}
+                          onChange={(e) => setContactForm({ ...contactForm, email: e.target.value })}
+                          className="w-full px-3 py-2 text-sm rounded-xl border border-slate-300 focus:outline-none focus:border-[#1E70B8]"
+                        />
+                      </div>
+
+                      <div>
+                        <label className="block text-xs font-semibold text-slate-700 mb-1">
+                          Leak Service Needed
+                        </label>
+                        <select
+                          value={contactForm.serviceType}
+                          onChange={(e) => setContactForm({ ...contactForm, serviceType: e.target.value })}
+                          className="w-full px-3 py-2 text-sm rounded-xl border border-slate-300 focus:outline-none focus:border-[#1E70B8] bg-white"
+                        >
+                          <option value="Water Leak Detection & Repair">Water Leak Detection & Repair</option>
+                          <option value="Slab Leak Detection & Repair">Slab Leak Detection & Repair</option>
+                          <option value="Swimming Pool Leak Detection">Swimming Pool Leak Detection</option>
+                          <option value="Gas Leak Detection & Emergency Repair">Gas Leak Detection & Emergency Repair</option>
+                          <option value="Underground Main Yard Leak">Underground Main Yard Leak</option>
+                        </select>
+                      </div>
+                    </div>
+
+                    <div>
+                      <label className="block text-xs font-semibold text-slate-700 mb-1">
+                        Service Address or Neighborhood in Clark County
+                      </label>
+                      <input
+                        type="text"
+                        placeholder="e.g. 6875 Groveview Ln, Las Vegas, NV 89103 or Spring Valley / Spanish Trail"
+                        value={contactForm.address}
+                        onChange={(e) => setContactForm({ ...contactForm, address: e.target.value })}
+                        className="w-full px-3 py-2 text-sm rounded-xl border border-slate-300 focus:outline-none focus:border-[#1E70B8]"
+                      />
+                    </div>
+
+                    <div>
+                      <label className="block text-xs font-semibold text-slate-700 mb-1">
+                        Describe Symptoms (e.g., warm floor, high water bill, rotten egg odor, pool dropping)
+                      </label>
+                      <textarea
+                        rows={3}
+                        placeholder="Tell us what you are noticing..."
+                        value={contactForm.message}
+                        onChange={(e) => setContactForm({ ...contactForm, message: e.target.value })}
+                        className="w-full px-3 py-2 text-sm rounded-xl border border-slate-300 focus:outline-none focus:border-[#1E70B8]"
+                      />
+                    </div>
+
+                    <button
+                      type="submit"
+                      className="px-6 py-3 bg-[#0F2942] hover:bg-[#1E70B8] text-white font-bold text-sm rounded-xl flex items-center justify-center gap-2 transition-colors cursor-pointer"
+                    >
+                      <Send className="w-4 h-4 text-amber-400" />
+                      <span>Send Direct Message</span>
+                    </button>
+                  </form>
+                )}
+              </section>
+            )}
+
+            {/* GOOGLE MAPS EMBED & LOCAL NAP SECTION */}
+            {page.showMap && (
+              <section className="bg-white rounded-2xl p-6 sm:p-8 border border-slate-200 shadow-xs space-y-5">
+                <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+                  <div>
+                    <div className="flex items-center gap-1.5 text-xs font-bold text-[#1E70B8] uppercase tracking-wider font-display mb-1">
+                      <MapPin className="w-4 h-4 text-amber-500" />
+                      <span>Official Business Location & Service Area</span>
+                    </div>
+                    <h3 className="text-xl sm:text-2xl font-bold text-slate-900 font-display">
+                      Spring Valley Location & Map
+                    </h3>
+                  </div>
+                  <div className="text-xs text-slate-600 sm:text-right">
+                    <span className="font-semibold text-slate-900 block font-mono">6875 Groveview Ln</span>
+                    <span>Las Vegas, NV 89103 (Spring Valley)</span>
+                  </div>
+                </div>
+
+                {/* NAP Summary Card */}
+                <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 p-4 bg-slate-50 border border-slate-200 rounded-xl text-xs">
+                  <div>
+                    <span className="text-slate-400 block font-medium uppercase tracking-wider text-[10px]">Business Name</span>
+                    <strong className="text-slate-900 block mt-0.5">{BRAND_NAME}</strong>
+                  </div>
+                  <div>
+                    <span className="text-slate-400 block font-medium uppercase tracking-wider text-[10px]">Physical Address</span>
+                    <strong className="text-slate-900 block mt-0.5">6875 Groveview Ln, Las Vegas, NV 89103</strong>
+                  </div>
+                  <div>
+                    <span className="text-slate-400 block font-medium uppercase tracking-wider text-[10px]">Telephone & Hours</span>
+                    <strong className="text-slate-900 block mt-0.5 font-mono">{PHONE_NUMBER} • Open 24/7</strong>
+                  </div>
+                </div>
+
+                <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
+                  Centrally based at 6875 Groveview Ln in Spring Valley, our mobile diagnostic units provide rapid response for domestic water, hazardous gas, concrete slab, and swimming pool leak emergencies throughout Clark County, NV.
+                </p>
+
+                {/* Embedded Responsive Google Map (User's Exact Embed URL) */}
+                <div className="w-full h-80 sm:h-96 rounded-xl overflow-hidden border border-slate-200 shadow-inner bg-slate-100">
+                  <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d228.32573332633928!2d-115.24263393980249!3d36.10665393950978!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c8c718b3b90839%3A0x478991a6983539e5!2s6875%20Groveview%20Ln%2C%20Las%20Vegas%2C%20NV%2089103%2C%20USA!5e0!3m2!1sen!2sve!4v1791569926749!5m2!1sen!2sve"
+                    width="100%"
+                    height="100%"
+                    style={{ border: 0 }}
+                    allowFullScreen={false}
+                    loading="lazy"
+                    referrerPolicy="strict-origin-when-cross-origin"
+                    title="Spring Valley Leak Detection Location - 6875 Groveview Ln, Las Vegas, NV 89103"
+                    className="w-full h-full"
+                  />
+                </div>
+
+                <div className="flex flex-wrap items-center justify-between gap-3 pt-2 text-xs text-slate-500 border-t border-slate-100">
+                  <div className="flex items-center gap-2">
+                    <span className="w-2 h-2 rounded-full bg-emerald-500"></span>
+                    <span>Coverage: Spring Valley, The Lakes, Spanish Trail, Summerlin South & Rhodes Ranch</span>
+                  </div>
+                  <a
+                    href={PHONE_HREF}
+                    className="text-[#1E70B8] hover:underline font-bold"
+                  >
+                    Call (725) 313-0108 for Emergency Service →
+                  </a>
+                </div>
+              </section>
+            )}
+
             {/* QUALITY STANDARDS & NEVADA STATE LICENSURE SECTION */}
             <section className="bg-slate-900 text-white rounded-2xl p-6 sm:p-8 border border-slate-800 space-y-5">
               <div className="flex items-center gap-2 text-amber-400 text-xs font-bold uppercase tracking-wider font-display">
@@ -309,7 +553,7 @@ export const PageRenderer: React.FC<PageRendererProps> = ({
                 Certified Leak Detection & Repair in Spring Valley, NV
               </h3>
               <p className="text-sm text-slate-300 leading-relaxed">
-                {BRAND_NAME} provides rapid 24/7 emergency leak diagnostics and permanent repair across Spring Valley and Clark County. All services are performed by licensed, insured professionals adhering to strict Nevada State Contractors Board (NSCB) standards.
+                {BRAND_NAME} provides 24/7 non-invasive emergency leak diagnostics and durable repair across Spring Valley and Clark County. All services are performed by licensed, insured professionals adhering to strict Nevada State Contractors Board (NSCB) standards.
               </p>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
@@ -333,94 +577,43 @@ export const PageRenderer: React.FC<PageRendererProps> = ({
               </div>
             </section>
 
-            {/* FREQUENTLY ASKED QUESTIONS (FAQ Accordion with Schema Support) */}
-            <section className="bg-white rounded-2xl p-6 sm:p-8 border border-slate-200 shadow-xs space-y-6">
-              <div>
-                <div className="flex items-center gap-1.5 text-xs font-bold text-[#1E70B8] uppercase tracking-wider font-display mb-1">
-                  <HelpCircle className="w-4 h-4" />
-                  <span>Frequently Asked Questions</span>
+            {/* FREQUENTLY ASKED QUESTIONS */}
+            {page.faqs && page.faqs.length > 0 && (
+              <section className="bg-white rounded-2xl p-6 sm:p-8 border border-slate-200 shadow-xs space-y-6">
+                <div>
+                  <div className="flex items-center gap-1.5 text-xs font-bold text-[#1E70B8] uppercase tracking-wider font-display mb-1">
+                    <HelpCircle className="w-4 h-4" />
+                    <span>Frequently Asked Questions</span>
+                  </div>
+                  <h3 className="text-xl sm:text-2xl font-bold text-slate-900 font-display">
+                    Questions About {page.name} in Spring Valley, NV
+                  </h3>
+                  <p className="text-xs text-slate-500 mt-1">
+                    Specific answers to common technical, diagnostic, and pricing inquiries.
+                  </p>
                 </div>
-                <h3 className="text-xl sm:text-2xl font-bold text-slate-900 font-display">
-                  Questions About {page.name} in Spring Valley, NV
-                </h3>
-                <p className="text-xs text-slate-500 mt-1">
-                  Specific answers to common technical, dispatch, and cost inquiries before calling.
-                </p>
-              </div>
 
-              <div className="divide-y divide-slate-100">
-                {page.faqs.map((faq, fIdx) => (
-                  <div key={fIdx} className="py-4">
-                    <button
-                      onClick={() => toggleFaq(fIdx)}
-                      className="w-full flex items-center justify-between text-left gap-4 font-bold text-slate-900 hover:text-[#1E70B8] transition-colors cursor-pointer"
-                    >
-                      <span className="text-sm sm:text-base font-display">{faq.question}</span>
-                      {openFaq === fIdx ? (
-                        <ChevronUp className="w-4 h-4 text-[#1E70B8] shrink-0" />
-                      ) : (
-                        <ChevronDown className="w-4 h-4 text-slate-400 shrink-0" />
+                <div className="divide-y divide-slate-100">
+                  {page.faqs.map((faq, fIdx) => (
+                    <div key={fIdx} className="py-4">
+                      <button
+                        onClick={() => toggleFaq(fIdx)}
+                        className="w-full flex items-center justify-between text-left gap-4 font-bold text-slate-900 hover:text-[#1E70B8] transition-colors cursor-pointer"
+                      >
+                        <span className="text-sm sm:text-base font-display">{faq.question}</span>
+                        {openFaq === fIdx ? (
+                          <ChevronUp className="w-4 h-4 text-[#1E70B8] shrink-0" />
+                        ) : (
+                          <ChevronDown className="w-4 h-4 text-slate-400 shrink-0" />
+                        )}
+                      </button>
+                      {openFaq === fIdx && (
+                        <div className="mt-3 text-xs sm:text-sm text-slate-600 leading-relaxed pl-1">
+                          {renderParagraphWithLinks(faq.answer)}
+                        </div>
                       )}
-                    </button>
-                    {openFaq === fIdx && (
-                      <div className="mt-3 text-xs sm:text-sm text-slate-600 leading-relaxed pl-1">
-                        {renderParagraphWithLinks(faq.answer)}
-                      </div>
-                    )}
-                  </div>
-                ))}
-              </div>
-            </section>
-
-            {/* GOOGLE MAPS EMBED & LOCAL NAP SECTION */}
-            {page.showMap && (
-              <section className="bg-white rounded-2xl p-6 sm:p-8 border border-slate-200 shadow-xs space-y-5">
-                <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
-                  <div>
-                    <div className="flex items-center gap-1.5 text-xs font-bold text-[#1E70B8] uppercase tracking-wider font-display mb-1">
-                      <MapPin className="w-4 h-4 text-amber-500" />
-                      <span>Verified Dispatch Location & Service Area</span>
                     </div>
-                    <h3 className="text-xl sm:text-2xl font-bold text-slate-900 font-display">
-                      Spring Valley Coordination Desk
-                    </h3>
-                  </div>
-                  <div className="text-xs text-slate-600 sm:text-right">
-                    <span className="font-semibold text-slate-900 block font-mono">6875 Groveview Ln</span>
-                    <span>Las Vegas, NV 89103 (Spring Valley)</span>
-                  </div>
-                </div>
-
-                <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
-                  Centrally located in Spring Valley, our mobile dispatch desk coordinates rapid on-call routing for water, gas, slab, and swimming pool leak emergencies across Clark County, NV.
-                </p>
-
-                {/* Embedded Responsive Google Map */}
-                <div className="w-full h-80 sm:h-96 rounded-xl overflow-hidden border border-slate-200 shadow-inner bg-slate-100">
-                  <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d228.32573332633928!2d-115.24263393980249!3d36.10665393950978!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c8c718b3b90839%3A0x478991a6983539e5!2s6875%20Groveview%20Ln%2C%20Las%20Vegas%2C%20NV%2089103%2C%20USA!5e0!3m2!1sen!2sve!4v1791569926749!5m2!1sen!2sve"
-                    width="100%"
-                    height="100%"
-                    style={{ border: 0 }}
-                    allowFullScreen={false}
-                    loading="lazy"
-                    referrerPolicy="strict-origin-when-cross-origin"
-                    title="Spring Valley Leak Detection Location - 6875 Groveview Ln, Las Vegas, NV 89103"
-                    className="w-full h-full"
-                  />
-                </div>
-
-                <div className="flex flex-wrap items-center justify-between gap-3 pt-2 text-xs text-slate-500 border-t border-slate-100">
-                  <div className="flex items-center gap-2">
-                    <span className="w-2 h-2 rounded-full bg-emerald-500"></span>
-                    <span>Dispatched Mobile Coverage: Spring Valley, The Lakes, Spanish Trail, Summerlin South & Rhodes Ranch</span>
-                  </div>
-                  <a
-                    href={PHONE_HREF}
-                    className="text-[#1E70B8] hover:underline font-bold"
-                  >
-                    Call (725) 313-0108 for Dispatch →
-                  </a>
+                  ))}
                 </div>
               </section>
             )}
@@ -435,7 +628,7 @@ export const PageRenderer: React.FC<PageRendererProps> = ({
                   Need Immediate Help With {page.name}?
                 </h3>
                 <p className="text-sm text-slate-300 leading-relaxed">
-                  Avoid catastrophic water, gas, slab, or pool damage to your Spring Valley property. Our dispatch team connects you with an on-call licensed leak detection contractor in minutes.
+                  Avoid catastrophic water, gas, slab, or pool damage to your Spring Valley property. Our licensed technicians arrive promptly with advanced non-invasive diagnostic tools.
                 </p>
               </div>
 
@@ -448,10 +641,10 @@ export const PageRenderer: React.FC<PageRendererProps> = ({
                   <span>Call {PHONE_NUMBER}</span>
                 </a>
                 <button
-                  onClick={onOpenDispatch}
+                  onClick={() => onNavigate('contact')}
                   className="px-6 py-4 bg-white/10 hover:bg-white/20 text-white font-bold text-sm rounded-xl border border-white/20 transition-colors cursor-pointer"
                 >
-                  Submit Online Dispatch Intake
+                  Contact Office & Location Details
                 </button>
               </div>
             </section>
@@ -461,13 +654,32 @@ export const PageRenderer: React.FC<PageRendererProps> = ({
           {/* SIDEBAR: CONTEXTUAL NAVIGATION & CONVERSION (4 Columns) */}
           <aside className="lg:col-span-4 space-y-6">
             
-            {/* Interactive Inline Dispatch & Lead Form */}
+            {/* Interactive Inline Emergency Call & Callback Card */}
             <SidebarDispatchForm
               currentLocationName={page.type === 'location' ? page.navTitle : 'Spring Valley Core'}
               currentServiceType={page.type === 'service' ? page.name : 'Water Leak (Indoor / Wall)'}
             />
 
-            <div className="bg-white rounded-2xl p-6 border border-slate-200 shadow-xs space-y-4">
+            <div className="bg-white rounded-2xl p-6 border border-slate-200 shadow-xs space-y-5">
+              
+              {/* Educational Blog Callout in Sidebar */}
+              <div className="p-4 rounded-xl bg-amber-50/70 border border-amber-200/80 space-y-2">
+                <div className="flex items-center gap-1.5 text-xs font-bold text-amber-900 uppercase tracking-wider">
+                  <BookOpen className="w-3.5 h-3.5 text-amber-700" />
+                  <span>Leak Prevention Guides</span>
+                </div>
+                <p className="text-xs text-slate-700 leading-relaxed">
+                  Learn how to read water meters, perform the 24-hour pool bucket test, or recognize sub-slab copper leaks.
+                </p>
+                <button
+                  onClick={() => onNavigate('blog')}
+                  className="text-xs font-bold text-[#1E70B8] hover:underline flex items-center gap-1 cursor-pointer pt-1"
+                >
+                  <span>Explore Leak Blog Articles</span>
+                  <ArrowRight className="w-3 h-3" />
+                </button>
+              </div>
+
               {/* Related Sub-Services Contextual Box */}
               {page.relatedServices && page.relatedServices.length > 0 && (
                 <div className="space-y-3">
@@ -527,7 +739,7 @@ export const PageRenderer: React.FC<PageRendererProps> = ({
               {/* Link back to Homepage Anchor */}
               {page.slug !== '' && (
                 <div className="pt-4 border-t border-slate-100 text-xs text-slate-500">
-                  <span>Explore whole-home emergency solutions on our </span>
+                  <span>Explore full solutions on our </span>
                   <a
                     href="/"
                     onClick={(e) => {
@@ -538,7 +750,7 @@ export const PageRenderer: React.FC<PageRendererProps> = ({
                   >
                     Spring Valley leak detection
                   </a>
-                  <span> main authority hub.</span>
+                  <span> main hub.</span>
                 </div>
               )}
 

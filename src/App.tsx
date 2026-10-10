@@ -5,24 +5,45 @@ import { Header } from './components/Header';
 import { Footer } from './components/Footer';
 import { PageRenderer } from './components/PageRenderer';
 import { StickyMobileCallBar } from './components/StickyMobileCallBar';
-import { DispatchModal } from './components/DispatchModal';
 import { SeoAuditModal } from './components/SeoAuditModal';
+import { BlogPage } from './components/BlogPage';
 
 export default function App() {
   // Determine initial slug from window.location.pathname
   const getSlugFromPath = (): string => {
     const path = window.location.pathname.replace(/^\/|\/$/g, '');
     if (!path) return '';
+    if (path === 'blog' || path.startsWith('blog/')) return path;
+    if (path === 'how-it-works') return 'how-it-works';
+    if (path === 'contact-nap') return 'contact';
     if (sitePages[path]) return path;
     return '';
   };
 
   const [currentSlug, setCurrentSlug] = useState<string>(getSlugFromPath);
-  const [isDispatchModalOpen, setIsDispatchModalOpen] = useState(false);
   const [isAuditModalOpen, setIsAuditModalOpen] = useState(false);
 
-  // Get active page data (default to home)
-  const currentPage: PageContent = sitePages[currentSlug] || sitePages['home'];
+  // Check if we are on a blog route
+  const isBlogRoute = currentSlug === 'blog' || currentSlug.startsWith('blog/');
+  const activeBlogPostSlug = currentSlug.startsWith('blog/')
+    ? currentSlug.replace(/^blog\//, '').replace(/\/$/, '')
+    : undefined;
+
+  // Resolve page content
+  const getActivePage = (): PageContent => {
+    if (isBlogRoute) {
+      return sitePages['blog'] || sitePages['home'];
+    }
+    if (currentSlug === 'how-it-works') {
+      return sitePages['how-it-works'] || sitePages['about'] || sitePages['home'];
+    }
+    if (currentSlug === 'contact-nap') {
+      return sitePages['contact'] || sitePages['home'];
+    }
+    return sitePages[currentSlug] || sitePages['home'];
+  };
+
+  const currentPage = getActivePage();
 
   // Handle in-app navigation and browser history
   const handleNavigate = (slug: string) => {
@@ -84,31 +105,29 @@ export default function App() {
         currentSlug={currentSlug}
         onNavigate={handleNavigate}
         onOpenAudit={() => setIsAuditModalOpen(true)}
-        onOpenDispatch={() => setIsDispatchModalOpen(true)}
       />
 
       {/* Main Page Content */}
       <div className="flex-1">
-        <PageRenderer
-          page={currentPage}
-          onNavigate={handleNavigate}
-          onOpenDispatch={() => setIsDispatchModalOpen(true)}
-          onOpenAudit={() => setIsAuditModalOpen(true)}
-        />
+        {isBlogRoute ? (
+          <BlogPage
+            onNavigate={handleNavigate}
+            activePostSlug={activeBlogPostSlug}
+          />
+        ) : (
+          <PageRenderer
+            page={currentPage}
+            onNavigate={handleNavigate}
+            onOpenAudit={() => setIsAuditModalOpen(true)}
+          />
+        )}
       </div>
 
-      {/* Quiet Footer with Full Disclosures & Internal Links */}
+      {/* Footer with Full Navigation & NAP Information */}
       <Footer onNavigate={handleNavigate} />
 
-      {/* Mobile Sticky Call Bar (Under 15% viewport height) */}
-      <StickyMobileCallBar onOpenDispatch={() => setIsDispatchModalOpen(true)} />
-
-      {/* Online Dispatch Modal */}
-      <DispatchModal
-        isOpen={isDispatchModalOpen}
-        onClose={() => setIsDispatchModalOpen(false)}
-        defaultNeighborhood={currentPage.type === 'location' ? currentPage.navTitle : 'Spring Valley Core'}
-      />
+      {/* Mobile Sticky Call Bar */}
+      <StickyMobileCallBar onNavigate={handleNavigate} />
 
       {/* Interactive SEO & Architecture Audit Modal */}
       <SeoAuditModal

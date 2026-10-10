@@ -47,7 +47,7 @@ export function generateSchemaForPage(page: PageContent) {
       "postalCode": BUSINESS_ADDRESS.postalCode,
       "addressCountry": "US"
     },
-    "description": "24/7 Pay-Per-Call referral network specializing in water, gas, slab, and swimming pool leak detection and repair across Spring Valley, NV and Clark County.",
+    "description": "24/7 professional non-invasive water, gas, slab, and swimming pool leak detection and repair across Spring Valley, NV and Clark County.",
     "areaServed": [
       {
         "@type": "Place",

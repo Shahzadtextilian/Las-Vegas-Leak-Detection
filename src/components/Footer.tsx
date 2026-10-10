@@ -28,19 +28,19 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
             </div>
             
             <p className="text-sm text-slate-400 leading-relaxed max-w-sm">
-              24/7 Pay-Per-Call referral network connecting Spring Valley property owners with independent, NSCB-licensed leak detection contractors. Non-invasive acoustic, thermal, and hydrophone testing for water, gas, slab, and swimming pool leaks.
+              24/7 non-invasive water, gas, slab, and swimming pool leak detection and repair across Spring Valley and Clark County, NV. Utilizing advanced acoustic listening discs, infrared thermal imaging, and electronic hydrophones.
             </p>
 
             <div className="pt-2 flex flex-col gap-2 text-xs text-slate-400">
               <div className="flex items-start gap-2">
                 <MapPin className="w-4 h-4 text-amber-500 shrink-0 mt-0.5" />
                 <span>
-                  <strong>Dispatch Office:</strong> {BUSINESS_ADDRESS.streetAddress}, {BUSINESS_ADDRESS.addressLocality}, {BUSINESS_ADDRESS.addressRegion} {BUSINESS_ADDRESS.postalCode} (Spring Valley / Clark County)
+                  <strong>Office Location:</strong> {BUSINESS_ADDRESS.streetAddress}, {BUSINESS_ADDRESS.addressLocality}, {BUSINESS_ADDRESS.addressRegion} {BUSINESS_ADDRESS.postalCode} (Spring Valley / Clark County)
                 </span>
               </div>
               <div className="flex items-center gap-2">
                 <Clock className="w-4 h-4 text-emerald-400 shrink-0" />
-                <span>Dispatch Availability: 24 Hours / 7 Days / 365 Days</span>
+                <span>Service Hours: 24 Hours / 7 Days / 365 Days</span>
               </div>
               <div className="flex items-center gap-2">
                 <Phone className="w-4 h-4 text-sky-400 shrink-0" />
@@ -168,19 +168,29 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
             </ul>
           </div>
 
-          {/* Column 4: Standards & Legal */}
+          {/* Column 4: Company & Knowledge Base */}
           <div>
             <h4 className="text-xs font-semibold uppercase tracking-wider text-slate-100 mb-4 font-display">
-              Referral Standards
+              Company & Guides
             </h4>
             <ul className="space-y-2.5 text-sm">
               <li>
                 <a
-                  href="/about/"
-                  onClick={(e) => { e.preventDefault(); onNavigate('about'); }}
+                  href="/how-it-works/"
+                  onClick={(e) => { e.preventDefault(); onNavigate('how-it-works'); }}
                   className="hover:text-white transition-colors"
                 >
-                  How Referral Routing Works
+                  How It Works (5 Steps)
+                </a>
+              </li>
+              <li>
+                <a
+                  href="/blog/"
+                  onClick={(e) => { e.preventDefault(); onNavigate('blog'); }}
+                  className="hover:text-amber-400 font-semibold transition-colors flex items-center gap-1.5"
+                >
+                  <span>Blog & Leak Guides</span>
+                  <span className="text-[10px] bg-amber-500/20 text-amber-300 px-1.5 py-0.2 rounded">New</span>
                 </a>
               </li>
               <li>
@@ -189,14 +199,23 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
                   onClick={(e) => { e.preventDefault(); onNavigate('contact'); }}
                   className="hover:text-white transition-colors"
                 >
-                  Contact & Dispatch Desk
+                  Contact & NAP (Map)
+                </a>
+              </li>
+              <li>
+                <a
+                  href="/about/"
+                  onClick={(e) => { e.preventDefault(); onNavigate('about'); }}
+                  className="hover:text-white transition-colors"
+                >
+                  About Our Team
                 </a>
               </li>
               <li>
                 <a
                   href="/privacy-policy/"
                   onClick={(e) => { e.preventDefault(); onNavigate('privacy-policy'); }}
-                  className="hover:text-white transition-colors text-amber-400 font-medium"
+                  className="hover:text-white transition-colors text-slate-400 font-medium"
                 >
                   Privacy Policy
                 </a>
@@ -211,41 +230,31 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
                   XML Sitemap
                 </a>
               </li>
-              <li>
-                <a
-                  href="/robots.txt"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="hover:text-white transition-colors"
-                >
-                  Robots Directives
-                </a>
-              </li>
             </ul>
 
             <div className="mt-6 pt-4 border-t border-slate-900 flex items-start gap-2 text-xs text-slate-400">
               <ShieldCheck className="w-4 h-4 text-emerald-400 shrink-0 mt-0.5" />
-              <span>Independent contractors carry active Nevada State Contractors Board (NSCB) C-1 Plumbing & Heating licenses.</span>
+              <span>Licensed Nevada Contractors complying with Nevada State Contractors Board (NSCB) C-1 standards.</span>
             </div>
           </div>
 
         </div>
 
-        {/* Legal Referral Disclaimer & Transparency Disclosure */}
-        <div className="pt-8 space-y-4 text-xs text-slate-300 leading-relaxed">
-          <div className="p-4 rounded-xl bg-slate-900/60 border border-slate-800 text-slate-300">
-            <span className="font-semibold text-slate-200">Legal Disclosure & Referral Model Notice: </span>
-            {BRAND_NAME} is an independent marketing referral and emergency dispatch service based at {BUSINESS_ADDRESS.streetAddress}, {BUSINESS_ADDRESS.addressLocality}, {BUSINESS_ADDRESS.addressRegion} {BUSINESS_ADDRESS.postalCode}. We connect property owners with independent, third-party licensed plumbing and leak detection contractors in Spring Valley and Clark County, NV. We do not directly provide contracting services, nor do we employ service technicians. Any work contracted, estimates provided, or warranties issued are strictly between the customer and the independent contractor performing the service.
+        {/* Quality Standards & Local Service Notice */}
+        <div className="pt-8 space-y-4 text-xs text-slate-400 leading-relaxed">
+          <div className="p-4 rounded-xl bg-slate-900/60 border border-slate-800 text-slate-400">
+            <span className="font-semibold text-slate-200">Local Service Notice: </span>
+            {BRAND_NAME} provides 24/7 non-invasive diagnostic testing and precision leak repair across Spring Valley and Clark County, NV. Headquartered at {BUSINESS_ADDRESS.streetAddress}, {BUSINESS_ADDRESS.addressLocality}, {BUSINESS_ADDRESS.addressRegion} {BUSINESS_ADDRESS.postalCode}. All water, gas, slab, and swimming pool repairs are executed to strict Nevada State Contractors Board (NSCB) standards and Clark County plumbing codes.
           </div>
 
-          <div className="flex flex-col sm:flex-row items-center justify-between gap-4 text-slate-400 pt-2">
+          <div className="flex flex-col sm:flex-row items-center justify-between gap-4 text-slate-500 pt-2">
             <div>
               © 2026 {BRAND_NAME}. All rights reserved.
             </div>
             <div className="flex items-center gap-4">
               <span>Spring Valley, Clark County, NV</span>
               <span>•</span>
-              <span>Direct Call Dispatch Line: {PHONE_NUMBER}</span>
+              <span>24/7 Emergency Line: {PHONE_NUMBER}</span>
             </div>
           </div>
         </div>

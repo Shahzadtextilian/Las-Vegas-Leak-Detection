@@ -974,7 +974,118 @@ export const sitePages: Record<string, PageContent> = {
     schemaType: "LocalBusiness"
   },
 
-  // 13. ABOUT PAGE
+  // 13. HOW IT WORKS / ABOUT PAGE
+  "how-it-works": {
+    slug: "how-it-works",
+    urlPath: "/how-it-works/",
+    type: "about",
+    name: "How Leak Detection & Repair Works",
+    navTitle: "How It Works",
+    metaTitle: "How It Works | Spring Valley Leak Detection & Repair Process",
+    metaDescription: "Step-by-step diagnostic and repair process for water, gas, slab & pool leaks in Spring Valley, NV. Non-invasive acoustic and thermal testing. Call (725) 313-0108.",
+    primaryKeyword: "how leak detection works Spring Valley",
+    secondaryKeywords: [
+      "leak detection process Las Vegas",
+      "non-invasive leak diagnostics",
+      "slab leak detection procedure",
+      "Spring Valley leak repair workflow"
+    ],
+    semanticEntities: [
+      "Non-invasive ultrasonic acoustic diagnostics",
+      "FLIR thermal infrared moisture inspection",
+      "Electronic pool hydrophone listening",
+      "Combustible gas PPM sniffers",
+      "Nevada State Contractors Board (NSCB) standards"
+    ],
+    h1: "How Our Precision Leak Detection & Repair Process Works",
+    heroKicker: "5-Step Non-Invasive Diagnostic & Permanent Repair Process",
+    heroSubheadline: "From emergency phone intake to state-of-the-art acoustic and thermal localization, here is how our licensed technicians protect your home without destructive guesswork.",
+    directAnswer: "Our leak detection process combines five systematic stages: 24/7 rapid initial assessment, non-invasive electronic diagnostics (acoustic ground microphones, thermal imaging, combustible gas sniffers, and pool hydrophones), pinpoint location verification to within inches, transparent written itemized estimates, and permanent code-compliant repairs with pressure verification. Call (725) 313-0108.",
+    featuredImage: "/src/assets/images/pool_leak_detection_1791567711591.jpg",
+    imageAlt: "Spring Valley Leak Detection step by step diagnostic process",
+    imageCaption: "Advanced electronic sensors locate subterranean pipe ruptures before any invasive opening begins.",
+    sections: [
+      {
+        heading: "Step 1: Rapid 24/7 Assessment & Emergency Triage",
+        subheading: "Immediate telephone guidance to protect your property",
+        paragraphs: [
+          "When you contact our Spring Valley team at (725) 313-0108, an experienced leak specialist immediately evaluates your situation. If you are experiencing a pressurized indoor water flood or smelling natural gas, we guide you through safe main valve shutoffs right away.",
+          "Our fully equipped mobile service vehicles are dispatched promptly across Spring Valley, The Lakes, Spanish Trail, Summerlin South, and Rhodes Ranch."
+        ],
+        bulletPoints: [
+          "24/7/365 rapid response across all Spring Valley neighborhoods",
+          "Immediate emergency shutoff protocol guidance over the phone",
+          "Fast technician arrival equipped with mobile diagnostic tools"
+        ]
+      },
+      {
+        heading: "Step 2: Non-Invasive Advanced Diagnostic Technology",
+        subheading: "Zero-destruction acoustic, thermal, and electronic testing",
+        paragraphs: [
+          "Traditional plumbing companies often rely on destructive trial-and-error—breaking through concrete slabs or cutting exploratory holes in drywall. We never guess.",
+          "Instead, our technicians deploy high-resolution FLIR thermal infrared cameras, ultrasonic ground microphones, digital combustible gas detectors, and underwater pool hydrophones to track moisture differentials, pipe pressure variations, and acoustic soundwaves."
+        ],
+        bulletPoints: [
+          "Ultrasonic acoustic locators to hear pressurized water escaping beneath concrete slabs",
+          "Thermal infrared imaging to map hidden moisture paths behind drywall and tiles",
+          "Hydrophones and precision dye testing for swimming pools and spas",
+          "Digital PPM combustible gas wands for natural gas and propane lines"
+        ]
+      },
+      {
+        heading: "Step 3: Pinpoint Leak Location Identification",
+        subheading: "Isolating pipe ruptures to within inches",
+        paragraphs: [
+          "By cross-referencing acoustic frequencies and thermal moisture gradients, technicians isolate the exact point of pipe failure beneath foundation slabs, inside wall cavities, or deep under pool decking.",
+          "This pinpoint precision means any future access point is minimal, surgical, and contained—saving thousands of dollars in drywall or flooring restoration."
+        ]
+      },
+      {
+        heading: "Step 4: Upfront Written Itemized Estimate",
+        subheading: "Clear solutions and transparent pricing before work begins",
+        paragraphs: [
+          "Once the leak is pinpointed, our technician provides a comprehensive, itemized written proposal detailing the recommended repair methods (such as direct spot repair, overhead PEX bypass reroute, or pool line replacement).",
+          "You receive transparent, upfront pricing with no surprise charges or hidden fees before any repair work commences."
+        ]
+      },
+      {
+        heading: "Step 5: Code-Compliant Repair & Pressure Verification",
+        subheading: "Permanent craftsmanship backed by warranty",
+        paragraphs: [
+          "All repairs are performed by licensed professionals adhering strictly to Nevada State Contractors Board (NSCB) regulations and Clark County plumbing codes.",
+          "Following repair, the entire plumbing or gas system undergoes rigorous hydrostatic or pneumatic pressure testing to verify 100% airtight and watertight integrity before we consider the job complete."
+        ]
+      }
+    ],
+    faqs: [
+      {
+        question: "How long does a typical leak detection inspection take?",
+        answer: "Most residential water, gas, slab, or pool leak detection appointments take between 60 and 90 minutes. Technicians verify line pressures, conduct acoustic and thermal scans, and pinpoint the leak location on the same visit."
+      },
+      {
+        question: "Do you provide written estimates before beginning repair work?",
+        answer: "Yes, always. We explain all available repair options—such as direct sub-slab repairs versus overhead PEX reroutes—along with transparent, itemized written pricing before any repair begins."
+      },
+      {
+        question: "Are your technicians licensed and insured in Nevada?",
+        answer: "Yes. All work is performed by licensed Nevada contractors complying with Nevada State Contractors Board (NSCB) standards, Clark County codes, and industry safety protocols."
+      }
+    ],
+    relatedServices: [
+      { title: "Water Leak Detection & Repair", slug: "water-leak-detection", description: "Concealed potable line diagnostics." },
+      { title: "Slab Leak Detection & Repair", slug: "slab-leak-detection", description: "Concrete foundation diagnostics." },
+      { title: "Swimming Pool Leak Detection", slug: "pool-leak-detection", description: "Pool plumbing & shell testing." },
+      { title: "Gas Leak Detection & Emergency Repair", slug: "gas-leak-detection", description: "Combustible gas safety testing." }
+    ],
+    relatedLocations: [
+      { name: "Spring Valley Center", slug: "spring-valley-center", context: "Central core area." },
+      { name: "The Lakes", slug: "the-lakes", context: "Waterfront community." },
+      { name: "Spanish Trail", slug: "spanish-trail", context: "Gated estate community." }
+    ],
+    schemaType: "HowTo"
+  },
+
+  // 13b. ABOUT PAGE (Alias & Company Profile)
   "about": {
     slug: "about",
     urlPath: "/about/",
@@ -983,7 +1094,7 @@ export const sitePages: Record<string, PageContent> = {
     navTitle: "About Us",
     metaTitle: "About Us | Spring Valley Leak Detection & Repair | (725) 313-0108",
     metaDescription: "Spring Valley Leak Detection & Repair provides 24/7 non-invasive diagnostics and emergency repair for water, gas, slab & pool leaks in Spring Valley, NV.",
-    primaryKeyword: "Spring Valley leak detection service",
+    primaryKeyword: "Spring Valley leak detection company",
     secondaryKeywords: [
       "about Spring Valley Leak Detection",
       "leak detection specialists Las Vegas",
@@ -999,7 +1110,7 @@ export const sitePages: Record<string, PageContent> = {
     h1: "About Spring Valley Leak Detection & Repair",
     heroKicker: "Precision Non-Invasive Diagnostics • 6875 Groveview Ln, Las Vegas, NV",
     heroSubheadline: "Providing 24/7 emergency water, gas, slab, and swimming pool leak detection and repair across Spring Valley and Clark County.",
-    directAnswer: "Spring Valley Leak Detection & Repair provides dedicated 24/7 non-invasive leak diagnostics for residential and commercial properties in Spring Valley and Clark County, NV. Operating from 6875 Groveview Ln, our technicians utilize electronic listening discs, thermal imaging cameras, and pool hydrophones to pinpoint leaks quickly and execute durable repairs with upfront, transparent pricing.",
+    directAnswer: "Spring Valley Leak Detection & Repair provides dedicated 24/7 non-invasive leak diagnostics for residential and commercial properties in Spring Valley and Clark County, NV. Operating from 6875 Groveview Ln, our technicians utilize electronic listening discs, thermal imaging cameras, and pool hydrophones to pinpoint leaks quickly and execute durable repairs with upfront, transparent pricing. Call (725) 313-0108.",
     featuredImage: "/src/assets/images/pool_leak_detection_1791567711591.jpg",
     imageAlt: "Spring Valley Leak Detection technical team and diagnostics equipment",
     imageCaption: "Equipped with advanced acoustic and thermal diagnostic tools, our team serves Spring Valley 24/7.",
@@ -1050,15 +1161,15 @@ export const sitePages: Record<string, PageContent> = {
     schemaType: "AboutPage"
   },
 
-  // 14. CONTACT PAGE
+  // 14. CONTACT & NAP PAGE
   "contact": {
     slug: "contact",
     urlPath: "/contact/",
     type: "contact",
-    name: "Contact Spring Valley Leak Detection & Repair",
-    navTitle: "Contact",
+    name: "Contact & NAP | Spring Valley Leak Detection & Repair",
+    navTitle: "Contact & NAP",
     metaTitle: "Contact Us 24/7 | Spring Valley Leak Detection & Repair (725) 313-0108",
-    metaDescription: "Contact Spring Valley Leak Detection 24/7 at (725) 313-0108. Located at 6875 Groveview Ln, Las Vegas, NV 89103. Water, gas, slab & pool leak dispatch.",
+    metaDescription: "Contact Spring Valley Leak Detection 24/7 at (725) 313-0108. Located at 6875 Groveview Ln, Las Vegas, NV 89103. Water, gas, slab & pool leak detection and repair.",
     primaryKeyword: "contact Spring Valley leak detection",
     secondaryKeywords: [
       "Spring Valley leak detection phone number",
@@ -1067,48 +1178,55 @@ export const sitePages: Record<string, PageContent> = {
       "emergency leak repair phone Las Vegas"
     ],
     semanticEntities: [
-      "Telephone dispatch: (725) 313-0108",
+      "Telephone: (725) 313-0108",
       "Physical address: 6875 Groveview Ln, Las Vegas, NV 89103",
       "Target service area: Spring Valley, Clark County, NV",
-      "24/7 live intake coordination"
+      "24/7 emergency service response"
     ],
     h1: "Contact Spring Valley Leak Detection & Repair",
-    heroKicker: "24/7 Emergency Line: (725) 313-0108 • 6875 Groveview Ln",
-    heroSubheadline: "Have an active water leak, natural gas odor, sub-slab rupture, or leaking pool in Spring Valley? Call our dedicated dispatch desk immediately.",
-    directAnswer: "For urgent water, gas, slab, and swimming pool leaks, direct phone contact provides the fastest response. Call (725) 313-0108 to speak with our 24/7 team for rapid technician dispatch to your Spring Valley property, or submit an online request for immediate service.",
+    heroKicker: "24/7 Emergency Line: (725) 313-0108 • 6875 Groveview Ln, Las Vegas, NV",
+    heroSubheadline: "Have an active water leak, natural gas odor, sub-slab rupture, or leaking pool in Spring Valley? Contact our local specialists immediately for fast, non-invasive service.",
+    directAnswer: "For urgent water, gas, slab, and swimming pool leaks, phone contact provides the fastest response. Call (725) 313-0108 to speak directly with our 24/7 emergency team at 6875 Groveview Ln, Las Vegas, NV 89103 for rapid dispatch across Spring Valley, The Lakes, Spanish Trail, Summerlin South, and Rhodes Ranch.",
     featuredImage: "/src/assets/images/pool_leak_detection_1791567711591.jpg",
-    imageAlt: "Contact dispatch desk for Spring Valley leak detection and repair",
-    imageCaption: "Live 24/7 phone dispatch connects you with on-call leak detection specialists across Spring Valley.",
+    imageAlt: "Contact Spring Valley leak detection and repair office",
+    imageCaption: "Live 24/7 emergency telephone support and service coordination at 6875 Groveview Ln.",
     sections: [
       {
-        heading: "Direct Phone Dispatch & Business Information",
-        subheading: "Immediate telephone intake protocol",
+        heading: "Official Business Information & NAP Details",
+        subheading: "Verified local presence in Clark County, Nevada",
         paragraphs: [
-          "Our dispatch coordinators are available 24 hours a day, 7 days a week, including weekends and holidays. When you call, we record your address, the type of leak (water, gas, slab, or pool), and whether any immediate shutoff has occurred.",
-          "Our central coordination office is located at 6875 Groveview Ln, Las Vegas, NV 89103, servicing Spring Valley and surrounding Clark County neighborhoods."
+          "Spring Valley Leak Detection & Repair operates 24 hours a day, 7 days a week from our central location in Spring Valley. When you call, our team immediately assesses your property situation, explains emergency shutoff procedures, and dispatches technicians equipped for acoustic and thermal diagnostics.",
+          "Our central office is located at 6875 Groveview Ln, Las Vegas, NV 89103, providing rapid transit to all residential and commercial addresses in Spring Valley and surrounding Clark County areas."
         ],
         bulletPoints: [
-          "Direct 24/7 Phone Line: (725) 313-0108",
-          "Business Address: 6875 Groveview Ln, Las Vegas, NV 89103",
-          "Target Service Area: Spring Valley, The Lakes, Spanish Trail, Summerlin South & Rhodes Ranch",
-          "Average Dispatch Response Time: 30 to 60 minutes"
+          "Company Name: Spring Valley Leak Detection & Repair",
+          "Physical Address: 6875 Groveview Ln, Las Vegas, NV 89103",
+          "Primary 24/7 Telephone: (725) 313-0108",
+          "Service Hours: 24 Hours a Day, 7 Days a Week, 365 Days a Year",
+          "Target Service Areas: Spring Valley, The Lakes, Spanish Trail, Summerlin South, Rhodes Ranch & Clark County, NV",
+          "Primary Services: Water Leak Detection, Slab Leak Detection, Pool Leak Detection, Gas Leak Detection"
         ]
       }
     ],
     faqs: [
       {
-        question: "Is the phone line answered 24/7?",
-        answer: "Yes. Our dispatch desk is staffed 24/7/365 to handle urgent water, gas, slab, and pool leak emergencies."
+        question: "Is your phone line answered 24 hours a day?",
+        answer: "Yes. Our emergency line at (725) 313-0108 is staffed 24/7/365 to handle urgent water floods, natural gas leaks, slab leaks, and pool plumbing failures."
+      },
+      {
+        question: "What should I do while waiting for a technician to arrive?",
+        answer: "If water is flooding, locate and turn off your main water shutoff valve (usually located in your garage or near the front hose bib). If you smell natural gas, evacuate immediately and call from a safe exterior location."
       },
       {
         question: "Can I schedule non-emergency pool or slab testing in advance?",
-        answer: "Yes. You can schedule routine bucket-test evaluations, pool dye testing, or preventative water line inspections for any weekday or weekend appointment."
+        answer: "Yes. We offer flexible scheduling for preventative water line inspections, pool bucket test evaluations, and non-emergency diagnostic appointments."
       }
     ],
     relatedServices: [
-      { title: "Water Leak Detection & Repair", slug: "water-leak-detection", description: "Indoor and domestic water leaks." },
-      { title: "Gas Leak Detection & Repair", slug: "gas-leak-detection", description: "Natural gas line testing." },
-      { title: "Swimming Pool Leak Detection", slug: "pool-leak-detection", description: "Pool and spa leak diagnostics." }
+      { title: "Water Leak Detection & Repair", slug: "water-leak-detection", description: "Indoor and domestic water supply lines." },
+      { title: "Slab Leak Detection & Repair", slug: "slab-leak-detection", description: "Under-foundation acoustic diagnostics." },
+      { title: "Swimming Pool Leak Detection", slug: "pool-leak-detection", description: "Hydrophone pool and spa diagnostics." },
+      { title: "Gas Leak Detection & Repair", slug: "gas-leak-detection", description: "Natural gas line testing." }
     ],
     relatedLocations: [
       { name: "Spring Valley Center", slug: "spring-valley-center", context: "Central core area." },
@@ -1119,7 +1237,38 @@ export const sitePages: Record<string, PageContent> = {
     showMap: true
   },
 
-  // 15. PRIVACY POLICY PAGE
+  // 15. BLOG PAGE METADATA
+  "blog": {
+    slug: "blog",
+    urlPath: "/blog/",
+    type: "about",
+    name: "Leak Detection Blog & Knowledge Base",
+    navTitle: "Blog",
+    metaTitle: "Leak Detection Blog & Guides | Spring Valley Leak Detection",
+    metaDescription: "Expert guides, DIY diagnostic tips, and emergency protocols for water, gas, slab, and pool leaks in Spring Valley, NV. Written by licensed leak specialists.",
+    primaryKeyword: "Spring Valley leak detection blog",
+    secondaryKeywords: [
+      "slab leak warning signs Las Vegas",
+      "pool bucket test guide",
+      "smell gas emergency protocol",
+      "caliche soil pipe damage"
+    ],
+    semanticEntities: [
+      "Slab leak diagnostics",
+      "Swimming pool 24-hour bucket test",
+      "Combustible natural gas safety",
+      "Clark County caliche soil geology"
+    ],
+    h1: "Spring Valley Leak Detection Blog & Educational Guides",
+    heroKicker: "Technical Guides • DIY Diagnostics • Emergency Protocols",
+    heroSubheadline: "Practical guides and technical knowledge from licensed leak detection specialists in Clark County, Nevada.",
+    directAnswer: "Explore our collection of in-depth guides covering slab leak warning signs, the swimming pool bucket test, natural gas safety procedures, and how Clark County caliche soil impacts underground plumbing. For immediate emergency service, call (725) 313-0108.",
+    sections: [],
+    faqs: [],
+    schemaType: "Blog"
+  },
+
+  // 16. PRIVACY POLICY PAGE
   "privacy-policy": {
     slug: "privacy-policy",
     urlPath: "/privacy-policy/",
@@ -1127,66 +1276,57 @@ export const sitePages: Record<string, PageContent> = {
     name: "Privacy Policy",
     navTitle: "Privacy Policy",
     metaTitle: "Privacy Policy | Spring Valley Leak Detection & Repair",
-    metaDescription: "Privacy Policy for Spring Valley Leak Detection & Repair at 6875 Groveview Ln, Las Vegas, NV 89103. Learn how referral dispatch data is collected and protected.",
+    metaDescription: "Privacy Policy for Spring Valley Leak Detection & Repair at 6875 Groveview Ln, Las Vegas, NV 89103. Learn how customer data is protected.",
     primaryKeyword: "Spring Valley Leak Detection privacy policy",
     secondaryKeywords: [
-      "leak detection referral privacy policy",
+      "leak detection privacy policy",
       "6875 Groveview Ln privacy Las Vegas",
-      "dispatch phone communication policy"
+      "customer data protection policy"
     ],
     semanticEntities: [
       "Telephone Consumer Protection Act (TCPA)",
       "Consumer data protection protocols",
-      "Third-party independent contractor referral data routing",
       "Nevada consumer privacy regulations"
     ],
     h1: "Privacy Policy for Spring Valley Leak Detection & Repair",
     heroKicker: "Effective Date: October 2026 • 6875 Groveview Ln, Las Vegas, NV",
-    heroSubheadline: "This Privacy Policy describes how Spring Valley Leak Detection & Repair collects, uses, and safeguards information when you visit our website or contact our 24/7 dispatch desk.",
-    directAnswer: "Spring Valley Leak Detection & Repair operates from 6875 Groveview Ln, Las Vegas, NV 89103 as a referral and emergency dispatch service. We collect only necessary contact and property information (name, telephone number, address, and leak description) to connect you directly with independent, licensed leak detection contractors in Clark County, Nevada.",
+    heroSubheadline: "This Privacy Policy describes how Spring Valley Leak Detection & Repair collects, uses, and safeguards information when you visit our website or contact our service line.",
+    directAnswer: "Spring Valley Leak Detection & Repair operates from 6875 Groveview Ln, Las Vegas, NV 89103. We collect only necessary contact and property information (name, telephone number, address, and leak description) to schedule and perform leak detection and repair services in Clark County, Nevada.",
     sections: [
       {
-        heading: "1. Information We Collect for Referral Dispatch",
-        subheading: "Data gathered to coordinate emergency and diagnostic services",
+        heading: "1. Information We Collect",
+        subheading: "Data gathered to coordinate diagnostic and repair services",
         paragraphs: [
-          "When you contact our dispatch desk by calling (725) 313-0108 or submitting an online dispatch intake form, we collect personal information you voluntarily provide, including your full name, telephone number, service address (in Spring Valley or greater Las Vegas), email address, and details regarding your water, gas, slab, or pool leak emergency.",
-          "We do not collect sensitive financial data such as credit card numbers or banking details through our website. Any billing or payment transactions are handled directly between you and the independent contractor performing the on-site diagnostic or repair service."
+          "When you contact our team by calling (725) 313-0108 or submitting an online contact request, we collect personal information you voluntarily provide, including your full name, telephone number, service address in Clark County, email address, and details regarding your water, gas, slab, or pool leak issue.",
+          "We do not collect sensitive financial data such as credit card numbers or banking passwords through our website. Payment transactions are processed securely on-site upon completion of services."
         ]
       },
       {
         heading: "2. How We Use Your Information",
-        subheading: "Purpose of data processing and contractor routing",
+        subheading: "Purpose of service scheduling and communication",
         paragraphs: [
-          "The primary purpose of collecting your information is to facilitate the referral and dispatch process. Specifically, we use your details to: (a) determine the nature of your leak emergency; (b) identify an available, on-call independent contractor licensed by the Nevada State Contractors Board (NSCB) servicing your specific neighborhood; (c) transfer your contact details to that contractor so they can call you with arrival estimates and emergency shutoff instructions; and (d) follow up on customer satisfaction.",
+          "The information you provide is used strictly to communicate with you regarding your service request, dispatch technicians to your property, provide upfront written estimates, and follow up on customer satisfaction.",
           "We never sell, rent, or trade your personal information to third-party marketing brokers or unrelated commercial advertisers."
         ]
       },
       {
         heading: "3. Communications & Telephone Disclosure (TCPA)",
-        subheading: "Consent to receive calls and text messages for dispatch coordination",
+        subheading: "Consent for service-related calls and messages",
         paragraphs: [
-          "By providing your telephone number through our contact forms or by placing an inbound call to (725) 313-0108, you expressly consent to receive telephone calls and transactional SMS/text messages from our dispatch coordinators and independent licensed plumbing and leak detection contractors regarding your service request.",
-          "Standard carrier message and data rates may apply. You may opt out of future non-emergency text communications at any time by replying 'STOP' or by contacting our dispatch office."
+          "By providing your telephone number through our contact forms or by placing a call to (725) 313-0108, you consent to receive telephone calls and transactional SMS/text messages from our technicians regarding your appointment schedule and arrival times.",
+          "Standard carrier message and data rates may apply. You may opt out of non-emergency text communications at any time by replying 'STOP' or by notifying our office."
         ]
       },
       {
-        heading: "4. Third-Party Independent Contractors Disclosure",
-        subheading: "Understanding the referral data transfer",
-        paragraphs: [
-          "Spring Valley Leak Detection & Repair operates as a marketing referral and dispatch coordinator. To fulfill your request for water, gas, slab, or pool leak detection and repair, your contact and property information will be shared with an independent third-party contractor.",
-          "Once your information is provided to the independent contractor, their handling of your data is governed by their independent privacy practices and contractual standards."
-        ]
-      },
-      {
-        heading: "5. Cookies & Automated Website Analytics",
+        heading: "4. Cookies & Website Analytics",
         subheading: "Standard web browsing technologies",
         paragraphs: [
           "Our website uses standard technical cookies and anonymous analytics to understand site performance, visitor navigation paths, and page responsiveness. These cookies do not collect personally identifiable information and can be disabled through your browser settings."
         ]
       },
       {
-        heading: "6. Contact Information for Privacy Concerns",
-        subheading: "How to reach our coordination office",
+        heading: "5. Contact Information for Privacy Concerns",
+        subheading: "How to reach our office",
         paragraphs: [
           "If you have questions regarding this Privacy Policy or wish to request the deletion or correction of your contact records, please contact our office at: Spring Valley Leak Detection & Repair, 6875 Groveview Ln, Las Vegas, NV 89103, Phone: (725) 313-0108."
         ]
@@ -1195,11 +1335,11 @@ export const sitePages: Record<string, PageContent> = {
     faqs: [
       {
         question: "Is my personal phone number sold to marketing lists?",
-        answer: "No. Your phone number is strictly used to route your emergency leak request to an on-call independent contractor in Spring Valley and to communicate arrival ETAs."
+        answer: "No. Your phone number is strictly used to communicate with you regarding your leak detection appointment and arrival estimates."
       },
       {
-        question: "How do I request deletion of my service intake record?",
-        answer: "You can request deletion of your contact records by calling our coordination office at (725) 313-0108 or by writing to 6875 Groveview Ln, Las Vegas, NV 89103."
+        question: "How do I request deletion of my contact records?",
+        answer: "You can request deletion of your contact records by calling our office at (725) 313-0108 or by writing to 6875 Groveview Ln, Las Vegas, NV 89103."
       }
     ],
     relatedServices: [
