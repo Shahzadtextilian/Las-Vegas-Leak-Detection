@@ -107,7 +107,7 @@ export default function App() {
       <DispatchModal
         isOpen={isDispatchModalOpen}
         onClose={() => setIsDispatchModalOpen(false)}
-        defaultNeighborhood={currentPage.type === 'location' ? currentPage.navTitle : 'Downtown / Uptown'}
+        defaultNeighborhood={currentPage.type === 'location' ? currentPage.navTitle : 'Spring Valley Core'}
       />
 
       {/* Interactive SEO & Architecture Audit Modal */}

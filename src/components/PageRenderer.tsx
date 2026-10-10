@@ -15,6 +15,7 @@ import {
   Wrench,
   Sparkles
 } from 'lucide-react';
+import { SidebarDispatchForm } from './SidebarDispatchForm';
 
 interface PageRendererProps {
   page: PageContent;
@@ -114,7 +115,7 @@ export const PageRenderer: React.FC<PageRendererProps> = ({
               <>
                 <span className="mx-2 text-slate-300">/</span>
                 <span className="text-slate-400 capitalize">
-                  {page.type === 'service' ? 'Emergency Services' : page.type === 'location' ? 'Dallas Service Areas' : 'Information'}
+                  {page.type === 'service' ? 'Leak Services' : page.type === 'location' ? 'Spring Valley Service Areas' : 'Information'}
                 </span>
                 <span className="mx-2 text-slate-300">/</span>
                 <span className="text-slate-900 font-semibold" aria-current="page">
@@ -223,7 +224,7 @@ export const PageRenderer: React.FC<PageRendererProps> = ({
                     <div>
                       <Wrench className="w-12 h-12 text-amber-400 mx-auto mb-3" />
                       <h3 className="font-bold text-lg font-display">{page.name}</h3>
-                      <p className="text-xs text-slate-300 mt-1">24/7 Dallas Emergency Plumbing Dispatch</p>
+                      <p className="text-xs text-slate-300 mt-1">24/7 Spring Valley Leak Detection & Repair</p>
                     </div>
                   </div>
                 )}
@@ -298,35 +299,35 @@ export const PageRenderer: React.FC<PageRendererProps> = ({
               </section>
             ))}
 
-            {/* TRANSPARENT REFERRAL MODEL & VERIFIED CREDENTIALS SECTION */}
+            {/* QUALITY STANDARDS & NEVADA STATE LICENSURE SECTION */}
             <section className="bg-slate-900 text-white rounded-2xl p-6 sm:p-8 border border-slate-800 space-y-5">
               <div className="flex items-center gap-2 text-amber-400 text-xs font-bold uppercase tracking-wider font-display">
                 <ShieldCheck className="w-4 h-4 text-amber-400" />
-                <span>Consumer Protection & Provider Standards</span>
+                <span>Professional Quality Standards</span>
               </div>
               <h3 className="text-xl sm:text-2xl font-bold font-display">
-                How Our Referral Network Connects You With Licensed Professionals
+                Certified Leak Detection & Repair in Spring Valley, NV
               </h3>
               <p className="text-sm text-slate-300 leading-relaxed">
-                {BRAND_NAME} operates transparently as an emergency dispatch coordinator for property owners across Spring Valley and Clark County, NV. When you call our desk, you are connected directly with pre-screened independent leak detection and plumbing contractors.
+                {BRAND_NAME} provides rapid 24/7 emergency leak diagnostics and permanent repair across Spring Valley and Clark County. All services are performed by licensed, insured professionals adhering to strict Nevada State Contractors Board (NSCB) standards.
               </p>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
                 <div className="p-4 rounded-xl bg-slate-800/80 border border-slate-700 space-y-2">
                   <h4 className="text-sm font-bold text-white font-display">
-                    Nevada Licensing Verification
+                    Nevada State Licensure
                   </h4>
                   <p className="text-xs text-slate-300 leading-relaxed">
-                    Under Nevada law, independent contractors in our referral system maintain active C-1 Plumbing & Heating or leak detection licenses issued by the Nevada State Contractors Board (NSCB).
+                    Contractors hold active C-1 Plumbing & Heating or specialized leak detection licenses issued and verified by the Nevada State Contractors Board (NSCB).
                   </p>
                 </div>
 
                 <div className="p-4 rounded-xl bg-slate-800/80 border border-slate-700 space-y-2">
                   <h4 className="text-sm font-bold text-white font-display">
-                    Commercial Liability & Upfront Pricing
+                    Upfront Itemized Estimates
                   </h4>
                   <p className="text-xs text-slate-300 leading-relaxed">
-                    Participating independent companies maintain commercial general liability insurance and provide clear, itemized estimates on-site before initiating any repair or replacement.
+                    Technicians thoroughly test and inspect your property, providing clear, itemized quotes before beginning any water, gas, slab, or pool leak repair.
                   </p>
                 </div>
               </div>
@@ -340,7 +341,7 @@ export const PageRenderer: React.FC<PageRendererProps> = ({
                   <span>Frequently Asked Questions</span>
                 </div>
                 <h3 className="text-xl sm:text-2xl font-bold text-slate-900 font-display">
-                  Questions About {page.name} in Dallas
+                  Questions About {page.name} in Spring Valley, NV
                 </h3>
                 <p className="text-xs text-slate-500 mt-1">
                   Specific answers to common technical, dispatch, and cost inquiries before calling.
@@ -460,41 +461,18 @@ export const PageRenderer: React.FC<PageRendererProps> = ({
           {/* SIDEBAR: CONTEXTUAL NAVIGATION & CONVERSION (4 Columns) */}
           <aside className="lg:col-span-4 space-y-6">
             
-            {/* Quick Dispatch Card */}
-            <div className="bg-white rounded-2xl p-6 border border-slate-200 shadow-xs space-y-4 sticky top-24">
-              <div className="space-y-1">
-                <span className="text-xs font-bold uppercase tracking-wider text-rose-600 flex items-center gap-1.5 font-display">
-                  <span className="w-2 h-2 rounded-full bg-rose-600 animate-pulse"></span>
-                  Active Dispatch Open
-                </span>
-                <h4 className="text-lg font-bold text-slate-900 font-display">
-                  Connect With a Dallas Plumber
-                </h4>
-                <p className="text-xs text-slate-500 leading-relaxed">
-                  Call our 24-hour line for immediate phone routing to on-call independent contractors.
-                </p>
-              </div>
+            {/* Interactive Inline Dispatch & Lead Form */}
+            <SidebarDispatchForm
+              currentLocationName={page.type === 'location' ? page.navTitle : 'Spring Valley Core'}
+              currentServiceType={page.type === 'service' ? page.name : 'Water Leak (Indoor / Wall)'}
+            />
 
-              <a
-                href={PHONE_HREF}
-                className="w-full py-3.5 px-4 bg-[#0F2942] hover:bg-[#1E70B8] text-white font-bold rounded-xl flex items-center justify-center gap-2.5 transition-colors shadow-xs"
-              >
-                <Phone className="w-4 h-4 text-amber-400" />
-                <span className="font-mono text-base">{PHONE_NUMBER}</span>
-              </a>
-
-              <button
-                onClick={onOpenDispatch}
-                className="w-full py-2.5 px-4 border border-slate-300 hover:border-slate-400 text-slate-700 font-semibold text-xs rounded-xl hover:bg-slate-50 transition-colors cursor-pointer"
-              >
-                Intake Form Dispatch
-              </button>
-
+            <div className="bg-white rounded-2xl p-6 border border-slate-200 shadow-xs space-y-4">
               {/* Related Sub-Services Contextual Box */}
               {page.relatedServices && page.relatedServices.length > 0 && (
-                <div className="pt-4 border-t border-slate-100 space-y-3">
+                <div className="space-y-3">
                   <h5 className="text-xs font-bold uppercase tracking-wider text-slate-700 font-display">
-                    Related Emergency Services
+                    Related Leak Services
                   </h5>
                   <div className="space-y-2">
                     {page.relatedServices.map((rs) => (
@@ -518,11 +496,11 @@ export const PageRenderer: React.FC<PageRendererProps> = ({
                 </div>
               )}
 
-              {/* Related Dallas Neighborhoods Box */}
+              {/* Related Spring Valley Neighborhoods Box */}
               {page.relatedLocations && page.relatedLocations.length > 0 && (
                 <div className="pt-4 border-t border-slate-100 space-y-3">
                   <h5 className="text-xs font-bold uppercase tracking-wider text-slate-700 font-display">
-                    Target Dallas Service Areas
+                    Spring Valley & Nearby Areas
                   </h5>
                   <div className="space-y-1.5">
                     {page.relatedLocations.map((rl) => (
