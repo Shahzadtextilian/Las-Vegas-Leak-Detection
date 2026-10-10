@@ -143,6 +143,18 @@ export const BlogPage: React.FC<BlogPageProps> = ({ onNavigate, activePostSlug }
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10">
             {/* Main Article Content */}
             <div className="lg:col-span-8 space-y-8">
+              {/* Featured Image */}
+              {selectedPost.featuredImage && (
+                <div className="rounded-2xl overflow-hidden border border-slate-200 shadow-md bg-slate-100">
+                  <img
+                    src={selectedPost.featuredImage}
+                    alt={selectedPost.title}
+                    className="w-full h-64 sm:h-80 object-cover"
+                    loading="eager"
+                  />
+                </div>
+              )}
+
               {/* Introduction Box */}
               <div className="p-6 rounded-2xl bg-white border border-slate-200 shadow-xs text-base text-slate-800 leading-relaxed font-normal">
                 {selectedPost.content.introduction}
@@ -383,10 +395,28 @@ export const BlogPage: React.FC<BlogPageProps> = ({ onNavigate, activePostSlug }
                   window.scrollTo({ top: 0, behavior: 'smooth' });
                 }}
               >
+                {/* Thumbnail Image */}
+                {post.featuredImage && (
+                  <div className="relative h-48 w-full overflow-hidden bg-slate-100">
+                    <img
+                      src={post.featuredImage}
+                      alt={post.title}
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                      loading="lazy"
+                    />
+                    <div className="absolute top-3 left-3">
+                      <span className="px-2.5 py-1 rounded-md bg-white/95 backdrop-blur-xs text-amber-900 font-semibold text-xs shadow-xs border border-amber-200/60">
+                        {post.category}
+                      </span>
+                    </div>
+                  </div>
+                )}
+
                 {/* Category & Badge Bar */}
-                <div className="p-6 pb-4 flex items-center justify-between text-xs text-slate-500">
-                  <span className="px-2.5 py-1 rounded-md bg-amber-50 text-amber-900 font-semibold border border-amber-200/60">
-                    {post.category}
+                <div className="p-6 pb-3 flex items-center justify-between text-xs text-slate-500">
+                  <span className="flex items-center gap-1">
+                    <Calendar className="w-3.5 h-3.5" />
+                    {post.date}
                   </span>
                   <span className="flex items-center gap-1 font-medium">
                     <Clock className="w-3.5 h-3.5" />

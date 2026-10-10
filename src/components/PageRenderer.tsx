@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { PageContent, PHONE_NUMBER, PHONE_HREF, BRAND_NAME, BUSINESS_ADDRESS } from '../data/siteData';
 import {
   Phone,
@@ -32,6 +32,11 @@ export const PageRenderer: React.FC<PageRendererProps> = ({
   onOpenAudit,
 }) => {
   const [openFaq, setOpenFaq] = useState<number | null>(0);
+  const [imgHasError, setImgHasError] = useState<boolean>(false);
+
+  useEffect(() => {
+    setImgHasError(false);
+  }, [page.slug, page.featuredImage]);
 
   // Contact form state on contact page
   const [contactForm, setContactForm] = useState({
@@ -241,26 +246,33 @@ export const PageRenderer: React.FC<PageRendererProps> = ({
 
             {/* Right Column: Featured Image Asset */}
             <div className="lg:col-span-5 flex flex-col justify-center">
-              <div className="relative rounded-2xl overflow-hidden border border-slate-200 shadow-md bg-slate-900 group">
-                {page.featuredImage ? (
+              <div className="relative rounded-2xl overflow-hidden border border-slate-200 shadow-md bg-slate-100 group min-h-[300px]">
+                {page.featuredImage && !imgHasError ? (
                   <img
                     src={page.featuredImage}
                     alt={page.imageAlt || page.name}
                     className="w-full h-72 sm:h-96 object-cover object-center group-hover:scale-102 transition-transform duration-500"
                     referrerPolicy="no-referrer"
                     loading="eager"
+                    onError={() => setImgHasError(true)}
                   />
                 ) : (
-                  <div className="w-full h-80 bg-linear-to-br from-[#0F2942] to-slate-800 flex items-center justify-center p-8 text-center text-white">
-                    <div>
-                      <Wrench className="w-12 h-12 text-amber-400 mx-auto mb-3" />
-                      <h3 className="font-bold text-lg font-display">{page.name}</h3>
-                      <p className="text-xs text-slate-300 mt-1">24/7 Spring Valley Leak Detection & Repair</p>
+                  <div className="w-full h-72 sm:h-96 bg-gradient-to-br from-[#0F2942] via-slate-800 to-[#1E70B8] flex items-center justify-center p-8 text-center text-white">
+                    <div className="max-w-sm">
+                      <div className="w-14 h-14 rounded-2xl bg-white/10 backdrop-blur-xs flex items-center justify-center mx-auto mb-4 border border-white/20">
+                        <Wrench className="w-7 h-7 text-amber-400" />
+                      </div>
+                      <h3 className="font-bold text-xl font-display text-white mb-1.5">{page.name}</h3>
+                      <p className="text-xs text-slate-200 mb-4">Precision Non-Invasive Leak Detection & Repair</p>
+                      <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-amber-500/20 text-amber-300 text-xs font-semibold border border-amber-400/30">
+                        <ShieldCheck className="w-3.5 h-3.5 text-amber-400" />
+                        <span>Nevada NSCB Licensed</span>
+                      </div>
                     </div>
                   </div>
                 )}
 
-                <div className="absolute inset-x-0 bottom-0 bg-linear-to-t from-slate-950/90 via-slate-950/40 to-transparent p-4 text-white text-xs">
+                <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-slate-950/90 via-slate-950/50 to-transparent p-4 text-white text-xs">
                   <div className="font-medium text-slate-200">
                     {page.imageCaption || "Mobile diagnostic units carry electronic acoustic & thermal locators for same-day service."}
                   </div>
