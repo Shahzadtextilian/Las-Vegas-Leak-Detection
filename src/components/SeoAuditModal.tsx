@@ -260,15 +260,15 @@ export const SeoAuditModal: React.FC<SeoAuditModalProps> = ({
             </div>
           )}
 
-          {/* TAB 4: CLOUDFLARE PAGES READY */}
+          {/* TAB 4: VERCEL & CLOUDFLARE PAGES READY */}
           {activeTab === 'cloudflare' && (
             <div className="space-y-4 text-xs">
               <div className="p-4 bg-emerald-50 border border-emerald-200 rounded-xl text-emerald-950 space-y-1">
                 <div className="font-bold text-emerald-900 text-sm">
-                  ✓ 100% Cloudflare Pages & Static Hosting Ready
+                  ✓ 100% Vercel & Cloudflare Edge Ready
                 </div>
                 <p>
-                  Zero external server dependencies, no database required, no Node server needed at runtime. Clean first-level URLs, static HTML, CSS, robots.txt, and sitemap.xml.
+                  Zero external server dependencies, no database required, no Node server needed at runtime. Configured with <code className="font-mono bg-emerald-100 px-1 py-0.5 rounded">vercel.json</code> and <code className="font-mono bg-emerald-100 px-1 py-0.5 rounded">_redirects</code> for seamless SPA first-level URL routing, robots.txt, and sitemap.xml.
                 </p>
               </div>
 
@@ -295,8 +295,21 @@ export const SeoAuditModal: React.FC<SeoAuditModalProps> = ({
                 </ul>
               </div>
 
-              <div className="p-3 bg-slate-100 rounded-lg text-slate-700">
-                <strong>Deployment Command:</strong> Connect your repository to Cloudflare Pages, set build command to <code className="bg-white px-1.5 py-0.5 rounded font-mono">npm run build</code> and output directory to <code className="bg-white px-1.5 py-0.5 rounded font-mono">dist</code>.
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                <div className="p-3 bg-slate-100 rounded-lg text-slate-700 space-y-1">
+                  <div className="font-bold text-slate-900">▲ Vercel Deploy</div>
+                  <p>Preset: <code className="bg-white px-1 py-0.5 rounded font-mono">Vite</code></p>
+                  <p>Build: <code className="bg-white px-1 py-0.5 rounded font-mono">npm run build</code></p>
+                  <p>Output: <code className="bg-white px-1 py-0.5 rounded font-mono">dist</code></p>
+                  <p className="text-[11px] text-slate-500">Root <code className="font-mono">vercel.json</code> auto-handles rewrites.</p>
+                </div>
+                <div className="p-3 bg-slate-100 rounded-lg text-slate-700 space-y-1">
+                  <div className="font-bold text-slate-900">☁ Cloudflare Pages</div>
+                  <p>Preset: <code className="bg-white px-1 py-0.5 rounded font-mono">Vite</code></p>
+                  <p>Build: <code className="bg-white px-1 py-0.5 rounded font-mono">npm run build</code></p>
+                  <p>Output: <code className="bg-white px-1 py-0.5 rounded font-mono">dist</code></p>
+                  <p className="text-[11px] text-slate-500">Public <code className="font-mono">_redirects</code> auto-handles 200 rewrites.</p>
+                </div>
               </div>
             </div>
           )}
