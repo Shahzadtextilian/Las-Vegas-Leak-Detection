@@ -14,8 +14,6 @@ import {
   Droplets,
   Wrench,
   Sparkles,
-  Mail,
-  Send,
   BookOpen
 } from 'lucide-react';
 import { SidebarDispatchForm } from './SidebarDispatchForm';
@@ -38,35 +36,8 @@ export const PageRenderer: React.FC<PageRendererProps> = ({
     setImgHasError(false);
   }, [page.slug, page.featuredImage]);
 
-  // Contact form state on contact page
-  const [contactForm, setContactForm] = useState({
-    fullName: '',
-    phone: '',
-    email: '',
-    serviceType: 'Water Leak Detection & Repair',
-    address: '',
-    message: ''
-  });
-  const [contactSubmitted, setContactSubmitted] = useState(false);
-  const [contactErrors, setContactErrors] = useState<Record<string, string>>({});
-
   const toggleFaq = (idx: number) => {
     setOpenFaq(openFaq === idx ? null : idx);
-  };
-
-  const handleContactSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    const errs: Record<string, string> = {};
-    if (!contactForm.fullName.trim()) errs.fullName = 'Full name is required';
-    if (!contactForm.phone.trim() || contactForm.phone.length < 10) {
-      errs.phone = 'Valid 10-digit phone number is required';
-    }
-    if (Object.keys(errs).length > 0) {
-      setContactErrors(errs);
-      return;
-    }
-    setContactErrors({});
-    setContactSubmitted(true);
   };
 
   // Helper to render text with contextual in-paragraph links
@@ -342,147 +313,65 @@ export const PageRenderer: React.FC<PageRendererProps> = ({
               </section>
             ))}
 
-            {/* DEDICATED CONTACT & NAP SECTION (If contact page) */}
+            {/* DEDICATED DIRECT CONTACT & DISPATCH CHANNELS (No Form) */}
             {page.type === 'contact' && (
               <section className="bg-white rounded-2xl p-6 sm:p-8 border border-slate-200 shadow-xs space-y-6">
                 <div>
                   <div className="flex items-center gap-1.5 text-xs font-bold text-[#1E70B8] uppercase tracking-wider font-display mb-1">
-                    <Mail className="w-4 h-4" />
-                    <span>Send a Direct Message</span>
+                    <Phone className="w-4 h-4 text-amber-500" />
+                    <span>Direct Telephone Communication & 24/7 Dispatch</span>
                   </div>
                   <h3 className="text-xl sm:text-2xl font-bold text-slate-900 font-display">
-                    Schedule an Inspection or Request a Quote
+                    Immediate Phone Dispatch — No Waiting on Web Forms
                   </h3>
-                  <p className="text-xs sm:text-sm text-slate-500 mt-1">
-                    Fill out the form below and a licensed leak specialist will respond promptly. For active floods or gas odors, call <a href={PHONE_HREF} className="text-[#1E70B8] font-bold underline font-mono">{PHONE_NUMBER}</a> immediately.
+                  <p className="text-xs sm:text-sm text-slate-600 mt-1 leading-relaxed">
+                    Active water leaks, pipe bursts, and combustible gas odors require instantaneous human triage. Rather than waiting on web forms or delayed emails, call our 24/7 Spring Valley dispatch desk directly at <a href={PHONE_HREF} className="text-[#1E70B8] font-bold underline font-mono">{PHONE_NUMBER}</a> for 30–60 minute on-site technician arrival.
                   </p>
                 </div>
 
-                {contactSubmitted ? (
-                  <div className="p-6 bg-emerald-50 border border-emerald-200 rounded-2xl text-center space-y-3">
-                    <div className="w-12 h-12 bg-emerald-100 text-emerald-600 rounded-full flex items-center justify-center mx-auto">
-                      <CheckCircle className="w-7 h-7" />
+                <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-1">
+                  <div className="p-5 rounded-xl bg-slate-50 border border-slate-200 space-y-3">
+                    <div className="w-10 h-10 rounded-lg bg-[#0F2942] text-amber-400 flex items-center justify-center">
+                      <Phone className="w-5 h-5" />
                     </div>
-                    <h4 className="text-lg font-bold text-emerald-950 font-display">
-                      Message Received Successfully
-                    </h4>
-                    <p className="text-sm text-emerald-800 max-w-md mx-auto">
-                      Thank you, {contactForm.fullName}. Our team at 6875 Groveview Ln has received your inquiry for {contactForm.serviceType}. A specialist will call <strong className="font-mono">{contactForm.phone}</strong> shortly.
-                    </p>
-                    <button
-                      onClick={() => setContactSubmitted(false)}
-                      className="text-xs text-[#1E70B8] hover:underline font-bold pt-2 block mx-auto"
+                    <div>
+                      <h4 className="text-sm font-bold text-slate-900 font-display">24/7 Emergency Line</h4>
+                      <p className="text-xs text-slate-500 mt-0.5">Staffed 24/7/365 by local dispatchers</p>
+                    </div>
+                    <a
+                      href={PHONE_HREF}
+                      className="block text-center py-2.5 px-4 bg-amber-500 hover:bg-amber-400 text-slate-950 font-bold text-sm rounded-lg transition-colors font-mono cursor-pointer"
                     >
-                      Send Another Message
-                    </button>
+                      {PHONE_NUMBER}
+                    </a>
                   </div>
-                ) : (
-                  <form onSubmit={handleContactSubmit} className="space-y-4" noValidate>
-                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                      <div>
-                        <label className="block text-xs font-semibold text-slate-700 mb-1">
-                          Full Name *
-                        </label>
-                        <input
-                          type="text"
-                          placeholder="Your full name"
-                          value={contactForm.fullName}
-                          onChange={(e) => setContactForm({ ...contactForm, fullName: e.target.value })}
-                          className={`w-full px-3 py-2 text-sm rounded-xl border ${
-                            contactErrors.fullName ? 'border-red-500 bg-red-50/30' : 'border-slate-300'
-                          } focus:outline-none focus:border-[#1E70B8]`}
-                        />
-                        {contactErrors.fullName && (
-                          <span className="text-[11px] text-red-600 mt-0.5 block">{contactErrors.fullName}</span>
-                        )}
-                      </div>
 
-                      <div>
-                        <label className="block text-xs font-semibold text-slate-700 mb-1">
-                          Phone Number *
-                        </label>
-                        <input
-                          type="tel"
-                          placeholder="(702) 555-0199"
-                          value={contactForm.phone}
-                          onChange={(e) => setContactForm({ ...contactForm, phone: e.target.value })}
-                          className={`w-full px-3 py-2 text-sm font-mono rounded-xl border ${
-                            contactErrors.phone ? 'border-red-500 bg-red-50/30' : 'border-slate-300'
-                          } focus:outline-none focus:border-[#1E70B8]`}
-                        />
-                        {contactErrors.phone && (
-                          <span className="text-[11px] text-red-600 mt-0.5 block">{contactErrors.phone}</span>
-                        )}
-                      </div>
+                  <div className="p-5 rounded-xl bg-slate-50 border border-slate-200 space-y-3">
+                    <div className="w-10 h-10 rounded-lg bg-[#1E70B8] text-white flex items-center justify-center">
+                      <MapPin className="w-5 h-5" />
                     </div>
-
-                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                      <div>
-                        <label className="block text-xs font-semibold text-slate-700 mb-1">
-                          Email Address (Optional)
-                        </label>
-                        <input
-                          type="email"
-                          placeholder="name@example.com"
-                          value={contactForm.email}
-                          onChange={(e) => setContactForm({ ...contactForm, email: e.target.value })}
-                          className="w-full px-3 py-2 text-sm rounded-xl border border-slate-300 focus:outline-none focus:border-[#1E70B8]"
-                        />
-                      </div>
-
-                      <div>
-                        <label className="block text-xs font-semibold text-slate-700 mb-1">
-                          Leak Service Needed
-                        </label>
-                        <select
-                          value={contactForm.serviceType}
-                          onChange={(e) => setContactForm({ ...contactForm, serviceType: e.target.value })}
-                          className="w-full px-3 py-2 text-sm rounded-xl border border-slate-300 focus:outline-none focus:border-[#1E70B8] bg-white"
-                        >
-                          <option value="Water Leak Detection & Repair">Water Leak Detection & Repair</option>
-                          <option value="Slab Leak Detection & Repair">Slab Leak Detection & Repair</option>
-                          <option value="Swimming Pool Leak Detection">Swimming Pool Leak Detection</option>
-                          <option value="Gas Leak Detection & Emergency Repair">Gas Leak Detection & Emergency Repair</option>
-                          <option value="Underground Main Yard Leak">Underground Main Yard Leak</option>
-                        </select>
-                      </div>
-                    </div>
-
                     <div>
-                      <label className="block text-xs font-semibold text-slate-700 mb-1">
-                        Service Address or Neighborhood in Clark County
-                      </label>
-                      <input
-                        type="text"
-                        placeholder="e.g. 6875 Groveview Ln, Las Vegas, NV 89103 or Spring Valley / Spanish Trail"
-                        value={contactForm.address}
-                        onChange={(e) => setContactForm({ ...contactForm, address: e.target.value })}
-                        className="w-full px-3 py-2 text-sm rounded-xl border border-slate-300 focus:outline-none focus:border-[#1E70B8]"
-                      />
+                      <h4 className="text-sm font-bold text-slate-900 font-display">Physical Location</h4>
+                      <p className="text-xs text-slate-500 mt-0.5">Spring Valley dispatch office</p>
                     </div>
+                    <div className="text-xs font-semibold text-slate-800 leading-snug">
+                      6875 Groveview Ln<br />Las Vegas, NV 89103
+                    </div>
+                  </div>
 
+                  <div className="p-5 rounded-xl bg-slate-50 border border-slate-200 space-y-3">
+                    <div className="w-10 h-10 rounded-lg bg-emerald-600 text-white flex items-center justify-center">
+                      <Clock className="w-5 h-5" />
+                    </div>
                     <div>
-                      <label className="block text-xs font-semibold text-slate-700 mb-1">
-                        Describe Symptoms (e.g., warm floor, high water bill, rotten egg odor, pool dropping)
-                      </label>
-                      <textarea
-                        rows={3}
-                        placeholder="Tell us what you are noticing..."
-                        value={contactForm.message}
-                        onChange={(e) => setContactForm({ ...contactForm, message: e.target.value })}
-                        className="w-full px-3 py-2 text-sm rounded-xl border border-slate-300 focus:outline-none focus:border-[#1E70B8]"
-                      />
+                      <h4 className="text-sm font-bold text-slate-900 font-display">Rapid Dispatch</h4>
+                      <p className="text-xs text-slate-500 mt-0.5">Spring Valley & Clark County</p>
                     </div>
-
-                    <button
-                      type="submit"
-                      className="px-6 py-3 bg-[#0F2942] hover:bg-[#1E70B8] text-white font-bold text-sm rounded-xl flex items-center justify-center gap-2 transition-colors cursor-pointer"
-                    >
-                      <Send className="w-4 h-4 text-amber-400" />
-                      <span>Send Direct Message</span>
-                    </button>
-                  </form>
-                )}
+                    <div className="text-xs font-semibold text-emerald-700">
+                      Mobile Diagnostic Trucks On Standby
+                    </div>
+                  </div>
+                </div>
               </section>
             )}
 
