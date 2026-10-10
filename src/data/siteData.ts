@@ -87,7 +87,7 @@ export const sitePages: Record<string, PageContent> = {
     heroKicker: "Non-Invasive Diagnostic Testing • 24/7 Rapid Repair Dispatch",
     heroSubheadline: "Hidden water leaks, dangerous gas odors, sub-slab foundation ruptures, and vanishing pool water threaten property integrity and safety. Our local dispatch desk at 6875 Groveview Ln connects you with certified, licensed leak detection specialists across Spring Valley.",
     directAnswer: "If you suspect a leak in Spring Valley—whether an unexplained surge on your Las Vegas Valley Water District bill, a rotten egg gas odor, warm flooring indicating a slab leak, or abnormal swimming pool water drop—specialized non-invasive electronic diagnostics pinpoint the rupture without destructive property demolition. Call (725) 313-0108 for immediate local dispatch.",
-    featuredImage: "/src/assets/images/pool_leak_detection_1791567711591.jpg",
+    featuredImage: "/src/assets/images/pool_leak_detection_1791567711591.webp",
     imageAlt: "Technician conducting specialized pool and water leak detection in Spring Valley Nevada",
     imageCaption: "Specialized electronic hydrophone and acoustic sensors pinpoint water, gas, slab, and swimming pool leaks.",
     sections: [
@@ -202,7 +202,7 @@ export const sitePages: Record<string, PageContent> = {
     heroKicker: "Stop Structural Water Damage • Pinpoint Acoustic Diagnostics",
     heroSubheadline: "Pressurized potable water leaks hidden inside walls, ceilings, and underground yard lines cause thousands of dollars in structural damage and water bill spikes. Connect with local leak specialists in Spring Valley.",
     directAnswer: "Water leak detection employs ultrasonic listening devices, thermal imaging, and digital line pressure testing to identify the exact location of leaking pipes without unnecessary drywall removal or concrete tearing. Dispatched Spring Valley technicians locate the breach and perform immediate copper, PEX, or main line pipe repairs.",
-    featuredImage: "/src/assets/images/hero_emergency_plumbing_1791566119640.jpg",
+    featuredImage: "/src/assets/images/hero_emergency_plumbing_1791566119640.webp",
     imageAlt: "Service van and technician performing water leak diagnostics in Spring Valley",
     imageCaption: "Mobile leak detection units carry sensitive acoustic locators and digital line-pressurizing equipment.",
     sections: [
@@ -291,7 +291,7 @@ export const sitePages: Record<string, PageContent> = {
     heroKicker: "Hazardous Gas Containment • 24/7 Immediate Dispatch",
     heroSubheadline: "Natural gas leaks pose severe fire, explosion, and asphyxiation risks. When you smell sulfur or suspect a gas line breach, our Spring Valley dispatch line connects you instantly with certified gas piping contractors.",
     directAnswer: "Gas leak detection utilizes specialized combustible gas sensors (gas sniffers) sensitive to parts-per-million concentrations, ultrasonic detectors, and calibrated digital manometers to locate natural gas or propane leaks along supply lines, valves, and heating appliances. Dispatched Spring Valley technicians isolate the leak, make code-compliant repairs, and coordinate re-pressurization testing.",
-    featuredImage: "/src/assets/images/gas_leak_detection_1791567732913.jpg",
+    featuredImage: "/src/assets/images/gas_leak_detection_1791567732913.webp",
     imageAlt: "Plumbing technician using electronic gas leak detector on natural gas supply line",
     imageCaption: "Digital combustible gas sniffing wands locate leaks along gas valves, fittings, and appliance connections.",
     sections: [
@@ -380,7 +380,7 @@ export const sitePages: Record<string, PageContent> = {
     heroKicker: "Protect Your Concrete Foundation • Pinpoint Acoustic Sensors",
     heroSubheadline: "Sub-slab copper pipe ruptures undermine concrete foundations and cause catastrophic flooring damage. Connect with experienced Spring Valley slab leak technicians who locate leaks without breaking concrete.",
     directAnswer: "A slab leak occurs when pressurized copper water lines running beneath or embedded inside a home's concrete foundation slab rupture due to friction against caliche rock, corrosion, or ground shifting. Dispatched Spring Valley technicians utilize acoustic ground listening discs, line tracing transmitters, and thermal imaging to pinpoint sub-slab leaks to within inches before recommending precision spot repair or an overhead PEX re-route.",
-    featuredImage: "/src/assets/images/slab_leak_inspection_1791566136409.jpg",
+    featuredImage: "/src/assets/images/slab_leak_inspection_1791566136409.webp",
     imageAlt: "Technician operating acoustic slab leak detector on residential flooring in Spring Valley",
     imageCaption: "Non-invasive electronic acoustic sensors detect pressurized water leaks beneath concrete slabs.",
     sections: [
@@ -476,7 +476,7 @@ export const sitePages: Record<string, PageContent> = {
     heroKicker: "Stop Vanishing Pool Water • Hydrophone Acoustic Diagnostics",
     heroSubheadline: "In the Southern Nevada desert, a swimming pool leak wastes hundreds of gallons of water per day and erodes the soil supporting your pool deck. Dispatched specialists locate structural, skimmer, and underground pipe leaks accurately.",
     directAnswer: "Swimming pool leak detection combines underwater hydrophone acoustic listening, precision dye testing at skimmers and light niches, and pneumatic line-pressure testing on return, suction, and main drain pipes to pinpoint water loss. Dispatched Spring Valley pool leak technicians diagnose whether the leak is in the structure or underground plumbing without draining your pool.",
-    featuredImage: "/src/assets/images/pool_leak_detection_1791567711591.jpg",
+    featuredImage: "/src/assets/images/pool_leak_detection_1791567711591.webp",
     imageAlt: "Pool leak detection specialist using dye syringe and underwater acoustic hydrophone",
     imageCaption: "Underwater hydrophone microphones and precision dye testing locate leaks in pool shells, lights, and underground pipes.",
     sections: [
@@ -566,7 +566,7 @@ export const sitePages: Record<string, PageContent> = {
     heroKicker: "Locate Buried Pipe Leaks • Zero Unnecessary Digging",
     heroSubheadline: "Water leaks in buried main supply lines and desert landscape irrigation systems waste thousands of gallons of water underground before breaking the surface. Connect with specialized underground line locators.",
     directAnswer: "Underground leak detection uses electromagnetic pipe locators, acoustic ground microphones, and non-toxic tracer gas to find leaks in buried main water service lines, commercial irrigation mains, and residential landscape lines without trenching your entire property. Dispatched Spring Valley technicians pinpoint the subterranean rupture for surgical excavation and repair.",
-    featuredImage: "/src/assets/images/hero_emergency_plumbing_1791566119640.jpg",
+    featuredImage: "/src/assets/images/hero_emergency_plumbing_1791566119640.webp",
     imageAlt: "Technician tracing underground pipe lines in residential Spring Valley neighborhood",
     imageCaption: "Electromagnetic line locators and acoustic ground sensors identify buried water line breaks.",
     sections: [
@@ -642,7 +642,7 @@ export const sitePages: Record<string, PageContent> = {
     heroKicker: "Active Leaks • 24/7 Rapid Response Across Clark County",
     heroSubheadline: "Active water floods and hazardous gas leaks require instant emergency containment. When an urgent leak threatens your property, our dispatch line connects you with on-call licensed contractors in minutes.",
     directAnswer: "Emergency leak repair delivers rapid-response containment and permanent restoration for active, catastrophic water and gas ruptures. Calling our Spring Valley emergency dispatch desk at (725) 313-0108 immediately routes your situation to on-call mobile contractors equipped with diagnostic locators and replacement components for fast containment.",
-    featuredImage: "/src/assets/images/hero_emergency_plumbing_1791566119640.jpg",
+    featuredImage: "/src/assets/images/hero_emergency_plumbing_1791566119640.webp",
     imageAlt: "Emergency leak repair mobile dispatch van in Spring Valley Nevada",
     imageCaption: "Mobile service units carry pipe clamps, crimp fittings, and emergency valves for instant on-site containment.",
     sections: [
@@ -710,7 +710,7 @@ export const sitePages: Record<string, PageContent> = {
     heroKicker: "Serving 89103, 89147, Rainbow Blvd & Flamingo Rd",
     heroSubheadline: "From established residential subdivisions to busy commercial corridors along Rainbow and Sahara, dispatched technicians provide non-invasive water, gas, slab, and swimming pool leak diagnostics across central Spring Valley.",
     directAnswer: "If you need leak detection in central Spring Valley, our dispatch desk at 6875 Groveview Ln connects you with local technicians experienced with local residential slab foundations, older copper piping, commercial strip malls, and backyard swimming pools. Call (725) 313-0108 for fast dispatch.",
-    featuredImage: "/src/assets/images/pool_leak_detection_1791567711591.jpg",
+    featuredImage: "/src/assets/images/pool_leak_detection_1791567711591.webp",
     imageAlt: "Technician performing leak detection in Spring Valley neighborhood",
     imageCaption: "Rapid service response across Rainbow Blvd, Flamingo Rd, and surrounding Spring Valley neighborhoods.",
     sections: [
@@ -768,7 +768,7 @@ export const sitePages: Record<string, PageContent> = {
     heroKicker: "Serving The Lakes, Peccole Ranch & West Sahara (89117)",
     heroSubheadline: "Waterfront homes around Lake Sahara and lush neighborhoods in Peccole Ranch feature high pool concentrations and unique moisture considerations. Dispatched specialists deliver non-invasive leak diagnostics.",
     directAnswer: "If you need leak detection in The Lakes or Peccole Ranch, our dispatch network connects you directly with local technicians who specialize in swimming pool plumbing, sub-slab foundation leaks, and underground irrigation systems across the 89117 zip code.",
-    featuredImage: "/src/assets/images/pool_leak_detection_1791567711591.jpg",
+    featuredImage: "/src/assets/images/pool_leak_detection_1791567711591.webp",
     imageAlt: "Pool leak detection testing at home in The Lakes neighborhood",
     imageCaption: "Acoustic hydrophone testing for swimming pool plumbing in The Lakes community.",
     sections: [
@@ -826,7 +826,7 @@ export const sitePages: Record<string, PageContent> = {
     heroKicker: "Discreet White-Glove Service • Guard-Gated Estate Dispatch",
     heroSubheadline: "Spanish Trail's custom luxury estates, championship golf course homes, and architectural infinity pools require skilled, discreet technicians equipped for complex multi-line plumbing systems.",
     directAnswer: "If you need leak detection in Spanish Trail, our dispatch network connects you directly with top-tier plumbing and leak detection contractors experienced with high-end estate plumbing, custom swimming pool hydraulics, large concrete slabs, and outdoor gas fire features. Call (725) 313-0108.",
-    featuredImage: "/src/assets/images/pool_leak_detection_1791567711591.jpg",
+    featuredImage: "/src/assets/images/pool_leak_detection_1791567711591.webp",
     imageAlt: "Technician servicing luxury estate pool in Spanish Trail Las Vegas",
     imageCaption: "Specialized diagnostics for custom estate pools and expansive post-tension slab foundations.",
     sections: [
@@ -884,7 +884,7 @@ export const sitePages: Record<string, PageContent> = {
     heroKicker: "Serving 89135, 89148, The Ridges & Desert Foothills",
     heroSubheadline: "Bordering the scenic Spring Mountains, Summerlin South features premier residential neighborhoods, modern custom pools, and rocky caliche soil. Dispatched specialists solve complex leak challenges quickly.",
     directAnswer: "If you need leak detection in Summerlin South, our dispatch network connects you directly with local technicians equipped for modern residential plumbing, post-tension slabs, swimming pool return lines, and domestic gas systems. Call (725) 313-0108.",
-    featuredImage: "/src/assets/images/pool_leak_detection_1791567711591.jpg",
+    featuredImage: "/src/assets/images/pool_leak_detection_1791567711591.webp",
     imageAlt: "Technician inspecting pool and water lines in Summerlin South Nevada",
     imageCaption: "Fast leak detection response across Summerlin South and West Las Vegas Valley.",
     sections: [
@@ -942,7 +942,7 @@ export const sitePages: Record<string, PageContent> = {
     heroKicker: "Serving Rhodes Ranch, Nevada Trails & 89148",
     heroSubheadline: "Guard-gated golf course homes and family neighborhoods in Rhodes Ranch feature extensive swimming pools and post-tension slabs. Dispatched technicians provide non-invasive leak diagnostics.",
     directAnswer: "If you need leak detection in Rhodes Ranch or Southwest Las Vegas, our dispatch line connects you with local contractors equipped for swimming pool pressure testing, sub-slab acoustic testing, gas appliance inspections, and domestic water line repairs. Call (725) 313-0108.",
-    featuredImage: "/src/assets/images/pool_leak_detection_1791567711591.jpg",
+    featuredImage: "/src/assets/images/pool_leak_detection_1791567711591.webp",
     imageAlt: "Technician testing pool and slab plumbing in Rhodes Ranch home",
     imageCaption: "Non-invasive leak detection for golf course residences and swimming pools in Rhodes Ranch.",
     sections: [
@@ -1001,7 +1001,7 @@ export const sitePages: Record<string, PageContent> = {
     heroKicker: "5-Step Non-Invasive Diagnostic & Permanent Repair Process",
     heroSubheadline: "From emergency phone intake to state-of-the-art acoustic and thermal localization, here is how our licensed technicians protect your home without destructive guesswork.",
     directAnswer: "Our leak detection process combines five systematic stages: 24/7 rapid initial assessment, non-invasive electronic diagnostics (acoustic ground microphones, thermal imaging, combustible gas sniffers, and pool hydrophones), pinpoint location verification to within inches, transparent written itemized estimates, and permanent code-compliant repairs with pressure verification. Call (725) 313-0108.",
-    featuredImage: "/src/assets/images/pool_leak_detection_1791567711591.jpg",
+    featuredImage: "/src/assets/images/pool_leak_detection_1791567711591.webp",
     imageAlt: "Spring Valley Leak Detection step by step diagnostic process",
     imageCaption: "Advanced electronic sensors locate subterranean pipe ruptures before any invasive opening begins.",
     sections: [
@@ -1111,7 +1111,7 @@ export const sitePages: Record<string, PageContent> = {
     heroKicker: "Precision Non-Invasive Diagnostics • 6875 Groveview Ln, Las Vegas, NV",
     heroSubheadline: "Providing 24/7 emergency water, gas, slab, and swimming pool leak detection and repair across Spring Valley and Clark County.",
     directAnswer: "Spring Valley Leak Detection & Repair provides dedicated 24/7 non-invasive leak diagnostics for residential and commercial properties in Spring Valley and Clark County, NV. Operating from 6875 Groveview Ln, our technicians utilize electronic listening discs, thermal imaging cameras, and pool hydrophones to pinpoint leaks quickly and execute durable repairs with upfront, transparent pricing. Call (725) 313-0108.",
-    featuredImage: "/src/assets/images/pool_leak_detection_1791567711591.jpg",
+    featuredImage: "/src/assets/images/pool_leak_detection_1791567711591.webp",
     imageAlt: "Spring Valley Leak Detection technical team and diagnostics equipment",
     imageCaption: "Equipped with advanced acoustic and thermal diagnostic tools, our team serves Spring Valley 24/7.",
     sections: [
@@ -1187,7 +1187,7 @@ export const sitePages: Record<string, PageContent> = {
     heroKicker: "24/7 Emergency Line: (725) 313-0108 • 6875 Groveview Ln, Las Vegas, NV",
     heroSubheadline: "Have an active water leak, natural gas odor, sub-slab rupture, or leaking pool in Spring Valley? Contact our local specialists immediately for fast, non-invasive service.",
     directAnswer: "For urgent water, gas, slab, and swimming pool leaks, phone contact provides the fastest response. Call (725) 313-0108 to speak directly with our 24/7 emergency team at 6875 Groveview Ln, Las Vegas, NV 89103 for rapid dispatch across Spring Valley, The Lakes, Spanish Trail, Summerlin South, and Rhodes Ranch.",
-    featuredImage: "/src/assets/images/pool_leak_detection_1791567711591.jpg",
+    featuredImage: "/src/assets/images/pool_leak_detection_1791567711591.webp",
     imageAlt: "Contact Spring Valley leak detection and repair office",
     imageCaption: "Live 24/7 emergency telephone support and service coordination at 6875 Groveview Ln.",
     sections: [

@@ -188,7 +188,7 @@ export const SeoAuditModal: React.FC<SeoAuditModalProps> = ({
                     Validated JSON-LD Schema Graph
                   </h4>
                   <p className="text-xs text-slate-500">
-                    Includes BreadcrumbList, Organization (Referral attribution), Service / LocalBusiness, and FAQPage schemas.
+                    Includes BreadcrumbList, Organization, LocalBusiness, and FAQPage schemas.
                   </p>
                 </div>
                 <button
@@ -289,9 +289,10 @@ export const SeoAuditModal: React.FC<SeoAuditModalProps> = ({
                   <li>/spanish-trail/ (Spanish Trail Estates)</li>
                   <li>/summerlin-south/ (Summerlin South 89135)</li>
                   <li>/rhodes-ranch/ (Rhodes Ranch & SW Vegas)</li>
-                  <li>/about/ (Referral Model & NSCB Standards)</li>
-                  <li>/contact/ (Dispatch Desk & 6875 Groveview Ln)</li>
-                  <li>/privacy-policy/ (Privacy Policy & TCPA Disclosures)</li>
+                  <li>/how-it-works/ (How Leak Detection & Repair Works)</li>
+                  <li>/contact/ (Contact & NAP at 6875 Groveview Ln)</li>
+                  <li>/blog/ (Knowledge Base & Leak Prevention Guides)</li>
+                  <li>/privacy-policy/ (Privacy Policy & Terms)</li>
                 </ul>
               </div>
 

@@ -32,7 +32,7 @@ export const BLOG_POSTS: BlogPost[] = [
     excerpt: 'Detecting underground copper pipe ruptures beneath concrete foundations before extensive structural damage and mold occur.',
     author: 'Spring Valley Diagnostic Team',
     authorRole: 'Master Leak Specialists',
-    featuredImage: '/src/assets/images/pool_leak_detection_1791567711591.jpg',
+    featuredImage: '/src/assets/images/slab_leak_inspection_1791566136409.webp',
     tags: ['Slab Leak', 'Foundation', 'Las Vegas Plumbing', 'Caliche Soil'],
     content: {
       introduction: 'In Spring Valley and the Las Vegas Valley, most single-family residences are built directly on concrete slab-on-grade foundations. Pressurized hot and cold potable copper water lines are routed beneath the concrete slab before emerging at fixtures. When these lines develop leaks, the symptoms can remain hidden for weeks until severe damage occurs.',
@@ -90,7 +90,7 @@ export const BLOG_POSTS: BlogPost[] = [
     excerpt: 'Learn the definitive DIY calibration test to distinguish normal desert evaporation from underground pool plumbing ruptures.',
     author: 'Spring Valley Diagnostic Team',
     authorRole: 'Pool Hydraulics Specialist',
-    featuredImage: '/src/assets/images/pool_leak_detection_1791567711591.jpg',
+    featuredImage: '/src/assets/images/pool_leak_detection_1791567711591.webp',
     tags: ['Pool Leak Detection', 'Bucket Test', 'Evaporation', 'Spring Valley Pools'],
     content: {
       introduction: 'During Southern Nevada summers, intense dry desert winds and ambient temperatures exceeding 105°F cause rapid swimming pool evaporation. Homeowners often wonder: is my pool water drop normal evaporation, or do I have a crack in my pool plumbing or shell? The simple 24-Hour Bucket Test provides the answer.',
@@ -138,7 +138,7 @@ export const BLOG_POSTS: BlogPost[] = [
     excerpt: 'Critical life-safety steps to take immediately when natural gas or propane odors are detected in your Spring Valley residence.',
     author: 'Spring Valley Diagnostic Team',
     authorRole: 'Certified Gas Piping Inspector',
-    featuredImage: '/src/assets/images/pool_leak_detection_1791567711591.jpg',
+    featuredImage: '/src/assets/images/gas_leak_detection_1791567732913.webp',
     tags: ['Gas Leak', 'Home Safety', 'Southwest Gas', 'Emergency Protocol'],
     content: {
       introduction: 'Natural gas is naturally colorless and odorless. For safety, utility suppliers infuse mercaptan—a harmless chemical additive that produces a distinct, pungent sulfur or rotten-egg odor—so leaks can be detected quickly before dangerous gas accumulation creates an explosion hazard.',
@@ -184,7 +184,7 @@ export const BLOG_POSTS: BlogPost[] = [
     excerpt: 'Understanding the unique geology of Spring Valley and how dense caliche layers cause subterranean plumbing failures.',
     author: 'Spring Valley Diagnostic Team',
     authorRole: 'Geological Plumbing Consultant',
-    featuredImage: '/src/assets/images/pool_leak_detection_1791567711591.jpg',
+    featuredImage: '/src/assets/images/drain_hydro_jetting_1791566153107.webp',
     tags: ['Caliche Soil', 'Clark County', 'Hard Water', 'Pipe Corrosion'],
     content: {
       introduction: 'Homeowners in Spring Valley and the Las Vegas Valley experience pipe leaks at rates noticeably higher than national averages. The primary culprit is not defective plumbing—it is the brutal combination of dense subterranean caliche rock, alkaline desert soils, and high mineral content in Lake Mead tap water.',
@@ -229,7 +229,7 @@ export const BLOG_POSTS: BlogPost[] = [
     excerpt: 'Use your front yard water meter box to test your entire home plumbing system for hidden leaks in under 15 minutes.',
     author: 'Spring Valley Diagnostic Team',
     authorRole: 'Water Conservation Specialist',
-    featuredImage: '/src/assets/images/pool_leak_detection_1791567711591.jpg',
+    featuredImage: '/src/assets/images/hero_emergency_plumbing_1791566119640.webp',
     tags: ['Water Meter', 'LVVWD', 'Leak Prevention', 'Water Conservation'],
     content: {
       introduction: 'Your municipal water meter is an incredibly precise diagnostic tool. Because every drop of pressurized water entering your property passes through this meter, you can verify whether water is silently leaking anywhere inside your walls, under your slab, or across your yard in just a few minutes.',
