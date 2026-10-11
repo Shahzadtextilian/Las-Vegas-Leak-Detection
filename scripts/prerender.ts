@@ -94,6 +94,18 @@ function buildPreRenderedBody(page: PageContent, blogPost: BlogPost | null): str
               <h3 class="text-lg font-bold mb-2">Summary</h3>
               <p class="text-sm text-slate-300">${blogPost.content.conclusion}</p>
             </div>
+
+            <div class="mt-10 pt-6 border-t border-slate-200">
+              <h3 class="text-xl font-bold text-slate-900 mb-4">Related Diagnostic & Prevention Guides</h3>
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm">
+                ${BLOG_POSTS.filter(p => p.id !== blogPost.id).map(other => `
+                  <a href="/blog/${other.slug}/" class="p-3 rounded-xl border border-slate-200 hover:border-[#1E70B8] block">
+                    <span class="text-xs font-bold text-amber-700 block mb-1">${other.category}</span>
+                    <span class="font-bold text-slate-900 block">${other.title}</span>
+                  </a>
+                `).join('')}
+              </div>
+            </div>
           </div>
         ` : `
           <div class="space-y-8 text-slate-700 leading-relaxed">
@@ -109,6 +121,21 @@ function buildPreRenderedBody(page: PageContent, blogPost: BlogPost | null): str
                 ` : ''}
               </section>
             `).join('')}
+
+            ${page.slug === '' ? `
+              <section class="mt-12 pt-8 border-t border-slate-200">
+                <h2 class="text-2xl font-bold text-slate-900 mb-4">Featured Diagnostic Guides & Technical Articles</h2>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  ${BLOG_POSTS.map(b => `
+                    <a href="/blog/${b.slug}/" class="p-4 rounded-xl border border-slate-200 hover:border-[#1E70B8] block">
+                      <span class="text-xs font-bold text-amber-700 block mb-1">${b.category} • ${b.readTime}</span>
+                      <span class="text-sm font-bold text-slate-900 block mb-1">${b.title}</span>
+                      <span class="text-xs text-slate-600 block">${b.excerpt}</span>
+                    </a>
+                  `).join('')}
+                </div>
+              </section>
+            ` : ''}
 
             ${page.faqs && page.faqs.length > 0 ? `
               <section class="mt-12 pt-8 border-t border-slate-200">
@@ -182,6 +209,16 @@ function buildPreRenderedBody(page: PageContent, blogPost: BlogPost | null): str
             <li><a href="/sitemap.xml" class="hover:text-white">XML Sitemap</a></li>
             <li><a href="/llms.txt" class="hover:text-white">LLMs.txt</a></li>
           </ul>
+        </div>
+        <div class="md:col-span-4 mt-6 pt-6 border-t border-slate-700/60">
+          <h4 class="font-bold text-amber-400 mb-3 uppercase tracking-wider text-[11px]">Technical Leak Diagnostics & Knowledge Base</h4>
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-3">
+            <a href="/blog/signs-of-slab-leak-in-las-vegas-homes/" class="hover:text-amber-300 block">5 Warning Signs of a Slab Leak</a>
+            <a href="/blog/how-swimming-pool-bucket-test-works/" class="hover:text-amber-300 block">Pool 24-Hr Bucket Test Guide</a>
+            <a href="/blog/what-to-do-when-you-smell-gas/" class="hover:text-amber-300 block">Smell Gas Emergency Safety</a>
+            <a href="/blog/desert-caliche-soil-pipe-damage/" class="hover:text-amber-300 block">Caliche Soil & Pipe Damage</a>
+            <a href="/blog/how-to-read-water-meter-for-hidden-leaks/" class="hover:text-amber-300 block">Read Water Meter for Leaks</a>
+          </div>
         </div>
       </div>
     </footer>

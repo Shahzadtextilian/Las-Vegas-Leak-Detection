@@ -242,6 +242,45 @@ export const BlogPage: React.FC<BlogPageProps> = ({ onNavigate, activePostSlug }
                   </span>
                 ))}
               </div>
+
+              {/* Reciprocal Internal Cross-Links (Prevents Orphan Pages) */}
+              <div className="mt-12 pt-8 border-t border-slate-200">
+                <h3 className="text-xl font-bold text-slate-900 mb-2 font-display">
+                  Explore More Diagnostic & Prevention Guides
+                </h3>
+                <p className="text-xs text-slate-500 mb-6">
+                  Recommended reading from our master leak detection specialists in Spring Valley, NV:
+                </p>
+
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  {BLOG_POSTS.filter((p) => p.id !== selectedPost.id).slice(0, 4).map((other) => (
+                    <a
+                      key={other.id}
+                      href={`/blog/${other.slug}/`}
+                      onClick={(e) => {
+                        e.preventDefault();
+                        setSelectedPost(other);
+                        onNavigate(`blog/${other.slug}`);
+                        window.scrollTo({ top: 0, behavior: 'smooth' });
+                      }}
+                      className="p-4 rounded-xl border border-slate-200 hover:border-[#1E70B8] hover:bg-white transition-all group block no-underline bg-slate-50/60"
+                    >
+                      <div className="text-[10px] font-bold text-amber-700 uppercase tracking-wider mb-1">
+                        {other.category}
+                      </div>
+                      <div className="text-sm font-bold text-slate-900 group-hover:text-[#1E70B8] transition-colors leading-snug line-clamp-2">
+                        {other.title}
+                      </div>
+                      <div className="text-xs text-slate-500 mt-2 flex items-center justify-between">
+                        <span>{other.readTime}</span>
+                        <span className="text-[#1E70B8] font-semibold flex items-center gap-1">
+                          Read Guide <ArrowRight className="w-3 h-3" />
+                        </span>
+                      </div>
+                    </a>
+                  ))}
+                </div>
+              </div>
             </div>
 
             {/* Sidebar */}
@@ -267,29 +306,32 @@ export const BlogPage: React.FC<BlogPageProps> = ({ onNavigate, activePostSlug }
                 </a>
               </div>
 
-              {/* Other Articles */}
+              {/* Other Articles (Sidebar Inlinks) */}
               <div className="bg-white rounded-2xl p-6 border border-slate-200 shadow-xs space-y-4">
                 <h4 className="text-xs font-bold uppercase tracking-wider text-slate-700 font-display">
                   Related Leak Guides
                 </h4>
                 <div className="space-y-3">
                   {BLOG_POSTS.filter((p) => p.id !== selectedPost.id).map((other) => (
-                    <button
+                    <a
                       key={other.id}
-                      onClick={() => {
+                      href={`/blog/${other.slug}/`}
+                      onClick={(e) => {
+                        e.preventDefault();
                         setSelectedPost(other);
+                        onNavigate(`blog/${other.slug}`);
                         window.scrollTo({ top: 0, behavior: 'smooth' });
                       }}
-                      className="w-full text-left p-3 rounded-xl border border-slate-100 hover:border-[#1E70B8] hover:bg-slate-50 transition-colors group block"
+                      className="w-full text-left p-3 rounded-xl border border-slate-100 hover:border-[#1E70B8] hover:bg-slate-50 transition-colors group block no-underline"
                     >
                       <div className="text-xs font-bold text-slate-900 group-hover:text-[#1E70B8] line-clamp-2">
                         {other.title}
                       </div>
                       <div className="text-[11px] text-slate-400 mt-1 flex items-center justify-between">
-                        <span>{other.category}</span>
+                        <span className="text-amber-700 font-semibold">{other.category}</span>
                         <span>{other.readTime}</span>
                       </div>
-                    </button>
+                    </a>
                   ))}
                 </div>
               </div>

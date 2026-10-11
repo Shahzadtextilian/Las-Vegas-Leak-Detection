@@ -1,6 +1,7 @@
 import React from 'react';
 import { PHONE_NUMBER, PHONE_HREF, BRAND_NAME, BUSINESS_ADDRESS } from '../data/siteData';
-import { Phone, ShieldCheck, MapPin, Clock } from 'lucide-react';
+import { BLOG_POSTS } from '../data/blogData';
+import { Phone, ShieldCheck, MapPin, Clock, BookOpen, ArrowRight } from 'lucide-react';
 
 interface FooterProps {
   onNavigate: (slug: string) => void;
@@ -248,6 +249,62 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
             </div>
           </div>
 
+        </div>
+
+        {/* Featured Technical Leak Guides & Diagnostic Articles (Incoming Internal Links) */}
+        <div className="py-8 border-b border-slate-800">
+          <div className="flex flex-col md:flex-row md:items-center justify-between gap-3 mb-5">
+            <div>
+              <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-amber-400 font-display">
+                <BookOpen className="w-3.5 h-3.5 text-amber-400" />
+                <span>Expert Diagnostic Guides & Technical Articles</span>
+              </div>
+              <p className="text-xs text-slate-400 mt-1">
+                Detailed DIY diagnostic procedures, Southern Nevada water district meter checks, and caliche soil damage prevention.
+              </p>
+            </div>
+            <a
+              href="/blog/"
+              onClick={(e) => {
+                e.preventDefault();
+                onNavigate('blog');
+              }}
+              className="text-xs font-bold text-[#38BDF8] hover:text-white flex items-center gap-1 shrink-0 transition-colors"
+            >
+              <span>Explore All Leak Guides</span>
+              <ArrowRight className="w-3.5 h-3.5" />
+            </a>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-3.5">
+            {BLOG_POSTS.map((post) => (
+              <a
+                key={post.id}
+                href={`/blog/${post.slug}/`}
+                onClick={(e) => {
+                  e.preventDefault();
+                  onNavigate(`blog/${post.slug}`);
+                  window.scrollTo({ top: 0, behavior: 'smooth' });
+                }}
+                className="p-3.5 rounded-xl bg-slate-900/80 border border-slate-800 hover:border-[#1E70B8] hover:bg-slate-800/80 transition-all group flex flex-col justify-between block no-underline text-inherit"
+              >
+                <div>
+                  <span className="text-[10px] font-bold text-amber-400 uppercase tracking-wider block mb-1">
+                    {post.category}
+                  </span>
+                  <span className="text-xs font-semibold text-slate-200 group-hover:text-white line-clamp-2 leading-snug block">
+                    {post.title}
+                  </span>
+                </div>
+                <div className="text-[11px] text-slate-400 mt-2.5 flex items-center justify-between pt-2 border-t border-slate-800/60">
+                  <span>{post.readTime}</span>
+                  <span className="text-[#38BDF8] font-bold group-hover:translate-x-0.5 transition-transform flex items-center gap-0.5">
+                    Read <ArrowRight className="w-3 h-3 inline" />
+                  </span>
+                </div>
+              </a>
+            ))}
+          </div>
         </div>
 
         {/* Quality Standards & Local Service Notice */}

@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { PageContent, PHONE_NUMBER, PHONE_HREF, BRAND_NAME, BUSINESS_ADDRESS } from '../data/siteData';
+import { BLOG_POSTS, BlogPost } from '../data/blogData';
 import {
   Phone,
   ShieldCheck,
@@ -522,6 +523,116 @@ export const PageRenderer: React.FC<PageRendererProps> = ({
               </section>
             )}
 
+            {/* FEATURED TECHNICAL LEAK GUIDES & DIAGNOSTICS (Incoming Inlinks) */}
+            {page.slug === '' ? (
+              <section className="bg-white rounded-2xl p-6 sm:p-8 border border-slate-200 shadow-xs space-y-6">
+                <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pb-4 border-b border-slate-100">
+                  <div>
+                    <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-amber-700 font-display">
+                      <BookOpen className="w-4 h-4 text-amber-600" />
+                      <span>Spring Valley Diagnostic Knowledge Base</span>
+                    </div>
+                    <h2 className="text-xl sm:text-2xl font-bold text-slate-900 mt-1 font-display">
+                      Expert Leak Detection Guides & DIY Diagnostic Protocols
+                    </h2>
+                  </div>
+                  <a
+                    href="/blog/"
+                    onClick={(e) => {
+                      e.preventDefault();
+                      onNavigate('blog');
+                    }}
+                    className="text-xs font-bold text-[#1E70B8] hover:underline flex items-center gap-1 shrink-0"
+                  >
+                    <span>View All Articles</span>
+                    <ArrowRight className="w-3.5 h-3.5" />
+                  </a>
+                </div>
+
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+                  {BLOG_POSTS.map((post) => (
+                    <a
+                      key={post.id}
+                      href={`/blog/${post.slug}/`}
+                      onClick={(e) => {
+                        e.preventDefault();
+                        onNavigate(`blog/${post.slug}`);
+                        window.scrollTo({ top: 0, behavior: 'smooth' });
+                      }}
+                      className="group p-5 rounded-xl border border-slate-200 hover:border-[#1E70B8] hover:bg-slate-50/60 transition-all flex flex-col justify-between block no-underline text-inherit"
+                    >
+                      <div>
+                        <span className="text-[10px] font-bold text-amber-800 bg-amber-50 px-2 py-0.5 rounded border border-amber-200 uppercase tracking-wider inline-block mb-2">
+                          {post.category}
+                        </span>
+                        <h3 className="text-sm font-bold text-slate-900 group-hover:text-[#1E70B8] transition-colors leading-snug line-clamp-2 mb-2">
+                          {post.title}
+                        </h3>
+                        <p className="text-xs text-slate-600 line-clamp-2 leading-relaxed">
+                          {post.excerpt}
+                        </p>
+                      </div>
+                      <div className="mt-4 pt-3 border-t border-slate-100 flex items-center justify-between text-xs text-slate-500">
+                        <span>{post.readTime}</span>
+                        <span className="text-[#1E70B8] font-bold group-hover:translate-x-0.5 transition-transform flex items-center gap-1">
+                          Read Guide <ArrowRight className="w-3 h-3" />
+                        </span>
+                      </div>
+                    </a>
+                  ))}
+                </div>
+              </section>
+            ) : page.type === 'service' ? (
+              <section className="bg-amber-50/80 rounded-2xl p-6 sm:p-8 border border-amber-200 space-y-4">
+                <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-amber-900 font-display">
+                  <BookOpen className="w-4 h-4 text-amber-700" />
+                  <span>Recommended Diagnostic Guide for This Service</span>
+                </div>
+                {(() => {
+                  const matchedPost =
+                    page.slug === 'pool-leak-detection'
+                      ? BLOG_POSTS.find((p) => p.slug === 'how-swimming-pool-bucket-test-works')
+                      : page.slug === 'gas-leak-detection'
+                      ? BLOG_POSTS.find((p) => p.slug === 'what-to-do-when-you-smell-gas')
+                      : page.slug === 'slab-leak-detection'
+                      ? BLOG_POSTS.find((p) => p.slug === 'signs-of-slab-leak-in-las-vegas-homes')
+                      : page.slug === 'underground-leak-detection'
+                      ? BLOG_POSTS.find((p) => p.slug === 'desert-caliche-soil-pipe-damage')
+                      : BLOG_POSTS.find((p) => p.slug === 'how-to-read-water-meter-for-hidden-leaks');
+
+                  if (!matchedPost) return null;
+
+                  return (
+                    <div className="bg-white rounded-xl p-5 border border-amber-200/80 shadow-xs flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+                      <div className="space-y-1 max-w-xl">
+                        <span className="text-[10px] font-bold text-amber-700 uppercase tracking-wider">
+                          {matchedPost.category} • {matchedPost.readTime}
+                        </span>
+                        <h3 className="text-base font-bold text-slate-900 font-display">
+                          {matchedPost.title}
+                        </h3>
+                        <p className="text-xs text-slate-600 line-clamp-2">
+                          {matchedPost.excerpt}
+                        </p>
+                      </div>
+                      <a
+                        href={`/blog/${matchedPost.slug}/`}
+                        onClick={(e) => {
+                          e.preventDefault();
+                          onNavigate(`blog/${matchedPost.slug}`);
+                          window.scrollTo({ top: 0, behavior: 'smooth' });
+                        }}
+                        className="px-4 py-2.5 bg-[#0F2942] hover:bg-[#1E70B8] text-white text-xs font-bold rounded-lg transition-colors shrink-0 flex items-center gap-1.5 no-underline"
+                      >
+                        <span>Read Technical Guide</span>
+                        <ArrowRight className="w-3.5 h-3.5" />
+                      </a>
+                    </div>
+                  );
+                })()}
+              </section>
+            ) : null}
+
             {/* FINAL URGENT CONVERSION CTA BANNER */}
             <section className="p-8 rounded-2xl bg-linear-to-br from-[#0F2942] to-slate-900 text-white space-y-6 shadow-xl">
               <div className="max-w-2xl space-y-2">
@@ -566,22 +677,49 @@ export const PageRenderer: React.FC<PageRendererProps> = ({
 
             <div className="bg-white rounded-2xl p-6 border border-slate-200 shadow-xs space-y-5">
               
-              {/* Educational Blog Callout in Sidebar */}
-              <div className="p-4 rounded-xl bg-amber-50/70 border border-amber-200/80 space-y-2">
-                <div className="flex items-center gap-1.5 text-xs font-bold text-amber-900 uppercase tracking-wider">
-                  <BookOpen className="w-3.5 h-3.5 text-amber-700" />
-                  <span>Leak Prevention Guides</span>
+              {/* Educational Blog Callout in Sidebar (Incoming Inlinks) */}
+              <div className="p-4 rounded-xl bg-amber-50/70 border border-amber-200/80 space-y-3">
+                <div className="flex items-center justify-between">
+                  <div className="flex items-center gap-1.5 text-xs font-bold text-amber-900 uppercase tracking-wider">
+                    <BookOpen className="w-3.5 h-3.5 text-amber-700" />
+                    <span>Technical Leak Guides</span>
+                  </div>
+                  <a
+                    href="/blog/"
+                    onClick={(e) => {
+                      e.preventDefault();
+                      onNavigate('blog');
+                    }}
+                    className="text-[11px] font-bold text-[#1E70B8] hover:underline flex items-center gap-0.5"
+                  >
+                    <span>All Guides</span>
+                    <ArrowRight className="w-3 h-3" />
+                  </a>
                 </div>
                 <p className="text-xs text-slate-700 leading-relaxed">
-                  Learn how to read water meters, perform the 24-hour pool bucket test, or recognize sub-slab copper leaks.
+                  Step-by-step DIY diagnostic procedures and utility leak verification:
                 </p>
-                <button
-                  onClick={() => onNavigate('blog')}
-                  className="text-xs font-bold text-[#1E70B8] hover:underline flex items-center gap-1 cursor-pointer pt-1"
-                >
-                  <span>Explore Leak Blog Articles</span>
-                  <ArrowRight className="w-3 h-3" />
-                </button>
+                <div className="space-y-2 pt-1 border-t border-amber-200/60">
+                  {BLOG_POSTS.slice(0, 3).map((post) => (
+                    <a
+                      key={post.id}
+                      href={`/blog/${post.slug}/`}
+                      onClick={(e) => {
+                        e.preventDefault();
+                        onNavigate(`blog/${post.slug}`);
+                        window.scrollTo({ top: 0, behavior: 'smooth' });
+                      }}
+                      className="block p-2.5 rounded-lg bg-white/90 hover:bg-white border border-amber-200/70 hover:border-[#1E70B8] transition-colors group no-underline text-inherit"
+                    >
+                      <div className="text-[10px] font-bold text-amber-800 uppercase tracking-wider mb-0.5">
+                        {post.category}
+                      </div>
+                      <div className="text-xs font-bold text-slate-900 group-hover:text-[#1E70B8] transition-colors line-clamp-2 leading-snug">
+                        {post.title}
+                      </div>
+                    </a>
+                  ))}
+                </div>
               </div>
 
               {/* Related Sub-Services Contextual Box */}
