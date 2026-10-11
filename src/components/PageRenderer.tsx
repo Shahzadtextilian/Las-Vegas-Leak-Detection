@@ -220,9 +220,14 @@ export const PageRenderer: React.FC<PageRendererProps> = ({
                   <img
                     src={page.featuredImage}
                     alt={page.imageAlt || page.name}
+                    width={800}
+                    height={600}
                     className="w-full h-72 sm:h-96 object-cover object-center group-hover:scale-102 transition-transform duration-500"
                     referrerPolicy="no-referrer"
                     loading="eager"
+                    // @ts-ignore
+                    fetchPriority="high"
+                    decoding="async"
                     onError={() => setImgHasError(true)}
                   />
                 ) : (

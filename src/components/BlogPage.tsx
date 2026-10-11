@@ -149,8 +149,11 @@ export const BlogPage: React.FC<BlogPageProps> = ({ onNavigate, activePostSlug }
                   <img
                     src={selectedPost.featuredImage}
                     alt={selectedPost.title}
+                    width={800}
+                    height={500}
                     className="w-full h-64 sm:h-80 object-cover"
                     loading="eager"
+                    decoding="async"
                   />
                 </div>
               )}

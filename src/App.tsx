@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { sitePages, PageContent, DOMAIN_URL } from './data/siteData';
+import { BLOG_POSTS } from './data/blogData';
 import { generateSchemaForPage } from './utils/schemaGenerator';
 import { Header } from './components/Header';
 import { Footer } from './components/Footer';
@@ -28,6 +29,10 @@ export default function App() {
   const activeBlogPostSlug = currentSlug.startsWith('blog/')
     ? currentSlug.replace(/^blog\//, '').replace(/\/$/, '')
     : undefined;
+
+  const currentBlogPost = activeBlogPostSlug
+    ? BLOG_POSTS.find((p) => p.slug === activeBlogPostSlug) || null
+    : null;
 
   // Resolve page content
   const getActivePage = (): PageContent => {
@@ -64,7 +69,15 @@ export default function App() {
 
   // Sync document head metadata and JSON-LD schema dynamically
   useEffect(() => {
-    document.title = currentPage.metaTitle;
+    // Determine dynamic title and description
+    const metaTitle = currentBlogPost
+      ? `${currentBlogPost.title} | Spring Valley Leak Detection`
+      : currentPage.metaTitle;
+    const metaDescription = currentBlogPost
+      ? currentBlogPost.excerpt
+      : currentPage.metaDescription;
+
+    document.title = metaTitle;
 
     // Update Meta Description
     let metaDesc = document.querySelector('meta[name="description"]');
@@ -73,17 +86,34 @@ export default function App() {
       metaDesc.setAttribute('name', 'description');
       document.head.appendChild(metaDesc);
     }
-    metaDesc.setAttribute('content', currentPage.metaDescription);
+    metaDesc.setAttribute('content', metaDescription);
 
-    // Update Canonical Link
+    // Update OpenGraph Title & Description
+    let ogTitle = document.querySelector('meta[property="og:title"]');
+    if (ogTitle) ogTitle.setAttribute('content', metaTitle);
+    let ogDesc = document.querySelector('meta[property="og:description"]');
+    if (ogDesc) ogDesc.setAttribute('content', metaDescription);
+
+    // Update Twitter Title & Description
+    let twTitle = document.querySelector('meta[name="twitter:title"]');
+    if (twTitle) twTitle.setAttribute('content', metaTitle);
+    let twDesc = document.querySelector('meta[name="twitter:description"]');
+    if (twDesc) twDesc.setAttribute('content', metaDescription);
+
+    // Update Canonical Link & OpenGraph URL
     let canonical = document.querySelector('link[rel="canonical"]');
     if (!canonical) {
       canonical = document.createElement('link');
       canonical.setAttribute('rel', 'canonical');
       document.head.appendChild(canonical);
     }
-    const fullCanonicalUrl = `${DOMAIN_URL}${currentPage.urlPath === '/' ? '' : currentPage.urlPath}`;
+    const fullCanonicalUrl = currentBlogPost
+      ? `${DOMAIN_URL}/blog/${currentBlogPost.slug}/`
+      : `${DOMAIN_URL}${currentPage.urlPath === '/' ? '' : currentPage.urlPath}`;
     canonical.setAttribute('href', fullCanonicalUrl);
+
+    let ogUrl = document.querySelector('meta[property="og:url"]');
+    if (ogUrl) ogUrl.setAttribute('content', fullCanonicalUrl);
 
     // Inject JSON-LD Schema
     const oldScript = document.getElementById('dynamic-schema-ld');
@@ -93,9 +123,9 @@ export default function App() {
     const schemaScript = document.createElement('script');
     schemaScript.id = 'dynamic-schema-ld';
     schemaScript.type = 'application/ld+json';
-    schemaScript.text = JSON.stringify(generateSchemaForPage(currentPage));
+    schemaScript.text = JSON.stringify(generateSchemaForPage(currentPage, currentBlogPost));
     document.head.appendChild(schemaScript);
-  }, [currentPage]);
+  }, [currentPage, currentBlogPost]);
 
   return (
     <div className="min-h-screen flex flex-col bg-slate-50 font-sans text-slate-900">
