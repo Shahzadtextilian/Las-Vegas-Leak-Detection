@@ -69,12 +69,17 @@ export const BlogPage: React.FC<BlogPageProps> = ({ onNavigate, activePostSlug }
                 Home
               </a>
               <span className="mx-2 text-slate-300">/</span>
-              <button
-                onClick={() => setSelectedPost(null)}
+              <a
+                href="/blog/"
+                onClick={(e) => {
+                  e.preventDefault();
+                  setSelectedPost(null);
+                  onNavigate('blog');
+                }}
                 className="hover:text-[#1E70B8] transition-colors"
               >
                 Blog & Leak Guides
-              </button>
+              </a>
               <span className="mx-2 text-slate-300">/</span>
               <span className="text-slate-900 font-semibold truncate max-w-xs sm:max-w-md">
                 {selectedPost.title}
@@ -390,11 +395,14 @@ export const BlogPage: React.FC<BlogPageProps> = ({ onNavigate, activePostSlug }
         ) : (
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {filteredPosts.map((post) => (
-              <div
+              <a
                 key={post.id}
-                className="bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-xs hover:shadow-md transition-shadow flex flex-col group cursor-pointer"
-                onClick={() => {
+                href={`/blog/${post.slug}/`}
+                className="bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-xs hover:shadow-md transition-shadow flex flex-col group cursor-pointer block no-underline text-inherit"
+                onClick={(e) => {
+                  e.preventDefault();
                   setSelectedPost(post);
+                  onNavigate(`blog/${post.slug}`);
                   window.scrollTo({ top: 0, behavior: 'smooth' });
                 }}
               >
@@ -455,7 +463,7 @@ export const BlogPage: React.FC<BlogPageProps> = ({ onNavigate, activePostSlug }
                     Read Article <ArrowRight className="w-3.5 h-3.5" />
                   </span>
                 </div>
-              </div>
+              </a>
             ))}
           </div>
         )}

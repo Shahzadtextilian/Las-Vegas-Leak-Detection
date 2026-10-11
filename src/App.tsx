@@ -8,17 +8,26 @@ import { PageRenderer } from './components/PageRenderer';
 import { StickyMobileCallBar } from './components/StickyMobileCallBar';
 import { SeoAuditModal } from './components/SeoAuditModal';
 import { BlogPage } from './components/BlogPage';
+import { NotFoundPage } from './components/NotFoundPage';
 
 export default function App() {
   // Determine initial slug from window.location.pathname
   const getSlugFromPath = (): string => {
-    const path = window.location.pathname.replace(/^\/|\/$/g, '');
-    if (!path) return '';
-    if (path === 'blog' || path.startsWith('blog/')) return path;
-    if (path === 'how-it-works') return 'how-it-works';
-    if (path === 'contact-nap') return 'contact';
-    if (sitePages[path]) return path;
-    return '';
+    const rawPath = window.location.pathname.replace(/^\/|\/$/g, '');
+    if (!rawPath) return '';
+    // Normalize aliases
+    if (rawPath === 'blog' || rawPath.startsWith('blog/')) return rawPath;
+    if (rawPath === 'how-it-works') return 'how-it-works';
+    if (rawPath === 'contact-nap' || rawPath === 'contact-us') return 'contact';
+    if (rawPath === 'about-us') return 'about';
+    if (rawPath === 'emergency' || rawPath === 'emergency-leak-detection') return 'emergency-leak-repair';
+    if (rawPath === 'water-leak') return 'water-leak-detection';
+    if (rawPath === 'gas-leak') return 'gas-leak-detection';
+    if (rawPath === 'slab-leak') return 'slab-leak-detection';
+    if (rawPath === 'pool-leak') return 'pool-leak-detection';
+    if (rawPath === 'services' || rawPath === 'locations' || rawPath === 'service-areas') return '';
+    if (sitePages[rawPath]) return rawPath;
+    return '404';
   };
 
   const [currentSlug, setCurrentSlug] = useState<string>(getSlugFromPath);
@@ -69,6 +78,8 @@ export default function App() {
 
   // Sync document head metadata and JSON-LD schema dynamically
   useEffect(() => {
+    if (currentSlug === '404') return;
+
     // Determine dynamic title and description
     const metaTitle = currentBlogPost
       ? `${currentBlogPost.title} | Spring Valley Leak Detection`
@@ -125,7 +136,7 @@ export default function App() {
     schemaScript.type = 'application/ld+json';
     schemaScript.text = JSON.stringify(generateSchemaForPage(currentPage, currentBlogPost));
     document.head.appendChild(schemaScript);
-  }, [currentPage, currentBlogPost]);
+  }, [currentPage, currentBlogPost, currentSlug]);
 
   return (
     <div className="min-h-screen flex flex-col bg-slate-50 font-sans text-slate-900">
@@ -139,7 +150,9 @@ export default function App() {
 
       {/* Main Page Content */}
       <div className="flex-1">
-        {isBlogRoute ? (
+        {currentSlug === '404' ? (
+          <NotFoundPage onNavigate={handleNavigate} />
+        ) : isBlogRoute ? (
           <BlogPage
             onNavigate={handleNavigate}
             activePostSlug={activeBlogPostSlug}

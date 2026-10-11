@@ -41,7 +41,7 @@ jobs:
 
       - name: Setup SPA fallback and domain
         run: |
-          cp dist/index.html dist/404.html
+          if [ ! -f dist/404.html ]; then cp dist/index.html dist/404.html; fi
           if [ -f CNAME ]; then cp CNAME dist/CNAME; fi
           if [ -f public/CNAME ]; then cp public/CNAME dist/CNAME; fi
 
