@@ -1,7 +1,7 @@
 import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
-import { sitePages, DOMAIN_URL, PHONE_NUMBER, PHONE_HREF, BUSINESS_ADDRESS, BRAND_NAME, PageContent } from '../src/data/siteData.js';
+import { sitePages, DOMAIN_URL, PHONE_NUMBER, PHONE_HREF, BUSINESS_ADDRESS, BRAND_NAME, PageContent, FACEBOOK_URL } from '../src/data/siteData.js';
 import { BLOG_POSTS, BlogPost } from '../src/data/blogData.js';
 import { generateSchemaForPage } from '../src/utils/schemaGenerator.js';
 
@@ -35,6 +35,9 @@ function buildPreRenderedBody(page: PageContent, blogPost: BlogPost | null): str
           <p class="text-xs text-amber-300">24/7 Dispatch Desk: ${BUSINESS_ADDRESS.streetAddress}, ${BUSINESS_ADDRESS.addressLocality}, NV ${BUSINESS_ADDRESS.postalCode}</p>
         </div>
         <div class="flex items-center gap-4">
+          <a href="${FACEBOOK_URL}" target="_blank" rel="noopener noreferrer" class="text-xs text-sky-200 hover:text-white flex items-center gap-1">
+            <span>Facebook Page</span>
+          </a>
           <a href="${PHONE_HREF}" class="bg-[#1E70B8] hover:bg-blue-600 text-white font-bold px-4 py-2 rounded-lg text-sm">
             Call Dispatch: ${PHONE_NUMBER}
           </a>
@@ -176,6 +179,7 @@ function buildPreRenderedBody(page: PageContent, blogPost: BlogPost | null): str
           <p class="leading-relaxed mb-3">Licensed, insured non-invasive leak detection specialists serving Spring Valley, Las Vegas, and Clark County, NV.</p>
           <p><strong>Dispatch:</strong> <a href="${PHONE_HREF}" class="text-amber-300 underline">${PHONE_NUMBER}</a></p>
           <p><strong>Address:</strong> ${BUSINESS_ADDRESS.streetAddress}, ${BUSINESS_ADDRESS.addressLocality}, NV ${BUSINESS_ADDRESS.postalCode}</p>
+          <p><strong>Facebook:</strong> <a href="${FACEBOOK_URL}" target="_blank" rel="noopener noreferrer" class="text-sky-300 underline">Official Facebook Page</a></p>
         </div>
         <div>
           <h4 class="font-bold text-white mb-3">Target Leak Services</h4>

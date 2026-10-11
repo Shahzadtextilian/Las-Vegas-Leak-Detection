@@ -1,4 +1,4 @@
-import { PageContent, PHONE_NUMBER, DOMAIN_URL, BRAND_NAME, BUSINESS_ADDRESS } from '../data/siteData';
+import { PageContent, PHONE_NUMBER, DOMAIN_URL, BRAND_NAME, BUSINESS_ADDRESS, FACEBOOK_URL } from '../data/siteData';
 import { BlogPost } from '../data/blogData';
 
 export function generateSchemaForPage(page: PageContent, blogPost?: BlogPost | null) {
@@ -58,6 +58,9 @@ export function generateSchemaForPage(page: PageContent, blogPost?: BlogPost | n
     "image": `${DOMAIN_URL}/images/hero_emergency_plumbing_1791566119640.webp`,
     "telephone": PHONE_NUMBER,
     "priceRange": "$$",
+    "sameAs": [
+      FACEBOOK_URL
+    ],
     "address": {
       "@type": "PostalAddress",
       "streetAddress": BUSINESS_ADDRESS.streetAddress,

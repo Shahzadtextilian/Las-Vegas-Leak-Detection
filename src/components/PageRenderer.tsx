@@ -17,6 +17,7 @@ import {
   BookOpen
 } from 'lucide-react';
 import { SidebarDispatchForm } from './SidebarDispatchForm';
+import { FacebookEmbed } from './FacebookEmbed';
 
 interface PageRendererProps {
   page: PageContent;
@@ -448,6 +449,17 @@ export const PageRenderer: React.FC<PageRendererProps> = ({
               </section>
             )}
 
+            {/* OFFICIAL FACEBOOK PAGE EMBED (On Contact & NAP page) */}
+            {page.type === 'contact' && (
+              <section className="space-y-3">
+                <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-[#1877F2] font-display">
+                  <span className="w-2 h-2 rounded-full bg-[#1877F2]"></span>
+                  <span>Official Social Dispatch & Facebook Community</span>
+                </div>
+                <FacebookEmbed />
+              </section>
+            )}
+
             {/* QUALITY STANDARDS & NEVADA STATE LICENSURE SECTION */}
             <section className="bg-slate-900 text-white rounded-2xl p-6 sm:p-8 border border-slate-800 space-y-5">
               <div className="flex items-center gap-2 text-amber-400 text-xs font-bold uppercase tracking-wider font-display">
@@ -632,6 +644,17 @@ export const PageRenderer: React.FC<PageRendererProps> = ({
                 })()}
               </section>
             ) : null}
+
+            {/* HOMEPAGE OFFICIAL FACEBOOK EMBED & COMMUNITY DESK */}
+            {page.slug === '' && (
+              <section className="space-y-3">
+                <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-[#1877F2] font-display">
+                  <span className="w-2.5 h-2.5 rounded-full bg-[#1877F2]"></span>
+                  <span>Connect With Our Dispatch Desk on Facebook</span>
+                </div>
+                <FacebookEmbed />
+              </section>
+            )}
 
             {/* FINAL URGENT CONVERSION CTA BANNER */}
             <section className="p-8 rounded-2xl bg-linear-to-br from-[#0F2942] to-slate-900 text-white space-y-6 shadow-xl">
