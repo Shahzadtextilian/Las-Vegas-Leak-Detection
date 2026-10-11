@@ -230,6 +230,16 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
                   XML Sitemap
                 </a>
               </li>
+              <li>
+                <a
+                  href="/llms.txt"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="hover:text-white transition-colors"
+                >
+                  LLMs.txt (AI Context)
+                </a>
+              </li>
             </ul>
 
             <div className="mt-6 pt-4 border-t border-slate-900 flex items-start gap-2 text-xs text-slate-400">

@@ -7,3 +7,7 @@ Allow: /
 
 # XML Sitemap Location
 Sitemap: https://www.leakdetectionnv.com/sitemap.xml
+
+# LLM & AI Context File
+# Standard: https://llmstxt.org
+# llms.txt: https://www.leakdetectionnv.com/llms.txt
