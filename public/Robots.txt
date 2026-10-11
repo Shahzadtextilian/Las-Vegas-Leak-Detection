@@ -1,0 +1,9 @@
+# robots.txt for Spring Valley Leak Detection & Repair
+# Domain: https://www.leakdetectionnv.com
+# Allow full indexing for search engine crawlers (Google, Bing, Applebot, DuckDuckGo)
+
+User-agent: *
+Allow: /
+
+# XML Sitemap Location
+Sitemap: https://www.leakdetectionnv.com/sitemap.xml

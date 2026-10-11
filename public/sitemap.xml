@@ -1,104 +1,145 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <!-- Homepage -->
   <url>
-    <loc>https://www.springvalleyleakdetection.com/</loc>
-    <lastmod>2026-10-09</lastmod>
+    <loc>https://www.leakdetectionnv.com/</loc>
+    <lastmod>2026-10-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
+
+  <!-- Core Leak Detection Services -->
   <url>
-    <loc>https://www.springvalleyleakdetection.com/water-leak-detection/</loc>
-    <lastmod>2026-10-09</lastmod>
-    <changefreq>monthly</changefreq>
+    <loc>https://www.leakdetectionnv.com/water-leak-detection/</loc>
+    <lastmod>2026-10-11</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://www.springvalleyleakdetection.com/slab-leak-detection/</loc>
-    <lastmod>2026-10-09</lastmod>
-    <changefreq>monthly</changefreq>
+    <loc>https://www.leakdetectionnv.com/slab-leak-detection/</loc>
+    <lastmod>2026-10-11</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://www.springvalleyleakdetection.com/pool-leak-detection/</loc>
-    <lastmod>2026-10-09</lastmod>
-    <changefreq>monthly</changefreq>
+    <loc>https://www.leakdetectionnv.com/pool-leak-detection/</loc>
+    <lastmod>2026-10-11</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://www.springvalleyleakdetection.com/gas-leak-detection/</loc>
-    <lastmod>2026-10-09</lastmod>
-    <changefreq>monthly</changefreq>
+    <loc>https://www.leakdetectionnv.com/gas-leak-detection/</loc>
+    <lastmod>2026-10-11</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://www.springvalleyleakdetection.com/underground-leak-detection/</loc>
-    <lastmod>2026-10-09</lastmod>
+    <loc>https://www.leakdetectionnv.com/underground-leak-detection/</loc>
+    <lastmod>2026-10-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.leakdetectionnv.com/emergency-leak-repair/</loc>
+    <lastmod>2026-10-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Service Areas (Spring Valley & Las Vegas Valley) -->
+  <url>
+    <loc>https://www.leakdetectionnv.com/spring-valley-center/</loc>
+    <lastmod>2026-10-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.springvalleyleakdetection.com/emergency-leak-repair/</loc>
-    <lastmod>2026-10-09</lastmod>
+    <loc>https://www.leakdetectionnv.com/the-lakes/</loc>
+    <lastmod>2026-10-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.springvalleyleakdetection.com/spring-valley-center/</loc>
-    <lastmod>2026-10-09</lastmod>
+    <loc>https://www.leakdetectionnv.com/spanish-trail/</loc>
+    <lastmod>2026-10-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.springvalleyleakdetection.com/the-lakes/</loc>
-    <lastmod>2026-10-09</lastmod>
+    <loc>https://www.leakdetectionnv.com/summerlin-south/</loc>
+    <lastmod>2026-10-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.springvalleyleakdetection.com/spanish-trail/</loc>
-    <lastmod>2026-10-09</lastmod>
+    <loc>https://www.leakdetectionnv.com/rhodes-ranch/</loc>
+    <lastmod>2026-10-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Company & Process Pages -->
+  <url>
+    <loc>https://www.leakdetectionnv.com/how-it-works/</loc>
+    <lastmod>2026-10-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.springvalleyleakdetection.com/summerlin-south/</loc>
-    <lastmod>2026-10-09</lastmod>
+    <loc>https://www.leakdetectionnv.com/about/</loc>
+    <lastmod>2026-10-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.springvalleyleakdetection.com/rhodes-ranch/</loc>
-    <lastmod>2026-10-09</lastmod>
+    <loc>https://www.leakdetectionnv.com/contact/</loc>
+    <lastmod>2026-10-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.springvalleyleakdetection.com/how-it-works/</loc>
-    <lastmod>2026-10-10</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.springvalleyleakdetection.com/blog/</loc>
-    <lastmod>2026-10-10</lastmod>
+    <loc>https://www.leakdetectionnv.com/blog/</loc>
+    <lastmod>2026-10-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
+
+  <!-- Knowledge Base & Leak Diagnostic Guides -->
   <url>
-    <loc>https://www.springvalleyleakdetection.com/about/</loc>
-    <lastmod>2026-10-10</lastmod>
+    <loc>https://www.leakdetectionnv.com/blog/signs-of-slab-leak-in-las-vegas-homes/</loc>
+    <lastmod>2026-10-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.springvalleyleakdetection.com/contact/</loc>
-    <lastmod>2026-10-10</lastmod>
+    <loc>https://www.leakdetectionnv.com/blog/how-swimming-pool-bucket-test-works/</loc>
+    <lastmod>2026-10-11</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.springvalleyleakdetection.com/privacy-policy/</loc>
-    <lastmod>2026-10-10</lastmod>
+    <loc>https://www.leakdetectionnv.com/blog/what-to-do-when-you-smell-gas/</loc>
+    <lastmod>2026-10-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.leakdetectionnv.com/blog/desert-caliche-soil-pipe-damage/</loc>
+    <lastmod>2026-10-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.leakdetectionnv.com/blog/how-to-read-water-meter-for-hidden-leaks/</loc>
+    <lastmod>2026-10-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Legal & Compliance -->
+  <url>
+    <loc>https://www.leakdetectionnv.com/privacy-policy/</loc>
+    <lastmod>2026-10-11</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
   </url>

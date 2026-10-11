@@ -46,7 +46,7 @@ export interface PageContent {
 
 export const PHONE_NUMBER = "(725) 313-0108";
 export const PHONE_HREF = "tel:+17253130108";
-export const DOMAIN_URL = "https://www.springvalleyleakdetection.com";
+export const DOMAIN_URL = "https://www.leakdetectionnv.com";
 export const BRAND_NAME = "Spring Valley Leak Detection & Repair";
 export const BUSINESS_ADDRESS = {
   streetAddress: "6875 Groveview Ln",
