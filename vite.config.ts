@@ -1,11 +1,21 @@
 import tailwindcss from '@tailwindcss/vite';
 import react from '@vitejs/plugin-react';
 import path from 'path';
-import {defineConfig} from 'vite';
+import {defineConfig, Plugin} from 'vite';
+
+function deferScriptsPlugin(): Plugin {
+  return {
+    name: 'vite-plugin-defer-scripts',
+    transformIndexHtml(html) {
+      // Ensure module script tags have defer attribute for SEO and speed audit tools
+      return html.replace(/<script\s+type="module"(?! defer)/g, '<script type="module" defer');
+    },
+  };
+}
 
 export default defineConfig(() => {
   return {
-    plugins: [react(), tailwindcss()],
+    plugins: [react(), tailwindcss(), deferScriptsPlugin()],
     resolve: {
       alias: {
         '@': path.resolve('.'),

@@ -66,7 +66,7 @@ export const sitePages: Record<string, PageContent> = {
     name: "Spring Valley Leak Detection & Repair",
     navTitle: "Home",
     metaTitle: "Leak Detection Spring Valley NV | Water, Gas, Slab & Pool Leaks (725) 313-0108",
-    metaDescription: "Precision water, gas, slab & pool leak detection and repair in Spring Valley, NV. Non-invasive acoustic, thermal & dye testing. Call (725) 313-0108. 6875 Groveview Ln.",
+    metaDescription: "Water, gas, slab & pool leak detection and repair in Spring Valley, NV. 24/7 emergency dispatch. Call (725) 313-0108. Fast non-invasive diagnostics.",
     primaryKeyword: "leak detection Spring Valley NV",
     secondaryKeywords: [
       "water leak detection Spring Valley",
@@ -982,7 +982,7 @@ export const sitePages: Record<string, PageContent> = {
     name: "How Leak Detection & Repair Works",
     navTitle: "How It Works",
     metaTitle: "How It Works | Spring Valley Leak Detection & Repair Process",
-    metaDescription: "Step-by-step diagnostic and repair process for water, gas, slab & pool leaks in Spring Valley, NV. Non-invasive acoustic and thermal testing. Call (725) 313-0108.",
+    metaDescription: "Diagnostic and repair process for water, gas, slab & pool leaks in Spring Valley, NV. Non-invasive acoustic and thermal testing. Call (725) 313-0108.",
     primaryKeyword: "how leak detection works Spring Valley",
     secondaryKeywords: [
       "leak detection process Las Vegas",
@@ -1169,7 +1169,7 @@ export const sitePages: Record<string, PageContent> = {
     name: "Contact & NAP | Spring Valley Leak Detection & Repair",
     navTitle: "Contact & NAP",
     metaTitle: "Contact Us 24/7 | Spring Valley Leak Detection & Repair (725) 313-0108",
-    metaDescription: "Contact Spring Valley Leak Detection 24/7 at (725) 313-0108. Located at 6875 Groveview Ln, Las Vegas, NV 89103. Water, gas, slab & pool leak detection and repair.",
+    metaDescription: "Contact Spring Valley Leak Detection 24/7 at (725) 313-0108. Located at 6875 Groveview Ln. Water, gas, slab & pool leak detection and rapid repairs.",
     primaryKeyword: "contact Spring Valley leak detection",
     secondaryKeywords: [
       "Spring Valley leak detection phone number",
