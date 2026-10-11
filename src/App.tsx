@@ -115,11 +115,11 @@ export default function App() {
     let ogUrl = document.querySelector('meta[property="og:url"]');
     if (ogUrl) ogUrl.setAttribute('content', fullCanonicalUrl);
 
-    // Inject JSON-LD Schema
+    // Inject JSON-LD Schema (remove both prerendered or previous dynamic scripts)
+    const prerenderedScript = document.getElementById('prerendered-schema');
+    if (prerenderedScript) prerenderedScript.remove();
     const oldScript = document.getElementById('dynamic-schema-ld');
-    if (oldScript) {
-      oldScript.remove();
-    }
+    if (oldScript) oldScript.remove();
     const schemaScript = document.createElement('script');
     schemaScript.id = 'dynamic-schema-ld';
     schemaScript.type = 'application/ld+json';
