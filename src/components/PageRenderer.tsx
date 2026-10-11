@@ -13,7 +13,6 @@ import {
   ArrowRight,
   Droplets,
   Wrench,
-  Sparkles,
   BookOpen
 } from 'lucide-react';
 import { SidebarDispatchForm } from './SidebarDispatchForm';
@@ -21,13 +20,12 @@ import { SidebarDispatchForm } from './SidebarDispatchForm';
 interface PageRendererProps {
   page: PageContent;
   onNavigate: (slug: string) => void;
-  onOpenAudit: () => void;
+  onOpenAudit?: () => void;
 }
 
 export const PageRenderer: React.FC<PageRendererProps> = ({
   page,
   onNavigate,
-  onOpenAudit,
 }) => {
   const [openFaq, setOpenFaq] = useState<number | null>(0);
   const [imgHasError, setImgHasError] = useState<boolean>(false);
@@ -654,17 +652,6 @@ export const PageRenderer: React.FC<PageRendererProps> = ({
                   <span> main hub.</span>
                 </div>
               )}
-
-              {/* Audit Trigger */}
-              <div className="pt-2">
-                <button
-                  onClick={onOpenAudit}
-                  className="w-full py-2 bg-slate-100 hover:bg-slate-200 text-slate-700 font-medium text-xs rounded-lg flex items-center justify-center gap-1.5 transition-colors cursor-pointer"
-                >
-                  <Sparkles className="w-3.5 h-3.5 text-amber-600" />
-                  <span>Inspect SEO & Schema for this Page</span>
-                </button>
-              </div>
 
             </div>
 

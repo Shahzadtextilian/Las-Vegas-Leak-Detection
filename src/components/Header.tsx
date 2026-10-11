@@ -1,17 +1,16 @@
 import React, { useState } from 'react';
 import { PHONE_NUMBER, PHONE_HREF, BRAND_NAME, BUSINESS_ADDRESS } from '../data/siteData';
-import { Phone, ChevronDown, Menu, X, Sparkles, MapPin, BookOpen } from 'lucide-react';
+import { Phone, ChevronDown, Menu, X, MapPin, BookOpen } from 'lucide-react';
 
 interface HeaderProps {
   currentSlug: string;
   onNavigate: (slug: string) => void;
-  onOpenAudit: () => void;
+  onOpenAudit?: () => void;
 }
 
 export const Header: React.FC<HeaderProps> = ({
   currentSlug,
   onNavigate,
-  onOpenAudit,
 }) => {
   const [servicesOpen, setServicesOpen] = useState(false);
   const [locationsOpen, setLocationsOpen] = useState(false);
@@ -45,18 +44,10 @@ export const Header: React.FC<HeaderProps> = ({
             <span className="text-slate-300">Licensed NSCB leak specialists on call in Clark County, NV</span>
           </div>
           <div className="flex items-center gap-4">
-            <span className="text-slate-400 hidden md:inline">
-              <MapPin className="w-3.5 h-3.5 inline mr-1 text-amber-400" />
-              {BUSINESS_ADDRESS.streetAddress}, {BUSINESS_ADDRESS.addressLocality}, {BUSINESS_ADDRESS.addressRegion} {BUSINESS_ADDRESS.postalCode}
+            <span className="text-slate-300 flex items-center gap-1.5 text-xs">
+              <MapPin className="w-3.5 h-3.5 inline text-amber-400 shrink-0" />
+              <span>{BUSINESS_ADDRESS.streetAddress}, {BUSINESS_ADDRESS.addressLocality}, {BUSINESS_ADDRESS.addressRegion} {BUSINESS_ADDRESS.postalCode}</span>
             </span>
-            <button
-              onClick={onOpenAudit}
-              className="text-amber-400 hover:text-amber-300 transition-colors font-medium flex items-center gap-1 cursor-pointer"
-              title="Inspect SEO, JSON-LD Schema & Internal Links for this page"
-            >
-              <Sparkles className="w-3.5 h-3.5" />
-              <span>SEO & Schema Auditor</span>
-            </button>
           </div>
         </div>
       </div>
