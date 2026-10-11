@@ -40,8 +40,11 @@ jobs:
       - name: Build project
         run: npm run build
 
-      - name: Setup SPA fallback (404.html)
-        run: cp dist/index.html dist/404.html
+      - name: Setup SPA fallback and domain
+        run: |
+          cp dist/index.html dist/404.html
+          if [ -f CNAME ]; then cp CNAME dist/CNAME; fi
+          if [ -f public/CNAME ]; then cp public/CNAME dist/CNAME; fi
 
       - name: Configure GitHub Pages
         uses: actions/configure-pages@v5
