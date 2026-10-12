@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { PageContent, PHONE_NUMBER, PHONE_HREF, BRAND_NAME, BUSINESS_ADDRESS } from '../data/siteData';
+import { PageContent, PHONE_NUMBER, PHONE_HREF, BRAND_NAME, BUSINESS_ADDRESS, FACEBOOK_URL } from '../data/siteData';
 import { BLOG_POSTS, BlogPost } from '../data/blogData';
 import {
   Phone,
@@ -14,10 +14,10 @@ import {
   ArrowRight,
   Droplets,
   Wrench,
-  BookOpen
+  BookOpen,
+  ExternalLink
 } from 'lucide-react';
 import { SidebarDispatchForm } from './SidebarDispatchForm';
-import { FacebookEmbed } from './FacebookEmbed';
 
 interface PageRendererProps {
   page: PageContent;
@@ -449,17 +449,38 @@ export const PageRenderer: React.FC<PageRendererProps> = ({
               </section>
             )}
 
-            {/* OFFICIAL FACEBOOK PAGE EMBED (On Contact & NAP page) */}
+            {/* OFFICIAL FACEBOOK LINK (On Contact & NAP page) */}
             {page.type === 'contact' && (
-              <section className="space-y-3">
-                <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-[#1877F2] font-display">
-                  <span className="w-2 h-2 rounded-full bg-[#1877F2]"></span>
-                  <span>Official Social Dispatch & Facebook Community</span>
+              <section className="bg-white rounded-2xl p-6 sm:p-8 border border-slate-200 shadow-xs space-y-4">
+                <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+                  <div className="flex items-center gap-3.5">
+                    <div className="w-11 h-11 rounded-xl bg-[#1877F2]/10 text-[#1877F2] flex items-center justify-center shrink-0">
+                      <svg className="w-6 h-6 fill-current" viewBox="0 0 24 24">
+                        <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                      </svg>
+                    </div>
+                    <div>
+                      <h4 className="text-base font-bold text-slate-900 font-display">
+                        Official Facebook Page
+                      </h4>
+                      <p className="text-xs text-slate-500">
+                        Follow our Spring Valley dispatch team for emergency tips, pipe diagnostic updates, and customer reviews.
+                      </p>
+                    </div>
+                  </div>
+
+                  <a
+                    href={FACEBOOK_URL}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-xl bg-[#1877F2] hover:bg-[#166fe5] text-white font-bold text-xs shadow-xs transition-colors shrink-0"
+                  >
+                    <span>Visit Facebook Page</span>
+                    <ExternalLink className="w-3.5 h-3.5" />
+                  </a>
                 </div>
-                <FacebookEmbed />
               </section>
             )}
-
             {/* QUALITY STANDARDS & NEVADA STATE LICENSURE SECTION */}
             <section className="bg-slate-900 text-white rounded-2xl p-6 sm:p-8 border border-slate-800 space-y-5">
               <div className="flex items-center gap-2 text-amber-400 text-xs font-bold uppercase tracking-wider font-display">
@@ -644,17 +665,6 @@ export const PageRenderer: React.FC<PageRendererProps> = ({
                 })()}
               </section>
             ) : null}
-
-            {/* HOMEPAGE OFFICIAL FACEBOOK EMBED & COMMUNITY DESK */}
-            {page.slug === '' && (
-              <section className="space-y-3">
-                <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-[#1877F2] font-display">
-                  <span className="w-2.5 h-2.5 rounded-full bg-[#1877F2]"></span>
-                  <span>Connect With Our Dispatch Desk on Facebook</span>
-                </div>
-                <FacebookEmbed />
-              </section>
-            )}
 
             {/* FINAL URGENT CONVERSION CTA BANNER */}
             <section className="p-8 rounded-2xl bg-linear-to-br from-[#0F2942] to-slate-900 text-white space-y-6 shadow-xl">
