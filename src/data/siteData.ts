@@ -66,8 +66,8 @@ export const sitePages: Record<string, PageContent> = {
     type: "home",
     name: "Spring Valley Leak Detection & Repair",
     navTitle: "Home",
-    metaTitle: "Leak Detection Spring Valley NV | Water, Gas, Slab & Pool Leaks (725) 313-0108",
-    metaDescription: "Water, gas, slab & pool leak detection and repair in Spring Valley, NV. 24/7 emergency dispatch. Call (725) 313-0108. Fast non-invasive diagnostics.",
+    metaTitle: "Leak Detection & Repair Spring Valley NV | 24/7 Service",
+    metaDescription: "Expert water, gas, slab & pool leak detection in Spring Valley, NV. 24/7 emergency repair with fast, non-invasive diagnostics. Call (725) 313-0108 today!",
     primaryKeyword: "leak detection Spring Valley NV",
     secondaryKeywords: [
       "water leak detection Spring Valley",
