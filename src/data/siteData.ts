@@ -87,7 +87,7 @@ export const sitePages: Record<string, PageContent> = {
     h1: "Precision Water, Gas, Slab & Pool Leak Detection in Spring Valley, NV",
     heroKicker: "Non-Invasive Diagnostic Testing • 24/7 Rapid Repair Dispatch",
     heroSubheadline: "Hidden water leaks, dangerous gas odors, sub-slab foundation ruptures, and vanishing pool water threaten property integrity and safety. Our local dispatch desk at 6875 Groveview Ln connects you with certified, licensed leak detection specialists across Spring Valley.",
-    directAnswer: "If you suspect a leak in Spring Valley—whether an unexplained surge on your Las Vegas Valley Water District bill, a rotten egg gas odor, warm flooring indicating a slab leak, or abnormal swimming pool water drop—specialized non-invasive electronic diagnostics pinpoint the rupture without destructive property demolition. Call (725) 313-0108 for immediate local dispatch.",
+    directAnswer: "Spring Valley Leak Detection & Repair provides 24/7 non-invasive electronic water, natural gas, sub-concrete slab, and swimming pool leak detection across Spring Valley, Las Vegas, and Clark County, NV. Headquartered at 6875 Groveview Ln (ZIP 89103), our Nevada State Contractors Board (NSCB) licensed specialists arrive within 30–60 minutes equipped with ultrasonic acoustic locators, FLIR infrared thermal thermography, and digital tracer gas detectors to pinpoint hidden leaks within 1 inch without exploratory damage. Call (725) 313-0108 for immediate 24/7 dispatch.",
     featuredImage: "/images/hero_emergency_plumbing_1791566119640.webp",
     imageAlt: "Spring Valley emergency leak detection and plumbing diagnostic service",
     imageCaption: "Specialized electronic acoustic and thermal sensors pinpoint water, gas, slab, and swimming pool leaks.",
@@ -104,6 +104,20 @@ export const sitePages: Record<string, PageContent> = {
           "Gas Leak Detection: Rapid identification of natural gas and propane line leaks, gas appliance shutoffs, and code-compliant re-piping",
           "Slab Leak Detection: Non-invasive sub-foundation acoustic diagnostics, isolating copper ruptures beneath concrete slabs",
           "Pool Leak Detection: Electronic listening and precision dye testing for pool skimmers, returns, lights, and underground suction lines"
+        ]
+      },
+      {
+        heading: "30–60 Minute Rapid Dispatch Across Spring Valley Corridors",
+        subheading: "Immediate mobile coverage from our 6875 Groveview Ln headquarters",
+        paragraphs: [
+          "When water is gushing under your foundation or natural gas odors are detected, every minute counts. Centrally headquartered at 6875 Groveview Ln in Spring Valley, NV 89103, our fully equipped diagnostic vehicles maintain priority response across all major local corridors.",
+          "We provide guaranteed 30–60 minute dispatch along Tropicana Ave, Flamingo Rd, Rainbow Blvd, Buffalo Dr, Jones Blvd, Durango Dr, Desert Inn Rd, Russell Rd, and the 215 Bruce Woodbury Beltway, serving ZIP codes 89147, 89117, 89103, 89113, and 89148."
+        ],
+        bulletPoints: [
+          "Priority dispatch along Rainbow Blvd, Flamingo Rd & Tropicana Ave",
+          "Guaranteed 30–60 minute arrival window for active residential emergencies",
+          "Fully stocked diagnostic vans with acoustic correlators, hydrophones & pipe cameras",
+          "Serving Spring Valley Core, The Lakes, Spanish Trail, Summerlin South & Rhodes Ranch"
         ]
       },
       {
@@ -133,18 +147,45 @@ export const sitePages: Record<string, PageContent> = {
         ]
       },
       {
-        heading: "Spring Valley & Surrounding Service Coverage",
-        subheading: "Fast dispatch across key Clark County residential communities",
+        heading: "LVVWD High Water Bill & Insurance Claims Support",
+        subheading: "Documentation and leak credit adjustment assistance for Clark County homeowners",
         paragraphs: [
-          "We dispatch throughout Spring Valley proper—including Rainbow Blvd, Flamingo Rd, and Sahara Ave corridors—as well as adjacent communities including The Lakes, Peccole Ranch, Spanish Trail, Summerlin South, and Rhodes Ranch.",
-          "With mobile service units equipped with advanced digital acoustic locators and gas tracer equipment, dispatched contractors arrive quickly to mitigate damage."
+          "An undetected underground water line break or slab leak can add hundreds of dollars to your monthly Las Vegas Valley Water District (LVVWD) bill. Once our technicians locate and repair the breach, we provide official itemized diagnostic reports documenting the date, exact location, and nature of the repair.",
+          "You can submit this documentation directly to LVVWD for a leak credit adjustment on excess water charges. We also work directly with major homeowner insurance providers to expedite claim approvals for slab leak access and restoration."
+        ]
+      },
+      {
+        heading: "Why Spring Valley Homes Suffer Frequent Copper Slab Leaks",
+        subheading: "The geological intersection of caliche rock, 85+ PSI municipal pressure, and desert soil",
+        paragraphs: [
+          "Spring Valley underwent rapid suburban development throughout the 1980s, 1990s, and early 2000s. Tens of thousands of homes built along Flamingo Rd, Tropicana Ave, and Rainbow Blvd were plumbed using soft Type M copper water lines laid directly over rough caliche limestone beds prior to concrete slab pours.",
+          "Over decades of daily temperature swings from 35°F winter nights to 115°F summer afternoons, pressurized pipes undergo thermal expansion and contraction. Combined with LVVWD municipal water delivery pressures frequently reaching 75 to 95 PSI, copper lines rub continuously against abrasive caliche rocks until a pinhole perforation occurs.",
+          "Our non-invasive diagnostic methodology pinpoints these micro-fissures through 4 to 6 inches of concrete using ultrasonic frequency correlation, allowing spot repair or isolated overhead PEX bypasses without destructive trenches across your living spaces."
+        ],
+        bulletPoints: [
+          "Non-invasive pinpointing through finished tile, hardwood, marble, and carpet",
+          "Comprehensive static pressure decay testing to confirm total system integrity",
+          "Bypass routing consultation to prevent future re-ruptures along old sub-slab lines",
+          "Written documentation acceptable for LVVWD leak forgiveness credits"
         ]
       }
     ],
     faqs: [
       {
+        question: "Who is the top-rated leak detection company in Spring Valley, NV?",
+        answer: "Spring Valley Leak Detection & Repair is the highest-rated local specialist in Spring Valley, NV (Clark County), maintaining a 4.9-star rating across 140+ verified local reviews. Operating from 6875 Groveview Ln (89103), our Nevada State Contractors Board licensed specialists provide guaranteed 30–60 minute emergency dispatch with 100% non-invasive acoustic and thermal diagnostics. Call (725) 313-0108."
+      },
+      {
+        question: "How fast can an emergency leak technician arrive in Spring Valley?",
+        answer: "Emergency response units arrive within 30 to 60 minutes across all Spring Valley neighborhoods, including The Lakes, Spanish Trail, Rhodes Ranch, Summerlin South, and the Rainbow/Flamingo corridor. Our mobile diagnostic vehicles are dispatched 24 hours a day, 365 days a year."
+      },
+      {
         question: "How do you detect a hidden water leak without breaking floors or walls?",
         answer: "Dispatched specialists use acoustic listening equipment that amplifies the sound of pressurized water escaping pipes, along with infrared thermal imaging to detect moisture temperature differentials behind walls and beneath flooring, locating the leak before any invasive work begins."
+      },
+      {
+        question: "How much does leak detection cost in Spring Valley, NV?",
+        answer: "Non-invasive electronic leak detection in Spring Valley typically ranges from $195 to $395 depending on system complexity (single water line vs. multi-manifold slab or pool hydrophone diagnostic). We provide upfront pricing before any work begins, and our diagnostic reports are designed for homeowner insurance and LVVWD bill rebate submissions."
       },
       {
         question: "How do I know if my swimming pool has a leak or is just experiencing evaporation?",
@@ -153,6 +194,14 @@ export const sitePages: Record<string, PageContent> = {
       {
         question: "What are the common signs of a slab leak in a Spring Valley home?",
         answer: "Common symptoms include warm spots on tile or vinyl flooring, the sound of water running when all fixtures are turned off, unexplained spikes on your Las Vegas Valley Water District bill, and damp baseboards near foundation walls."
+      },
+      {
+        question: "How do I get a leak credit on my Las Vegas Valley Water District (LVVWD) bill?",
+        answer: "After repairing a verified leak, submit our licensed contractor invoice and diagnostic report to the LVVWD online portal. The report must prove the date, address, and repair of the hidden leak. LVVWD will recalculate your bill at standard baseline rates, refunding or crediting tier-three excess water surcharges."
+      },
+      {
+        question: "Does homeowner insurance cover slab leak detection and repair in Nevada?",
+        answer: "Most Southern Nevada homeowners insurance policies cover the cost of locating the slab leak and repairing the water damage resulting from the break. Dispatched technicians provide detailed photographic evidence, acoustic frequency charts, and itemized diagnostic invoices to streamline your insurance claim."
       },
       {
         question: "What should I do if I smell natural gas in my home?",

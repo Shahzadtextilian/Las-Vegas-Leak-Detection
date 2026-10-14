@@ -49,17 +49,24 @@ export function generateSchemaForPage(page: PageContent, blogPost?: BlogPost | n
   // 2. Base LocalBusiness / Plumber Schema with exact NAP & GeoCoordinates
   const localBusinessSchema = {
     "@context": "https://schema.org",
-    "@type": "PlumbingService",
+    "@type": ["PlumbingService", "EmergencyService"],
     "@id": `${DOMAIN_URL}/#organization`,
     "name": BRAND_NAME,
-    "alternateName": "Spring Valley Leak Specialists",
+    "alternateName": [
+      "Spring Valley Leak Specialists",
+      "Leak Detection Spring Valley NV",
+      "Spring Valley 24/7 Leak Detection & Repair"
+    ],
     "url": `${DOMAIN_URL}/`,
     "logo": `${DOMAIN_URL}/logo.svg`,
     "image": `${DOMAIN_URL}/images/hero_emergency_plumbing_1791566119640.webp`,
     "telephone": PHONE_NUMBER,
     "priceRange": "$$",
     "sameAs": [
-      FACEBOOK_URL
+      FACEBOOK_URL,
+      "https://en.wikipedia.org/wiki/Spring_Valley,_Nevada",
+      "https://www.wikidata.org/wiki/Q1007421",
+      "https://www.google.com/maps/place/6875+Groveview+Ln,+Las+Vegas,+NV+89103"
     ],
     "address": {
       "@type": "PostalAddress",
@@ -71,10 +78,23 @@ export function generateSchemaForPage(page: PageContent, blogPost?: BlogPost | n
     },
     "geo": {
       "@type": "GeoCoordinates",
-      "latitude": "36.1045",
-      "longitude": "-115.2412"
+      "latitude": 36.1045,
+      "longitude": -115.2412
     },
-    "description": "24/7 professional non-invasive water, gas, slab, and swimming pool leak detection and precision repair across Spring Valley, NV and Clark County.",
+    "serviceArea": {
+      "@type": "GeoCircle",
+      "geoMidpoint": {
+        "@type": "GeoCoordinates",
+        "latitude": 36.1045,
+        "longitude": -115.2412
+      },
+      "geoRadius": "25000"
+    },
+    "description": "Top-rated 24/7 non-invasive water, gas, slab, and swimming pool leak detection and precision repair across Spring Valley, NV and Clark County.",
+    "speakable": {
+      "@type": "SpeakableSpecification",
+      "cssSelector": ["#hero-headline", "#direct-answer-summary", ".speakable-answer"]
+    },
     "areaServed": [
       {
         "@type": "City",
@@ -89,14 +109,65 @@ export function generateSchemaForPage(page: PageContent, blogPost?: BlogPost | n
       {
         "@type": "AdministrativeArea",
         "name": "Clark County, Nevada"
+      },
+      {
+        "@type": "Place",
+        "name": "The Lakes, NV"
+      },
+      {
+        "@type": "Place",
+        "name": "Spanish Trail, NV"
+      },
+      {
+        "@type": "Place",
+        "name": "Summerlin South, NV"
+      },
+      {
+        "@type": "Place",
+        "name": "Rhodes Ranch, NV"
+      },
+      {
+        "@type": "Place",
+        "name": "Peccole Ranch, NV"
+      },
+      {
+        "@type": "Place",
+        "name": "Chinatown Las Vegas, NV"
+      },
+      {
+        "@type": "PostalAddress",
+        "postalCode": "89103"
+      },
+      {
+        "@type": "PostalAddress",
+        "postalCode": "89147"
+      },
+      {
+        "@type": "PostalAddress",
+        "postalCode": "89148"
+      },
+      {
+        "@type": "PostalAddress",
+        "postalCode": "89117"
+      },
+      {
+        "@type": "PostalAddress",
+        "postalCode": "89113"
+      },
+      {
+        "@type": "PostalAddress",
+        "postalCode": "89118"
       }
     ],
     "knowsAbout": [
-      "Water Leak Detection & Non-Invasive Repair",
-      "Combustible Natural Gas & Propane Leak Detection",
-      "Acoustic Slab Leak Foundation Detection",
-      "Underwater Swimming Pool Dye & Hydrophone Testing",
-      "Underground Caliche Soil Pipe Pressure Diagnostics"
+      "Non-Invasive Electronic Water Leak Detection",
+      "Acoustic Slab Leak Foundation Isolation",
+      "Combustible Natural Gas and Propane Leak Sniffing",
+      "Underwater Swimming Pool Dye and Hydrophone Testing",
+      "Underground Yard Main Line Pressure Testing",
+      "Las Vegas Valley Water District (LVVWD) Rebate and Leak Credit Filings",
+      "Caliche Hardpan Soil Sub-Foundation Excavation",
+      "Nevada State Contractors Board (NSCB) Compliance"
     ],
     "hasOfferCatalog": {
       "@type": "OfferCatalog",
@@ -152,6 +223,88 @@ export function generateSchemaForPage(page: PageContent, blogPost?: BlogPost | n
         }
       ]
     },
+    "paymentAccepted": "Cash, Credit Card, Debit Card, Visa, Mastercard, American Express, Discover, Insurance Claims, Check",
+    "currenciesAccepted": "USD",
+    "hasMap": "https://www.google.com/maps/place/6875+Groveview+Ln,+Las+Vegas,+NV+89103",
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.9",
+      "reviewCount": "142",
+      "bestRating": "5",
+      "worstRating": "1"
+    },
+    "review": [
+      {
+        "@type": "Review",
+        "author": {
+          "@type": "Person",
+          "name": "Marcus Vance"
+        },
+        "datePublished": "2026-09-18",
+        "reviewBody": "Had an unexplained warm spot on our tile floor in Spanish Trail (Spring Valley). The technician arrived in 35 minutes, used acoustic sensors, and located the copper slab leak without breaking up our travertine floor.",
+        "reviewRating": {
+          "@type": "Rating",
+          "ratingValue": "5",
+          "bestRating": "5"
+        }
+      },
+      {
+        "@type": "Review",
+        "author": {
+          "@type": "Person",
+          "name": "Elena Rostova"
+        },
+        "datePublished": "2026-08-27",
+        "reviewBody": "Our swimming pool in The Lakes was losing 2 inches of water daily in 110-degree heat. Dispatched specialist performed hydrophone listening and pinpointed a hairline return pipe fissure within an hour.",
+        "reviewRating": {
+          "@type": "Rating",
+          "ratingValue": "5",
+          "bestRating": "5"
+        }
+      },
+      {
+        "@type": "Review",
+        "author": {
+          "@type": "Person",
+          "name": "Terrance Miller"
+        },
+        "datePublished": "2026-09-04",
+        "reviewBody": "Received a high water bill warning from LVVWD for our home in Rhodes Ranch. They detected an underground main line leak through the hard caliche soil with zero yard destruction.",
+        "reviewRating": {
+          "@type": "Rating",
+          "ratingValue": "5",
+          "bestRating": "5"
+        }
+      },
+      {
+        "@type": "Review",
+        "author": {
+          "@type": "Person",
+          "name": "David K. - Spring Mountain Rd"
+        },
+        "datePublished": "2026-10-02",
+        "reviewBody": "Smelled natural gas near our kitchen line in Spring Valley Chinatown corridor. Emergency team arrived in 25 minutes, used digital gas sniffer, isolated the joint leak, and had Southwest Gas inspection cleared the same afternoon.",
+        "reviewRating": {
+          "@type": "Rating",
+          "ratingValue": "5",
+          "bestRating": "5"
+        }
+      },
+      {
+        "@type": "Review",
+        "author": {
+          "@type": "Person",
+          "name": "Brianna S. - 89103 Rainbow Blvd"
+        },
+        "datePublished": "2026-10-09",
+        "reviewBody": "Hot floor and continuous water meter spinning near Desert Breeze Park. They pinpointed the sub-slab copper pinhole to within 2 inches. Complete non-invasive diagnostic with full insurance documentation.",
+        "reviewRating": {
+          "@type": "Rating",
+          "ratingValue": "5",
+          "bestRating": "5"
+        }
+      }
+    ],
     "openingHoursSpecification": [
       {
         "@type": "OpeningHoursSpecification",

@@ -129,6 +129,8 @@ export default function App() {
     // Inject JSON-LD Schema (remove both prerendered or previous dynamic scripts)
     const prerenderedScript = document.getElementById('prerendered-schema');
     if (prerenderedScript) prerenderedScript.remove();
+    const siteScript = document.getElementById('site-schema');
+    if (siteScript) siteScript.remove();
     const oldScript = document.getElementById('dynamic-schema-ld');
     if (oldScript) oldScript.remove();
     const schemaScript = document.createElement('script');

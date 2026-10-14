@@ -63,12 +63,12 @@ function buildPreRenderedBody(page: PageContent, blogPost: BlogPost | null): str
         <div class="mb-4 text-xs font-bold uppercase tracking-wider text-amber-600">
           ${isPost ? `Leak Knowledge Base • ${blogPost.category}` : (page.heroKicker || 'Spring Valley, NV Diagnostics')}
         </div>
-        <h1 class="text-3xl sm:text-4xl font-extrabold text-slate-900 mb-6 leading-tight">
+        <h1 id="hero-headline" class="text-3xl sm:text-4xl font-extrabold text-slate-900 mb-6 leading-tight">
           ${title}
         </h1>
 
         <div class="bg-amber-50 border-l-4 border-amber-500 p-6 rounded-r-xl mb-8">
-          <p class="text-base text-slate-800 leading-relaxed font-medium">
+          <p id="direct-answer-summary" class="text-base text-slate-800 leading-relaxed font-medium speakable-answer">
             ${description}
           </p>
           <div class="mt-4 pt-3 border-t border-amber-200 text-sm">
@@ -126,6 +126,36 @@ function buildPreRenderedBody(page: PageContent, blogPost: BlogPost | null): str
             `).join('')}
 
             ${page.slug === '' ? `
+              <section class="mt-12 pt-8 border-t border-slate-200">
+                <h2 class="text-2xl font-bold text-slate-900 mb-4">Spring Valley 30–60 Minute Mobile Response Corridors</h2>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 text-xs">
+                  <div class="p-3 rounded-lg border border-slate-200 bg-slate-50">
+                    <strong class="text-slate-900 block font-bold">Spring Valley Core (89103)</strong>
+                    <p class="text-slate-600 mt-1">Rainbow Blvd & Tropicana Ave • ETA 20–30 min</p>
+                  </div>
+                  <div class="p-3 rounded-lg border border-slate-200 bg-slate-50">
+                    <strong class="text-slate-900 block font-bold">The Lakes & Peccole Ranch (89117)</strong>
+                    <p class="text-slate-600 mt-1">Sahara Ave & Fort Apache Rd • ETA 25–35 min</p>
+                  </div>
+                  <div class="p-3 rounded-lg border border-slate-200 bg-slate-50">
+                    <strong class="text-slate-900 block font-bold">Spanish Trail Estates (89113)</strong>
+                    <p class="text-slate-600 mt-1">Tropicana Ave & Buffalo Dr • ETA 20–30 min</p>
+                  </div>
+                  <div class="p-3 rounded-lg border border-slate-200 bg-slate-50">
+                    <strong class="text-slate-900 block font-bold">Rhodes Ranch & Sunset (89148)</strong>
+                    <p class="text-slate-600 mt-1">Durango Dr & Sunset Rd • ETA 30–40 min</p>
+                  </div>
+                  <div class="p-3 rounded-lg border border-slate-200 bg-slate-50">
+                    <strong class="text-slate-900 block font-bold">Desert Breeze & Durango (89147)</strong>
+                    <p class="text-slate-600 mt-1">Spring Mountain Rd & Durango Dr • ETA 25–35 min</p>
+                  </div>
+                  <div class="p-3 rounded-lg border border-slate-200 bg-slate-50">
+                    <strong class="text-slate-900 block font-bold">Summerlin South (89135 / 89148)</strong>
+                    <p class="text-slate-600 mt-1">Town Center Dr & 215 Beltway • ETA 30–40 min</p>
+                  </div>
+                </div>
+              </section>
+
               <section class="mt-12 pt-8 border-t border-slate-200">
                 <h2 class="text-2xl font-bold text-slate-900 mb-4">Featured Diagnostic Guides & Technical Articles</h2>
                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -327,9 +357,15 @@ for (const route of routesToPrerender) {
     `<meta name="twitter:description" content="${route.metaDescription.replace(/"/g, '&quot;')}" />`
   );
 
-  // Inject Structured Data Schema Script
-  const schemaScript = `\n    <!-- Structured Data (JSON-LD) Pre-rendered for Google & SEO Crawlers -->\n    <script type="application/ld+json" id="prerendered-schema">\n${route.schemaJson}\n    </script>\n  </head>`;
-  html = html.replace(/<\/head>/i, schemaScript);
+  // Inject or Replace Structured Data Schema Script
+  const schemaScript = `<!-- Structured Data (JSON-LD) Pre-rendered for Google & SEO Crawlers -->\n    <script type="application/ld+json" id="prerendered-schema">\n${route.schemaJson}\n    </script>`;
+  if (html.includes('id="site-schema"')) {
+    html = html.replace(/<script type="application\/ld\+json" id="site-schema">[\s\S]*?<\/script>/i, schemaScript);
+  } else if (html.includes('id="prerendered-schema"')) {
+    html = html.replace(/<script type="application\/ld\+json" id="prerendered-schema">[\s\S]*?<\/script>/i, schemaScript);
+  } else {
+    html = html.replace(/<\/head>/i, `\n    ${schemaScript}\n  </head>`);
+  }
 
   // Inject Pre-rendered Semantic Body inside <div id="root">
   const renderedBody = buildPreRenderedBody(route.pageData, route.blogPost);
