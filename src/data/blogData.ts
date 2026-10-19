@@ -264,5 +264,78 @@ export const BLOG_POSTS: BlogPost[] = [
       ],
       conclusion: 'Whether your leak is buried in your front yard or hidden beneath your slab foundation, our non-invasive acoustic locators can find it quickly. Call (725) 313-0108 for emergency diagnostics.'
     }
+  },
+  {
+    id: 'lvvwd-leak-credit-guide',
+    slug: 'how-to-get-lvvwd-leak-credit-water-bill',
+    title: 'How to Get an LVVWD Leak Credit: Las Vegas High Water Bill Relief Guide',
+    category: 'Prevention & Tips',
+    date: 'October 19, 2026',
+    readTime: '7 min read',
+    excerpt: 'Step-by-step instructions for Las Vegas and Spring Valley homeowners to claim an LVVWD high water bill leak credit and remove excess water penalties after a repaired leak.',
+    author: 'Spring Valley Diagnostic Team',
+    authorRole: 'Utility Billing & Leak Specialist',
+    featuredImage: '/images/diagnostic_tech_1791662650738.webp',
+    tags: ['LVVWD Leak Credit', 'High Water Bill', 'Water Rebate', 'Las Vegas Plumbing', 'Spring Valley NV'],
+    content: {
+      introduction: 'Opening a monthly Las Vegas Valley Water District (LVVWD) bill to discover charges of $600, $1,200, or even $3,000 is a homeowner’s nightmare. In Clark County, tiered conservation water rates penalize high consumption severely. Fortunately, the LVVWD provides an official Leak Credit Adjustment Policy that can refund or credit up to 50% of the excessive water charges—provided you follow the correct verification and licensed contractor documentation procedure.',
+      sections: [
+        {
+          heading: '1. Why Las Vegas Water Bills Skyrocket During a Leak (Tier-3 & Tier-4 Rates)',
+          body: [
+            'The Las Vegas Valley Water District operates on an escalating four-tier rate structure to incentivize desert water conservation. While Tier-1 baseline indoor water is inexpensive, Tier-3 and Tier-4 rates (triggered when monthly usage surpasses normal thresholds) are priced up to four times higher per 1,000 gallons.',
+            'A concealed copper slab leak, pool autofill valve failure, or underground yard main rupture running constantly for 30 days can dump 30,000 to 100,000 gallons of potable water directly into desert soil. This pushes your entire billing cycle into maximum penalty pricing, creating an enormous unexpected bill.'
+          ],
+          keyTakeaways: [
+            'Tier-3 and Tier-4 rates multiply your water costs exponentially during an active leak',
+            'LVVWD smart meters track hourly consumption and flag continuous 24-hour flow'
+          ]
+        },
+        {
+          heading: '2. Eligibility Requirements for an LVVWD Leak Adjustment',
+          body: [
+            'To qualify for an account adjustment under current Southern Nevada Water Authority and LVVWD rules, your situation must meet several strict criteria:',
+            'First, the leak must be repaired within a reasonable timeframe (typically within 30 days of discovery or receiving an LVVWD high consumption notice).',
+            'Second, you must submit your adjustment request within 90 calendar days of the date of the abnormal billing statement.',
+            'Third, the excessive water consumption must be at least double your historical seasonal average for that same property during the prior year’s billing period.',
+            'Fourth, you must provide verifiable proof of repair from a licensed Nevada plumbing contractor or proof of parts if a qualifying DIY repair was made on minor exterior lines.'
+          ],
+          keyTakeaways: [
+            'Must file within 90 days of the disputed bill statement date',
+            'Consumption must exceed historical seasonal average by at least 100%'
+          ]
+        },
+        {
+          heading: '3. Step-by-Step Procedure to Claim Your Leak Credit',
+          body: [
+            'Step 1: Stop the water loss immediately by locating and repairing the leak. Call a licensed non-invasive leak specialist at (725) 313-0108 to pinpoint the exact breach without destructive exploratory excavation.',
+            'Step 2: Verify zero-flow on your water meter. Once the repair is complete, examine the low-flow dial or digital LCD on your street meter to ensure all continuous flow has completely ceased.',
+            'Step 3: Secure an official Itemized Diagnostic & Repair Invoice. The invoice must clearly state the date of repair, property address, physical location of the rupture (e.g. sub-slab hot supply line, main yard line, irrigation manifold), and the contractor’s active Nevada State Contractors Board (NSCB) license number.',
+            'Step 4: Submit the Adjustment Request Form via the LVVWD online customer portal (lvvwd.com) or by calling customer service at (702) 870-4194. Upload digital copies of your contractor invoice and repair photos.'
+          ]
+        },
+        {
+          heading: '4. What Documentation Does LVVWD Require on Contractor Invoices?',
+          body: [
+            'The number one reason LVVWD denies leak credit applications is inadequate or incomplete documentation. Hand-written receipts or generic handyman invoices that lack specific diagnostic details are routinely rejected.',
+            'Spring Valley Leak Detection & Repair provides dedicated, standardized LVVWD Compliance Reports that include: Nevada State Contractors Board license number, technician certification, exact GPS coordinates/address, pre-repair acoustic test readings, post-repair static pressure test verification, and itemized materials deployed.',
+            'Having this complete audit-ready documentation guarantees smooth approval through the water district review committee.'
+          ],
+          keyTakeaways: [
+            'Generic handyman receipts without license numbers are rejected by LVVWD',
+            'Our standardized diagnostic reports include pressure decay tests and license credentials'
+          ]
+        },
+        {
+          heading: '5. How Much Money Can You Expect to Recover?',
+          body: [
+            'Under LVVWD guidelines, qualifying residential accounts receive a credit equal to 50% of the water volume billed in excess of the customer’s normal historical consumption for that period.',
+            'More importantly, the adjustment recalculates the excess volume at the lowest baseline Tier-1 rate rather than the punitive Tier-3/4 rates, effectively wiping out hundreds or thousands of dollars in excess penalties.',
+            'For example, on a $1,400 bill caused by a 45,000-gallon underground main rupture, a successful leak credit adjustment frequently reduces the balance by $600 to $900.'
+          ]
+        }
+      ],
+      conclusion: 'If an unexpected high water bill arrived in your mailbox or LVVWD sent a continuous flow alert, don’t wait. Call Spring Valley Leak Detection & Repair 24/7 at (725) 313-0108. We will locate your hidden leak non-invasively, perform emergency repairs, and supply the official documentation needed to claim your LVVWD refund.'
+    }
   }
 ];

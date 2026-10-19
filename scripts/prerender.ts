@@ -246,12 +246,8 @@ function buildPreRenderedBody(page: PageContent, blogPost: BlogPost | null): str
         </div>
         <div class="md:col-span-4 mt-6 pt-6 border-t border-slate-700/60">
           <h4 class="font-bold text-amber-400 mb-3 uppercase tracking-wider text-[11px]">Technical Leak Diagnostics & Knowledge Base</h4>
-          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-3">
-            <a href="/blog/signs-of-slab-leak-in-las-vegas-homes/" class="hover:text-amber-300 block">5 Warning Signs of a Slab Leak</a>
-            <a href="/blog/how-swimming-pool-bucket-test-works/" class="hover:text-amber-300 block">Pool 24-Hr Bucket Test Guide</a>
-            <a href="/blog/what-to-do-when-you-smell-gas/" class="hover:text-amber-300 block">Smell Gas Emergency Safety</a>
-            <a href="/blog/desert-caliche-soil-pipe-damage/" class="hover:text-amber-300 block">Caliche Soil & Pipe Damage</a>
-            <a href="/blog/how-to-read-water-meter-for-hidden-leaks/" class="hover:text-amber-300 block">Read Water Meter for Leaks</a>
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
+            ${BLOG_POSTS.map(b => `<a href="/blog/${b.slug}/" class="hover:text-amber-300 block">${b.title}</a>`).join('')}
           </div>
         </div>
       </div>
