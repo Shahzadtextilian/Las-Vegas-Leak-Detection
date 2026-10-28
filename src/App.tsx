@@ -6,9 +6,17 @@ import { Header } from './components/Header';
 import { Footer } from './components/Footer';
 import { PageRenderer } from './components/PageRenderer';
 import { StickyMobileCallBar } from './components/StickyMobileCallBar';
-import { SeoAuditModal } from './components/SeoAuditModal';
-import { BlogPage } from './components/BlogPage';
-import { NotFoundPage } from './components/NotFoundPage';
+
+// Lazy-load non-critical routes to eliminate unused JavaScript on initial mobile loads
+const SeoAuditModal = React.lazy(() =>
+  import('./components/SeoAuditModal').then((m) => ({ default: m.SeoAuditModal }))
+);
+const BlogPage = React.lazy(() =>
+  import('./components/BlogPage').then((m) => ({ default: m.BlogPage }))
+);
+const NotFoundPage = React.lazy(() =>
+  import('./components/NotFoundPage').then((m) => ({ default: m.NotFoundPage }))
+);
 
 export default function App() {
   // Determine initial slug from window.location.pathname
@@ -152,20 +160,22 @@ export default function App() {
 
       {/* Main Page Content */}
       <div className="flex-1">
-        {currentSlug === '404' ? (
-          <NotFoundPage onNavigate={handleNavigate} />
-        ) : isBlogRoute ? (
-          <BlogPage
-            onNavigate={handleNavigate}
-            activePostSlug={activeBlogPostSlug}
-          />
-        ) : (
-          <PageRenderer
-            page={currentPage}
-            onNavigate={handleNavigate}
-            onOpenAudit={() => setIsAuditModalOpen(true)}
-          />
-        )}
+        <React.Suspense fallback={<div className="min-h-[50vh] flex items-center justify-center py-20"><div className="w-8 h-8 border-3 border-[#1E70B8] border-t-transparent rounded-full animate-spin"></div></div>}>
+          {currentSlug === '404' ? (
+            <NotFoundPage onNavigate={handleNavigate} />
+          ) : isBlogRoute ? (
+            <BlogPage
+              onNavigate={handleNavigate}
+              activePostSlug={activeBlogPostSlug}
+            />
+          ) : (
+            <PageRenderer
+              page={currentPage}
+              onNavigate={handleNavigate}
+              onOpenAudit={() => setIsAuditModalOpen(true)}
+            />
+          )}
+        </React.Suspense>
       </div>
 
       {/* Footer with Full Navigation & NAP Information */}
@@ -174,13 +184,17 @@ export default function App() {
       {/* Mobile Sticky Call Bar */}
       <StickyMobileCallBar onNavigate={handleNavigate} />
 
-      {/* Interactive SEO & Architecture Audit Modal */}
-      <SeoAuditModal
-        page={currentPage}
-        isOpen={isAuditModalOpen}
-        onClose={() => setIsAuditModalOpen(false)}
-        onNavigate={handleNavigate}
-      />
+      {/* Interactive SEO & Architecture Audit Modal (Loaded only when opened) */}
+      {isAuditModalOpen && (
+        <React.Suspense fallback={null}>
+          <SeoAuditModal
+            page={currentPage}
+            isOpen={isAuditModalOpen}
+            onClose={() => setIsAuditModalOpen(false)}
+            onNavigate={handleNavigate}
+          />
+        </React.Suspense>
+      )}
 
     </div>
   );
