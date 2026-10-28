@@ -364,21 +364,36 @@ export const PageRenderer: React.FC<PageRendererProps> = ({
 
             {/* Right Column: Featured Image Asset */}
             <div className="lg:col-span-5 flex flex-col justify-center">
-              <div className="relative rounded-2xl overflow-hidden border border-slate-200 shadow-md bg-slate-100 group min-h-[300px]">
+              <div className="relative rounded-2xl overflow-hidden border border-slate-200 shadow-md bg-slate-100 group h-72 sm:h-96">
                 {page.featuredImage && !imgHasError ? (
-                  <img
-                    src={page.featuredImage}
-                    alt={page.imageAlt || page.name}
-                    width={800}
-                    height={600}
-                    className="w-full h-72 sm:h-96 object-cover object-center group-hover:scale-102 transition-transform duration-500"
-                    referrerPolicy="no-referrer"
-                    loading="eager"
-                    // @ts-ignore
-                    fetchPriority="high"
-                    decoding="async"
-                    onError={() => setImgHasError(true)}
-                  />
+                  <picture>
+                    {page.slug === '' && (
+                      <source
+                        media="(max-width: 640px)"
+                        srcSet="/images/hero_emergency_plumbing_mobile.webp"
+                        type="image/webp"
+                      />
+                    )}
+                    <img
+                      src={page.featuredImage}
+                      srcSet={
+                        page.slug === ''
+                          ? '/images/hero_emergency_plumbing_mobile.webp 640w, /images/hero_emergency_plumbing_1791566119640.webp 960w'
+                          : undefined
+                      }
+                      sizes="(max-width: 640px) 100vw, 550px"
+                      alt={page.imageAlt || page.name}
+                      width={960}
+                      height={536}
+                      className="w-full h-72 sm:h-96 object-cover object-center group-hover:scale-102 transition-transform duration-500"
+                      referrerPolicy="no-referrer"
+                      loading="eager"
+                      // @ts-ignore
+                      fetchPriority="high"
+                      decoding="async"
+                      onError={() => setImgHasError(true)}
+                    />
+                  </picture>
                 ) : (
                   <div className="w-full h-72 sm:h-96 bg-gradient-to-br from-[#0F2942] via-slate-800 to-[#1E70B8] flex items-center justify-center p-8 text-center text-white">
                     <div className="max-w-sm">
@@ -1026,7 +1041,6 @@ export const PageRenderer: React.FC<PageRendererProps> = ({
                       onClick={(e) => {
                         e.preventDefault();
                         onNavigate(`blog/${post.slug}`);
-                        window.scrollTo({ top: 0, behavior: 'smooth' });
                       }}
                       className="group p-5 rounded-xl border border-slate-200 hover:border-[#1E70B8] hover:bg-slate-50/60 transition-all flex flex-col justify-between block no-underline text-inherit"
                     >
@@ -1089,7 +1103,6 @@ export const PageRenderer: React.FC<PageRendererProps> = ({
                         onClick={(e) => {
                           e.preventDefault();
                           onNavigate(`blog/${matchedPost.slug}`);
-                          window.scrollTo({ top: 0, behavior: 'smooth' });
                         }}
                         className="px-4 py-2.5 bg-[#0F2942] hover:bg-[#1E70B8] text-white text-xs font-bold rounded-lg transition-colors shrink-0 flex items-center gap-1.5 no-underline"
                       >
@@ -1176,7 +1189,6 @@ export const PageRenderer: React.FC<PageRendererProps> = ({
                       onClick={(e) => {
                         e.preventDefault();
                         onNavigate(`blog/${post.slug}`);
-                        window.scrollTo({ top: 0, behavior: 'smooth' });
                       }}
                       className="block p-2.5 rounded-lg bg-white/90 hover:bg-white border border-amber-200/70 hover:border-[#1E70B8] transition-colors group no-underline text-inherit"
                     >

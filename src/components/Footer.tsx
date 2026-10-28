@@ -312,7 +312,6 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
                 onClick={(e) => {
                   e.preventDefault();
                   onNavigate(`blog/${post.slug}`);
-                  window.scrollTo({ top: 0, behavior: 'smooth' });
                 }}
                 className="p-3.5 rounded-xl bg-slate-900/80 border border-slate-800 hover:border-[#1E70B8] hover:bg-slate-800/80 transition-all group flex flex-col justify-between block no-underline text-inherit"
               >

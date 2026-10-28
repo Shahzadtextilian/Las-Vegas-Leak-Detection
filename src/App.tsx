@@ -64,7 +64,7 @@ export default function App() {
     setCurrentSlug(slug);
     const targetPath = slug === '' ? '/' : `/${slug}/`;
     window.history.pushState({}, '', targetPath);
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    window.scrollTo(0, 0);
   };
 
   // Sync with browser back/forward buttons

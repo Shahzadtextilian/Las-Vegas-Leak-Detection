@@ -150,7 +150,7 @@ export const BlogPage: React.FC<BlogPageProps> = ({ onNavigate, activePostSlug }
             <div className="lg:col-span-8 space-y-8">
               {/* Featured Image */}
               {selectedPost.featuredImage && (
-                <div className="rounded-2xl overflow-hidden border border-slate-200 shadow-md bg-slate-100">
+                <div className="rounded-2xl overflow-hidden border border-slate-200 shadow-md bg-slate-100 h-64 sm:h-80">
                   <img
                     src={selectedPost.featuredImage}
                     alt={selectedPost.title}
@@ -261,7 +261,6 @@ export const BlogPage: React.FC<BlogPageProps> = ({ onNavigate, activePostSlug }
                         e.preventDefault();
                         setSelectedPost(other);
                         onNavigate(`blog/${other.slug}`);
-                        window.scrollTo({ top: 0, behavior: 'smooth' });
                       }}
                       className="p-4 rounded-xl border border-slate-200 hover:border-[#1E70B8] hover:bg-white transition-all group block no-underline bg-slate-50/60"
                     >
@@ -320,7 +319,6 @@ export const BlogPage: React.FC<BlogPageProps> = ({ onNavigate, activePostSlug }
                         e.preventDefault();
                         setSelectedPost(other);
                         onNavigate(`blog/${other.slug}`);
-                        window.scrollTo({ top: 0, behavior: 'smooth' });
                       }}
                       className="w-full text-left p-3 rounded-xl border border-slate-100 hover:border-[#1E70B8] hover:bg-slate-50 transition-colors group block no-underline"
                     >
@@ -445,7 +443,6 @@ export const BlogPage: React.FC<BlogPageProps> = ({ onNavigate, activePostSlug }
                   e.preventDefault();
                   setSelectedPost(post);
                   onNavigate(`blog/${post.slug}`);
-                  window.scrollTo({ top: 0, behavior: 'smooth' });
                 }}
               >
                 {/* Thumbnail Image */}
@@ -454,8 +451,11 @@ export const BlogPage: React.FC<BlogPageProps> = ({ onNavigate, activePostSlug }
                     <img
                       src={post.featuredImage}
                       alt={post.title}
+                      width={400}
+                      height={192}
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                       loading="lazy"
+                      decoding="async"
                     />
                     <div className="absolute top-3 left-3">
                       <span className="px-2.5 py-1 rounded-md bg-white/95 backdrop-blur-xs text-amber-900 font-semibold text-xs shadow-xs border border-amber-200/60">
