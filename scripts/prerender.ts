@@ -403,6 +403,7 @@ const redirectAliases: { from: string; to: string }[] = [
   { from: 'gas-leak', to: '/gas-leak-detection/' },
   { from: 'slab-leak', to: '/slab-leak-detection/' },
   { from: 'pool-leak', to: '/pool-leak-detection/' },
+  { from: 'privacy', to: '/privacy-policy/' },
 ];
 
 for (const alias of redirectAliases) {

@@ -66,8 +66,8 @@ export const sitePages: Record<string, PageContent> = {
     type: "home",
     name: "Spring Valley Leak Detection & Repair",
     navTitle: "Home",
-    metaTitle: "Leak Detection & Repair Spring Valley NV | 24/7 Service",
-    metaDescription: "Expert water, gas, slab & pool leak detection in Spring Valley, NV. 24/7 emergency repair with fast, non-invasive diagnostics. Call (725) 313-0108 today!",
+    metaTitle: "Leak Detection in Spring Valley, Las Vegas NV | Fast Help",
+    metaDescription: "Hidden water, slab or gas leak in Spring Valley? Get matched with a licensed local pro for non-invasive detection. Call (725) 313-0108.",
     primaryKeyword: "leak detection Spring Valley NV",
     secondaryKeywords: [
       "water leak detection Spring Valley",
@@ -232,8 +232,8 @@ export const sitePages: Record<string, PageContent> = {
     type: "service",
     name: "Water Leak Detection & Repair",
     navTitle: "Water Leaks",
-    metaTitle: "Water Leak Detection Spring Valley NV | Hidden Pipe Leak Repair",
-    metaDescription: "Unexplained high water bill or hidden pipe leak in Spring Valley? Call (725) 313-0108. Non-invasive acoustic & thermal water leak detection & fast repair.",
+    metaTitle: "Slab & Water Leak Detection Las Vegas NV | No Digging",
+    metaDescription: "High water bill or wet spots? Acoustic and thermal imaging pinpoints slab and pipe leaks without tearing up floors. Free help: (725) 313-0108.",
     primaryKeyword: "water leak detection Spring Valley",
     secondaryKeywords: [
       "hidden water leak repair Spring Valley NV",
@@ -321,8 +321,8 @@ export const sitePages: Record<string, PageContent> = {
     type: "service",
     name: "Gas Leak Detection & Emergency Repair",
     navTitle: "Gas Leaks",
-    metaTitle: "Gas Leak Detection Spring Valley NV | Emergency Gas Line Repair (725) 313-0108",
-    metaDescription: "Smell natural gas or rotten eggs in Spring Valley? Call (725) 313-0108 for 24/7 emergency gas leak detection & repair. Licensed Nevada gas pipe technicians.",
+    metaTitle: "Gas Leak Detection Las Vegas, NV | 24/7 Emergency Help",
+    metaDescription: "Smell gas? Leave the home and call 911 or Southwest Gas first. Then call us for licensed gas leak testing in Spring Valley. (725) 313-0108.",
     primaryKeyword: "gas leak detection Spring Valley",
     secondaryKeywords: [
       "gas leak repair Spring Valley NV",
@@ -1142,8 +1142,8 @@ export const sitePages: Record<string, PageContent> = {
     type: "about",
     name: "About Spring Valley Leak Detection & Repair",
     navTitle: "About Us",
-    metaTitle: "About Us | Spring Valley Leak Detection & Repair | (725) 313-0108",
-    metaDescription: "Spring Valley Leak Detection & Repair provides 24/7 non-invasive diagnostics and emergency repair for water, gas, slab & pool leaks in Spring Valley, NV.",
+    metaTitle: "About Leak Detection NV | Spring Valley Plumber Network",
+    metaDescription: "We connect Spring Valley and Las Vegas homeowners with pre-screened, licensed leak detection pros. See how it works. Call (725) 313-0108.",
     primaryKeyword: "Spring Valley leak detection company",
     secondaryKeywords: [
       "about Spring Valley Leak Detection",
@@ -1218,8 +1218,8 @@ export const sitePages: Record<string, PageContent> = {
     type: "contact",
     name: "Contact & NAP | Spring Valley Leak Detection & Repair",
     navTitle: "Contact & NAP",
-    metaTitle: "Contact Us 24/7 | Spring Valley Leak Detection & Repair (725) 313-0108",
-    metaDescription: "Contact Spring Valley Leak Detection 24/7 at (725) 313-0108. Located at 6875 Groveview Ln. Water, gas, slab & pool leak detection and rapid repairs.",
+    metaTitle: "Contact Leak Detection NV | Las Vegas, NV 89103",
+    metaDescription: "Request a free leak detection estimate in Spring Valley. Call (725) 313-0108 anytime or visit 6875 Groveview Ln, Las Vegas, NV 89103.",
     primaryKeyword: "contact Spring Valley leak detection",
     secondaryKeywords: [
       "Spring Valley leak detection phone number",
@@ -1294,8 +1294,8 @@ export const sitePages: Record<string, PageContent> = {
     type: "about",
     name: "Leak Detection Blog & Knowledge Base",
     navTitle: "Blog",
-    metaTitle: "Leak Detection Blog & Guides | Spring Valley Leak Detection",
-    metaDescription: "Expert guides, DIY diagnostic tips, and emergency protocols for water, gas, slab, and pool leaks in Spring Valley, NV. Written by licensed leak specialists.",
+    metaTitle: "Leak Detection Cost in Las Vegas, NV (2026 Price Guide)",
+    metaDescription: "How much does leak detection cost in Las Vegas? See 2026 price ranges, what changes the bill, and whether insurance covers slab leak locating.",
     primaryKeyword: "Spring Valley leak detection blog",
     secondaryKeywords: [
       "slab leak warning signs Las Vegas",
@@ -1325,8 +1325,8 @@ export const sitePages: Record<string, PageContent> = {
     type: "about",
     name: "Privacy Policy",
     navTitle: "Privacy Policy",
-    metaTitle: "Privacy Policy | Spring Valley Leak Detection & Repair",
-    metaDescription: "Privacy Policy for Spring Valley Leak Detection & Repair at 6875 Groveview Ln, Las Vegas, NV 89103. Learn how customer data is protected.",
+    metaTitle: "Privacy Policy | Leak Detection NV Las Vegas",
+    metaDescription: "How Leak Detection NV collects, uses and protects your personal information, and the privacy choices available to you.",
     primaryKeyword: "Spring Valley Leak Detection privacy policy",
     secondaryKeywords: [
       "leak detection privacy policy",
@@ -1400,6 +1400,189 @@ export const sitePages: Record<string, PageContent> = {
     relatedLocations: [
       { name: "Spring Valley Center", slug: "spring-valley-center", context: "Central core area." },
       { name: "The Lakes", slug: "the-lakes", context: "Waterfront community." }
+    ],
+    schemaType: "WebPage"
+  },
+
+  // 17. DISCLAIMER & LICENSING PAGE
+  "disclaimer": {
+    slug: "disclaimer",
+    urlPath: "/disclaimer/",
+    type: "about",
+    name: "Legal Disclaimer & Licensing",
+    navTitle: "Disclaimer",
+    metaTitle: "Legal Disclaimer & Licensing | Leak Detection NV",
+    metaDescription: "Leak Detection NV is a referral service. Work is performed by independent licensed contractors. Read our licensing and service terms.",
+    primaryKeyword: "Leak Detection NV disclaimer licensing",
+    secondaryKeywords: [
+      "leak detection referral service",
+      "independent licensed contractors Nevada",
+      "NSCB plumbing licensing terms",
+      "Spring Valley contractor referral"
+    ],
+    semanticEntities: [
+      "Nevada State Contractors Board (NSCB)",
+      "Independent contractor referral service",
+      "Limitation of liability terms",
+      "Spring Valley service agreements"
+    ],
+    h1: "Legal Disclaimer & Contractor Licensing Information",
+    heroKicker: "Referral Service Terms • Independent Licensed Contractors",
+    heroSubheadline: "Transparency and licensing standards for homeowners and commercial property owners in Spring Valley, Las Vegas, and Clark County, NV.",
+    directAnswer: "Leak Detection NV is a customer referral and matching service. All leak detection, plumbing, gas piping, slab excavation, and restoration services are performed exclusively by independent, third-party licensed contractors holding valid Nevada State Contractors Board (NSCB) licenses. Leak Detection NV does not directly employ plumbers or perform plumbing work.",
+    sections: [
+      {
+        heading: "1. Contractor Matching & Referral Service",
+        subheading: "Independent plumbing and leak specialists",
+        paragraphs: [
+          "Leak Detection NV operates as an independent lead generation and customer matching portal connecting property owners in Spring Valley, NV (ZIP codes 89103, 89147, 89148, 89117, 89113) and surrounding Clark County areas with pre-screened, independent plumbing contractors.",
+          "When you contact our dispatch line at (725) 313-0108 or submit an inquiry, your request is routed to an independent contractor who possesses appropriate local and state trade licenses, commercial liability insurance, and specialized electronic leak detection equipment."
+        ]
+      },
+      {
+        heading: "2. Independent Contractor Responsibility & Licensing",
+        subheading: "Nevada State Contractors Board (NSCB) compliance",
+        paragraphs: [
+          "Each independent contractor dispatched to your property is solely responsible for evaluating job site conditions, executing technical diagnostics, providing itemized repair estimates, and completing all plumbing or gas repairs in compliance with the Nevada State Contractors Board (NSCB) and the Southern Nevada Plumbing Code.",
+          "Property owners are encouraged to verify contractor license numbers, bond standing, and insurance coverage directly with the contractor prior to authorizing major sub-slab or underground excavation work."
+        ]
+      },
+      {
+        heading: "3. Limitation of Liability & Warranties",
+        subheading: "Service terms and guarantees",
+        paragraphs: [
+          "Leak Detection NV does not guarantee, warrant, or assume liability for the work, acts, omissions, or representations of independent service providers. Any warranties, guarantees, or service contracts are entered into directly between the property owner and the servicing contractor.",
+          "Emergency dispatch estimates and diagnostic timeframes (such as 30–60 minute response windows) are subject to traffic conditions, severe weather, technician availability, and prior emergency call volumes in Spring Valley."
+        ]
+      },
+      {
+        heading: "4. Business Office & Questions",
+        subheading: "Contact our dispatch headquarters",
+        paragraphs: [
+          "If you have questions regarding these licensing disclosures or service policies, you may contact our Spring Valley dispatch desk at 6875 Groveview Ln, Las Vegas, NV 89103, or call (725) 313-0108."
+        ]
+      }
+    ],
+    faqs: [
+      {
+        question: "Does Leak Detection NV perform plumbing work directly?",
+        answer: "No. Leak Detection NV connects homeowners with pre-screened, independent plumbing contractors licensed by the Nevada State Contractors Board (NSCB)."
+      },
+      {
+        question: "Are dispatched contractors licensed and insured?",
+        answer: "Yes. All independent plumbing professionals in our network maintain active NSCB licenses, general liability insurance, and workman's compensation coverage."
+      }
+    ],
+    relatedServices: [
+      { title: "Water Leak Detection & Repair", slug: "water-leak-detection", description: "Potable supply line leak diagnostics." },
+      { title: "Gas Leak Detection & Repair", slug: "gas-leak-detection", description: "24/7 emergency gas line diagnostics." },
+      { title: "Slab Leak Detection & Repair", slug: "slab-leak-detection", description: "Sub-foundation acoustic diagnostics." }
+    ],
+    relatedLocations: [
+      { name: "Spring Valley Center", slug: "spring-valley-center", context: "Rainbow & Flamingo dispatch zone." },
+      { name: "The Lakes", slug: "the-lakes", context: "Sahara & Fort Apache service area." }
+    ],
+    schemaType: "WebPage"
+  },
+
+  // 18. SITEMAP PAGE
+  "sitemap": {
+    slug: "sitemap",
+    urlPath: "/sitemap/",
+    type: "about",
+    name: "Sitemap | Leak Detection NV Spring Valley",
+    navTitle: "Sitemap",
+    metaTitle: "Sitemap | Leak Detection NV Spring Valley",
+    metaDescription: "Browse every Leak Detection NV page: water leak detection, gas leak detection, cost guides and contact details for Spring Valley, Las Vegas.",
+    primaryKeyword: "Leak Detection NV sitemap Spring Valley",
+    secondaryKeywords: [
+      "Spring Valley leak detection pages directory",
+      "Las Vegas plumbing site map",
+      "water gas slab pool leak navigation"
+    ],
+    semanticEntities: [
+      "Spring Valley Leak Detection site index",
+      "Comprehensive service navigation directory",
+      "Clark County neighborhood pages"
+    ],
+    h1: "Leak Detection NV Sitemap & Page Directory",
+    heroKicker: "Complete Directory • Spring Valley & Las Vegas Leaks",
+    heroSubheadline: "Easily navigate all service lines, neighborhood dispatch guides, technical articles, and contact resources.",
+    directAnswer: "Browse every page on Leak Detection NV: residential and commercial water leak detection, 24/7 emergency gas leak testing, slab leak acoustic locating, swimming pool hydrophone testing, cost guides, and dispatch contact details for Spring Valley and Las Vegas, NV.",
+    sections: [
+      {
+        heading: "Core Service Pages",
+        subheading: "Non-invasive electronic leak detection capabilities",
+        paragraphs: [
+          "Our specialized diagnostic services protect foundations, walls, yards, and pools across Spring Valley and Clark County, NV:"
+        ],
+        bulletPoints: [
+          "Home / Main Hub: Precision Water, Gas, Slab & Pool Leak Detection",
+          "Water Leak Detection & Repair: Non-invasive acoustic & thermal diagnostics for hidden pipes",
+          "Gas Leak Detection & Emergency Repair: 24/7 electronic sniffing and gas shutoff",
+          "Slab Leak Detection & Repair: Sub-concrete foundation acoustic geophones & infrared",
+          "Pool Leak Detection & Repair: Underwater hydrophones & precision dye testing",
+          "Underground & Yard Pipe Leaks: Buried potable mains & irrigation manifolds",
+          "24/7 Emergency Leak Diagnostics: Immediate 30–60 minute dispatch"
+        ]
+      },
+      {
+        heading: "Spring Valley Neighborhood Dispatch Zones",
+        subheading: "Local corridors and response times",
+        paragraphs: [
+          "Explore localized response coverage, caliche soil conditions, and utility rebate offices:"
+        ],
+        bulletPoints: [
+          "Spring Valley Core & Rainbow Corridor (ZIP 89103)",
+          "The Lakes & Peccole Ranch (ZIP 89117)",
+          "Spanish Trail Estates (ZIP 89113)",
+          "Summerlin South & 215 Beltway (ZIP 89135 / 89148)",
+          "Rhodes Ranch & Sunset Corridor (ZIP 89148)"
+        ]
+      },
+      {
+        heading: "Educational Guides & Cost Resources",
+        subheading: "Technical knowledge base and price guides",
+        paragraphs: [
+          "In-depth articles covering DIY leak testing, water bill rebates, and Las Vegas pricing:"
+        ],
+        bulletPoints: [
+          "Blog & Knowledge Base Main Hub",
+          "5 Warning Signs of a Slab Leak in Spring Valley & Las Vegas Homes",
+          "The 24-Hour Bucket Test: How to Tell if Your Pool is Leaking or Evaporating",
+          "What to Do When You Smell Natural Gas in Your Home: Step-by-Step Safety Guide",
+          "How Desert Caliche Soil Destroys Underground Plumbing in Southern Nevada",
+          "How to Read Your Water Meter to Detect Hidden Leaks Before a High Bill",
+          "How to Get a Leak Credit on Your Las Vegas Valley Water District (LVVWD) Bill"
+        ]
+      },
+      {
+        heading: "Company Information & Legal",
+        subheading: "Headquarters, licensing, and policies",
+        paragraphs: [
+          "Transparency and compliance information for our dispatch office at 6875 Groveview Ln, Las Vegas, NV 89103:"
+        ],
+        bulletPoints: [
+          "About Us: Spring Valley Plumber & Leak Specialist Network",
+          "Contact & Location: 24/7 Dispatch Desk & Embedded Google Map",
+          "How It Works: 4-Step Non-Invasive Diagnostic Process",
+          "Privacy Policy: Consumer data protection & TCPA compliance",
+          "Legal Disclaimer & Licensing: Referral service terms & NSCB contractor disclosures"
+        ]
+      }
+    ],
+    faqs: [
+      {
+        question: "Where is Leak Detection NV physically located?",
+        answer: "Our Spring Valley dispatch office is located at 6875 Groveview Ln, Las Vegas, NV 89103. Call (725) 313-0108 for immediate 24/7 service."
+      }
+    ],
+    relatedServices: [
+      { title: "Water Leak Detection", slug: "water-leak-detection", description: "Pinpoint hidden supply lines." },
+      { title: "Gas Leak Detection", slug: "gas-leak-detection", description: "24/7 gas line safety testing." }
+    ],
+    relatedLocations: [
+      { name: "Spring Valley Core", slug: "spring-valley-center", context: "Rainbow & Flamingo core." }
     ],
     schemaType: "WebPage"
   }

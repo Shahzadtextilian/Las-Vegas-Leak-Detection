@@ -33,6 +33,9 @@ export default function App() {
     if (rawPath === 'gas-leak') return 'gas-leak-detection';
     if (rawPath === 'slab-leak') return 'slab-leak-detection';
     if (rawPath === 'pool-leak') return 'pool-leak-detection';
+    if (rawPath === 'privacy') return 'privacy-policy';
+    if (rawPath === 'disclaimer') return 'disclaimer';
+    if (rawPath === 'sitemap') return 'sitemap';
     if (rawPath === 'services' || rawPath === 'locations' || rawPath === 'service-areas') return '';
     if (sitePages[rawPath]) return rawPath;
     return '404';

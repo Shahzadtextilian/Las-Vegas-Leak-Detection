@@ -238,6 +238,24 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
               </li>
               <li>
                 <a
+                  href="/disclaimer/"
+                  onClick={(e) => { e.preventDefault(); onNavigate('disclaimer'); }}
+                  className="hover:text-white transition-colors text-slate-400 font-medium"
+                >
+                  Disclaimer & Licensing
+                </a>
+              </li>
+              <li>
+                <a
+                  href="/sitemap/"
+                  onClick={(e) => { e.preventDefault(); onNavigate('sitemap'); }}
+                  className="hover:text-white transition-colors text-slate-400 font-medium"
+                >
+                  HTML Sitemap
+                </a>
+              </li>
+              <li>
+                <a
                   href="/sitemap.xml"
                   target="_blank"
                   rel="noreferrer"
