@@ -178,9 +178,20 @@ export const Header: React.FC<HeaderProps> = ({
                 e.preventDefault();
                 onNavigate('how-it-works');
               }}
-              className={`hover:text-[#1E70B8] transition-colors whitespace-nowrap shrink-0 ${currentSlug === 'how-it-works' || currentSlug === 'about' ? 'text-[#1E70B8] font-bold' : ''}`}
+              className={`hover:text-[#1E70B8] transition-colors whitespace-nowrap shrink-0 ${currentSlug === 'how-it-works' ? 'text-[#1E70B8] font-bold' : ''}`}
             >
               How It Works
+            </a>
+
+            <a
+              href="/about/"
+              onClick={(e) => {
+                e.preventDefault();
+                onNavigate('about');
+              }}
+              className={`hover:text-[#1E70B8] transition-colors whitespace-nowrap shrink-0 ${currentSlug === 'about' ? 'text-[#1E70B8] font-bold' : ''}`}
+            >
+              About Us
             </a>
 
             <a
@@ -251,6 +262,12 @@ export const Header: React.FC<HeaderProps> = ({
                 How It Works (5-Step Diagnostic)
               </button>
               <button
+                onClick={() => { onNavigate('about'); setMobileMenuOpen(false); }}
+                className="w-full text-left px-3 py-2 text-base font-medium text-slate-800 hover:bg-slate-50 rounded-lg"
+              >
+                About Our Team & Network
+              </button>
+              <button
                 onClick={() => { onNavigate('blog'); setMobileMenuOpen(false); }}
                 className="w-full text-left px-3 py-2 text-base font-medium text-slate-800 hover:bg-slate-50 rounded-lg flex items-center justify-between"
               >
@@ -262,6 +279,18 @@ export const Header: React.FC<HeaderProps> = ({
                 className="w-full text-left px-3 py-2 text-base font-medium text-slate-800 hover:bg-slate-50 rounded-lg"
               >
                 Contact & NAP (6875 Groveview Ln)
+              </button>
+              <button
+                onClick={() => { onNavigate('disclaimer'); setMobileMenuOpen(false); }}
+                className="w-full text-left px-3 py-2 text-sm font-medium text-slate-600 hover:bg-slate-50 rounded-lg"
+              >
+                Legal Disclaimer & Licensing
+              </button>
+              <button
+                onClick={() => { onNavigate('sitemap'); setMobileMenuOpen(false); }}
+                className="w-full text-left px-3 py-2 text-sm font-medium text-slate-600 hover:bg-slate-50 rounded-lg"
+              >
+                HTML Sitemap Directory
               </button>
             </div>
 

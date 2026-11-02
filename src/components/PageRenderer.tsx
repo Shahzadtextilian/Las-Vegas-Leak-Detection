@@ -1007,6 +1007,213 @@ export const PageRenderer: React.FC<PageRendererProps> = ({
               </section>
             )}
 
+            {/* CONTEXTUAL INSTITUTIONAL & LEGAL CROSS-LINKS (Guarantees zero orphan legal pages) */}
+            {(page.slug === 'disclaimer' || page.slug === 'privacy-policy' || page.slug === 'about' || page.slug === 'how-it-works' || page.slug === 'contact') && (
+              <section className="bg-slate-100/90 rounded-2xl p-6 border border-slate-200">
+                <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 text-xs">
+                  <div className="font-bold text-slate-800 uppercase tracking-wider flex items-center gap-2">
+                    <ShieldCheck className="w-4 h-4 text-emerald-600" />
+                    <span>Company & Compliance Directory:</span>
+                  </div>
+                  <div className="flex flex-wrap items-center gap-3 text-xs font-medium">
+                    <a href="/about/" onClick={(e) => { e.preventDefault(); onNavigate('about'); }} className={`text-[#1E70B8] hover:underline ${page.slug === 'about' ? 'font-bold underline' : ''}`}>About Our Network</a>
+                    <span className="text-slate-300">•</span>
+                    <a href="/how-it-works/" onClick={(e) => { e.preventDefault(); onNavigate('how-it-works'); }} className={`text-[#1E70B8] hover:underline ${page.slug === 'how-it-works' ? 'font-bold underline' : ''}`}>How It Works</a>
+                    <span className="text-slate-300">•</span>
+                    <a href="/contact/" onClick={(e) => { e.preventDefault(); onNavigate('contact'); }} className={`text-[#1E70B8] hover:underline ${page.slug === 'contact' ? 'font-bold underline' : ''}`}>Contact & Map</a>
+                    <span className="text-slate-300">•</span>
+                    <a href="/privacy-policy/" onClick={(e) => { e.preventDefault(); onNavigate('privacy-policy'); }} className={`text-[#1E70B8] hover:underline ${page.slug === 'privacy-policy' ? 'font-bold underline' : ''}`}>Privacy Policy</a>
+                    <span className="text-slate-300">•</span>
+                    <a href="/disclaimer/" onClick={(e) => { e.preventDefault(); onNavigate('disclaimer'); }} className={`text-[#1E70B8] hover:underline ${page.slug === 'disclaimer' ? 'font-bold underline' : ''}`}>Legal Disclaimer</a>
+                    <span className="text-slate-300">•</span>
+                    <a href="/sitemap/" onClick={(e) => { e.preventDefault(); onNavigate('sitemap'); }} className="text-[#1E70B8] hover:underline">HTML Sitemap</a>
+                  </div>
+                </div>
+              </section>
+            )}
+
+            {/* HTML SITEMAP COMPREHENSIVE DIRECTORY (Guarantees 0 Orphan Pages) */}
+            {page.slug === 'sitemap' && (
+              <section className="bg-white rounded-2xl p-6 sm:p-8 border border-slate-200 shadow-xs space-y-8">
+                <div className="border-b border-slate-200 pb-4">
+                  <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-[#1E70B8] font-display">
+                    <Navigation className="w-4 h-4 text-amber-500" />
+                    <span>Complete Website Crawl Index</span>
+                  </div>
+                  <h2 className="text-xl sm:text-2xl font-bold text-slate-900 mt-1 font-display">
+                    Full Site Directory & Page Index
+                  </h2>
+                  <p className="text-xs sm:text-sm text-slate-600 mt-1">
+                    Every published service page, neighborhood dispatch zone, technical diagnostic guide, and company policy is linked below:
+                  </p>
+                </div>
+
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  {/* Category 1: Services */}
+                  <div className="bg-slate-50 border border-slate-200 rounded-xl p-5 space-y-3">
+                    <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-[#0F2942]">
+                      <Wrench className="w-4 h-4 text-[#1E70B8]" />
+                      <span>Leak Detection Services (6 Pages)</span>
+                    </div>
+                    <ul className="space-y-2.5 text-xs">
+                      <li>
+                        <a href="/water-leak-detection/" onClick={(e) => { e.preventDefault(); onNavigate('water-leak-detection'); }} className="font-bold text-[#1E70B8] hover:underline block text-sm">
+                          Water Leak Detection & Repair
+                        </a>
+                        <span className="text-slate-600">Acoustic listening & thermal infrared imaging for hidden potable pipe leaks.</span>
+                      </li>
+                      <li>
+                        <a href="/slab-leak-detection/" onClick={(e) => { e.preventDefault(); onNavigate('slab-leak-detection'); }} className="font-bold text-[#1E70B8] hover:underline block text-sm">
+                          Slab Leak Detection & Repair
+                        </a>
+                        <span className="text-slate-600">Locating sub-concrete foundation copper pipe pinholes without jackhammering.</span>
+                      </li>
+                      <li>
+                        <a href="/pool-leak-detection/" onClick={(e) => { e.preventDefault(); onNavigate('pool-leak-detection'); }} className="font-bold text-[#1E70B8] hover:underline block text-sm">
+                          Pool Leak Detection & Repair
+                        </a>
+                        <span className="text-slate-600">Hydrophone acoustic listening & dye testing for swimming pools & spas.</span>
+                      </li>
+                      <li>
+                        <a href="/gas-leak-detection/" onClick={(e) => { e.preventDefault(); onNavigate('gas-leak-detection'); }} className="font-bold text-[#1E70B8] hover:underline block text-sm">
+                          Gas Leak Detection & Emergency Repair
+                        </a>
+                        <span className="text-slate-600">24/7 PPM digital sniffing for hazardous natural gas & propane pipe leaks.</span>
+                      </li>
+                      <li>
+                        <a href="/underground-leak-detection/" onClick={(e) => { e.preventDefault(); onNavigate('underground-leak-detection'); }} className="font-bold text-[#1E70B8] hover:underline block text-sm">
+                          Underground & Yard Pipe Leaks
+                        </a>
+                        <span className="text-slate-600">Main potable lines & pressurized irrigation manifold diagnostics.</span>
+                      </li>
+                      <li>
+                        <a href="/emergency-leak-repair/" onClick={(e) => { e.preventDefault(); onNavigate('emergency-leak-repair'); }} className="font-bold text-[#1E70B8] hover:underline block text-sm">
+                          24/7 Emergency Leak Diagnostics
+                        </a>
+                        <span className="text-slate-600">30–60 minute rapid on-site technician response across Clark County.</span>
+                      </li>
+                    </ul>
+                  </div>
+
+                  {/* Category 2: Neighborhoods */}
+                  <div className="bg-slate-50 border border-slate-200 rounded-xl p-5 space-y-3">
+                    <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-[#0F2942]">
+                      <MapPin className="w-4 h-4 text-amber-500" />
+                      <span>Spring Valley Service Sectors (5 Pages)</span>
+                    </div>
+                    <ul className="space-y-2.5 text-xs">
+                      <li>
+                        <a href="/spring-valley-center/" onClick={(e) => { e.preventDefault(); onNavigate('spring-valley-center'); }} className="font-bold text-[#1E70B8] hover:underline block text-sm">
+                          Spring Valley Core & Rainbow Corridor (89103)
+                        </a>
+                        <span className="text-slate-600">Rainbow Blvd & Tropicana Ave / Flamingo Rd • ETA 20–30 min.</span>
+                      </li>
+                      <li>
+                        <a href="/the-lakes/" onClick={(e) => { e.preventDefault(); onNavigate('the-lakes'); }} className="font-bold text-[#1E70B8] hover:underline block text-sm">
+                          The Lakes & Peccole Ranch (89117)
+                        </a>
+                        <span className="text-slate-600">Sahara Ave & Fort Apache Rd • ETA 25–35 min.</span>
+                      </li>
+                      <li>
+                        <a href="/spanish-trail/" onClick={(e) => { e.preventDefault(); onNavigate('spanish-trail'); }} className="font-bold text-[#1E70B8] hover:underline block text-sm">
+                          Spanish Trail Estates (89113)
+                        </a>
+                        <span className="text-slate-600">Tropicana Ave & Buffalo Dr • ETA 20–30 min.</span>
+                      </li>
+                      <li>
+                        <a href="/summerlin-south/" onClick={(e) => { e.preventDefault(); onNavigate('summerlin-south'); }} className="font-bold text-[#1E70B8] hover:underline block text-sm">
+                          Summerlin South & 215 Beltway (89135 / 89148)
+                        </a>
+                        <span className="text-slate-600">Town Center Dr & Maule Ave • ETA 30–40 min.</span>
+                      </li>
+                      <li>
+                        <a href="/rhodes-ranch/" onClick={(e) => { e.preventDefault(); onNavigate('rhodes-ranch'); }} className="font-bold text-[#1E70B8] hover:underline block text-sm">
+                          Rhodes Ranch & Sunset Corridor (89148)
+                        </a>
+                        <span className="text-slate-600">Durango Dr & Sunset Rd • ETA 30–40 min.</span>
+                      </li>
+                    </ul>
+                  </div>
+
+                  {/* Category 3: Technical Guides */}
+                  <div className="bg-slate-50 border border-slate-200 rounded-xl p-5 space-y-3">
+                    <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-[#0F2942]">
+                      <BookOpen className="w-4 h-4 text-emerald-600" />
+                      <span>Technical Leak Guides & Blog (7 Pages)</span>
+                    </div>
+                    <ul className="space-y-2.5 text-xs">
+                      <li>
+                        <a href="/blog/" onClick={(e) => { e.preventDefault(); onNavigate('blog'); }} className="font-bold text-[#1E70B8] hover:underline block text-sm">
+                          Leak Knowledge Base Main Hub
+                        </a>
+                        <span className="text-slate-600">All DIY diagnostic procedures, cost guides & utility rebate information.</span>
+                      </li>
+                      {BLOG_POSTS.map((post) => (
+                        <li key={post.id}>
+                          <a href={`/blog/${post.slug}/`} onClick={(e) => { e.preventDefault(); onNavigate(`blog/${post.slug}`); }} className="font-bold text-[#1E70B8] hover:underline block text-sm">
+                            {post.title}
+                          </a>
+                          <span className="text-slate-600">{post.excerpt}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+
+                  {/* Category 4: Company & Legal */}
+                  <div className="bg-slate-50 border border-slate-200 rounded-xl p-5 space-y-3">
+                    <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-[#0F2942]">
+                      <ShieldCheck className="w-4 h-4 text-sky-600" />
+                      <span>Company Information & Compliance (7 Pages)</span>
+                    </div>
+                    <ul className="space-y-2.5 text-xs">
+                      <li>
+                        <a href="/" onClick={(e) => { e.preventDefault(); onNavigate(''); }} className="font-bold text-[#1E70B8] hover:underline block text-sm">
+                          Overview (Homepage)
+                        </a>
+                        <span className="text-slate-600">Main hub for 24/7 non-invasive leak detection in Spring Valley.</span>
+                      </li>
+                      <li>
+                        <a href="/how-it-works/" onClick={(e) => { e.preventDefault(); onNavigate('how-it-works'); }} className="font-bold text-[#1E70B8] hover:underline block text-sm">
+                          How It Works
+                        </a>
+                        <span className="text-slate-600">Our 4-step acoustic and infrared non-invasive inspection process.</span>
+                      </li>
+                      <li>
+                        <a href="/about/" onClick={(e) => { e.preventDefault(); onNavigate('about'); }} className="font-bold text-[#1E70B8] hover:underline block text-sm">
+                          About Our Team & Network
+                        </a>
+                        <span className="text-slate-600">Pre-screened, licensed Nevada State Contractors Board plumbing network.</span>
+                      </li>
+                      <li>
+                        <a href="/contact/" onClick={(e) => { e.preventDefault(); onNavigate('contact'); }} className="font-bold text-[#1E70B8] hover:underline block text-sm">
+                          Contact & Location Details
+                        </a>
+                        <span className="text-slate-600">6875 Groveview Ln, Las Vegas, NV 89103 • Phone: (725) 313-0108.</span>
+                      </li>
+                      <li>
+                        <a href="/privacy-policy/" onClick={(e) => { e.preventDefault(); onNavigate('privacy-policy'); }} className="font-bold text-[#1E70B8] hover:underline block text-sm">
+                          Privacy Policy
+                        </a>
+                        <span className="text-slate-600">Consumer data privacy, encryption, and TCPA telephone compliance.</span>
+                      </li>
+                      <li>
+                        <a href="/disclaimer/" onClick={(e) => { e.preventDefault(); onNavigate('disclaimer'); }} className="font-bold text-[#1E70B8] hover:underline block text-sm">
+                          Legal Disclaimer & Licensing
+                        </a>
+                        <span className="text-slate-600">Independent contractor terms, licensing disclosures, and warranties.</span>
+                      </li>
+                      <li>
+                        <a href="/sitemap.xml" target="_blank" rel="noreferrer" className="font-bold text-[#1E70B8] hover:underline block text-sm">
+                          XML Sitemap (Feed for Googlebot)
+                        </a>
+                        <span className="text-slate-600">Standard XML protocol feed listing all verified canonical URLs.</span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </section>
+            )}
+
             {/* FEATURED TECHNICAL LEAK GUIDES & DIAGNOSTICS (Incoming Inlinks) */}
             {page.slug === '' ? (
               <section className="bg-white rounded-2xl p-6 sm:p-8 border border-slate-200 shadow-xs space-y-6">

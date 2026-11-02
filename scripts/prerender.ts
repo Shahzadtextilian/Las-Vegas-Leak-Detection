@@ -55,6 +55,8 @@ function buildPreRenderedBody(page: PageContent, blogPost: BlogPost | null): str
         <a href="/blog/" class="hover:text-amber-300">Blog & Guides</a>
         <a href="/contact/" class="hover:text-amber-300">Contact & Map</a>
         <a href="/about/" class="hover:text-amber-300">About</a>
+        <a href="/disclaimer/" class="hover:text-amber-300">Disclaimer</a>
+        <a href="/sitemap/" class="hover:text-amber-300">Sitemap</a>
       </nav>
     </header>
 
@@ -170,6 +172,72 @@ function buildPreRenderedBody(page: PageContent, blogPost: BlogPost | null): str
               </section>
             ` : ''}
 
+            ${page.slug === 'sitemap' ? `
+              <section class="mt-12 pt-8 border-t border-slate-200">
+                <h2 class="text-2xl font-bold text-slate-900 mb-6">Complete Website Directory & Internal Link Index</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                  <div class="bg-slate-50 border border-slate-200 rounded-xl p-6">
+                    <h3 class="text-base font-bold text-[#0F2942] uppercase tracking-wider mb-4 border-b border-slate-200 pb-2">
+                      Precision Leak Detection Services
+                    </h3>
+                    <ul class="space-y-3 text-sm">
+                      <li><a href="/water-leak-detection/" class="font-bold text-[#1E70B8] hover:underline block">Water Leak Detection & Repair</a><span class="text-xs text-slate-600">Non-invasive acoustic & thermal diagnostics for hidden potable water lines.</span></li>
+                      <li><a href="/slab-leak-detection/" class="font-bold text-[#1E70B8] hover:underline block">Slab Leak Detection & Repair</a><span class="text-xs text-slate-600">Pinpointing copper pipe pinholes beneath concrete foundations without jackhammering.</span></li>
+                      <li><a href="/pool-leak-detection/" class="font-bold text-[#1E70B8] hover:underline block">Pool Leak Detection & Repair</a><span class="text-xs text-slate-600">Hydrophone acoustic listening and precision dye testing for swimming pools & spas.</span></li>
+                      <li><a href="/gas-leak-detection/" class="font-bold text-[#1E70B8] hover:underline block">Gas Leak Detection & Emergency Repair</a><span class="text-xs text-slate-600">24/7 PPM digital sniffing for hazardous natural gas and propane lines.</span></li>
+                      <li><a href="/underground-leak-detection/" class="font-bold text-[#1E70B8] hover:underline block">Underground & Yard Pipe Leaks</a><span class="text-xs text-slate-600">Detecting buried potable supply lines and irrigation manifolds in caliche soil.</span></li>
+                      <li><a href="/emergency-leak-repair/" class="font-bold text-[#1E70B8] hover:underline block">24/7 Emergency Leak Diagnostics</a><span class="text-xs text-slate-600">30–60 minute rapid on-site technician response across Clark County, NV.</span></li>
+                    </ul>
+                  </div>
+
+                  <div class="bg-slate-50 border border-slate-200 rounded-xl p-6">
+                    <h3 class="text-base font-bold text-[#0F2942] uppercase tracking-wider mb-4 border-b border-slate-200 pb-2">
+                      Spring Valley Service Areas
+                    </h3>
+                    <ul class="space-y-3 text-sm">
+                      <li><a href="/spring-valley-center/" class="font-bold text-[#1E70B8] hover:underline block">Spring Valley Core (89103)</a><span class="text-xs text-slate-600">Rainbow Blvd & Tropicana Ave • ETA 20–30 min.</span></li>
+                      <li><a href="/the-lakes/" class="font-bold text-[#1E70B8] hover:underline block">The Lakes & Peccole Ranch (89117)</a><span class="text-xs text-slate-600">Sahara Ave & Fort Apache Rd • ETA 25–35 min.</span></li>
+                      <li><a href="/spanish-trail/" class="font-bold text-[#1E70B8] hover:underline block">Spanish Trail Estates (89113)</a><span class="text-xs text-slate-600">Tropicana Ave & Buffalo Dr • ETA 20–30 min.</span></li>
+                      <li><a href="/summerlin-south/" class="font-bold text-[#1E70B8] hover:underline block">Summerlin South & 215 (89135 / 89148)</a><span class="text-xs text-slate-600">Town Center Dr & Maule Ave • ETA 30–40 min.</span></li>
+                      <li><a href="/rhodes-ranch/" class="font-bold text-[#1E70B8] hover:underline block">Rhodes Ranch & Sunset (89148)</a><span class="text-xs text-slate-600">Durango Dr & Sunset Rd • ETA 30–40 min.</span></li>
+                    </ul>
+                  </div>
+
+                  <div class="bg-slate-50 border border-slate-200 rounded-xl p-6">
+                    <h3 class="text-base font-bold text-[#0F2942] uppercase tracking-wider mb-4 border-b border-slate-200 pb-2">
+                      Technical Leak Guides & Knowledge Base
+                    </h3>
+                    <ul class="space-y-3 text-sm">
+                      <li><a href="/blog/" class="font-bold text-[#1E70B8] hover:underline block">Leak Guides & Knowledge Base Hub</a><span class="text-xs text-slate-600">All DIY diagnostic procedures, cost guides, and emergency protocols.</span></li>
+                      <li><a href="/blog/signs-of-slab-leak-in-las-vegas-homes/" class="font-bold text-[#1E70B8] hover:underline block">5 Warning Signs of a Slab Leak in Las Vegas</a><span class="text-xs text-slate-600">Warm floor spots, hissing sounds, and high water bill indicators.</span></li>
+                      <li><a href="/blog/how-swimming-pool-bucket-test-works/" class="font-bold text-[#1E70B8] hover:underline block">The 24-Hour Pool Bucket Test Guide</a><span class="text-xs text-slate-600">How to distinguish summer evaporation from plumbing ruptures.</span></li>
+                      <li><a href="/blog/what-to-do-when-you-smell-gas/" class="font-bold text-[#1E70B8] hover:underline block">What to Do When You Smell Natural Gas</a><span class="text-xs text-slate-600">Step-by-step emergency evacuation and safety protocol.</span></li>
+                      <li><a href="/blog/desert-caliche-soil-pipe-damage/" class="font-bold text-[#1E70B8] hover:underline block">How Desert Caliche Soil Causes Pipe Damage</a><span class="text-xs text-slate-600">Limestone friction and thermal ground expansion hazards.</span></li>
+                      <li><a href="/blog/how-to-read-water-meter-for-hidden-leaks/" class="font-bold text-[#1E70B8] hover:underline block">How to Read Your Water Meter for Leaks</a><span class="text-xs text-slate-600">Low-flow indicator dial check before bill spikes happen.</span></li>
+                      <li><a href="/blog/how-to-get-lvvwd-leak-credit-water-bill/" class="font-bold text-[#1E70B8] hover:underline block">How to Get an LVVWD Leak Bill Credit</a><span class="text-xs text-slate-600">Southern Nevada excess water consumption rebate filing steps.</span></li>
+                    </ul>
+                  </div>
+
+                  <div class="bg-slate-50 border border-slate-200 rounded-xl p-6">
+                    <h3 class="text-base font-bold text-[#0F2942] uppercase tracking-wider mb-4 border-b border-slate-200 pb-2">
+                      Company Info, Contact & Compliance
+                    </h3>
+                    <ul class="space-y-3 text-sm">
+                      <li><a href="/" class="font-bold text-[#1E70B8] hover:underline block">Overview (Homepage)</a><span class="text-xs text-slate-600">Central authority hub for Spring Valley leak detection.</span></li>
+                      <li><a href="/how-it-works/" class="font-bold text-[#1E70B8] hover:underline block">How It Works</a><span class="text-xs text-slate-600">Our 4-step non-invasive acoustic & thermal diagnostic workflow.</span></li>
+                      <li><a href="/about/" class="font-bold text-[#1E70B8] hover:underline block">About Our Team & Network</a><span class="text-xs text-slate-600">Pre-screened, licensed Nevada plumbing contractors.</span></li>
+                      <li><a href="/contact/" class="font-bold text-[#1E70B8] hover:underline block">Contact & Location (6875 Groveview Ln)</a><span class="text-xs text-slate-600">24/7 dispatch phone: (725) 313-0108 and interactive map.</span></li>
+                      <li><a href="/privacy-policy/" class="font-bold text-[#1E70B8] hover:underline block">Privacy Policy</a><span class="text-xs text-slate-600">Customer personal information safeguards & TCPA compliance.</span></li>
+                      <li><a href="/disclaimer/" class="font-bold text-[#1E70B8] hover:underline block">Legal Disclaimer & Licensing</a><span class="text-xs text-slate-600">Referral network disclosures and NSCB contractor terms.</span></li>
+                      <li><a href="/sitemap/" class="font-bold text-[#1E70B8] hover:underline block">HTML Sitemap (Current Page)</a><span class="text-xs text-slate-600">Complete website index and internal link structure.</span></li>
+                      <li><a href="/sitemap.xml" class="font-bold text-[#1E70B8] hover:underline block">XML Sitemap (Googlebot Index)</a><span class="text-xs text-slate-600">Search engine machine-readable XML feed.</span></li>
+                      <li><a href="/llms.txt" class="font-bold text-[#1E70B8] hover:underline block">LLMs.txt Context</a><span class="text-xs text-slate-600">AI and LLM markdown structured documentation.</span></li>
+                    </ul>
+                  </div>
+                </div>
+              </section>
+            ` : ''}
+
             ${page.faqs && page.faqs.length > 0 ? `
               <section class="mt-12 pt-8 border-t border-slate-200">
                 <h2 class="text-2xl font-bold text-slate-900 mb-6">Frequently Asked Questions</h2>
@@ -240,6 +308,8 @@ function buildPreRenderedBody(page: PageContent, blogPost: BlogPost | null): str
             <li><a href="/contact/" class="hover:text-white">Contact & Map</a></li>
             <li><a href="/about/" class="hover:text-white">About Our Team</a></li>
             <li><a href="/privacy-policy/" class="hover:text-white">Privacy Policy</a></li>
+            <li><a href="/disclaimer/" class="hover:text-white">Disclaimer & Licensing</a></li>
+            <li><a href="/sitemap/" class="hover:text-white">HTML Sitemap</a></li>
             <li><a href="/sitemap.xml" class="hover:text-white">XML Sitemap</a></li>
             <li><a href="/llms.txt" class="hover:text-white">LLMs.txt</a></li>
           </ul>
