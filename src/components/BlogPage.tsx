@@ -114,7 +114,7 @@ export const BlogPage: React.FC<BlogPageProps> = ({ onNavigate, activePostSlug }
             </div>
 
             <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-950 tracking-tight leading-tight mb-6 font-display">
-              {selectedPost.title}
+              {selectedPost.h1 || selectedPost.title}
             </h1>
 
             <p className="text-lg text-slate-600 leading-relaxed mb-6 font-light">
@@ -150,16 +150,21 @@ export const BlogPage: React.FC<BlogPageProps> = ({ onNavigate, activePostSlug }
             <div className="lg:col-span-8 space-y-8">
               {/* Featured Image */}
               {selectedPost.featuredImage && (
-                <div className="rounded-2xl overflow-hidden border border-slate-200 shadow-md bg-slate-100 h-64 sm:h-80">
+                <div className="rounded-2xl overflow-hidden border border-slate-200 shadow-md bg-slate-100">
                   <img
                     src={selectedPost.featuredImage}
-                    alt={selectedPost.title}
+                    alt={selectedPost.featuredImageAlt || selectedPost.title}
                     width={800}
-                    height={500}
-                    className="w-full h-64 sm:h-80 object-cover"
+                    height={450}
+                    className="w-full h-auto max-h-[420px] object-cover"
                     loading="eager"
                     decoding="async"
                   />
+                  {selectedPost.featuredImageAlt && (
+                    <div className="px-4 py-2 bg-slate-100 text-slate-500 text-xs italic border-t border-slate-200">
+                      {selectedPost.featuredImageAlt}
+                    </div>
+                  )}
                 </div>
               )}
 
@@ -180,6 +185,34 @@ export const BlogPage: React.FC<BlogPageProps> = ({ onNavigate, activePostSlug }
                     ))}
                   </div>
 
+                  {section.bulletPoints && (
+                    <ul className="space-y-2.5 my-3 text-sm sm:text-base text-slate-700">
+                      {section.bulletPoints.map((bp, bpIdx) => (
+                        <li key={bpIdx} className="flex items-start gap-2.5">
+                          <CheckCircle className="w-5 h-5 text-[#1E70B8] shrink-0 mt-0.5" />
+                          <span>{bp}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  )}
+
+                  {section.image && (
+                    <figure className="my-5 rounded-xl overflow-hidden border border-slate-200 bg-slate-50">
+                      <img
+                        src={section.image.src}
+                        alt={section.image.alt}
+                        className="w-full h-auto max-h-80 object-cover"
+                        loading="lazy"
+                        decoding="async"
+                      />
+                      {section.image.caption && (
+                        <figcaption className="p-3 text-xs text-slate-600 bg-slate-50 border-t border-slate-200 italic">
+                          {section.image.caption}
+                        </figcaption>
+                      )}
+                    </figure>
+                  )}
+
                   {section.keyTakeaways && (
                     <div className="p-4 rounded-xl bg-amber-50/70 border border-amber-200/80 mt-4 space-y-2">
                       <div className="text-xs font-bold uppercase tracking-wider text-amber-900">
@@ -197,6 +230,30 @@ export const BlogPage: React.FC<BlogPageProps> = ({ onNavigate, activePostSlug }
                   )}
                 </div>
               ))}
+
+              {/* FAQs Section if present */}
+              {selectedPost.content.faqs && selectedPost.content.faqs.length > 0 && (
+                <div className="bg-white rounded-2xl p-6 sm:p-8 border border-slate-200 shadow-xs space-y-5">
+                  <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-[#1E70B8]">
+                    <span>Quick Answers</span>
+                  </div>
+                  <h2 className="text-xl sm:text-2xl font-bold text-slate-900 font-display">
+                    Frequently Asked Questions
+                  </h2>
+                  <div className="space-y-4 divide-y divide-slate-100">
+                    {selectedPost.content.faqs.map((faq, fIdx) => (
+                      <div key={fIdx} className={fIdx > 0 ? "pt-4" : ""}>
+                        <h3 className="text-base font-bold text-slate-900 mb-1.5">
+                          {faq.question}
+                        </h3>
+                        <p className="text-sm text-slate-600 leading-relaxed">
+                          {faq.answer}
+                        </p>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              )}
 
               {/* Conclusion and Urgent Call to Action */}
               <div className="p-6 sm:p-8 rounded-2xl bg-[#0F2942] text-white space-y-4 shadow-lg">

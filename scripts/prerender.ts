@@ -24,8 +24,8 @@ const templateHtml = fs.readFileSync(indexHtmlPath, 'utf8');
  */
 function buildPreRenderedBody(page: PageContent, blogPost: BlogPost | null): string {
   const isPost = !!blogPost;
-  const title = isPost ? blogPost.title : page.h1;
-  const description = isPost ? blogPost.excerpt : page.directAnswer;
+  const title = isPost ? (blogPost.h1 || blogPost.title) : page.h1;
+  const description = isPost ? (blogPost.metaDescription || blogPost.excerpt) : page.directAnswer;
 
   return `
     <header class="bg-[#0F2942] text-white py-4 px-6 border-b border-slate-700">
@@ -80,11 +80,32 @@ function buildPreRenderedBody(page: PageContent, blogPost: BlogPost | null): str
 
         ${isPost ? `
           <div class="space-y-6 text-slate-700 leading-relaxed">
-            <p>${blogPost.content.introduction}</p>
+            ${blogPost.featuredImage ? `
+              <figure class="my-6 rounded-2xl overflow-hidden border border-slate-200 shadow-sm">
+                <img src="${blogPost.featuredImage}" alt="${blogPost.featuredImageAlt || blogPost.title}" class="w-full h-auto max-h-[440px] object-cover" width="800" height="450" />
+                ${blogPost.featuredImageAlt ? `<figcaption class="p-2.5 bg-slate-100 text-slate-600 text-xs italic border-t border-slate-200">${blogPost.featuredImageAlt}</figcaption>` : ''}
+              </figure>
+            ` : ''}
+
+            <div class="p-6 rounded-xl bg-white border border-slate-200 text-base leading-relaxed">
+              <p>${blogPost.content.introduction}</p>
+            </div>
+
             ${blogPost.content.sections.map(sec => `
               <section class="mt-8">
                 <h2 class="text-2xl font-bold text-slate-900 mb-3">${sec.heading}</h2>
                 ${sec.body.map(p => `<p class="mb-3 text-slate-700">${p}</p>`).join('')}
+                ${sec.bulletPoints ? `
+                  <ul class="list-disc pl-5 space-y-1.5 my-3 text-slate-700">
+                    ${sec.bulletPoints.map(b => `<li>${b}</li>`).join('')}
+                  </ul>
+                ` : ''}
+                ${sec.image ? `
+                  <figure class="my-5 rounded-xl overflow-hidden border border-slate-200 bg-slate-50">
+                    <img src="${sec.image.src}" alt="${sec.image.alt}" class="w-full h-auto max-h-80 object-cover" loading="lazy" />
+                    ${sec.image.caption ? `<figcaption class="p-2 text-xs text-slate-500 italic bg-slate-50 border-t border-slate-200">${sec.image.caption}</figcaption>` : ''}
+                  </figure>
+                ` : ''}
                 ${sec.keyTakeaways ? `
                   <div class="bg-slate-100 p-4 rounded-lg my-4">
                     <h3 class="text-xs font-bold uppercase text-slate-600 mb-2">Key Takeaways</h3>
@@ -95,16 +116,34 @@ function buildPreRenderedBody(page: PageContent, blogPost: BlogPost | null): str
                 ` : ''}
               </section>
             `).join('')}
+
+            ${blogPost.content.faqs && blogPost.content.faqs.length > 0 ? `
+              <section class="mt-10 p-6 rounded-2xl bg-white border border-slate-200">
+                <h2 class="text-2xl font-bold text-slate-900 mb-4">Frequently Asked Questions</h2>
+                <div class="space-y-4">
+                  ${blogPost.content.faqs.map(f => `
+                    <div class="pt-3 border-t border-slate-100 first:border-0 first:pt-0">
+                      <h3 class="font-bold text-slate-900 text-base mb-1">${f.question}</h3>
+                      <p class="text-slate-700 text-sm leading-relaxed">${f.answer}</p>
+                    </div>
+                  `).join('')}
+                </div>
+              </section>
+            ` : ''}
+
             <div class="mt-8 p-6 bg-slate-900 text-white rounded-xl">
-              <h3 class="text-lg font-bold mb-2">Summary</h3>
-              <p class="text-sm text-slate-300">${blogPost.content.conclusion}</p>
+              <h3 class="text-lg font-bold mb-2">Think You Have a Leak? Contact Our Team</h3>
+              <p class="text-sm text-slate-300 leading-relaxed">${blogPost.content.conclusion}</p>
+              <div class="mt-4 pt-3 border-t border-slate-700">
+                <a href="${PHONE_HREF}" class="inline-block bg-amber-500 text-slate-950 font-bold px-5 py-2.5 rounded-lg text-sm">Call 24/7: ${PHONE_NUMBER}</a>
+              </div>
             </div>
 
             <div class="mt-10 pt-6 border-t border-slate-200">
               <h3 class="text-xl font-bold text-slate-900 mb-4">Related Diagnostic & Prevention Guides</h3>
               <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm">
                 ${BLOG_POSTS.filter(p => p.id !== blogPost.id).map(other => `
-                  <a href="/blog/${other.slug}/" class="p-3 rounded-xl border border-slate-200 hover:border-[#1E70B8] block">
+                  <a href="${other.slug === 'spring-valley-leak-detection-guide' ? `/${other.slug}/` : `/blog/${other.slug}/`}" class="p-3 rounded-xl border border-slate-200 hover:border-[#1E70B8] block">
                     <span class="text-xs font-bold text-amber-700 block mb-1">${other.category}</span>
                     <span class="font-bold text-slate-900 block">${other.title}</span>
                   </a>
@@ -208,6 +247,7 @@ function buildPreRenderedBody(page: PageContent, blogPost: BlogPost | null): str
                       Technical Leak Guides & Knowledge Base
                     </h3>
                     <ul class="space-y-3 text-sm">
+                      <li><a href="/spring-valley-leak-detection-guide/" class="font-bold text-[#1E70B8] hover:underline block">Spring Valley Leak Detection: A Desert Homeowner’s Guide</a><span class="text-xs text-slate-600">Where desert homes hide leaks, diagnostic visit stages, and pricing factors.</span></li>
                       <li><a href="/blog/" class="font-bold text-[#1E70B8] hover:underline block">Leak Guides & Knowledge Base Hub</a><span class="text-xs text-slate-600">All DIY diagnostic procedures, cost guides, and emergency protocols.</span></li>
                       <li><a href="/blog/signs-of-slab-leak-in-las-vegas-homes/" class="font-bold text-[#1E70B8] hover:underline block">5 Warning Signs of a Slab Leak in Las Vegas</a><span class="text-xs text-slate-600">Warm floor spots, hissing sounds, and high water bill indicators.</span></li>
                       <li><a href="/blog/how-swimming-pool-bucket-test-works/" class="font-bold text-[#1E70B8] hover:underline block">The 24-Hour Pool Bucket Test Guide</a><span class="text-xs text-slate-600">How to distinguish summer evaporation from plumbing ruptures.</span></li>
@@ -317,7 +357,7 @@ function buildPreRenderedBody(page: PageContent, blogPost: BlogPost | null): str
         <div class="md:col-span-4 mt-6 pt-6 border-t border-slate-700/60">
           <h4 class="font-bold text-amber-400 mb-3 uppercase tracking-wider text-[11px]">Technical Leak Diagnostics & Knowledge Base</h4>
           <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
-            ${BLOG_POSTS.map(b => `<a href="/blog/${b.slug}/" class="hover:text-amber-300 block">${b.title}</a>`).join('')}
+            ${BLOG_POSTS.map(b => `<a href="${b.slug === 'spring-valley-leak-detection-guide' ? `/${b.slug}/` : `/blog/${b.slug}/`}" class="hover:text-amber-300 block">${b.title}</a>`).join('')}
           </div>
         </div>
       </div>
@@ -341,24 +381,29 @@ const routesToPrerender: RouteConfig[] = [];
 // 1. All site pages in siteData
 for (const [key, page] of Object.entries(sitePages)) {
   const canonicalUrl = `${DOMAIN_URL}${page.urlPath === '/' ? '/' : `/${page.slug}/`}`;
-  const schema = generateSchemaForPage(page, null);
+  const matchingBlogPost = BLOG_POSTS.find(b => b.slug === page.slug) || null;
+  const schema = generateSchemaForPage(page, matchingBlogPost);
   const schemaJson = JSON.stringify(schema, null, 2);
 
   routesToPrerender.push({
     slug: page.slug,
     urlPath: page.urlPath,
-    metaTitle: page.metaTitle,
-    metaDescription: page.metaDescription,
+    metaTitle: matchingBlogPost?.metaTitle || page.metaTitle,
+    metaDescription: matchingBlogPost?.metaDescription || page.metaDescription,
     canonicalUrl,
     schemaJson,
     pageData: page,
-    blogPost: null,
+    blogPost: matchingBlogPost,
   });
 }
 
 // 2. Individual Blog Posts
 const blogIndexPage = sitePages['blog'] || sitePages['home'];
 for (const post of BLOG_POSTS) {
+  if (post.slug === 'spring-valley-leak-detection-guide') {
+    // This post is already pre-rendered as root page /spring-valley-leak-detection-guide/
+    continue;
+  }
   const postSlug = `blog/${post.slug}`;
   const canonicalUrl = `${DOMAIN_URL}/${postSlug}/`;
   const schema = generateSchemaForPage(blogIndexPage, post);
@@ -474,6 +519,7 @@ const redirectAliases: { from: string; to: string }[] = [
   { from: 'slab-leak', to: '/slab-leak-detection/' },
   { from: 'pool-leak', to: '/pool-leak-detection/' },
   { from: 'privacy', to: '/privacy-policy/' },
+  { from: 'blog/spring-valley-leak-detection-guide', to: '/spring-valley-leak-detection-guide/' },
 ];
 
 for (const alias of redirectAliases) {

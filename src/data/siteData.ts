@@ -1548,6 +1548,7 @@ export const sitePages: Record<string, PageContent> = {
         ],
         bulletPoints: [
           "Blog & Knowledge Base Main Hub",
+          "Spring Valley Leak Detection: A Desert Homeowner’s Guide (2026)",
           "5 Warning Signs of a Slab Leak in Spring Valley & Las Vegas Homes",
           "The 24-Hour Bucket Test: How to Tell if Your Pool is Leaking or Evaporating",
           "What to Do When You Smell Natural Gas in Your Home: Step-by-Step Safety Guide",
@@ -1585,5 +1586,151 @@ export const sitePages: Record<string, PageContent> = {
       { name: "Spring Valley Core", slug: "spring-valley-center", context: "Rainbow & Flamingo core." }
     ],
     schemaType: "WebPage"
+  },
+
+  // 19. SPRING VALLEY LEAK DETECTION: A DESERT HOMEOWNER'S GUIDE
+  "spring-valley-leak-detection-guide": {
+    slug: "spring-valley-leak-detection-guide",
+    urlPath: "/spring-valley-leak-detection-guide/",
+    type: "about",
+    name: "Spring Valley Leak Detection: A Desert Homeowner’s Guide",
+    navTitle: "Desert Leak Guide",
+    metaTitle: "Spring Valley Leak Detection: A Desert Homeowner’s Guide",
+    metaDescription: "Rising water bill in Spring Valley, Las Vegas? Learn where desert homes hide leaks, what a pro visit involves, and what shapes pricing. Call (725) 313-0108.",
+    primaryKeyword: "Spring Valley leak detection guide",
+    secondaryKeywords: [
+      "desert home leak detection",
+      "Las Vegas slab leak cost",
+      "water bill spike Spring Valley NV",
+      "leak detection cost estimate"
+    ],
+    semanticEntities: [
+      "Spring Valley Nevada residential plumbing",
+      "Clark County caliche soil and slab leaks",
+      "Non-invasive ultrasonic acoustic diagnostics",
+      "Las Vegas Valley Water District high bill credits"
+    ],
+    h1: "Spring Valley Leak Detection: Finding Hidden Water Problems in a Desert Home",
+    heroKicker: "Desert Homeowner’s Guide • Spring Valley, NV",
+    heroSubheadline: "Practical advice on finding hidden water, slab, and gas leaks in Southern Nevada homes before structural damage and high bills occur.",
+    directAnswer: "Rising water bill in Spring Valley, Las Vegas? Learn where desert homes hide leaks, what a pro visit involves, and what shapes pricing. Call (725) 313-0108.",
+    sections: [
+      {
+        heading: "Why Desert Homes Hide Leaks So Well",
+        subheading: "Evaporative climate, slab foundations, and mineral-heavy hard water",
+        paragraphs: [
+          "Dry air and hot soil can make a leak harder to spot. Moisture evaporates quickly in Southern Nevada’s arid climate, so the telltale puddle or dark wall stain may never show up on the surface.",
+          "Add slab foundations, copper lines buried under poured concrete patios, and complex drip irrigation systems running underground through hard caliche, and a severe leak can quietly run for months with zero visible clues.",
+          "Furthermore, Clark County tap water has high mineral content (calcium and magnesium), leaving heavy mineral buildup that wears on copper pipe walls, valves, and solder fittings over time."
+        ],
+        bulletPoints: [
+          "Arid desert air accelerates evaporation, masking subsurface water pooling",
+          "Slab-on-grade foundations route pressurized lines directly beneath structural concrete",
+          "Hard water mineral scaling and caliche friction thin pipes from the inside out"
+        ]
+      },
+      {
+        heading: "Five Quick Checks You Can Do Today",
+        subheading: "Simple DIY tests to verify your plumbing system before calling",
+        paragraphs: [
+          "Before calling anyone, a few simple checks can tell you whether a leak is likely active on your property:"
+        ],
+        bulletPoints: [
+          "Run a water meter test: Turn off every tap, faucet, ice maker, and appliance, then watch your front yard meter. If the low-flow dial or digital indicator keeps moving, pressurized water is escaping somewhere on your property.",
+          "Try a toilet dye test: Place 4–5 drops of food coloring or a dye tablet in the toilet tank without flushing. Wait 15 minutes; if colored water seeps into the bowl, your flapper or fill valve is leaking silently.",
+          "Walk your irrigation zones: Check your yard while the timer is running. Soggy patches in desert gravel, geysers, bubbling emitter lines, or unusually weak spray heads often point to a broken underground lateral line.",
+          "Watch the pool level: Normal Las Vegas evaporation accounts for 1/4 to 1/2 inch per day. A drop that exceeds normal evaporation can signal a leak in the pool skimmer, return plumbing, or gunite shell.",
+          "Compare recent utility bills: A steady climb in CCFs or gallons on your Las Vegas Valley Water District (LVVWD) bill with no change in household habits is a strong hint of a subterranean rupture."
+        ]
+      },
+      {
+        heading: "What a Professional Visit Looks Like",
+        subheading: "Non-invasive electronic acoustic, thermal, and pressure decay diagnostic stages",
+        paragraphs: [
+          "A licensed technician usually begins with questions: when did your water bill change, and where have you noticed anything odd such as warm tiles, running water sounds, or damp baseboards? From there, the diagnostic work moves systematically through non-invasive stages:",
+          "1. Pressure Testing: Isolates whether the pressure drop is occurring on the potable cold supply, hot water recirculating loop, or dedicated irrigation lines.",
+          "2. Acoustic Listening: Electronic ground microphones and amplified listening discs pick up the faint ultrasonic frequency of water escaping a pinhole pipe breach beneath tile or concrete.",
+          "3. Thermal Imaging: High-resolution infrared cameras reveal subtle temperature differentials caused by concealed hot water slab leaks or moisture accumulation inside drywall cavities.",
+          "4. Tracer Gas or Camera Inspection: Non-toxic safe helium/nitrogen tracer gas or fiber-optic micro-cameras are deployed to trace stubborn, deeply buried lines."
+        ],
+        bulletPoints: [
+          "Non-invasive tools pinpoint the rupture within inches without exploratory trenching",
+          "Repairs require opening only a minimal, targeted patch rather than whole floors",
+          "You receive an audit-ready written diagnostic report for insurance and LVVWD credits"
+        ]
+      },
+      {
+        heading: "Water, Slab, or Gas: Knowing the Difference",
+        subheading: "Distinguishing potable, structural slab, and combustible gas line issues",
+        paragraphs: [
+          "Water leaks inside walls, under slabs, and in landscaping call for fundamentally different diagnostic equipment. Slab leaks sit beneath the concrete floor and often show up as localized warm spots underfoot, unexplained indoor humidity, or the sound of hissing water at night.",
+          "Gas is a separate, critical life-safety matter entirely. Larger commercial properties and multi-unit complexes frequently hire specialized gas leak survey companies to inspect every line and document the findings with calibrated parts-per-million (PPM) sensors.",
+          "EMERGENCY GAS PROTOCOL: If you ever smell rotten eggs (mercaptan) or hear loud hissing near a gas furnace, water heater, or meter, leave the building immediately on foot. Do not use light switches, phones, or garage door openers. Call Southwest Gas at (877) 860-6020 or 911 from outside, then call our licensed gas testing team for code-compliant pressure testing."
+        ],
+        bulletPoints: [
+          "Slab leaks create warm floor tiles, sound of rushing water, and foundation dampness",
+          "Combustible gas leaks require immediate evacuation and emergency notification"
+        ]
+      },
+      {
+        heading: "Understanding the Price Tag & Leak Detection Cost Factors",
+        subheading: "Access, scope, diagnostic equipment, and insurance report inclusions",
+        paragraphs: [
+          "Most homeowners start with one question: how much does leak detection cost? There’s no single flat number because no two Spring Valley houses or plumbing layouts are alike. Leak detection costs generally follow how complicated the physical search is. A quick diagnostic check on an exposed fixture line is a small, straightforward job, while tracing a concealed line under a finished post-tension slab takes specialized acoustic gear and technician time.",
+          "Key factors that move the price include:",
+          "• Access: Slab leak detection cost rises when pipes sit beneath thick structural concrete, hardwood flooring, or imported stone tile.",
+          "• Scope: Gas leak detection cost depends on property square footage, pipe length, and how many appliance drops require pressure decay isolation.",
+          "• Time & Depth: Leak locating cost grows when irrigation lines are buried deep in rocky caliche soil or run beneath paved driveways.",
+          "Always ask for a written leak detection cost estimate before work begins. Find out what the cost of leak detection includes, such as an itemized diagnostic report for your homeowners insurance, and whether surgical repairs or pipe reroutes are billed separately. Before approving any cost for leak detection, ask the technician to walk you through each line item.",
+          "Whatever the initial leak detection cost turns out to be, finding and isolating a leak early is almost always thousands of dollars cheaper than repairing catastrophic sub-slab foundation shifting or black mold damage later."
+        ],
+        bulletPoints: [
+          "Surgical acoustic detection saves thousands compared to exploratory demolition",
+          "Reputable providers provide written upfront estimates before beginning work",
+          "Detailed diagnostic reports can be submitted to LVVWD for 50% leak bill credits"
+        ]
+      },
+      {
+        heading: "A Note for Landlords and Property Managers",
+        subheading: "Protecting tenants, mitigating mold liabilities, and securing utility rebates",
+        paragraphs: [
+          "Rental property owners and HOA managers in Spring Valley have extra reasons to act fast: tenant comfort, water-damage liability, and escalating turnover costs.",
+          "Documented findings and digital pressure decay logs from a licensed professional visit make insurance claim conversations, LVVWD high bill adjustments, and contractor scheduling much smoother and dispute-free."
+        ],
+        bulletPoints: [
+          "Written inspection certificates satisfy tenant habitability requirements",
+          "Immediate response prevents expensive drywall mold remediation disputes"
+        ]
+      }
+    ],
+    faqs: [
+      {
+        question: "How long does a professional leak detection visit take?",
+        answer: "Many standard residential inspections take between 1 to 3 hours, depending on the property size, number of plumbing fixtures, and how stubborn the underground leak is."
+      },
+      {
+        question: "Will walls or floors be opened during the detection process?",
+        answer: "No. Professional leak detection is 100% non-invasive. Acoustic listening discs, infrared thermal imaging, and pressure decay gauges locate the leak through floors and drywall. Only the confirmed spot needs to be opened for the actual repair."
+      },
+      {
+        question: "Does homeowners insurance help cover the cost?",
+        answer: "Many Nevada homeowners policies cover resulting water damage repairs and access to tear out and replace flooring for a covered plumbing peril, though policies vary. Always request an itemized diagnostic report to submit to your insurer."
+      },
+      {
+        question: "What should I do before the technician arrives at my Spring Valley home?",
+        answer: "Secure all pets, ensure unobstructed access to the main water shutoff valve (garage or front hose bib) and the front yard street water meter box, and have a copy of your recent LVVWD water bill handy."
+      }
+    ],
+    relatedServices: [
+      { title: "Slab Leak Detection & Repair", slug: "slab-leak-detection", description: "Sub-concrete copper pipe locating without floor tear-out." },
+      { title: "Water Leak Detection & Repair", slug: "water-leak-detection", description: "Potable supply line and acoustic pinhole tracing." },
+      { title: "Gas Leak Detection & Repair", slug: "gas-leak-detection", description: "Emergency combustible gas sniffing and safety testing." }
+    ],
+    relatedLocations: [
+      { name: "Spring Valley Core (89103)", slug: "spring-valley-center", context: "Rapid 30-min dispatch." },
+      { name: "The Lakes (89117)", slug: "the-lakes", context: "Desert community plumbing." },
+      { name: "Spanish Trail (89113)", slug: "spanish-trail", context: "Estate home slab diagnostics." }
+    ],
+    schemaType: "TechArticle"
   }
 };

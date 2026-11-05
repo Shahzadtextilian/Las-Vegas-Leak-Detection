@@ -106,6 +106,12 @@
 
   <!-- Knowledge Base & Leak Diagnostic Guides -->
   <url>
+    <loc>https://www.leakdetectionnv.com/spring-valley-leak-detection-guide/</loc>
+    <lastmod>2026-11-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
     <loc>https://www.leakdetectionnv.com/blog/signs-of-slab-leak-in-las-vegas-homes/</loc>
     <lastmod>2026-10-19</lastmod>
     <changefreq>monthly</changefreq>

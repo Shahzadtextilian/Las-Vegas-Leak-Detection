@@ -3,7 +3,9 @@ import { BlogPost } from '../data/blogData';
 
 export function generateSchemaForPage(page: PageContent, blogPost?: BlogPost | null) {
   const pageUrl = blogPost
-    ? `${DOMAIN_URL}/blog/${blogPost.slug}/`
+    ? (blogPost.slug === 'spring-valley-leak-detection-guide'
+        ? `${DOMAIN_URL}/spring-valley-leak-detection-guide/`
+        : `${DOMAIN_URL}/blog/${blogPost.slug}/`)
     : `${DOMAIN_URL}${page.urlPath === '/' ? '' : page.urlPath}`;
 
   const schemas: any[] = [];
@@ -323,11 +325,12 @@ export function generateSchemaForPage(page: PageContent, blogPost?: BlogPost | n
     schemas.push({
       "@context": "https://schema.org",
       "@type": "TechArticle",
-      "headline": blogPost.title,
-      "description": blogPost.excerpt,
+      "headline": blogPost.h1 || blogPost.title,
+      "name": blogPost.metaTitle || blogPost.title,
+      "description": blogPost.metaDescription || blogPost.excerpt,
       "image": blogPost.featuredImage ? `${DOMAIN_URL}${blogPost.featuredImage}` : `${DOMAIN_URL}/images/hero_emergency_plumbing_1791566119640.webp`,
-      "datePublished": "2026-10-08T08:00:00-07:00",
-      "dateModified": "2026-10-11T07:15:00-07:00",
+      "datePublished": blogPost.slug === 'spring-valley-leak-detection-guide' ? "2026-11-05T07:00:00-08:00" : "2026-10-08T08:00:00-07:00",
+      "dateModified": "2026-11-05T07:15:00-08:00",
       "author": {
         "@type": "Organization",
         "name": blogPost.author,
@@ -441,11 +444,15 @@ export function generateSchemaForPage(page: PageContent, blogPost?: BlogPost | n
   }
 
   // 5. FAQPage Schema
-  if (!blogPost && page.faqs && page.faqs.length > 0) {
+  const faqsToUse = (blogPost && blogPost.content.faqs && blogPost.content.faqs.length > 0)
+    ? blogPost.content.faqs
+    : (page.faqs && page.faqs.length > 0 ? page.faqs : null);
+
+  if (faqsToUse && faqsToUse.length > 0) {
     schemas.push({
       "@context": "https://schema.org",
       "@type": "FAQPage",
-      "mainEntity": page.faqs.map(faq => ({
+      "mainEntity": faqsToUse.map(faq => ({
         "@type": "Question",
         "name": faq.question,
         "acceptedAnswer": {

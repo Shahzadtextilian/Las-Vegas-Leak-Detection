@@ -1139,7 +1139,7 @@ export const PageRenderer: React.FC<PageRendererProps> = ({
                   <div className="bg-slate-50 border border-slate-200 rounded-xl p-5 space-y-3">
                     <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-[#0F2942]">
                       <BookOpen className="w-4 h-4 text-emerald-600" />
-                      <span>Technical Leak Guides & Blog (7 Pages)</span>
+                      <span>Technical Leak Guides & Blog (8 Pages)</span>
                     </div>
                     <ul className="space-y-2.5 text-xs">
                       <li>
@@ -1150,7 +1150,14 @@ export const PageRenderer: React.FC<PageRendererProps> = ({
                       </li>
                       {BLOG_POSTS.map((post) => (
                         <li key={post.id}>
-                          <a href={`/blog/${post.slug}/`} onClick={(e) => { e.preventDefault(); onNavigate(`blog/${post.slug}`); }} className="font-bold text-[#1E70B8] hover:underline block text-sm">
+                          <a
+                            href={post.slug === 'spring-valley-leak-detection-guide' ? `/${post.slug}/` : `/blog/${post.slug}/`}
+                            onClick={(e) => {
+                              e.preventDefault();
+                              onNavigate(post.slug === 'spring-valley-leak-detection-guide' ? post.slug : `blog/${post.slug}`);
+                            }}
+                            className="font-bold text-[#1E70B8] hover:underline block text-sm"
+                          >
                             {post.title}
                           </a>
                           <span className="text-slate-600">{post.excerpt}</span>
@@ -1392,10 +1399,10 @@ export const PageRenderer: React.FC<PageRendererProps> = ({
                   {BLOG_POSTS.slice(0, 3).map((post) => (
                     <a
                       key={post.id}
-                      href={`/blog/${post.slug}/`}
+                      href={post.slug === 'spring-valley-leak-detection-guide' ? `/${post.slug}/` : `/blog/${post.slug}/`}
                       onClick={(e) => {
                         e.preventDefault();
-                        onNavigate(`blog/${post.slug}`);
+                        onNavigate(post.slug === 'spring-valley-leak-detection-guide' ? post.slug : `blog/${post.slug}`);
                       }}
                       className="block p-2.5 rounded-lg bg-white/90 hover:bg-white border border-amber-200/70 hover:border-[#1E70B8] transition-colors group no-underline text-inherit"
                     >

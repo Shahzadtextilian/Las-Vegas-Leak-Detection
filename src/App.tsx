@@ -24,6 +24,8 @@ export default function App() {
     const rawPath = window.location.pathname.replace(/^\/|\/$/g, '');
     if (!rawPath) return '';
     // Normalize aliases
+    if (rawPath === 'spring-valley-leak-detection-guide') return 'spring-valley-leak-detection-guide';
+    if (rawPath === 'blog/spring-valley-leak-detection-guide') return 'spring-valley-leak-detection-guide';
     if (rawPath === 'blog' || rawPath.startsWith('blog/')) return rawPath;
     if (rawPath === 'how-it-works') return 'how-it-works';
     if (rawPath === 'contact-nap' || rawPath === 'contact-us') return 'contact';
@@ -44,11 +46,18 @@ export default function App() {
   const [currentSlug, setCurrentSlug] = useState<string>(getSlugFromPath);
   const [isAuditModalOpen, setIsAuditModalOpen] = useState(false);
 
-  // Check if we are on a blog route
-  const isBlogRoute = currentSlug === 'blog' || currentSlug.startsWith('blog/');
-  const activeBlogPostSlug = currentSlug.startsWith('blog/')
-    ? currentSlug.replace(/^blog\//, '').replace(/\/$/, '')
-    : undefined;
+  // Check if we are on a blog route or standalone guide route
+  const isBlogRoute =
+    currentSlug === 'blog' ||
+    currentSlug.startsWith('blog/') ||
+    currentSlug === 'spring-valley-leak-detection-guide';
+
+  const activeBlogPostSlug =
+    currentSlug === 'spring-valley-leak-detection-guide'
+      ? 'spring-valley-leak-detection-guide'
+      : currentSlug.startsWith('blog/')
+      ? currentSlug.replace(/^blog\//, '').replace(/\/$/, '')
+      : undefined;
 
   const currentBlogPost = activeBlogPostSlug
     ? BLOG_POSTS.find((p) => p.slug === activeBlogPostSlug) || null
@@ -57,7 +66,7 @@ export default function App() {
   // Resolve page content
   const getActivePage = (): PageContent => {
     if (isBlogRoute) {
-      return sitePages['blog'] || sitePages['home'];
+      return sitePages['spring-valley-leak-detection-guide'] || sitePages['blog'] || sitePages['home'];
     }
     if (currentSlug === 'how-it-works') {
       return sitePages['how-it-works'] || sitePages['about'] || sitePages['home'];
@@ -93,10 +102,10 @@ export default function App() {
 
     // Determine dynamic title and description
     const metaTitle = currentBlogPost
-      ? `${currentBlogPost.title} | Spring Valley Leak Detection`
+      ? (currentBlogPost.metaTitle || `${currentBlogPost.title} | Spring Valley Leak Detection`)
       : currentPage.metaTitle;
     const metaDescription = currentBlogPost
-      ? currentBlogPost.excerpt
+      ? (currentBlogPost.metaDescription || currentBlogPost.excerpt)
       : currentPage.metaDescription;
 
     document.title = metaTitle;
@@ -130,7 +139,9 @@ export default function App() {
       document.head.appendChild(canonical);
     }
     const fullCanonicalUrl = currentBlogPost
-      ? `${DOMAIN_URL}/blog/${currentBlogPost.slug}/`
+      ? (currentBlogPost.slug === 'spring-valley-leak-detection-guide'
+          ? `${DOMAIN_URL}/spring-valley-leak-detection-guide/`
+          : `${DOMAIN_URL}/blog/${currentBlogPost.slug}/`)
       : `${DOMAIN_URL}${currentPage.urlPath === '/' ? '' : currentPage.urlPath}`;
     canonical.setAttribute('href', fullCanonicalUrl);
 
