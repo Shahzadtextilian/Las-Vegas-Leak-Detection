@@ -1591,7 +1591,7 @@ export const sitePages: Record<string, PageContent> = {
   // 19. SPRING VALLEY LEAK DETECTION: A DESERT HOMEOWNER'S GUIDE
   "spring-valley-leak-detection-guide": {
     slug: "spring-valley-leak-detection-guide",
-    urlPath: "/spring-valley-leak-detection-guide/",
+    urlPath: "/blog/spring-valley-leak-detection-guide/",
     type: "about",
     name: "Spring Valley Leak Detection: A Desert Homeowner’s Guide",
     navTitle: "Desert Leak Guide",

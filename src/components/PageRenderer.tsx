@@ -1151,10 +1151,10 @@ export const PageRenderer: React.FC<PageRendererProps> = ({
                       {BLOG_POSTS.map((post) => (
                         <li key={post.id}>
                           <a
-                            href={post.slug === 'spring-valley-leak-detection-guide' ? `/${post.slug}/` : `/blog/${post.slug}/`}
+                            href={`/blog/${post.slug}/`}
                             onClick={(e) => {
                               e.preventDefault();
-                              onNavigate(post.slug === 'spring-valley-leak-detection-guide' ? post.slug : `blog/${post.slug}`);
+                              onNavigate(`blog/${post.slug}`);
                             }}
                             className="font-bold text-[#1E70B8] hover:underline block text-sm"
                           >
@@ -1399,10 +1399,10 @@ export const PageRenderer: React.FC<PageRendererProps> = ({
                   {BLOG_POSTS.slice(0, 3).map((post) => (
                     <a
                       key={post.id}
-                      href={post.slug === 'spring-valley-leak-detection-guide' ? `/${post.slug}/` : `/blog/${post.slug}/`}
+                      href={`/blog/${post.slug}/`}
                       onClick={(e) => {
                         e.preventDefault();
-                        onNavigate(post.slug === 'spring-valley-leak-detection-guide' ? post.slug : `blog/${post.slug}`);
+                        onNavigate(`blog/${post.slug}`);
                       }}
                       className="block p-2.5 rounded-lg bg-white/90 hover:bg-white border border-amber-200/70 hover:border-[#1E70B8] transition-colors group no-underline text-inherit"
                     >

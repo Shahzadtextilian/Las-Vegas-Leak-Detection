@@ -143,7 +143,7 @@ function buildPreRenderedBody(page: PageContent, blogPost: BlogPost | null): str
               <h3 class="text-xl font-bold text-slate-900 mb-4">Related Diagnostic & Prevention Guides</h3>
               <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm">
                 ${BLOG_POSTS.filter(p => p.id !== blogPost.id).map(other => `
-                  <a href="${other.slug === 'spring-valley-leak-detection-guide' ? `/${other.slug}/` : `/blog/${other.slug}/`}" class="p-3 rounded-xl border border-slate-200 hover:border-[#1E70B8] block">
+                  <a href="/blog/${other.slug}/" class="p-3 rounded-xl border border-slate-200 hover:border-[#1E70B8] block">
                     <span class="text-xs font-bold text-amber-700 block mb-1">${other.category}</span>
                     <span class="font-bold text-slate-900 block">${other.title}</span>
                   </a>
@@ -247,7 +247,7 @@ function buildPreRenderedBody(page: PageContent, blogPost: BlogPost | null): str
                       Technical Leak Guides & Knowledge Base
                     </h3>
                     <ul class="space-y-3 text-sm">
-                      <li><a href="/spring-valley-leak-detection-guide/" class="font-bold text-[#1E70B8] hover:underline block">Spring Valley Leak Detection: A Desert Homeowner’s Guide</a><span class="text-xs text-slate-600">Where desert homes hide leaks, diagnostic visit stages, and pricing factors.</span></li>
+                      <li><a href="/blog/spring-valley-leak-detection-guide/" class="font-bold text-[#1E70B8] hover:underline block">Spring Valley Leak Detection: A Desert Homeowner’s Guide</a><span class="text-xs text-slate-600">Where desert homes hide leaks, diagnostic visit stages, and pricing factors.</span></li>
                       <li><a href="/blog/" class="font-bold text-[#1E70B8] hover:underline block">Leak Guides & Knowledge Base Hub</a><span class="text-xs text-slate-600">All DIY diagnostic procedures, cost guides, and emergency protocols.</span></li>
                       <li><a href="/blog/signs-of-slab-leak-in-las-vegas-homes/" class="font-bold text-[#1E70B8] hover:underline block">5 Warning Signs of a Slab Leak in Las Vegas</a><span class="text-xs text-slate-600">Warm floor spots, hissing sounds, and high water bill indicators.</span></li>
                       <li><a href="/blog/how-swimming-pool-bucket-test-works/" class="font-bold text-[#1E70B8] hover:underline block">The 24-Hour Pool Bucket Test Guide</a><span class="text-xs text-slate-600">How to distinguish summer evaporation from plumbing ruptures.</span></li>
@@ -357,7 +357,7 @@ function buildPreRenderedBody(page: PageContent, blogPost: BlogPost | null): str
         <div class="md:col-span-4 mt-6 pt-6 border-t border-slate-700/60">
           <h4 class="font-bold text-amber-400 mb-3 uppercase tracking-wider text-[11px]">Technical Leak Diagnostics & Knowledge Base</h4>
           <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
-            ${BLOG_POSTS.map(b => `<a href="${b.slug === 'spring-valley-leak-detection-guide' ? `/${b.slug}/` : `/blog/${b.slug}/`}" class="hover:text-amber-300 block">${b.title}</a>`).join('')}
+            ${BLOG_POSTS.map(b => `<a href="/blog/${b.slug}/" class="hover:text-amber-300 block">${b.title}</a>`).join('')}
           </div>
         </div>
       </div>
@@ -380,7 +380,7 @@ const routesToPrerender: RouteConfig[] = [];
 
 // 1. All site pages in siteData
 for (const [key, page] of Object.entries(sitePages)) {
-  const canonicalUrl = `${DOMAIN_URL}${page.urlPath === '/' ? '/' : `/${page.slug}/`}`;
+  const canonicalUrl = `${DOMAIN_URL}${page.urlPath === '/' ? '/' : (page.urlPath ? (page.urlPath.endsWith('/') ? page.urlPath : `${page.urlPath}/`) : `/${page.slug}/`)}`;
   const matchingBlogPost = BLOG_POSTS.find(b => b.slug === page.slug) || null;
   const schema = generateSchemaForPage(page, matchingBlogPost);
   const schemaJson = JSON.stringify(schema, null, 2);
@@ -400,10 +400,6 @@ for (const [key, page] of Object.entries(sitePages)) {
 // 2. Individual Blog Posts
 const blogIndexPage = sitePages['blog'] || sitePages['home'];
 for (const post of BLOG_POSTS) {
-  if (post.slug === 'spring-valley-leak-detection-guide') {
-    // This post is already pre-rendered as root page /spring-valley-leak-detection-guide/
-    continue;
-  }
   const postSlug = `blog/${post.slug}`;
   const canonicalUrl = `${DOMAIN_URL}/${postSlug}/`;
   const schema = generateSchemaForPage(blogIndexPage, post);
@@ -412,8 +408,8 @@ for (const post of BLOG_POSTS) {
   routesToPrerender.push({
     slug: postSlug,
     urlPath: `/${postSlug}/`,
-    metaTitle: `${post.title} | Spring Valley Leak Detection & Repair`,
-    metaDescription: post.excerpt,
+    metaTitle: post.metaTitle || `${post.title} | Spring Valley Leak Detection & Repair`,
+    metaDescription: post.metaDescription || post.excerpt,
     canonicalUrl,
     schemaJson,
     pageData: blogIndexPage,
@@ -519,7 +515,6 @@ const redirectAliases: { from: string; to: string }[] = [
   { from: 'slab-leak', to: '/slab-leak-detection/' },
   { from: 'pool-leak', to: '/pool-leak-detection/' },
   { from: 'privacy', to: '/privacy-policy/' },
-  { from: 'blog/spring-valley-leak-detection-guide', to: '/spring-valley-leak-detection-guide/' },
 ];
 
 for (const alias of redirectAliases) {

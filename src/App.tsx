@@ -24,8 +24,9 @@ export default function App() {
     const rawPath = window.location.pathname.replace(/^\/|\/$/g, '');
     if (!rawPath) return '';
     // Normalize aliases
-    if (rawPath === 'spring-valley-leak-detection-guide') return 'spring-valley-leak-detection-guide';
-    if (rawPath === 'blog/spring-valley-leak-detection-guide') return 'spring-valley-leak-detection-guide';
+    if (rawPath === 'spring-valley-leak-detection-guide' || rawPath === 'blog/spring-valley-leak-detection-guide') {
+      return 'blog/spring-valley-leak-detection-guide';
+    }
     if (rawPath === 'blog' || rawPath.startsWith('blog/')) return rawPath;
     if (rawPath === 'how-it-works') return 'how-it-works';
     if (rawPath === 'contact-nap' || rawPath === 'contact-us') return 'contact';
@@ -46,18 +47,12 @@ export default function App() {
   const [currentSlug, setCurrentSlug] = useState<string>(getSlugFromPath);
   const [isAuditModalOpen, setIsAuditModalOpen] = useState(false);
 
-  // Check if we are on a blog route or standalone guide route
-  const isBlogRoute =
-    currentSlug === 'blog' ||
-    currentSlug.startsWith('blog/') ||
-    currentSlug === 'spring-valley-leak-detection-guide';
+  // Check if we are on a blog route
+  const isBlogRoute = currentSlug === 'blog' || currentSlug.startsWith('blog/');
 
-  const activeBlogPostSlug =
-    currentSlug === 'spring-valley-leak-detection-guide'
-      ? 'spring-valley-leak-detection-guide'
-      : currentSlug.startsWith('blog/')
-      ? currentSlug.replace(/^blog\//, '').replace(/\/$/, '')
-      : undefined;
+  const activeBlogPostSlug = currentSlug.startsWith('blog/')
+    ? currentSlug.replace(/^blog\//, '').replace(/\/$/, '')
+    : undefined;
 
   const currentBlogPost = activeBlogPostSlug
     ? BLOG_POSTS.find((p) => p.slug === activeBlogPostSlug) || null
@@ -139,9 +134,7 @@ export default function App() {
       document.head.appendChild(canonical);
     }
     const fullCanonicalUrl = currentBlogPost
-      ? (currentBlogPost.slug === 'spring-valley-leak-detection-guide'
-          ? `${DOMAIN_URL}/spring-valley-leak-detection-guide/`
-          : `${DOMAIN_URL}/blog/${currentBlogPost.slug}/`)
+      ? `${DOMAIN_URL}/blog/${currentBlogPost.slug}/`
       : `${DOMAIN_URL}${currentPage.urlPath === '/' ? '' : currentPage.urlPath}`;
     canonical.setAttribute('href', fullCanonicalUrl);
 

@@ -3,9 +3,7 @@ import { BlogPost } from '../data/blogData';
 
 export function generateSchemaForPage(page: PageContent, blogPost?: BlogPost | null) {
   const pageUrl = blogPost
-    ? (blogPost.slug === 'spring-valley-leak-detection-guide'
-        ? `${DOMAIN_URL}/spring-valley-leak-detection-guide/`
-        : `${DOMAIN_URL}/blog/${blogPost.slug}/`)
+    ? `${DOMAIN_URL}/blog/${blogPost.slug}/`
     : `${DOMAIN_URL}${page.urlPath === '/' ? '' : page.urlPath}`;
 
   const schemas: any[] = [];
