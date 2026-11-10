@@ -365,7 +365,7 @@ export const BLOG_POSTS: BlogPost[] = [
     excerpt: 'Rising water bill in Spring Valley, Las Vegas? Learn where desert homes hide leaks, what a pro visit involves, and what shapes pricing. Call (725) 313-0108.',
     author: 'Spring Valley Diagnostic Team',
     authorRole: 'Master Leak Specialists',
-    featuredImage: '/images/desert_home_leak_guide.jpg',
+    featuredImage: '/images/desert_home_leak_guide.webp',
     featuredImageAlt: 'Spring Valley leak detection specialist with thermal camera and acoustic locator near desert stucco home',
     tags: ['Spring Valley Leak Detection', 'Desert Home Plumbing', 'Slab Leaks Las Vegas', 'Water Bill Spike', 'Leak Detection Cost'],
     content: {
@@ -412,7 +412,7 @@ export const BLOG_POSTS: BlogPost[] = [
             '4. Tracer Gas or Camera Inspection: Non-toxic safe helium/nitrogen tracer gas or fiber-optic micro-cameras are deployed to trace stubborn, deeply buried lines.'
           ],
           image: {
-            src: '/images/acoustic_meter_inspection.jpg',
+            src: '/images/acoustic_meter_inspection.webp',
             alt: 'Technician using acoustic listening ground microphone and digital pressure gauge on desert home floor',
             caption: 'Non-invasive acoustic sensors and digital manometers pinpoint leak coordinates without exploratory floor demolition.'
           },
