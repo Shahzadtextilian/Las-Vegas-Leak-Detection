@@ -1,4 +1,4 @@
-import { PageContent, PHONE_NUMBER, DOMAIN_URL, BRAND_NAME, BUSINESS_ADDRESS, FACEBOOK_URL } from '../data/siteData';
+import { PageContent, DOMAIN_URL, BRAND_NAME, BUSINESS_ADDRESS, FACEBOOK_URL } from '../data/siteData';
 import { BlogPost, getBlogPostUrlPath } from '../data/blogData';
 
 export function generateSchemaForPage(page: PageContent, blogPost?: BlogPost | null) {
@@ -8,12 +8,24 @@ export function generateSchemaForPage(page: PageContent, blogPost?: BlogPost | n
 
   const schemas: any[] = [];
 
-  // 1. Breadcrumbs Schema
+  // 1. Breadcrumbs Schema (Nevada > Clark County > Spring Valley Hub)
   const breadcrumbItems = [
     {
       "@type": "ListItem",
       "position": 1,
-      "name": "Home",
+      "name": "Nevada",
+      "item": `${DOMAIN_URL}/#nevada`
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Clark County",
+      "item": `${DOMAIN_URL}/#clark-county`
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Spring Valley",
       "item": `${DOMAIN_URL}/`
     }
   ];
@@ -21,20 +33,20 @@ export function generateSchemaForPage(page: PageContent, blogPost?: BlogPost | n
   if (blogPost) {
     breadcrumbItems.push({
       "@type": "ListItem",
-      "position": 2,
+      "position": 4,
       "name": "Blog & Guides",
       "item": `${DOMAIN_URL}/blog/`
     });
     breadcrumbItems.push({
       "@type": "ListItem",
-      "position": 3,
+      "position": 5,
       "name": blogPost.title,
       "item": pageUrl
     });
   } else if (page.slug !== "") {
     breadcrumbItems.push({
       "@type": "ListItem",
-      "position": 2,
+      "position": 4,
       "name": page.name,
       "item": pageUrl
     });
@@ -46,10 +58,10 @@ export function generateSchemaForPage(page: PageContent, blogPost?: BlogPost | n
     "itemListElement": breadcrumbItems
   });
 
-  // 2. Base LocalBusiness / Plumber Schema with exact NAP & GeoCoordinates
+  // 2. Base Plumber / LocalBusiness Schema with exact NAP, GeoCoordinates & AreaServed
   const localBusinessSchema = {
     "@context": "https://schema.org",
-    "@type": ["PlumbingService", "EmergencyService"],
+    "@type": ["Plumber", "LocalBusiness"],
     "@id": `${DOMAIN_URL}/#organization`,
     "name": BRAND_NAME,
     "alternateName": [
@@ -60,7 +72,7 @@ export function generateSchemaForPage(page: PageContent, blogPost?: BlogPost | n
     "url": `${DOMAIN_URL}/`,
     "logo": `${DOMAIN_URL}/logo.svg`,
     "image": `${DOMAIN_URL}/images/hero_emergency_plumbing_1791566119640.webp`,
-    "telephone": PHONE_NUMBER,
+    "telephone": BUSINESS_ADDRESS.telephone,
     "priceRange": "$$",
     "sameAs": [
       FACEBOOK_URL,
@@ -78,19 +90,19 @@ export function generateSchemaForPage(page: PageContent, blogPost?: BlogPost | n
     },
     "geo": {
       "@type": "GeoCoordinates",
-      "latitude": 36.1045,
-      "longitude": -115.2412
+      "latitude": 36.1105,
+      "longitude": -115.2415
     },
     "serviceArea": {
       "@type": "GeoCircle",
       "geoMidpoint": {
         "@type": "GeoCoordinates",
-        "latitude": 36.1045,
-        "longitude": -115.2412
+        "latitude": 36.1105,
+        "longitude": -115.2415
       },
       "geoRadius": "25000"
     },
-    "description": "Top-rated 24/7 non-invasive water, gas, slab, and swimming pool leak detection and precision repair across Spring Valley, NV and Clark County.",
+    "description": "Licensed 24/7 non-invasive water, gas, slab, and swimming pool leak detection and precision repair across Spring Valley, NV and Clark County.",
     "speakable": {
       "@type": "SpeakableSpecification",
       "cssSelector": ["#hero-headline", "#direct-answer-summary", ".speakable-answer"]
@@ -98,65 +110,44 @@ export function generateSchemaForPage(page: PageContent, blogPost?: BlogPost | n
     "areaServed": [
       {
         "@type": "City",
-        "name": "Spring Valley, NV",
+        "name": "Spring Valley",
         "sameAs": "https://en.wikipedia.org/wiki/Spring_Valley,_Nevada"
       },
       {
-        "@type": "City",
-        "name": "Las Vegas, NV",
-        "sameAs": "https://en.wikipedia.org/wiki/Las_Vegas"
-      },
-      {
-        "@type": "AdministrativeArea",
-        "name": "Clark County, Nevada"
+        "@type": "Place",
+        "name": "The Lakes"
       },
       {
         "@type": "Place",
-        "name": "The Lakes, NV"
+        "name": "Spanish Trail"
       },
       {
         "@type": "Place",
-        "name": "Spanish Trail, NV"
+        "name": "Rhodes Ranch"
       },
       {
         "@type": "Place",
-        "name": "Summerlin South, NV"
+        "name": "Summerlin South"
       },
       {
-        "@type": "Place",
-        "name": "Rhodes Ranch, NV"
-      },
-      {
-        "@type": "Place",
-        "name": "Peccole Ranch, NV"
-      },
-      {
-        "@type": "Place",
-        "name": "Chinatown Las Vegas, NV"
-      },
-      {
-        "@type": "PostalAddress",
+        "@type": "GeoShape",
         "postalCode": "89103"
       },
       {
-        "@type": "PostalAddress",
-        "postalCode": "89147"
-      },
-      {
-        "@type": "PostalAddress",
-        "postalCode": "89148"
-      },
-      {
-        "@type": "PostalAddress",
-        "postalCode": "89117"
-      },
-      {
-        "@type": "PostalAddress",
+        "@type": "GeoShape",
         "postalCode": "89113"
       },
       {
-        "@type": "PostalAddress",
-        "postalCode": "89118"
+        "@type": "GeoShape",
+        "postalCode": "89117"
+      },
+      {
+        "@type": "GeoShape",
+        "postalCode": "89147"
+      },
+      {
+        "@type": "GeoShape",
+        "postalCode": "89148"
       }
     ],
     "knowsAbout": [
@@ -226,85 +217,6 @@ export function generateSchemaForPage(page: PageContent, blogPost?: BlogPost | n
     "paymentAccepted": "Cash, Credit Card, Debit Card, Visa, Mastercard, American Express, Discover, Insurance Claims, Check",
     "currenciesAccepted": "USD",
     "hasMap": "https://www.google.com/maps/place/6875+Groveview+Ln,+Las+Vegas,+NV+89103",
-    "aggregateRating": {
-      "@type": "AggregateRating",
-      "ratingValue": "4.9",
-      "reviewCount": "142",
-      "bestRating": "5",
-      "worstRating": "1"
-    },
-    "review": [
-      {
-        "@type": "Review",
-        "author": {
-          "@type": "Person",
-          "name": "Marcus Vance"
-        },
-        "datePublished": "2026-09-18",
-        "reviewBody": "Had an unexplained warm spot on our tile floor in Spanish Trail (Spring Valley). The technician arrived in 35 minutes, used acoustic sensors, and located the copper slab leak without breaking up our travertine floor.",
-        "reviewRating": {
-          "@type": "Rating",
-          "ratingValue": "5",
-          "bestRating": "5"
-        }
-      },
-      {
-        "@type": "Review",
-        "author": {
-          "@type": "Person",
-          "name": "Elena Rostova"
-        },
-        "datePublished": "2026-08-27",
-        "reviewBody": "Our swimming pool in The Lakes was losing 2 inches of water daily in 110-degree heat. Dispatched specialist performed hydrophone listening and pinpointed a hairline return pipe fissure within an hour.",
-        "reviewRating": {
-          "@type": "Rating",
-          "ratingValue": "5",
-          "bestRating": "5"
-        }
-      },
-      {
-        "@type": "Review",
-        "author": {
-          "@type": "Person",
-          "name": "Terrance Miller"
-        },
-        "datePublished": "2026-09-04",
-        "reviewBody": "Received a high water bill warning from LVVWD for our home in Rhodes Ranch. They detected an underground main line leak through the hard caliche soil with zero yard destruction.",
-        "reviewRating": {
-          "@type": "Rating",
-          "ratingValue": "5",
-          "bestRating": "5"
-        }
-      },
-      {
-        "@type": "Review",
-        "author": {
-          "@type": "Person",
-          "name": "David K. - Spring Mountain Rd"
-        },
-        "datePublished": "2026-10-02",
-        "reviewBody": "Smelled natural gas near our kitchen line in Spring Valley Chinatown corridor. Emergency team arrived in 25 minutes, used digital gas sniffer, isolated the joint leak, and had Southwest Gas inspection cleared the same afternoon.",
-        "reviewRating": {
-          "@type": "Rating",
-          "ratingValue": "5",
-          "bestRating": "5"
-        }
-      },
-      {
-        "@type": "Review",
-        "author": {
-          "@type": "Person",
-          "name": "Brianna S. - 89103 Rainbow Blvd"
-        },
-        "datePublished": "2026-10-09",
-        "reviewBody": "Hot floor and continuous water meter spinning near Desert Breeze Park. They pinpointed the sub-slab copper pinhole to within 2 inches. Complete non-invasive diagnostic with full insurance documentation.",
-        "reviewRating": {
-          "@type": "Rating",
-          "ratingValue": "5",
-          "bestRating": "5"
-        }
-      }
-    ],
     "openingHoursSpecification": [
       {
         "@type": "OpeningHoursSpecification",
@@ -361,9 +273,9 @@ export function generateSchemaForPage(page: PageContent, blogPost?: BlogPost | n
       "name": page.h1,
       "serviceType": page.name,
       "provider": {
-        "@type": "PlumbingService",
+        "@type": "Plumber",
         "name": BRAND_NAME,
-        "telephone": PHONE_NUMBER,
+        "telephone": BUSINESS_ADDRESS.telephone,
         "url": `${DOMAIN_URL}/`,
         "address": {
           "@type": "PostalAddress",
@@ -384,9 +296,9 @@ export function generateSchemaForPage(page: PageContent, blogPost?: BlogPost | n
   } else if (page.type === 'location') {
     schemas.push({
       "@context": "https://schema.org",
-      "@type": "PlumbingService",
+      "@type": "Plumber",
       "name": `${BRAND_NAME} - ${page.navTitle} Service Area`,
-      "telephone": PHONE_NUMBER,
+      "telephone": BUSINESS_ADDRESS.telephone,
       "url": pageUrl,
       "description": page.metaDescription,
       "address": {

@@ -61,7 +61,11 @@ export const BlogPage: React.FC<BlogPageProps> = ({ onNavigate, activePostSlug }
         {/* Breadcrumb */}
         <div className="bg-white border-b border-slate-200">
           <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-3">
-            <nav aria-label="Breadcrumb" className="flex items-center text-xs text-slate-500 font-medium">
+            <nav aria-label="Breadcrumb" className="flex flex-wrap items-center gap-1.5 text-xs text-slate-500 font-medium">
+              <span>Nevada</span>
+              <span className="text-slate-300">&gt;</span>
+              <span>Clark County</span>
+              <span className="text-slate-300">&gt;</span>
               <a
                 href="/"
                 onClick={(e) => {
@@ -70,9 +74,9 @@ export const BlogPage: React.FC<BlogPageProps> = ({ onNavigate, activePostSlug }
                 }}
                 className="hover:text-[#1E70B8] transition-colors"
               >
-                Home
+                Spring Valley
               </a>
-              <span className="mx-2 text-slate-300">/</span>
+              <span className="text-slate-300">&gt;</span>
               <a
                 href="/blog/"
                 onClick={(e) => {
@@ -82,10 +86,10 @@ export const BlogPage: React.FC<BlogPageProps> = ({ onNavigate, activePostSlug }
                 }}
                 className="hover:text-[#1E70B8] transition-colors"
               >
-                Blog & Leak Guides
+                Blog &amp; Leak Guides
               </a>
-              <span className="mx-2 text-slate-300">/</span>
-              <span className="text-slate-900 font-semibold truncate max-w-xs sm:max-w-md">
+              <span className="text-slate-300">&gt;</span>
+              <span className="text-slate-900 font-semibold truncate max-w-xs sm:max-w-md" aria-current="page">
                 {selectedPost.title}
               </span>
             </nav>

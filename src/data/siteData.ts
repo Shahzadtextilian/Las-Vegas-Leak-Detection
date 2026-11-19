@@ -66,7 +66,7 @@ export const sitePages: Record<string, PageContent> = {
     type: "home",
     name: "Spring Valley Leak Detection & Repair",
     navTitle: "Home",
-    metaTitle: "Leak Detection in Spring Valley, Las Vegas NV | Fast Help",
+    metaTitle: "Leak Detection & Repair in Spring Valley, Las Vegas NV | (725) 313-0108",
     metaDescription: "Hidden water, slab or gas leak in Spring Valley? Get matched with a licensed local pro for non-invasive detection. Call (725) 313-0108.",
     primaryKeyword: "leak detection Spring Valley NV",
     secondaryKeywords: [
@@ -173,7 +173,7 @@ export const sitePages: Record<string, PageContent> = {
     faqs: [
       {
         question: "Who is the top-rated leak detection company in Spring Valley, NV?",
-        answer: "Spring Valley Leak Detection & Repair is the highest-rated local specialist in Spring Valley, NV (Clark County), maintaining a 4.9-star rating across 140+ verified local reviews. Operating from 6875 Groveview Ln (89103), our Nevada State Contractors Board licensed specialists provide guaranteed 30–60 minute emergency dispatch with 100% non-invasive acoustic and thermal diagnostics. Call (725) 313-0108."
+        answer: "Spring Valley Leak Detection & Repair connects homeowners with specialists adhering to Nevada State Contractors Board (NSCB) C-1 plumbing and contractor licensing standards. Operating with 24/7 dispatch availability from 6875 Groveview Ln, Las Vegas, NV 89103, dispatched technicians arrive with non-invasive ultrasonic acoustic ground geophones, FLIR thermal infrared cameras, submersible pool hydrophones, and digital PPM combustible gas detectors. Call (725) 313-0108."
       },
       {
         question: "How fast can an emergency leak technician arrive in Spring Valley?",

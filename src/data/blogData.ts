@@ -44,6 +44,24 @@ export function getBlogPostNavSlug(post: BlogPost): string {
   return post.customUrlPath ? post.customUrlPath.replace(/^\/|\/$/g, '') : `blog/${post.slug}`;
 }
 
+export const TOP_DIAGNOSTIC_GUIDE_SLUGS = [
+  'spring-valley-leak-detection-guide',
+  'pool-irrigation-leak-detection-spring-valley',
+  'signs-of-slab-leak-in-las-vegas-homes',
+  'how-to-read-water-meter-for-hidden-leaks'
+] as const;
+
+export function getTopDiagnosticGuides(): BlogPost[] {
+  return TOP_DIAGNOSTIC_GUIDE_SLUGS
+    .map((slug) => BLOG_POSTS.find((p) => p.slug === slug))
+    .filter((p): p is BlogPost => Boolean(p));
+}
+
+export function getComplementaryGuides(): BlogPost[] {
+  const topSet = new Set<string>(TOP_DIAGNOSTIC_GUIDE_SLUGS);
+  return BLOG_POSTS.filter((p) => !topSet.has(p.slug));
+}
+
 export const BLOG_POSTS: BlogPost[] = [
   {
     id: 'signs-of-slab-leak',

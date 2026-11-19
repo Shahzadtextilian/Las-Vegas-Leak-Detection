@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { PageContent, PHONE_NUMBER, PHONE_HREF, BRAND_NAME, BUSINESS_ADDRESS, FACEBOOK_URL } from '../data/siteData';
-import { BLOG_POSTS, BlogPost, getBlogPostUrlPath, getBlogPostNavSlug } from '../data/blogData';
+import { BLOG_POSTS, getComplementaryGuides, getBlogPostUrlPath, getBlogPostNavSlug } from '../data/blogData';
 import {
   Phone,
   ShieldCheck,
@@ -133,37 +133,6 @@ const SYMPTOM_DATA = {
   }
 };
 
-const LOCAL_CUSTOMER_REVIEWS = [
-  {
-    name: 'Marcus Vance',
-    neighborhood: 'Spanish Trail Estates, Spring Valley',
-    date: 'September 2026',
-    stars: 5,
-    text: 'Had an unexplained warm spot on our tile floor in Spanish Trail. The technician arrived in 35 minutes, used acoustic geophones, and located the copper slab leak without breaking up our travertine floor.'
-  },
-  {
-    name: 'Elena Rostova',
-    neighborhood: 'The Lakes near Lake Sahara, Spring Valley',
-    date: 'August 2026',
-    stars: 5,
-    text: 'Our swimming pool was losing 2 inches of water daily in 110-degree heat. Dispatched specialist performed hydrophone listening and pinpointed a hairline return pipe fissure within an hour.'
-  },
-  {
-    name: 'Terrance Miller',
-    neighborhood: 'Rhodes Ranch, Spring Valley',
-    date: 'September 2026',
-    stars: 5,
-    text: 'Received a high water bill warning from LVVWD for our home in Rhodes Ranch. They detected an underground main line leak through the hard caliche soil with zero yard destruction.'
-  },
-  {
-    name: 'David Kim',
-    neighborhood: 'Spring Mountain Rd / Chinatown, Spring Valley',
-    date: 'October 2026',
-    stars: 5,
-    text: 'Detected natural gas odor near our kitchen line in Spring Valley. Emergency crew arrived in 25 minutes, used a digital gas sniffer wand, repaired the union leak, and had Southwest Gas inspection cleared same afternoon.'
-  }
-];
-
 interface PageRendererProps {
   page: PageContent;
   onNavigate: (slug: string) => void;
@@ -249,20 +218,28 @@ export const PageRenderer: React.FC<PageRendererProps> = ({
   return (
     <article className="min-h-screen bg-slate-50 text-slate-900 pb-20">
       
-      {/* Breadcrumb Navigation */}
+      {/* Breadcrumb Navigation (Nevada > Clark County > Spring Valley Hub) */}
       <div className="bg-white border-b border-slate-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3">
-          <nav aria-label="Breadcrumb" className="flex items-center text-xs text-slate-500 font-medium">
-            <a
-              href="/"
-              onClick={(e) => { e.preventDefault(); onNavigate(''); }}
-              className="hover:text-[#1E70B8] transition-colors"
-            >
-              Home
-            </a>
-            {page.slug !== '' && (
+          <nav aria-label="Breadcrumb" className="flex flex-wrap items-center gap-1.5 text-xs text-slate-500 font-medium">
+            <span>Nevada</span>
+            <span className="text-slate-300">&gt;</span>
+            <span>Clark County</span>
+            <span className="text-slate-300">&gt;</span>
+            {page.slug === '' ? (
+              <span className="text-slate-900 font-semibold" aria-current="page">
+                Spring Valley
+              </span>
+            ) : (
               <>
-                <span className="mx-2 text-slate-300">/</span>
+                <a
+                  href="/"
+                  onClick={(e) => { e.preventDefault(); onNavigate(''); }}
+                  className="hover:text-[#1E70B8] transition-colors"
+                >
+                  Spring Valley
+                </a>
+                <span className="text-slate-300">&gt;</span>
                 <span className="text-slate-400 capitalize">
                   {page.type === 'service'
                     ? 'Leak Services'
@@ -270,7 +247,7 @@ export const PageRenderer: React.FC<PageRendererProps> = ({
                     ? 'Spring Valley Service Areas'
                     : 'Information'}
                 </span>
-                <span className="mx-2 text-slate-300">/</span>
+                <span className="text-slate-300">&gt;</span>
                 <span className="text-slate-900 font-semibold" aria-current="page">
                   {page.navTitle}
                 </span>
@@ -889,45 +866,61 @@ export const PageRenderer: React.FC<PageRendererProps> = ({
               </section>
             )}
 
-            {/* HOMEPAGE RANKING AUTHORITY: VERIFIED SPRING VALLEY CUSTOMER REVIEWS */}
+            {/* HOMEPAGE VERIFIABLE TRUST SIGNALS: LICENSING, DISPATCH & DIAGNOSTIC SPECS */}
             {page.slug === '' && (
               <section className="bg-white rounded-2xl p-6 sm:p-8 border border-slate-200 shadow-xs space-y-6">
                 <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pb-3 border-b border-slate-100">
                   <div>
                     <div className="flex items-center gap-1.5 text-xs font-bold text-[#1E70B8] uppercase tracking-wider font-display mb-1">
-                      <Award className="w-4 h-4 text-amber-500" />
-                      <span>Verified Local Customer Testimonials</span>
+                      <ShieldCheck className="w-4 h-4 text-emerald-600" />
+                      <span>Verifiable Licensing, Dispatch &amp; Equipment Standards</span>
                     </div>
                     <h3 className="text-xl sm:text-2xl font-bold text-slate-900 font-display">
-                      What Spring Valley Property Owners Say About Our Diagnostics
+                      Spring Valley Diagnostic Benchmarks &amp; Contractor Compliance
                     </h3>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <span className="text-amber-500 text-sm font-black">★★★★★</span>
-                    <span className="text-xs font-bold text-slate-900">4.9 / 5.0 Rating (142 Reviews)</span>
                   </div>
                 </div>
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                  {LOCAL_CUSTOMER_REVIEWS.map((rev, rIdx) => (
-                    <div key={rIdx} className="p-4 rounded-xl border border-slate-200 bg-slate-50/70 space-y-2.5">
-                      <div className="flex items-center justify-between">
-                        <div className="flex items-center gap-1 text-amber-500 text-xs">
-                          {Array.from({ length: rev.stars }).map((_, i) => (
-                            <span key={i}>★</span>
-                          ))}
-                        </div>
-                        <span className="text-[11px] text-slate-400 font-medium">{rev.date}</span>
-                      </div>
-                      <p className="text-xs text-slate-700 leading-relaxed italic">
-                        "{rev.text}"
-                      </p>
-                      <div className="pt-2 border-t border-slate-200/80 flex items-center justify-between text-xs">
-                        <span className="font-bold text-slate-900">{rev.name}</span>
-                        <span className="text-[#1E70B8] font-medium text-[11px]">{rev.neighborhood}</span>
-                      </div>
+                  <div className="p-4 rounded-xl border border-slate-200 bg-slate-50/70 space-y-2">
+                    <div className="flex items-center gap-2 text-xs font-bold text-[#0F2942] uppercase tracking-wider">
+                      <ShieldCheck className="w-4 h-4 text-emerald-600" />
+                      <span>Nevada State Contractors Board (NSCB)</span>
                     </div>
-                  ))}
+                    <p className="text-xs text-slate-700 leading-relaxed">
+                      Referrals and dispatch assignments strictly enforce active Nevada State Contractors Board C-1 plumbing and contractor licensing standards, general liability coverage, and Clark County code compliance.
+                    </p>
+                  </div>
+
+                  <div className="p-4 rounded-xl border border-slate-200 bg-slate-50/70 space-y-2">
+                    <div className="flex items-center gap-2 text-xs font-bold text-[#0F2942] uppercase tracking-wider">
+                      <Clock className="w-4 h-4 text-amber-600" />
+                      <span>24/7 Local Dispatch Availability</span>
+                    </div>
+                    <p className="text-xs text-slate-700 leading-relaxed">
+                      Operating round the clock from 6875 Groveview Ln, Las Vegas, NV 89103 with 30–60 minute rapid dispatch across 89103, 89113, 89117, 89147, and 89148.
+                    </p>
+                  </div>
+
+                  <div className="p-4 rounded-xl border border-slate-200 bg-slate-50/70 space-y-2">
+                    <div className="flex items-center gap-2 text-xs font-bold text-[#0F2942] uppercase tracking-wider">
+                      <Radio className="w-4 h-4 text-[#1E70B8]" />
+                      <span>Ultrasonic Acoustic &amp; Thermal Specs</span>
+                    </div>
+                    <p className="text-xs text-slate-700 leading-relaxed">
+                      Equipped with amplified ground geophones (sub-slab frequency filtering), FLIR high-resolution infrared cameras, and submersible pool hydrophones to isolate leaks non-invasively.
+                    </p>
+                  </div>
+
+                  <div className="p-4 rounded-xl border border-slate-200 bg-slate-50/70 space-y-2">
+                    <div className="flex items-center gap-2 text-xs font-bold text-[#0F2942] uppercase tracking-wider">
+                      <FileText className="w-4 h-4 text-sky-600" />
+                      <span>Gas PPM &amp; LVVWD Documentation</span>
+                    </div>
+                    <p className="text-xs text-slate-700 leading-relaxed">
+                      Calibrated parts-per-million (PPM) combustible gas sniffers and itemized diagnostic repair logs formatted for Southwest Gas clearances, insurance claims, and LVVWD leak credits.
+                    </p>
+                  </div>
                 </div>
               </section>
             )}
@@ -1221,7 +1214,7 @@ export const PageRenderer: React.FC<PageRendererProps> = ({
               </section>
             )}
 
-            {/* FEATURED TECHNICAL LEAK GUIDES & DIAGNOSTICS (Incoming Inlinks) */}
+            {/* COMPLEMENTARY TECHNICAL LEAK GUIDES & DIAGNOSTICS (Non-Duplicated Homepage Links) */}
             {page.slug === '' ? (
               <section className="bg-white rounded-2xl p-6 sm:p-8 border border-slate-200 shadow-xs space-y-6">
                 <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pb-4 border-b border-slate-100">
@@ -1231,7 +1224,7 @@ export const PageRenderer: React.FC<PageRendererProps> = ({
                       <span>Spring Valley Diagnostic Knowledge Base</span>
                     </div>
                     <h2 className="text-xl sm:text-2xl font-bold text-slate-900 mt-1 font-display">
-                      Expert Leak Detection Guides & DIY Diagnostic Protocols
+                      Additional Southern Nevada Prevention &amp; Utility Guides
                     </h2>
                   </div>
                   <a
@@ -1242,19 +1235,19 @@ export const PageRenderer: React.FC<PageRendererProps> = ({
                     }}
                     className="text-xs font-bold text-[#1E70B8] hover:underline flex items-center gap-1 shrink-0"
                   >
-                    <span>View All Articles</span>
+                    <span>View All 8 Guides</span>
                     <ArrowRight className="w-3.5 h-3.5" />
                   </a>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
-                  {BLOG_POSTS.map((post) => (
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+                  {getComplementaryGuides().map((post) => (
                     <a
                       key={post.id}
-                      href={`/blog/${post.slug}/`}
+                      href={getBlogPostUrlPath(post)}
                       onClick={(e) => {
                         e.preventDefault();
-                        onNavigate(`blog/${post.slug}`);
+                        onNavigate(getBlogPostNavSlug(post));
                       }}
                       className="group p-5 rounded-xl border border-slate-200 hover:border-[#1E70B8] hover:bg-slate-50/60 transition-all flex flex-col justify-between block no-underline text-inherit"
                     >
@@ -1313,10 +1306,10 @@ export const PageRenderer: React.FC<PageRendererProps> = ({
                         </p>
                       </div>
                       <a
-                        href={`/blog/${matchedPost.slug}/`}
+                        href={getBlogPostUrlPath(matchedPost)}
                         onClick={(e) => {
                           e.preventDefault();
-                          onNavigate(`blog/${matchedPost.slug}`);
+                          onNavigate(getBlogPostNavSlug(matchedPost));
                         }}
                         className="px-4 py-2.5 bg-[#0F2942] hover:bg-[#1E70B8] text-white text-xs font-bold rounded-lg transition-colors shrink-0 flex items-center gap-1.5 no-underline"
                       >
@@ -1373,7 +1366,7 @@ export const PageRenderer: React.FC<PageRendererProps> = ({
 
             <div className="bg-white rounded-2xl p-6 border border-slate-200 shadow-xs space-y-5">
               
-              {/* Educational Blog Callout in Sidebar (Incoming Inlinks) */}
+              {/* Educational Blog Callout in Sidebar */}
               <div className="p-4 rounded-xl bg-amber-50/70 border border-amber-200/80 space-y-3">
                 <div className="flex items-center justify-between">
                   <div className="flex items-center gap-1.5 text-xs font-bold text-amber-900 uppercase tracking-wider">
@@ -1393,28 +1386,42 @@ export const PageRenderer: React.FC<PageRendererProps> = ({
                   </a>
                 </div>
                 <p className="text-xs text-slate-700 leading-relaxed">
-                  Step-by-step DIY diagnostic procedures and utility leak verification:
+                  Step-by-step DIY diagnostic procedures, Las Vegas leak cost guides, and utility leak credit steps.
                 </p>
-                <div className="space-y-2 pt-1 border-t border-amber-200/60">
-                  {BLOG_POSTS.slice(0, 3).map((post) => (
-                    <a
-                      key={post.id}
-                      href={getBlogPostUrlPath(post)}
-                      onClick={(e) => {
-                        e.preventDefault();
-                        onNavigate(getBlogPostNavSlug(post));
-                      }}
-                      className="block p-2.5 rounded-lg bg-white/90 hover:bg-white border border-amber-200/70 hover:border-[#1E70B8] transition-colors group no-underline text-inherit"
-                    >
-                      <div className="text-[10px] font-bold text-amber-800 uppercase tracking-wider mb-0.5">
-                        {post.category}
-                      </div>
-                      <div className="text-xs font-bold text-slate-900 group-hover:text-[#1E70B8] transition-colors line-clamp-2 leading-snug">
-                        {post.title}
-                      </div>
-                    </a>
-                  ))}
-                </div>
+                {page.slug === '' ? (
+                  <a
+                    href="/blog/"
+                    onClick={(e) => {
+                      e.preventDefault();
+                      onNavigate('blog');
+                    }}
+                    className="flex items-center justify-between p-2.5 rounded-lg bg-white hover:bg-slate-50 border border-amber-200/70 hover:border-[#1E70B8] text-xs font-bold text-[#0F2942] transition-colors no-underline"
+                  >
+                    <span>Browse All 8 Homeowner Guides</span>
+                    <ArrowRight className="w-3.5 h-3.5 text-[#1E70B8]" />
+                  </a>
+                ) : (
+                  <div className="space-y-2 pt-1 border-t border-amber-200/60">
+                    {BLOG_POSTS.slice(0, 3).map((post) => (
+                      <a
+                        key={post.id}
+                        href={getBlogPostUrlPath(post)}
+                        onClick={(e) => {
+                          e.preventDefault();
+                          onNavigate(getBlogPostNavSlug(post));
+                        }}
+                        className="block p-2.5 rounded-lg bg-white/90 hover:bg-white border border-amber-200/70 hover:border-[#1E70B8] transition-colors group no-underline text-inherit"
+                      >
+                        <div className="text-[10px] font-bold text-amber-800 uppercase tracking-wider mb-0.5">
+                          {post.category}
+                        </div>
+                        <div className="text-xs font-bold text-slate-900 group-hover:text-[#1E70B8] transition-colors line-clamp-2 leading-snug">
+                          {post.title}
+                        </div>
+                      </a>
+                    ))}
+                  </div>
+                )}
               </div>
 
               {/* Related Sub-Services Contextual Box */}

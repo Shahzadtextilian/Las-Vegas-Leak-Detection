@@ -1,6 +1,6 @@
 import React from 'react';
 import { PHONE_NUMBER, PHONE_HREF, BRAND_NAME, BUSINESS_ADDRESS, FACEBOOK_URL } from '../data/siteData';
-import { BLOG_POSTS, getBlogPostUrlPath, getBlogPostNavSlug } from '../data/blogData';
+import { getTopDiagnosticGuides, getBlogPostUrlPath, getBlogPostNavSlug } from '../data/blogData';
 import { Phone, ShieldCheck, MapPin, Clock, BookOpen, ArrowRight } from 'lucide-react';
 
 interface FooterProps {
@@ -264,29 +264,6 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
                   XML Sitemap
                 </a>
               </li>
-              <li>
-                <a
-                  href="/llms.txt"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="hover:text-white transition-colors"
-                >
-                  LLMs.txt (AI Context)
-                </a>
-              </li>
-              <li>
-                <a
-                  href={FACEBOOK_URL}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="hover:text-[#1877F2] transition-colors flex items-center gap-1.5"
-                >
-                  <svg className="w-3.5 h-3.5 fill-[#1877F2]" viewBox="0 0 24 24">
-                    <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
-                  </svg>
-                  <span>Facebook Page</span>
-                </a>
-              </li>
             </ul>
 
             <div className="mt-6 pt-4 border-t border-slate-900 flex items-start gap-2 text-xs text-slate-400">
@@ -297,17 +274,12 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
 
         </div>
 
-        {/* Featured Technical Leak Guides & Diagnostic Articles (Incoming Internal Links) */}
+        {/* Top 4 Diagnostic Guides */}
         <div className="py-8 border-b border-slate-800">
           <div className="flex flex-col md:flex-row md:items-center justify-between gap-3 mb-5">
-            <div>
-              <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-amber-400 font-display">
-                <BookOpen className="w-3.5 h-3.5 text-amber-400" />
-                <span>Expert Diagnostic Guides & Technical Articles</span>
-              </div>
-              <p className="text-xs text-slate-400 mt-1">
-                Detailed DIY diagnostic procedures, Southern Nevada water district meter checks, and caliche soil damage prevention.
-              </p>
+            <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-amber-400 font-display">
+              <BookOpen className="w-3.5 h-3.5 text-amber-400" />
+              <span>Top Diagnostic Guides</span>
             </div>
             <a
               href="/blog/"
@@ -317,13 +289,13 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
               }}
               className="text-xs font-bold text-[#38BDF8] hover:text-white flex items-center gap-1 shrink-0 transition-colors"
             >
-              <span>Explore All Leak Guides</span>
+              <span>View All Diagnostic Guides</span>
               <ArrowRight className="w-3.5 h-3.5" />
             </a>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 gap-3.5">
-            {BLOG_POSTS.map((post) => (
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3.5">
+            {getTopDiagnosticGuides().map((post) => (
               <a
                 key={post.id}
                 href={getBlogPostUrlPath(post)}

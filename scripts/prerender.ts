@@ -2,7 +2,7 @@ import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
 import { sitePages, DOMAIN_URL, PHONE_NUMBER, PHONE_HREF, BUSINESS_ADDRESS, BRAND_NAME, PageContent, FACEBOOK_URL } from '../src/data/siteData.js';
-import { BLOG_POSTS, BlogPost, getBlogPostUrlPath } from '../src/data/blogData.js';
+import { BLOG_POSTS, BlogPost, getBlogPostUrlPath, getTopDiagnosticGuides, getComplementaryGuides } from '../src/data/blogData.js';
 import { generateSchemaForPage } from '../src/utils/schemaGenerator.js';
 
 const __filename = fileURLToPath(import.meta.url);
@@ -61,6 +61,25 @@ function buildPreRenderedBody(page: PageContent, blogPost: BlogPost | null): str
     </header>
 
     <main class="max-w-5xl mx-auto px-4 py-12">
+      <nav aria-label="Breadcrumb" class="flex flex-wrap items-center gap-1.5 text-xs text-slate-500 font-medium mb-6 pb-3 border-b border-slate-200">
+        <span>Nevada</span>
+        <span class="text-slate-300">&gt;</span>
+        <span>Clark County</span>
+        <span class="text-slate-300">&gt;</span>
+        ${isPost ? `
+          <a href="/" class="hover:text-[#1E70B8]">Spring Valley</a>
+          <span class="text-slate-300">&gt;</span>
+          <a href="/blog/" class="hover:text-[#1E70B8]">Blog &amp; Leak Guides</a>
+          <span class="text-slate-300">&gt;</span>
+          <span class="text-slate-900 font-semibold">${blogPost.title}</span>
+        ` : page.slug === '' ? `
+          <span class="text-slate-900 font-semibold">Spring Valley</span>
+        ` : `
+          <a href="/" class="hover:text-[#1E70B8]">Spring Valley</a>
+          <span class="text-slate-300">&gt;</span>
+          <span class="text-slate-900 font-semibold">${page.navTitle}</span>
+        `}
+      </nav>
       <article>
         <div class="mb-4 text-xs font-bold uppercase tracking-wider text-amber-600">
           ${isPost ? `Leak Knowledge Base • ${blogPost.category}` : (page.heroKicker || 'Spring Valley, NV Diagnostics')}
@@ -198,10 +217,10 @@ function buildPreRenderedBody(page: PageContent, blogPost: BlogPost | null): str
               </section>
 
               <section class="mt-12 pt-8 border-t border-slate-200">
-                <h2 class="text-2xl font-bold text-slate-900 mb-4">Featured Diagnostic Guides & Technical Articles</h2>
+                <h2 class="text-2xl font-bold text-slate-900 mb-4">Additional Southern Nevada Prevention &amp; Utility Guides</h2>
                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                  ${BLOG_POSTS.map(b => `
-                    <a href="/blog/${b.slug}/" class="p-4 rounded-xl border border-slate-200 hover:border-[#1E70B8] block">
+                  ${getComplementaryGuides().map(b => `
+                    <a href="${getBlogPostUrlPath(b)}" class="p-4 rounded-xl border border-slate-200 hover:border-[#1E70B8] block">
                       <span class="text-xs font-bold text-amber-700 block mb-1">${b.category} • ${b.readTime}</span>
                       <span class="text-sm font-bold text-slate-900 block mb-1">${b.title}</span>
                       <span class="text-xs text-slate-600 block">${b.excerpt}</span>
@@ -352,13 +371,12 @@ function buildPreRenderedBody(page: PageContent, blogPost: BlogPost | null): str
             <li><a href="/disclaimer/" class="hover:text-white">Disclaimer & Licensing</a></li>
             <li><a href="/sitemap/" class="hover:text-white">HTML Sitemap</a></li>
             <li><a href="/sitemap.xml" class="hover:text-white">XML Sitemap</a></li>
-            <li><a href="/llms.txt" class="hover:text-white">LLMs.txt</a></li>
           </ul>
         </div>
         <div class="md:col-span-4 mt-6 pt-6 border-t border-slate-700/60">
-          <h4 class="font-bold text-amber-400 mb-3 uppercase tracking-wider text-[11px]">Technical Leak Diagnostics & Knowledge Base</h4>
-          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
-            ${BLOG_POSTS.map(b => `<a href="${getBlogPostUrlPath(b)}" class="hover:text-amber-300 block">${b.title}</a>`).join('')}
+          <h4 class="font-bold text-amber-400 mb-3 uppercase tracking-wider text-[11px]">Top 4 Diagnostic Guides</h4>
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">
+            ${getTopDiagnosticGuides().map(b => `<a href="${getBlogPostUrlPath(b)}" class="hover:text-amber-300 block">${b.title}</a>`).join('')}
           </div>
         </div>
       </div>
