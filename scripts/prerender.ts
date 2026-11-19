@@ -2,7 +2,7 @@ import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
 import { sitePages, DOMAIN_URL, PHONE_NUMBER, PHONE_HREF, BUSINESS_ADDRESS, BRAND_NAME, PageContent, FACEBOOK_URL } from '../src/data/siteData.js';
-import { BLOG_POSTS, BlogPost } from '../src/data/blogData.js';
+import { BLOG_POSTS, BlogPost, getBlogPostUrlPath } from '../src/data/blogData.js';
 import { generateSchemaForPage } from '../src/utils/schemaGenerator.js';
 
 const __filename = fileURLToPath(import.meta.url);
@@ -143,7 +143,7 @@ function buildPreRenderedBody(page: PageContent, blogPost: BlogPost | null): str
               <h3 class="text-xl font-bold text-slate-900 mb-4">Related Diagnostic & Prevention Guides</h3>
               <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm">
                 ${BLOG_POSTS.filter(p => p.id !== blogPost.id).map(other => `
-                  <a href="/blog/${other.slug}/" class="p-3 rounded-xl border border-slate-200 hover:border-[#1E70B8] block">
+                  <a href="${getBlogPostUrlPath(other)}" class="p-3 rounded-xl border border-slate-200 hover:border-[#1E70B8] block">
                     <span class="text-xs font-bold text-amber-700 block mb-1">${other.category}</span>
                     <span class="font-bold text-slate-900 block">${other.title}</span>
                   </a>
@@ -247,6 +247,7 @@ function buildPreRenderedBody(page: PageContent, blogPost: BlogPost | null): str
                       Technical Leak Guides & Knowledge Base
                     </h3>
                     <ul class="space-y-3 text-sm">
+                      <li><a href="/pool-irrigation-leak-detection-spring-valley/" class="font-bold text-[#1E70B8] hover:underline block">Pool, Sprinkler & Backyard Leaks in Spring Valley, Las Vegas</a><span class="text-xs text-slate-600">How to tell evaporation from a leak, sprinkler warning signs, and outdoor line checks.</span></li>
                       <li><a href="/blog/spring-valley-leak-detection-guide/" class="font-bold text-[#1E70B8] hover:underline block">Spring Valley Leak Detection: A Desert Homeowner’s Guide</a><span class="text-xs text-slate-600">Where desert homes hide leaks, diagnostic visit stages, and pricing factors.</span></li>
                       <li><a href="/blog/" class="font-bold text-[#1E70B8] hover:underline block">Leak Guides & Knowledge Base Hub</a><span class="text-xs text-slate-600">All DIY diagnostic procedures, cost guides, and emergency protocols.</span></li>
                       <li><a href="/blog/signs-of-slab-leak-in-las-vegas-homes/" class="font-bold text-[#1E70B8] hover:underline block">5 Warning Signs of a Slab Leak in Las Vegas</a><span class="text-xs text-slate-600">Warm floor spots, hissing sounds, and high water bill indicators.</span></li>
@@ -357,7 +358,7 @@ function buildPreRenderedBody(page: PageContent, blogPost: BlogPost | null): str
         <div class="md:col-span-4 mt-6 pt-6 border-t border-slate-700/60">
           <h4 class="font-bold text-amber-400 mb-3 uppercase tracking-wider text-[11px]">Technical Leak Diagnostics & Knowledge Base</h4>
           <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
-            ${BLOG_POSTS.map(b => `<a href="/blog/${b.slug}/" class="hover:text-amber-300 block">${b.title}</a>`).join('')}
+            ${BLOG_POSTS.map(b => `<a href="${getBlogPostUrlPath(b)}" class="hover:text-amber-300 block">${b.title}</a>`).join('')}
           </div>
         </div>
       </div>
@@ -400,14 +401,15 @@ for (const [key, page] of Object.entries(sitePages)) {
 // 2. Individual Blog Posts
 const blogIndexPage = sitePages['blog'] || sitePages['home'];
 for (const post of BLOG_POSTS) {
-  const postSlug = `blog/${post.slug}`;
-  const canonicalUrl = `${DOMAIN_URL}/${postSlug}/`;
+  const urlPath = getBlogPostUrlPath(post);
+  const postSlug = urlPath.replace(/^\/|\/$/g, '');
+  const canonicalUrl = `${DOMAIN_URL}${urlPath}`;
   const schema = generateSchemaForPage(blogIndexPage, post);
   const schemaJson = JSON.stringify(schema, null, 2);
 
   routesToPrerender.push({
     slug: postSlug,
-    urlPath: `/${postSlug}/`,
+    urlPath,
     metaTitle: post.metaTitle || `${post.title} | Spring Valley Leak Detection & Repair`,
     metaDescription: post.metaDescription || post.excerpt,
     canonicalUrl,

@@ -1548,6 +1548,7 @@ export const sitePages: Record<string, PageContent> = {
         ],
         bulletPoints: [
           "Blog & Knowledge Base Main Hub",
+          "Pool, Sprinkler & Backyard Leaks in Spring Valley, Las Vegas",
           "Spring Valley Leak Detection: A Desert Homeowner’s Guide (2026)",
           "5 Warning Signs of a Slab Leak in Spring Valley & Las Vegas Homes",
           "The 24-Hour Bucket Test: How to Tell if Your Pool is Leaking or Evaporating",

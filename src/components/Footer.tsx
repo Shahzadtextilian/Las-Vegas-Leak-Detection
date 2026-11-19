@@ -1,6 +1,6 @@
 import React from 'react';
 import { PHONE_NUMBER, PHONE_HREF, BRAND_NAME, BUSINESS_ADDRESS, FACEBOOK_URL } from '../data/siteData';
-import { BLOG_POSTS } from '../data/blogData';
+import { BLOG_POSTS, getBlogPostUrlPath, getBlogPostNavSlug } from '../data/blogData';
 import { Phone, ShieldCheck, MapPin, Clock, BookOpen, ArrowRight } from 'lucide-react';
 
 interface FooterProps {
@@ -326,10 +326,10 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
             {BLOG_POSTS.map((post) => (
               <a
                 key={post.id}
-                href={`/blog/${post.slug}/`}
+                href={getBlogPostUrlPath(post)}
                 onClick={(e) => {
                   e.preventDefault();
-                  onNavigate(`blog/${post.slug}`);
+                  onNavigate(getBlogPostNavSlug(post));
                 }}
                 className="p-3.5 rounded-xl bg-slate-900/80 border border-slate-800 hover:border-[#1E70B8] hover:bg-slate-800/80 transition-all group flex flex-col justify-between block no-underline text-inherit"
               >

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { sitePages, PageContent, DOMAIN_URL } from './data/siteData';
-import { BLOG_POSTS } from './data/blogData';
+import { BLOG_POSTS, getBlogPostUrlPath } from './data/blogData';
 import { generateSchemaForPage } from './utils/schemaGenerator';
 import { Header } from './components/Header';
 import { Footer } from './components/Footer';
@@ -27,6 +27,11 @@ export default function App() {
     if (rawPath === 'spring-valley-leak-detection-guide' || rawPath === 'blog/spring-valley-leak-detection-guide') {
       return 'blog/spring-valley-leak-detection-guide';
     }
+    // Check direct blog posts with customUrlPath
+    const matchingCustomPost = BLOG_POSTS.find(
+      (p) => p.customUrlPath && p.customUrlPath.replace(/^\/|\/$/g, '') === rawPath
+    );
+    if (matchingCustomPost) return rawPath;
     if (rawPath === 'blog' || rawPath.startsWith('blog/')) return rawPath;
     if (rawPath === 'how-it-works') return 'how-it-works';
     if (rawPath === 'contact-nap' || rawPath === 'contact-us') return 'contact';
@@ -47,10 +52,16 @@ export default function App() {
   const [currentSlug, setCurrentSlug] = useState<string>(getSlugFromPath);
   const [isAuditModalOpen, setIsAuditModalOpen] = useState(false);
 
-  // Check if we are on a blog route
-  const isBlogRoute = currentSlug === 'blog' || currentSlug.startsWith('blog/');
+  const customBlogPostMatch = BLOG_POSTS.find(
+    (p) => p.customUrlPath && p.customUrlPath.replace(/^\/|\/$/g, '') === currentSlug
+  ) || null;
 
-  const activeBlogPostSlug = currentSlug.startsWith('blog/')
+  // Check if we are on a blog route
+  const isBlogRoute = currentSlug === 'blog' || currentSlug.startsWith('blog/') || !!customBlogPostMatch;
+
+  const activeBlogPostSlug = customBlogPostMatch
+    ? customBlogPostMatch.slug
+    : currentSlug.startsWith('blog/')
     ? currentSlug.replace(/^blog\//, '').replace(/\/$/, '')
     : undefined;
 
@@ -134,7 +145,7 @@ export default function App() {
       document.head.appendChild(canonical);
     }
     const fullCanonicalUrl = currentBlogPost
-      ? `${DOMAIN_URL}/blog/${currentBlogPost.slug}/`
+      ? `${DOMAIN_URL}${getBlogPostUrlPath(currentBlogPost)}`
       : `${DOMAIN_URL}${currentPage.urlPath === '/' ? '' : currentPage.urlPath}`;
     canonical.setAttribute('href', fullCanonicalUrl);
 

@@ -1,6 +1,7 @@
 export interface BlogPost {
   id: string;
   slug: string;
+  customUrlPath?: string;
   title: string;
   metaTitle?: string;
   metaDescription?: string;
@@ -33,6 +34,14 @@ export interface BlogPost {
       answer: string;
     }[];
   };
+}
+
+export function getBlogPostUrlPath(post: BlogPost): string {
+  return post.customUrlPath || `/blog/${post.slug}/`;
+}
+
+export function getBlogPostNavSlug(post: BlogPost): string {
+  return post.customUrlPath ? post.customUrlPath.replace(/^\/|\/$/g, '') : `blog/${post.slug}`;
 }
 
 export const BLOG_POSTS: BlogPost[] = [
@@ -482,6 +491,124 @@ export const BLOG_POSTS: BlogPost[] = [
         }
       ],
       conclusion: 'Think You Have a Leak? Don’t wait for a ceiling stain or warped floorboards to appear. Our master leak specialists serve Spring Valley and all nearby Las Vegas neighborhoods 24 hours a day, 7 days a week. Call (725) 313-0108, visit our dispatch office at 6875 Groveview Ln, Las Vegas, NV 89103, or schedule service online at www.leakdetectionnv.com.'
+    }
+  },
+  {
+    id: 'pool-irrigation-backyard-leaks',
+    slug: 'pool-irrigation-leak-detection-spring-valley',
+    customUrlPath: '/pool-irrigation-leak-detection-spring-valley/',
+    title: 'Pool, Sprinkler & Backyard Leaks in Spring Valley, Las Vegas',
+    metaTitle: 'Pool, Sprinkler & Backyard Leaks in Spring Valley, Las Vegas',
+    metaDescription: 'Sinking pool level or soggy patches in the yard? Learn how to spot pool, sprinkler, and outdoor line leaks in Spring Valley. Call (725) 313-0108.',
+    h1: 'Backyard Leaks in Spring Valley: Pools, Sprinklers, and Outdoor Lines',
+    category: 'Pool Leaks',
+    date: 'November 18, 2026',
+    readTime: '5 min read',
+    excerpt: 'Sinking pool level or soggy patches in the yard? Learn how to spot pool, sprinkler, and outdoor line leaks in Spring Valley. Call (725) 313-0108.',
+    author: 'Leak Detection Pro Diagnostic Team',
+    authorRole: 'Pool & Irrigation Leak Specialists',
+    featuredImage: '/images/pool_backyard_leak_guide.webp',
+    featuredImageAlt: 'Uniformed leak detection specialist inspecting a Spring Valley backyard swimming pool deck with an acoustic listening sensor',
+    tags: ['Pool Leak Detection', 'Sprinkler Leaks', 'Backyard Water Lines', 'Spring Valley NV', 'Irrigation Repair'],
+    content: {
+      introduction: 'In a desert city, the backyard is where a lot of water goes: the pool, the sprinklers, the garden, and the hose bib on the side of the house. It’s also where leaks hide best, because a damp patch dries fast in the Las Vegas sun and a falling pool level is easy to blame on the heat.',
+      sections: [
+        {
+          heading: 'Is It a Leak or Just Evaporation?',
+          body: [
+            'Pools lose water to heat and wind every day in Southern Nevada, so a small daily drop is normal. However, a water level drop that seems too big or keeps falling steadily overnight is a clear sign to investigate further.',
+            'Try the simple 24-hour bucket test to separate natural desert evaporation from an active pool shell or plumbing leak:'
+          ],
+          bulletPoints: [
+            'Step 1: Set a 5-gallon bucket on the first or second pool step and fill it with pool water to match the surrounding pool level.',
+            'Step 2: Mark the exact water line inside the bucket and on the outside wall of the bucket with waterproof tape or marker.',
+            'Step 3: Turn off the automatic pool fill valve and leave both the bucket and pool undisturbed for 24 hours with your pump running as usual.',
+            'Step 4: Compare the two marks. If the pool water dropped noticeably lower than the water inside the bucket, a structural or underground plumbing leak is likely.'
+          ],
+          keyTakeaways: [
+            'Shut off your pool autofill valve before running the 24-hour bucket test',
+            'Equal drops indicate dry desert evaporation; uneven drops point to a leak'
+          ]
+        },
+        {
+          heading: 'Sprinkler and Drip Line Warning Signs',
+          body: [
+            'High summer temperatures and shifting caliche soil put steady stress on PVC manifolds, brass backflow valves, and buried poly drip tubing across Spring Valley yards. Watch for these common symptoms while walking your landscaping:'
+          ],
+          bulletPoints: [
+            'Soggy, muddy, or noticeably sunken patches in the lawn or desert gravel',
+            'An unexplained bright green strip of grass or weeds in an otherwise dry area',
+            'Weak spray heads or irrigation zones that never reach full operating pressure',
+            'Standing puddles or slow trickles pooling near a green plastic valve box',
+            'A monthly LVVWD water bill that climbs during months when your watering timer hasn’t changed'
+          ],
+          image: {
+            src: '/images/sprinkler_valve_leak_check.webp',
+            alt: 'Leak detection technician checking an outdoor irrigation sprinkler valve box and hose bib with pressure gauge in a desert yard',
+            caption: 'Pressure testing and acoustic checks at the irrigation manifold isolate underground zone leaks without digging up healthy landscaping.'
+          },
+          keyTakeaways: [
+            'Low spray pressure often signals a cracked lateral pipe or stuck solenoid valve',
+            'Weep-hole moisture inside valve boxes indicates failing seals even when timers are off'
+          ]
+        },
+        {
+          heading: 'Don’t Forget the Lines You Don’t See',
+          body: [
+            'Exterior hose bibs, the main domestic supply line running from the street water meter to your house, and buried irrigation feed pipes can all leak quietly beneath concrete walkways or rockscape without showing any wet surface spots.',
+            'Because pressurized supply lines sit beneath pavers and compacted desert soil, water often drains downward into gravel fissures. If your front-yard water meter dial or digital flow indicator keeps moving with every indoor tap and appliance turned off, an outdoor yard line or irrigation mainline is a prime suspect.'
+          ],
+          keyTakeaways: [
+            'Turn off your main house shutoff valve and recheck the street meter to isolate yard lines vs. indoor pipes',
+            'Exterior hose bib vacuum breakers and wall stubs frequently develop concealed stem drips'
+          ]
+        },
+        {
+          heading: 'How Specialists Track Them Down',
+          body: [
+            'Modern backyard leak detection eliminates guesswork. Instead of trenching across decorative pavers or tearing out mature desert trees, certified technicians use targeted non-invasive diagnostics:',
+            '• Pressure Testing: Isolates individual pool return/suction plumbing runs or sprinkler zones to verify exactly which buried pipe section is losing water.',
+            '• Acoustic Listening: Ground-penetrating ultrasonic microphones and hydrophones amplify the faint hissing sound of water escaping deep underground or under pool concrete decking.',
+            '• Precision Dye Testing: Safe, non-staining underwater dyes let specialists observe hairline cracks around pool skimmers, light niches, drains, and tile lines with pinpoint visual accuracy.',
+            'The entire goal is to mark the exact leak coordinates so repairs stay surgical—before anyone digs up the yard or drains the pool.'
+          ]
+        },
+        {
+          heading: 'Why It’s Worth Acting Early',
+          body: [
+            'Water is a limited, strictly tiered resource in Southern Nevada, and wasting thousands of gallons quietly underground drives up tier penalties quickly.',
+            'Beyond the high water bill, a constantly leaking sprinkler line, hose bib, or pool pipe near your home’s slab foundation can wash away supporting soil, soften the ground beneath pavers, and lead to costly structural or hardscape settling over time. Catching backyard leaks early keeps repairs smaller, faster, and your landscaping intact.'
+          ]
+        },
+        {
+          heading: 'Check These First Before Calling',
+          body: [
+            'Run through this quick 5-point homeowner checklist to gather helpful clues before scheduling a diagnostic visit:'
+          ],
+          bulletPoints: [
+            'Run the water meter test at the street box with everything indoors and outdoors turned off.',
+            'Walk every sprinkler and drip zone one by one while the system is actively running.',
+            'Complete the 24-hour bucket test on your swimming pool with the autofill disabled.',
+            'Note any new damp spots, mineral efflorescence, or settling pavers near the exterior walls of the house.',
+            'Call a licensed leak detection professional as soon as you spot a consistent water-loss pattern.'
+          ]
+        }
+      ],
+      faqs: [
+        {
+          question: 'How much water loss is normal evaporation for a Spring Valley pool?',
+          answer: 'In hot, windy Las Vegas summers, uncovered pools normally evaporate about 1/4 to 1/2 inch per day. Losing 1 inch or more daily usually indicates a leak in the pool shell, skimmer, or underground circulation plumbing.'
+        },
+        {
+          question: 'Do I have to drain my swimming pool for leak detection?',
+          answer: 'No. In fact, pools must remain full during professional leak detection so technicians can perform acoustic hydrophone listening, line pressure testing, and underwater dye inspections.'
+        },
+        {
+          question: 'How can I tell if a leak is in my yard irrigation or inside the house?',
+          answer: 'Shut off your main house water shutoff valve (usually in the garage or near the front wall) and watch the street water meter. If the meter stops moving, the leak is indoors. If it keeps spinning, the leak is in your outdoor supply line or sprinkler manifold.'
+        }
+      ],
+      conclusion: 'Need Help Finding a Backyard, Pool, or Sprinkler Leak? Contact Leak Detection Pro in Spring Valley for fast, non-invasive diagnostics. Call (725) 313-0108, visit 6875 Groveview Ln, Las Vegas, NV 89103, or reach us online at www.leakdetectionnv.com.'
     }
   }
 ];

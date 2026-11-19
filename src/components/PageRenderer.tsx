@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { PageContent, PHONE_NUMBER, PHONE_HREF, BRAND_NAME, BUSINESS_ADDRESS, FACEBOOK_URL } from '../data/siteData';
-import { BLOG_POSTS, BlogPost } from '../data/blogData';
+import { BLOG_POSTS, BlogPost, getBlogPostUrlPath, getBlogPostNavSlug } from '../data/blogData';
 import {
   Phone,
   ShieldCheck,
@@ -1139,7 +1139,7 @@ export const PageRenderer: React.FC<PageRendererProps> = ({
                   <div className="bg-slate-50 border border-slate-200 rounded-xl p-5 space-y-3">
                     <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-[#0F2942]">
                       <BookOpen className="w-4 h-4 text-emerald-600" />
-                      <span>Technical Leak Guides & Blog (8 Pages)</span>
+                      <span>Technical Leak Guides & Blog ({BLOG_POSTS.length + 1} Pages)</span>
                     </div>
                     <ul className="space-y-2.5 text-xs">
                       <li>
@@ -1151,10 +1151,10 @@ export const PageRenderer: React.FC<PageRendererProps> = ({
                       {BLOG_POSTS.map((post) => (
                         <li key={post.id}>
                           <a
-                            href={`/blog/${post.slug}/`}
+                            href={getBlogPostUrlPath(post)}
                             onClick={(e) => {
                               e.preventDefault();
-                              onNavigate(`blog/${post.slug}`);
+                              onNavigate(getBlogPostNavSlug(post));
                             }}
                             className="font-bold text-[#1E70B8] hover:underline block text-sm"
                           >
@@ -1399,10 +1399,10 @@ export const PageRenderer: React.FC<PageRendererProps> = ({
                   {BLOG_POSTS.slice(0, 3).map((post) => (
                     <a
                       key={post.id}
-                      href={`/blog/${post.slug}/`}
+                      href={getBlogPostUrlPath(post)}
                       onClick={(e) => {
                         e.preventDefault();
-                        onNavigate(`blog/${post.slug}`);
+                        onNavigate(getBlogPostNavSlug(post));
                       }}
                       className="block p-2.5 rounded-lg bg-white/90 hover:bg-white border border-amber-200/70 hover:border-[#1E70B8] transition-colors group no-underline text-inherit"
                     >

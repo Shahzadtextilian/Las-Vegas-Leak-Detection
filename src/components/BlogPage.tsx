@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { BLOG_POSTS, BlogPost } from '../data/blogData';
+import React, { useState, useEffect } from 'react';
+import { BLOG_POSTS, BlogPost, getBlogPostUrlPath, getBlogPostNavSlug } from '../data/blogData';
 import { PHONE_NUMBER, PHONE_HREF } from '../data/siteData';
 import {
   BookOpen,
@@ -32,6 +32,10 @@ export const BlogPage: React.FC<BlogPageProps> = ({ onNavigate, activePostSlug }
   );
   const [copiedLink, setCopiedLink] = useState(false);
 
+  useEffect(() => {
+    setSelectedPost(activePostSlug ? BLOG_POSTS.find((p) => p.slug === activePostSlug) || null : null);
+  }, [activePostSlug]);
+
   const categories = ['All', 'Slab Leaks', 'Pool Leaks', 'Gas Leaks', 'Water Leaks', 'Prevention & Tips'];
 
   const filteredPosts = BLOG_POSTS.filter((post) => {
@@ -44,7 +48,7 @@ export const BlogPage: React.FC<BlogPageProps> = ({ onNavigate, activePostSlug }
   });
 
   const handleShare = (post: BlogPost) => {
-    const url = `${window.location.origin}/blog/${post.slug}/`;
+    const url = `${window.location.origin}${getBlogPostUrlPath(post)}`;
     navigator.clipboard.writeText(url);
     setCopiedLink(true);
     setTimeout(() => setCopiedLink(false), 2500);
@@ -313,11 +317,11 @@ export const BlogPage: React.FC<BlogPageProps> = ({ onNavigate, activePostSlug }
                   {BLOG_POSTS.filter((p) => p.id !== selectedPost.id).slice(0, 4).map((other) => (
                     <a
                       key={other.id}
-                      href={`/blog/${other.slug}/`}
+                      href={getBlogPostUrlPath(other)}
                       onClick={(e) => {
                         e.preventDefault();
                         setSelectedPost(other);
-                        onNavigate(`blog/${other.slug}`);
+                        onNavigate(getBlogPostNavSlug(other));
                       }}
                       className="p-4 rounded-xl border border-slate-200 hover:border-[#1E70B8] hover:bg-white transition-all group block no-underline bg-slate-50/60"
                     >
@@ -371,11 +375,11 @@ export const BlogPage: React.FC<BlogPageProps> = ({ onNavigate, activePostSlug }
                   {BLOG_POSTS.filter((p) => p.id !== selectedPost.id).map((other) => (
                     <a
                       key={other.id}
-                      href={`/blog/${other.slug}/`}
+                      href={getBlogPostUrlPath(other)}
                       onClick={(e) => {
                         e.preventDefault();
                         setSelectedPost(other);
-                        onNavigate(`blog/${other.slug}`);
+                        onNavigate(getBlogPostNavSlug(other));
                       }}
                       className="w-full text-left p-3 rounded-xl border border-slate-100 hover:border-[#1E70B8] hover:bg-slate-50 transition-colors group block no-underline"
                     >
@@ -494,12 +498,12 @@ export const BlogPage: React.FC<BlogPageProps> = ({ onNavigate, activePostSlug }
             {filteredPosts.map((post) => (
               <a
                 key={post.id}
-                href={`/blog/${post.slug}/`}
+                href={getBlogPostUrlPath(post)}
                 className="bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-xs hover:shadow-md transition-shadow flex flex-col group cursor-pointer block no-underline text-inherit"
                 onClick={(e) => {
                   e.preventDefault();
                   setSelectedPost(post);
-                  onNavigate(`blog/${post.slug}`);
+                  onNavigate(getBlogPostNavSlug(post));
                 }}
               >
                 {/* Thumbnail Image */}

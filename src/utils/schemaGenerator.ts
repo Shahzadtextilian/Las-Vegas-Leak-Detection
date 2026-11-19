@@ -1,9 +1,9 @@
 import { PageContent, PHONE_NUMBER, DOMAIN_URL, BRAND_NAME, BUSINESS_ADDRESS, FACEBOOK_URL } from '../data/siteData';
-import { BlogPost } from '../data/blogData';
+import { BlogPost, getBlogPostUrlPath } from '../data/blogData';
 
 export function generateSchemaForPage(page: PageContent, blogPost?: BlogPost | null) {
   const pageUrl = blogPost
-    ? `${DOMAIN_URL}/blog/${blogPost.slug}/`
+    ? `${DOMAIN_URL}${getBlogPostUrlPath(blogPost)}`
     : `${DOMAIN_URL}${page.urlPath === '/' ? '' : page.urlPath}`;
 
   const schemas: any[] = [];
@@ -327,8 +327,12 @@ export function generateSchemaForPage(page: PageContent, blogPost?: BlogPost | n
       "name": blogPost.metaTitle || blogPost.title,
       "description": blogPost.metaDescription || blogPost.excerpt,
       "image": blogPost.featuredImage ? `${DOMAIN_URL}${blogPost.featuredImage}` : `${DOMAIN_URL}/images/hero_emergency_plumbing_1791566119640.webp`,
-      "datePublished": blogPost.slug === 'spring-valley-leak-detection-guide' ? "2026-11-05T07:00:00-08:00" : "2026-10-08T08:00:00-07:00",
-      "dateModified": "2026-11-05T07:15:00-08:00",
+      "datePublished": blogPost.slug === 'pool-irrigation-leak-detection-spring-valley'
+        ? "2026-11-18T08:00:00-08:00"
+        : blogPost.slug === 'spring-valley-leak-detection-guide'
+        ? "2026-11-05T07:00:00-08:00"
+        : "2026-10-08T08:00:00-07:00",
+      "dateModified": "2026-11-18T23:30:00-08:00",
       "author": {
         "@type": "Organization",
         "name": blogPost.author,
