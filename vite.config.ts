@@ -26,18 +26,6 @@ export default defineConfig(() => {
       modulePreload: {
         polyfill: false,
       },
-      rollupOptions: {
-        output: {
-          manualChunks(id) {
-            if (id.includes('node_modules/react') || id.includes('node_modules/react-dom')) {
-              return 'vendor-react';
-            }
-            if (id.includes('node_modules/lucide-react')) {
-              return 'vendor-icons';
-            }
-          },
-        },
-      },
     },
     server: {
       // HMR is disabled in AI Studio via DISABLE_HMR env var.

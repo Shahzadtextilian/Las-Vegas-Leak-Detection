@@ -355,13 +355,13 @@ export const PageRenderer: React.FC<PageRendererProps> = ({
                       src={page.featuredImage}
                       srcSet={
                         page.slug === ''
-                          ? '/images/hero_emergency_plumbing_mobile.webp 640w, /images/hero_emergency_plumbing_1791566119640.webp 960w'
+                          ? '/images/hero_emergency_plumbing_mobile.webp 480w, /images/hero_emergency_plumbing_1791566119640.webp 720w'
                           : undefined
                       }
-                      sizes="(max-width: 640px) 100vw, 550px"
+                      sizes="(max-width: 640px) calc(100vw - 32px), 520px"
                       alt={page.imageAlt || page.name}
-                      width={960}
-                      height={536}
+                      width={720}
+                      height={402}
                       className="w-full h-72 sm:h-96 object-cover object-center group-hover:scale-102 transition-transform duration-500"
                       referrerPolicy="no-referrer"
                       loading="eager"

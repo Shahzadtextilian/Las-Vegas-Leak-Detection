@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { sitePages, PageContent, DOMAIN_URL } from './data/siteData';
 import { BLOG_POSTS, getBlogPostUrlPath } from './data/blogData';
 import { generateSchemaForPage } from './utils/schemaGenerator';
@@ -6,22 +6,25 @@ import { Header } from './components/Header';
 import { Footer } from './components/Footer';
 import { PageRenderer } from './components/PageRenderer';
 import { StickyMobileCallBar } from './components/StickyMobileCallBar';
+import { BlogPage } from './components/BlogPage';
 
-// Lazy-load non-critical routes to eliminate unused JavaScript on initial mobile loads
+// Lazy-load interaction/fallback modals not rendered on initial valid page load
 const SeoAuditModal = React.lazy(() =>
   import('./components/SeoAuditModal').then((m) => ({ default: m.SeoAuditModal }))
-);
-const BlogPage = React.lazy(() =>
-  import('./components/BlogPage').then((m) => ({ default: m.BlogPage }))
 );
 const NotFoundPage = React.lazy(() =>
   import('./components/NotFoundPage').then((m) => ({ default: m.NotFoundPage }))
 );
 
-export default function App() {
-  // Determine initial slug from window.location.pathname
+interface AppProps {
+  initialSlug?: string;
+}
+
+export default function App({ initialSlug }: AppProps) {
+  // Determine initial slug safely for both SSR and client hydration
   const getSlugFromPath = (): string => {
-    const rawPath = window.location.pathname.replace(/^\/|\/$/g, '');
+    if (typeof window === 'undefined') return '';
+    const rawPath = window.location.pathname.replace(/\.html$/, '').replace(/^\/|\/$/g, '');
     if (!rawPath) return '';
     // Normalize aliases
     if (rawPath === 'spring-valley-leak-detection-guide' || rawPath === 'blog/spring-valley-leak-detection-guide') {
@@ -49,8 +52,11 @@ export default function App() {
     return '404';
   };
 
-  const [currentSlug, setCurrentSlug] = useState<string>(getSlugFromPath);
+  const [currentSlug, setCurrentSlug] = useState<string>(() =>
+    initialSlug !== undefined ? initialSlug : getSlugFromPath()
+  );
   const [isAuditModalOpen, setIsAuditModalOpen] = useState(false);
+  const isFirstHydration = useRef(true);
 
   const customBlogPostMatch = BLOG_POSTS.find(
     (p) => p.customUrlPath && p.customUrlPath.replace(/^\/|\/$/g, '') === currentSlug
@@ -102,9 +108,15 @@ export default function App() {
     return () => window.removeEventListener('popstate', handlePopState);
   }, []);
 
-  // Sync document head metadata and JSON-LD schema dynamically
+  // Sync document head metadata and JSON-LD schema on client-side navigation (skip first SSR-matched mount)
   useEffect(() => {
     if (currentSlug === '404') return;
+    if (isFirstHydration.current) {
+      isFirstHydration.current = false;
+      if (document.getElementById('prerendered-schema')) {
+        return;
+      }
+    }
 
     // Determine dynamic title and description
     const metaTitle = currentBlogPost

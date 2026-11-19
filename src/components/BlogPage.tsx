@@ -209,6 +209,8 @@ export const BlogPage: React.FC<BlogPageProps> = ({ onNavigate, activePostSlug }
                       <img
                         src={section.image.src}
                         alt={section.image.alt}
+                        width={800}
+                        height={447}
                         className="w-full h-auto max-h-80 object-cover"
                         loading="lazy"
                         decoding="async"
