@@ -27,137 +27,104 @@ import {
 } from 'lucide-react';
 import { SidebarDispatchForm } from './SidebarDispatchForm';
 
-const NEVADA_CITY_REGIONS = [
+const CARSON_CITY_DISTRICTS = [
   {
-    name: 'Las Vegas & Paradise Metro',
-    slug: 'las-vegas',
-    zip: '89101–89149',
-    crossStreets: 'Downtown, Paradise, Enterprise, Summerlin & Centennial Hills',
-    etaMinutes: '30–45 Min',
-    activeVans: 'Clark County Metro',
-    soilType: 'Dense Caliche Limestone (Grade 4/5)',
-    pipeRisk: 'Copper Sub-Slab Pinholes & 80+ PSI Mains',
-    utilityOffice: 'LVVWD Tier-3 Leak Credit Filing'
-  },
-  {
-    name: 'Henderson & Green Valley',
-    slug: 'henderson',
-    zip: '89002–89074',
-    crossStreets: 'Green Valley, Anthem, Seven Hills, Inspirada & Lake Las Vegas',
-    etaMinutes: '30–50 Min',
-    activeVans: 'Southeast Valley',
-    soilType: 'Foothill Bedrock & Caliche Strata',
-    pipeRisk: 'Hillside PRV Failures & Pool Suction Lines',
-    utilityOffice: 'City of Henderson Utilities Credit'
-  },
-  {
-    name: 'North Las Vegas',
-    slug: 'north-las-vegas',
-    zip: '89030–89086',
-    crossStreets: 'Aliante, Eldorado, Craig Ranch, Tule Springs & Apex',
-    etaMinutes: '30–50 Min',
-    activeVans: 'North Valley',
-    soilType: 'Expansive Alluvial Clay & Hardpan',
-    pipeRisk: 'Yard Main Breaks & Post-Tension Slab Lines',
-    utilityOffice: 'North Las Vegas Utilities Review'
-  },
-  {
-    name: 'Spring Valley & SW Vegas',
-    slug: 'spring-valley-center',
-    zip: '89103 / 89117 / 89147',
-    crossStreets: 'Rainbow Blvd, Flamingo Rd, The Lakes, Spanish Trail & Rhodes Ranch',
-    etaMinutes: '20–35 Min',
-    activeVans: 'HQ Dispatch Zone',
-    soilType: 'Caliche Cementation & High-Mineral Soil',
-    pipeRisk: '1980s–2000s Type M Copper & Pool Skimmers',
-    utilityOffice: 'LVVWD South/West Valley Direct Filing'
-  },
-  {
-    name: 'Reno & Lake Tahoe',
-    slug: 'reno',
-    zip: '89501–89523 / 89451',
-    crossStreets: 'Midtown, Old Southwest, Damonte Ranch, Somersett, Verdi & Incline Village',
-    etaMinutes: '35–60 Min',
-    activeVans: 'Truckee Meadows',
-    soilType: 'Sierra Granite Alluvium & Valley Clay',
-    pipeRisk: 'Winter Freeze-Thaw Bursts & Crawlspace Splits',
-    utilityOffice: 'TMWA (Truckee Meadows Water) Support'
-  },
-  {
-    name: 'Sparks & Spanish Springs',
-    slug: 'sparks',
-    zip: '89431–89441',
-    crossStreets: 'Victorian Square, Sparks Marina, Spanish Springs, Wingfield & Sun Valley',
-    etaMinutes: '35–60 Min',
-    activeVans: 'East Washoe',
-    soilType: 'High-Desert Gravel & Frost-Line Clay',
-    pipeRisk: 'Long Acreage Yard Mains & Frost-Line PVC',
-    utilityOffice: 'TMWA / Washoe County Documentation'
-  },
-  {
-    name: 'Carson City, Minden & Dayton',
+    name: 'Downtown & Capitol District',
     slug: 'carson-city',
-    zip: '89701–89706 / 89423',
-    crossStreets: 'Carson City, Minden, Gardnerville, Genoa & Dayton',
-    etaMinutes: 'Same-Day / 60 Min',
-    activeVans: 'Carson Valley',
-    soilType: 'Sierra Fault Silt & High Water Table',
-    pipeRisk: 'Historic Crawlspace Lines & Ranch Well Mains',
-    utilityOffice: 'Carson City Public Works & Well Reports'
+    zip: '89701',
+    crossStreets: 'Carson St, 5th St, Stewart St & Governor’s Mansion Historic Zone',
+    etaMinutes: 'Priority Local',
+    activeVans: 'Central Carson',
+    soilType: 'Eagle Valley Alluvial Silt & High Water Table',
+    pipeRisk: 'Historic Crawlspace Lines & Aging Galvanized Mains',
+    utilityOffice: 'Carson City Public Works Water Support'
   },
   {
-    name: 'Pahrump, Mesquite & Elko NV',
-    slug: 'elko-rural-nevada',
-    zip: '89048 / 89027 / 89801',
-    crossStreets: 'Pahrump, Mesquite, Boulder City, Fernley, Fallon, Winnemucca & Elko',
-    etaMinutes: 'Priority Regional',
-    activeVans: 'Statewide Rural',
-    soilType: 'Mojave Caliche to Sub-Zero I-80 Frost',
-    pipeRisk: 'Well Pump Short-Cycling & Deep Freeze Mains',
-    utilityOffice: 'VVWD / Great Basin / Rural Municipal Filing'
+    name: 'Westside, Kings Canyon & Lakeview',
+    slug: 'west-carson-lakeview',
+    zip: '89703',
+    crossStreets: 'Kings Canyon Rd, Ash Canyon, Foothill Dr & Highway 50 W / Lakeview',
+    etaMinutes: 'Priority Local',
+    activeVans: 'West Carson',
+    soilType: 'Sierra Granite Boulders & Foothill Gravel',
+    pipeRisk: 'Winter Freeze-Thaw Bursts & High-PSI Booster Lines',
+    utilityOffice: 'Carson City Water & Private Well Reports'
+  },
+  {
+    name: 'North Carson, Lompa & Silver Oak',
+    slug: 'north-carson-silver-oak',
+    zip: '89706',
+    crossStreets: 'N Carson St, Lompa Ln, College Pkwy, Silver Oak Pkwy & Northridge',
+    etaMinutes: 'Priority Local',
+    activeVans: 'North Corridor',
+    soilType: 'Compacted Valley Clay & Sand Strata',
+    pipeRisk: 'Post-Tension Slab Pinholes & Pool Equipment Loops',
+    utilityOffice: 'Carson City Public Works Adjustment Logs'
+  },
+  {
+    name: 'South Carson, Clearview & Stewart',
+    slug: 'south-carson-clearview',
+    zip: '89701 / 89705',
+    crossStreets: 'S Carson St, Clearview Dr, Snyder Ave, Koontz Ln & Carson River Rd',
+    etaMinutes: 'Priority Local',
+    activeVans: 'South Carson',
+    soilType: 'Carson River Floodplain Loam & Granite Fill',
+    pipeRisk: 'Commercial Yard Mains & Sub-Floor Supply Breaks',
+    utilityOffice: 'Carson City / Indian Hills Utility Filing'
+  },
+  {
+    name: 'East Carson, Empire Ranch & Pinion Hills',
+    slug: 'east-carson-empire-ranch',
+    zip: '89701 / 89706',
+    crossStreets: 'Highway 50 E, Fairview Dr, Deer Run Rd, Empire Ranch & Pinion Hills',
+    etaMinutes: 'Priority Local',
+    activeVans: 'East Carson',
+    soilType: 'High-Desert Clay Hardpan & Granitic Sand',
+    pipeRisk: 'Long-Run Private Well Mains & Buried Propane Feeds',
+    utilityOffice: 'Wellhead Pressure Reports & Utility Documentation'
   }
 ];
 
 const SYMPTOM_DATA = {
   slab: {
-    tabLabel: 'Warm Floor / Slab Sound',
-    title: 'Warm Tile Floor, Sound of Running Water, or Damp Baseboards',
-    diagnosis: 'Active Sub-Slab Foundation Pipe Rupture',
+    tabLabel: 'Warm Floor / Crawlspace',
+    title: 'Warm Tile Floor, Sound of Running Water, or Damp Crawlspace Subfloor',
+    diagnosis: 'Active Sub-Slab or Sub-Floor Pipe Rupture',
     urgency: 'HIGH PRIORITY • 24/7 Dispatch',
     equipment: 'Acoustic Ground Geophones & FLIR Infrared Thermal Imager',
-    action: 'Turn off the main shutoff valve near your garage, curb box, or wellhead. Avoid exploratory jackhammering until ultrasonic sensors isolate the exact leak spot.',
+    action: 'Turn off your main shutoff valve near the garage, crawlspace access, curb box, or wellhead. Avoid tearing up flooring until ultrasonic sensors isolate the exact leak spot.',
     costRange: '$195 – $345 Non-Invasive Diagnostic',
-    rebate: 'Documentation formatted for LVVWD, Henderson & TMWA Leak Credits'
+    rebate: 'Documentation formatted for Carson City Public Works & insurance claims'
   },
   pool: {
-    tabLabel: 'Pool Water Loss',
-    title: 'Pool Losing More Than 1/2 Inch of Water in 24 Hours',
+    tabLabel: 'Pool / Spa Water Loss',
+    title: 'Pool or Spa Losing More Than 1/2 Inch of Water in 24 Hours',
     diagnosis: 'Swimming Pool Underground Suction, Return, or Skimmer Leak',
     urgency: 'MODERATE URGENCY • Same-Day Service',
     equipment: 'Submersible Hydrophone Acoustic Sensor & Heavy-Dye Syringes',
-    action: 'Run the bucket test (mark water level inside and outside a bucket on pool steps). Do not drain your pool in Nevada heat, as empty plaster shells can crack or pop.',
+    action: 'Run the bucket test (mark water level inside and outside a bucket on pool steps). Do not drain your pool prematurely, as empty shells can shift in Carson City groundwater or freeze cycles.',
     costRange: '$275 – $395 Complete Hydrophone Diagnostic',
-    rebate: 'Certified inspection report provided for water district reviews'
+    rebate: 'Certified inspection report provided for water utility reviews'
   },
   gas: {
     tabLabel: 'Rotten Egg / Gas Odor',
-    title: 'Rotten-Egg Sulfur Odor or Hissing Gas Line',
+    title: 'Rotten-Egg Sulfur Odor or Hissing Natural Gas / Propane Line',
     diagnosis: 'Combustible Natural Gas or Propane Hazard',
     urgency: 'CRITICAL EMERGENCY • Immediate Action Required',
     equipment: 'Digital PPM Combustible Gas Sniffing Wand & Manometer Drop Test',
-    action: 'Evacuate all family members and pets outside immediately. Do not flip switches or use phones indoors. Call 911 / Southwest Gas / NV Energy, then call (725) 313-0108 from outside.',
+    action: 'Evacuate all family members and pets outside immediately. Do not flip switches or use phones indoors. Call 911 / Southwest Gas, then call (725) 313-0108 from outside.',
     costRange: 'Emergency Diagnostic & Immediate Safety Shutoff',
-    rebate: 'Certified pressure testing for Southwest Gas & NV Energy unlocks'
+    rebate: 'Certified pressure testing for Southwest Gas meter unlocks'
   },
   meter: {
-    tabLabel: 'High Bill / Meter Spin',
-    title: 'Water Meter Dial Spinning Continuously or Utility Bill Spike',
-    diagnosis: 'Underground Potable Main Line, Well Run, or Irrigation Breach',
-    urgency: 'HIGH PRIORITY • 24/7 Statewide Response',
+    tabLabel: 'High Bill / Well Cycling',
+    title: 'Water Meter Dial Spinning, Well Pump Short-Cycling, or Bill Spike',
+    diagnosis: 'Underground Potable Main Line, Well Run, or Freeze-Split Breach',
+    urgency: 'HIGH PRIORITY • 24/7 Carson City Response',
     equipment: 'Nitrogen Tracer Gas Pressurization & Line Pressure Decay Gauges',
-    action: 'Check if the low-flow triangle on your water meter spins (or well pump cycles) with all indoor taps off. If yes, water is escaping underground before your foundation.',
-    costRange: '$195 – $325 Yard Line Diagnostic',
-    rebate: 'Official repair report for Nevada water utility bill credits'
+    action: 'Check if the low-flow indicator on your Carson City water meter spins (or well pump cycles) with all indoor taps off. If yes, water is escaping underground before the house.',
+    costRange: '$195 – $325 Yard & Well Line Diagnostic',
+    rebate: 'Official repair report for Carson City Public Works leak credit requests'
   }
 };
 
@@ -199,16 +166,17 @@ export const PageRenderer: React.FC<PageRendererProps> = ({
       { phrase: 'Swimming Pool Leak Detection', slug: 'pool-leak-detection' },
       { phrase: 'underground leak detection', slug: 'underground-leak-detection' },
       { phrase: 'emergency leak repair', slug: 'emergency-leak-repair' },
-      { phrase: 'North Las Vegas', slug: 'north-las-vegas' },
-      { phrase: 'Las Vegas', slug: 'las-vegas' },
-      { phrase: 'Henderson', slug: 'henderson' },
+      { phrase: 'Downtown Carson City', slug: 'carson-city' },
+      { phrase: 'Capitol District', slug: 'carson-city' },
+      { phrase: 'Kings Canyon', slug: 'west-carson-lakeview' },
+      { phrase: 'Lakeview', slug: 'west-carson-lakeview' },
+      { phrase: 'Silver Oak', slug: 'north-carson-silver-oak' },
+      { phrase: 'North Carson', slug: 'north-carson-silver-oak' },
+      { phrase: 'Clearview', slug: 'south-carson-clearview' },
+      { phrase: 'South Carson', slug: 'south-carson-clearview' },
+      { phrase: 'Empire Ranch', slug: 'east-carson-empire-ranch' },
+      { phrase: 'Pinion Hills', slug: 'east-carson-empire-ranch' },
       { phrase: 'Carson City', slug: 'carson-city' },
-      { phrase: 'Boulder City', slug: 'boulder-city' },
-      { phrase: 'Reno', slug: 'reno' },
-      { phrase: 'Sparks', slug: 'sparks' },
-      { phrase: 'Pahrump', slug: 'pahrump' },
-      { phrase: 'Mesquite', slug: 'mesquite' },
-      { phrase: 'Elko', slug: 'elko-rural-nevada' },
       { phrase: 'Spring Valley Center', slug: 'spring-valley-center' },
       { phrase: 'The Lakes', slug: 'the-lakes' },
       { phrase: 'Peccole Ranch', slug: 'the-lakes' },
@@ -252,7 +220,7 @@ export const PageRenderer: React.FC<PageRendererProps> = ({
   return (
     <article className="min-h-screen bg-slate-50 text-slate-900 pb-20">
       
-      {/* Breadcrumb Navigation (Nevada Statewide Hierarchy) */}
+      {/* Breadcrumb Navigation (Nevada > Carson City) */}
       <div className="bg-white border-b border-slate-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3">
           <nav aria-label="Breadcrumb" className="flex flex-wrap items-center gap-1.5 text-xs text-slate-500 font-medium">
@@ -261,7 +229,7 @@ export const PageRenderer: React.FC<PageRendererProps> = ({
                 <span className="font-semibold text-slate-700">Nevada</span>
                 <span className="text-slate-300">&gt;</span>
                 <span className="text-slate-900 font-semibold" aria-current="page">
-                  All Cities Statewide
+                  Carson City, NV
                 </span>
               </>
             ) : (
@@ -271,18 +239,12 @@ export const PageRenderer: React.FC<PageRendererProps> = ({
                   onClick={(e) => { e.preventDefault(); onNavigate(''); }}
                   className="hover:text-[#1E70B8] transition-colors"
                 >
-                  Nevada Statewide
+                  Carson City, NV
                 </a>
                 <span className="text-slate-300">&gt;</span>
                 {['spring-valley-center', 'the-lakes', 'spanish-trail', 'summerlin-south', 'rhodes-ranch'].includes(page.slug) ? (
                   <>
-                    <a
-                      href="/las-vegas/"
-                      onClick={(e) => { e.preventDefault(); onNavigate('las-vegas'); }}
-                      className="hover:text-[#1E70B8] transition-colors"
-                    >
-                      Clark County
-                    </a>
+                    <span className="text-slate-400">Clark County</span>
                     <span className="text-slate-300">&gt;</span>
                   </>
                 ) : (
@@ -291,7 +253,7 @@ export const PageRenderer: React.FC<PageRendererProps> = ({
                       {page.type === 'service'
                         ? 'Leak Services'
                         : page.type === 'location'
-                        ? 'Nevada Cities'
+                        ? 'Carson City Districts'
                         : 'Information'}
                     </span>
                     <span className="text-slate-300">&gt;</span>
@@ -518,7 +480,7 @@ export const PageRenderer: React.FC<PageRendererProps> = ({
                     Immediate Phone Dispatch — No Waiting on Web Forms
                   </h3>
                   <p className="text-xs sm:text-sm text-slate-600 mt-1 leading-relaxed">
-                    Active water leaks, freeze-burst pipes, and combustible gas odors require instantaneous human triage. Call our 24/7 dispatch desk at <a href={PHONE_HREF} className="text-[#1E70B8] font-bold underline font-mono">{PHONE_NUMBER}</a> for rapid regional contractor matching anywhere in Nevada.
+                    Active water leaks, freeze-burst pipes, and combustible gas odors require instantaneous human triage. Call our 24/7 dispatch desk at <a href={PHONE_HREF} className="text-[#1E70B8] font-bold underline font-mono">{PHONE_NUMBER}</a> for rapid contractor matching in Carson City, NV.
                   </p>
                 </div>
 
@@ -529,7 +491,7 @@ export const PageRenderer: React.FC<PageRendererProps> = ({
                     </div>
                     <div>
                       <h4 className="text-sm font-bold text-slate-900 font-display">24/7 Emergency Line</h4>
-                      <p className="text-xs text-slate-500 mt-0.5">Staffed 24/7/365 statewide</p>
+                      <p className="text-xs text-slate-500 mt-0.5">Staffed 24/7/365 for Carson City</p>
                     </div>
                     <a
                       href={PHONE_HREF}
@@ -544,8 +506,8 @@ export const PageRenderer: React.FC<PageRendererProps> = ({
                       <MapPin className="w-5 h-5" />
                     </div>
                     <div>
-                      <h4 className="text-sm font-bold text-slate-900 font-display">Dispatch Headquarters</h4>
-                      <p className="text-xs text-slate-500 mt-0.5">Central Las Vegas hub</p>
+                      <h4 className="text-sm font-bold text-slate-900 font-display">Business Office</h4>
+                      <p className="text-xs text-slate-500 mt-0.5">Operations &amp; dispatch desk</p>
                     </div>
                     <div className="text-xs font-semibold text-slate-800 leading-snug">
                       6875 Groveview Ln<br />Las Vegas, NV 89103
@@ -557,11 +519,11 @@ export const PageRenderer: React.FC<PageRendererProps> = ({
                       <Clock className="w-5 h-5" />
                     </div>
                     <div>
-                      <h4 className="text-sm font-bold text-slate-900 font-display">Statewide Coverage</h4>
-                      <p className="text-xs text-slate-500 mt-0.5">Southern, Northern &amp; Rural NV</p>
+                      <h4 className="text-sm font-bold text-slate-900 font-display">Target Service Area</h4>
+                      <p className="text-xs text-slate-500 mt-0.5">Carson City, Nevada</p>
                     </div>
                     <div className="text-xs font-semibold text-emerald-700">
-                      Las Vegas • Henderson • Reno • Sparks • Carson City
+                      89701 • 89702 • 89703 • 89705 • 89706
                     </div>
                   </div>
                 </div>
@@ -575,15 +537,15 @@ export const PageRenderer: React.FC<PageRendererProps> = ({
                   <div>
                     <div className="flex items-center gap-1.5 text-xs font-bold text-[#1E70B8] uppercase tracking-wider font-display mb-1">
                       <MapPin className="w-4 h-4 text-amber-500" />
-                      <span>Headquarters Address &amp; Statewide Dispatch</span>
+                      <span>Carson City Coverage &amp; Office Location</span>
                     </div>
                     <h3 className="text-xl sm:text-2xl font-bold text-slate-900 font-display">
-                      Nevada Headquarters Location &amp; Map
+                      Dispatch Office &amp; Carson City Service Map
                     </h3>
                   </div>
                   <div className="text-xs text-slate-600 sm:text-right">
                     <span className="font-semibold text-slate-900 block font-mono">6875 Groveview Ln</span>
-                    <span>Las Vegas, NV 89103 (Spring Valley)</span>
+                    <span>Las Vegas, NV 89103 • Serving Carson City, NV</span>
                   </div>
                 </div>
 
@@ -594,7 +556,7 @@ export const PageRenderer: React.FC<PageRendererProps> = ({
                     <strong className="text-slate-900 block mt-0.5">{BRAND_NAME}</strong>
                   </div>
                   <div>
-                    <span className="text-slate-400 block font-medium uppercase tracking-wider text-[10px]">Physical Address</span>
+                    <span className="text-slate-400 block font-medium uppercase tracking-wider text-[10px]">Business Address</span>
                     <strong className="text-slate-900 block mt-0.5">6875 Groveview Ln, Las Vegas, NV 89103</strong>
                   </div>
                   <div>
@@ -604,7 +566,7 @@ export const PageRenderer: React.FC<PageRendererProps> = ({
                 </div>
 
                 <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
-                  Headquartered at 6875 Groveview Ln in Las Vegas, NV 89103, our 24/7 dispatch network matches homeowners and businesses with licensed leak specialists across Las Vegas, Henderson, North Las Vegas, Spring Valley, Reno, Sparks, Carson City, Pahrump, Mesquite, Boulder City, and Elko.
+                  Our 24/7 dispatch network coordinates NSCB-licensed leak detection specialists across every Carson City, Nevada neighborhood—including Downtown Capitol District (89701), Westside &amp; Kings Canyon (89703), Lakeview, North Carson &amp; Silver Oak (89706), South Carson &amp; Clearview (89705), and Empire Ranch.
                 </p>
 
                 {/* Embedded Responsive Google Map */}
@@ -625,13 +587,13 @@ export const PageRenderer: React.FC<PageRendererProps> = ({
                 <div className="flex flex-wrap items-center justify-between gap-3 pt-2 text-xs text-slate-500 border-t border-slate-100">
                   <div className="flex items-center gap-2">
                     <span className="w-2 h-2 rounded-full bg-emerald-500"></span>
-                    <span>Statewide Dispatch: Las Vegas Valley, Reno/Tahoe, Carson City, Mesquite, Pahrump &amp; Elko</span>
+                    <span>Carson City Coverage: 89701, 89702, 89703, 89705 &amp; 89706</span>
                   </div>
                   <a
                     href={PHONE_HREF}
                     className="text-[#1E70B8] hover:underline font-bold"
                   >
-                    Call (725) 313-0108 for Emergency Service →
+                    Call (725) 313-0108 for Carson City Dispatch →
                   </a>
                 </div>
               </section>
@@ -652,7 +614,7 @@ export const PageRenderer: React.FC<PageRendererProps> = ({
                         Official Facebook Page
                       </h4>
                       <p className="text-xs text-slate-500">
-                        Follow Leak Detection NV for statewide emergency prevention tips and seasonal freeze/heat alerts.
+                        Follow Leak Detection NV for Carson City emergency prevention tips and seasonal freeze/pipe alerts.
                       </p>
                     </div>
                   </div>
@@ -669,25 +631,25 @@ export const PageRenderer: React.FC<PageRendererProps> = ({
                 </div>
               </section>
             )}
-            {/* HOMEPAGE RANKING AUTHORITY: NEVADA STATEWIDE CITIES & REGIONAL DISPATCH ESTIMATOR */}
+            {/* HOMEPAGE RANKING AUTHORITY: CARSON CITY DISTRICTS & LOCAL DISPATCH EXPLORER */}
             {page.slug === '' && (
-              <section id="nevada-cities" className="bg-white rounded-2xl p-6 sm:p-8 border border-slate-200 shadow-xs space-y-6">
+              <section id="carson-city-areas" className="bg-white rounded-2xl p-6 sm:p-8 border border-slate-200 shadow-xs space-y-6">
                 <div>
                   <div className="flex items-center gap-2 text-xs font-bold text-[#1E70B8] uppercase tracking-wider font-display mb-1">
                     <Navigation className="w-4 h-4 text-amber-500" />
-                    <span>Nevada Statewide Coverage • Southern, Northern &amp; Rural NV</span>
+                    <span>Carson City, Nevada Coverage • ZIP Codes 89701–89706</span>
                   </div>
                   <h3 className="text-xl sm:text-2xl font-bold text-slate-900 font-display">
-                    All Nevada Cities Leak Detection &amp; Regional Dispatch Explorer
+                    Carson City Neighborhood Leak Detection &amp; Dispatch Explorer
                   </h3>
                   <p className="text-xs sm:text-sm text-slate-600 mt-1 leading-relaxed">
-                    Select any Nevada metro or region to inspect local soil &amp; freeze-thaw conditions, pipe failure risks, response availability, and municipal utility credit support:
+                    Select any Carson City district below to inspect local Eagle Valley soil &amp; freeze-thaw conditions, pipe risks, and Carson City Public Works documentation support:
                   </p>
                 </div>
 
-                {/* Regional City Selector Buttons */}
-                <div className="grid grid-cols-2 sm:grid-cols-4 gap-2.5">
-                  {NEVADA_CITY_REGIONS.map((nh, idx) => (
+                {/* Carson City District Selector Buttons */}
+                <div className="grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-5 gap-2.5">
+                  {CARSON_CITY_DISTRICTS.map((nh, idx) => (
                     <button
                       key={nh.slug}
                       onClick={() => setSelectedAreaIdx(idx)}
@@ -703,9 +665,9 @@ export const PageRenderer: React.FC<PageRendererProps> = ({
                   ))}
                 </div>
 
-                {/* Selected Region Data Card */}
+                {/* Selected District Data Card */}
                 {(() => {
-                  const area = NEVADA_CITY_REGIONS[selectedAreaIdx] || NEVADA_CITY_REGIONS[0];
+                  const area = CARSON_CITY_DISTRICTS[selectedAreaIdx] || CARSON_CITY_DISTRICTS[0];
                   return (
                     <div className="bg-linear-to-br from-slate-900 to-[#0F2942] rounded-xl p-5 text-white space-y-4 shadow-sm border border-slate-800">
                       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pb-3 border-b border-slate-700/80">
@@ -715,7 +677,7 @@ export const PageRenderer: React.FC<PageRendererProps> = ({
                             <span>{area.name} ({area.zip})</span>
                           </div>
                           <div className="text-xs text-slate-300 mt-0.5">
-                            Areas: {area.crossStreets}
+                            Corridors: {area.crossStreets}
                           </div>
                         </div>
                         <div className="flex items-center gap-2 flex-wrap">
@@ -724,14 +686,14 @@ export const PageRenderer: React.FC<PageRendererProps> = ({
                             {area.activeVans}
                           </span>
                           <span className="px-2.5 py-1 rounded-full bg-amber-500/20 text-amber-300 text-xs font-bold border border-amber-500/30">
-                            ETA: {area.etaMinutes}
+                            {area.etaMinutes}
                           </span>
                         </div>
                       </div>
 
                       <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 text-xs">
                         <div className="p-3 rounded-lg bg-slate-800/80 border border-slate-700">
-                          <span className="text-slate-400 block mb-1 font-medium">Regional Geology &amp; Climate:</span>
+                          <span className="text-slate-400 block mb-1 font-medium">Local Geology &amp; Climate:</span>
                           <span className="text-slate-200 font-bold">{area.soilType}</span>
                         </div>
                         <div className="p-3 rounded-lg bg-slate-800/80 border border-slate-700">
@@ -753,7 +715,7 @@ export const PageRenderer: React.FC<PageRendererProps> = ({
                           }}
                           className="text-xs font-bold text-[#38BDF8] hover:text-white flex items-center gap-1"
                         >
-                          <span>View {area.name} Local Guide</span>
+                          <span>View {area.name} Guide</span>
                           <ArrowRight className="w-3.5 h-3.5" />
                         </a>
                         <a
@@ -761,40 +723,30 @@ export const PageRenderer: React.FC<PageRendererProps> = ({
                           className="px-4 py-2 bg-amber-500 hover:bg-amber-400 text-slate-950 font-bold text-xs rounded-lg transition-colors flex items-center justify-center gap-1.5 shrink-0"
                         >
                           <Phone className="w-3.5 h-3.5 text-slate-950" />
-                          <span>Dispatch Tech to {area.name.split(' ')[0]}</span>
+                          <span>Dispatch Tech to Carson City</span>
                         </a>
                       </div>
                     </div>
                   );
                 })()}
 
-                {/* Complete Nevada City Hub Directory Strip (Zero Orphan Pages) */}
+                {/* Complete Carson City Neighborhood Links (Zero Orphan Pages) */}
                 <div className="pt-2 border-t border-slate-200 space-y-3">
                   <div className="flex flex-wrap items-center justify-between gap-2">
                     <span className="text-xs font-bold uppercase tracking-wider text-slate-700 font-display">
-                      Dedicated Nevada City &amp; Community Pages
+                      Dedicated Carson City, NV Service Area Pages
                     </span>
                     <span className="text-[11px] text-slate-500">
-                      Plus Paradise, Enterprise, Summerlin, Spanish Springs, Fernley, Fallon, Winnemucca, Ely &amp; Laughlin
+                      Serving 89701, 89702, 89703, 89705 &amp; 89706
                     </span>
                   </div>
                   <div className="flex flex-wrap gap-2">
                     {[
-                      { label: 'Las Vegas', slug: 'las-vegas' },
-                      { label: 'Henderson', slug: 'henderson' },
-                      { label: 'North Las Vegas', slug: 'north-las-vegas' },
-                      { label: 'Reno & Lake Tahoe', slug: 'reno' },
-                      { label: 'Sparks', slug: 'sparks' },
-                      { label: 'Carson City & Minden', slug: 'carson-city' },
-                      { label: 'Pahrump', slug: 'pahrump' },
-                      { label: 'Mesquite', slug: 'mesquite' },
-                      { label: 'Boulder City & Laughlin', slug: 'boulder-city' },
-                      { label: 'Elko, Fernley & Fallon', slug: 'elko-rural-nevada' },
-                      { label: 'Spring Valley Core', slug: 'spring-valley-center' },
-                      { label: 'The Lakes', slug: 'the-lakes' },
-                      { label: 'Spanish Trail', slug: 'spanish-trail' },
-                      { label: 'Summerlin South', slug: 'summerlin-south' },
-                      { label: 'Rhodes Ranch', slug: 'rhodes-ranch' },
+                      { label: 'Downtown & Capitol (89701)', slug: 'carson-city' },
+                      { label: 'Westside & Kings Canyon (89703)', slug: 'west-carson-lakeview' },
+                      { label: 'North Carson & Silver Oak (89706)', slug: 'north-carson-silver-oak' },
+                      { label: 'South Carson & Clearview (89705)', slug: 'south-carson-clearview' },
+                      { label: 'Empire Ranch & Pinion Hills', slug: 'east-carson-empire-ranch' },
                     ].map((city) => (
                       <a
                         key={city.slug}
@@ -822,7 +774,7 @@ export const PageRenderer: React.FC<PageRendererProps> = ({
                     <span>Emergency Diagnostic Triage</span>
                   </div>
                   <h3 className="text-xl sm:text-2xl font-bold text-slate-900 font-display">
-                    What Type of Leak Are You Experiencing in Nevada?
+                    What Type of Leak Are You Experiencing in Carson City?
                   </h3>
                   <p className="text-xs sm:text-sm text-slate-600 mt-1">
                     Select your symptoms below for immediate diagnostic protocols, safety steps, and pricing guidance:
@@ -921,7 +873,7 @@ export const PageRenderer: React.FC<PageRendererProps> = ({
                     Leak Detection NV Specialists vs. Conventional General Plumbers
                   </h3>
                   <p className="text-xs sm:text-sm text-slate-600 mt-1 leading-relaxed">
-                    Why working with a dedicated electronic leak detection specialist protects Nevada homeowners from destructive exploratory demolition:
+                    Why working with a dedicated electronic leak detection specialist protects Carson City homeowners from destructive exploratory demolition:
                   </p>
                 </div>
 
@@ -930,33 +882,33 @@ export const PageRenderer: React.FC<PageRendererProps> = ({
                     <thead className="bg-[#0F2942] text-white">
                       <tr>
                         <th className="py-3 px-4 font-bold">Diagnostic Capability</th>
-                        <th className="py-3 px-4 font-bold text-amber-300">Leak Detection NV Network</th>
+                        <th className="py-3 px-4 font-bold text-amber-300">Leak Detection NV — Carson City</th>
                         <th className="py-3 px-4 font-bold text-slate-300">Conventional General Plumbers</th>
                       </tr>
                     </thead>
                     <tbody className="divide-y divide-slate-200 bg-white">
                       <tr className="hover:bg-slate-50">
-                        <td className="py-3 px-4 font-bold text-slate-900">Concrete Slab Leak Pinpointing</td>
+                        <td className="py-3 px-4 font-bold text-slate-900">Concrete Slab &amp; Crawlspace Pinpointing</td>
                         <td className="py-3 px-4 text-emerald-700 font-semibold">Ultrasonic sensors locate leak within inches (minimal access)</td>
-                        <td className="py-3 px-4 text-slate-600">Guesswork jackhammering of multiple floor tiles</td>
+                        <td className="py-3 px-4 text-slate-600">Guesswork jackhammering or tearing up historic flooring</td>
                       </tr>
                       <tr className="hover:bg-slate-50">
-                        <td className="py-3 px-4 font-bold text-slate-900">Swimming Pool Diagnostics</td>
+                        <td className="py-3 px-4 font-bold text-slate-900">Swimming Pool &amp; Spa Diagnostics</td>
                         <td className="py-3 px-4 text-emerald-700 font-semibold">Submersible hydrophones + dye test without draining pool</td>
-                        <td className="py-3 px-4 text-slate-600">Require full draining (risking plaster damage in heat)</td>
+                        <td className="py-3 px-4 text-slate-600">Require full draining (risking shell shift or freeze cracks)</td>
                       </tr>
                       <tr className="hover:bg-slate-50">
-                        <td className="py-3 px-4 font-bold text-slate-900">Statewide Nevada Dispatch</td>
-                        <td className="py-3 px-4 text-emerald-700 font-semibold">30–60 min metro dispatch across Clark &amp; Washoe + rural NV</td>
-                        <td className="py-3 px-4 text-slate-600">Single-neighborhood hours or next-day windows</td>
+                        <td className="py-3 px-4 font-bold text-slate-900">24/7 Carson City Dispatch</td>
+                        <td className="py-3 px-4 text-emerald-700 font-semibold">24/7 dispatch across 89701, 89702, 89703, 89705 &amp; 89706</td>
+                        <td className="py-3 px-4 text-slate-600">Limited weekday hours or multi-day wait times</td>
                       </tr>
                       <tr className="hover:bg-slate-50">
                         <td className="py-3 px-4 font-bold text-slate-900">Utility Leak Credit Documentation</td>
-                        <td className="py-3 px-4 text-emerald-700 font-semibold">Detailed reports formatted for LVVWD, Henderson &amp; TMWA</td>
+                        <td className="py-3 px-4 text-emerald-700 font-semibold">Detailed reports formatted for Carson City Public Works</td>
                         <td className="py-3 px-4 text-slate-600">Basic receipt often missing required repair details</td>
                       </tr>
                       <tr className="hover:bg-slate-50">
-                        <td className="py-3 px-4 font-bold text-slate-900">Caliche &amp; Frost-Line Tracing</td>
+                        <td className="py-3 px-4 font-bold text-slate-900">Freeze-Line &amp; Well Main Tracing</td>
                         <td className="py-3 px-4 text-emerald-700 font-semibold">Acoustic correlation &amp; tracer gas minimize trenching</td>
                         <td className="py-3 px-4 text-slate-600">Wide backhoe trenching across yard or driveway</td>
                       </tr>
@@ -976,7 +928,7 @@ export const PageRenderer: React.FC<PageRendererProps> = ({
                       <span>Verifiable Licensing, Dispatch &amp; Equipment Standards</span>
                     </div>
                     <h3 className="text-xl sm:text-2xl font-bold text-slate-900 font-display">
-                      Nevada Statewide Diagnostic Benchmarks &amp; NSCB Compliance
+                      Carson City Diagnostic Benchmarks &amp; NSCB Compliance
                     </h3>
                   </div>
                 </div>
@@ -988,17 +940,17 @@ export const PageRenderer: React.FC<PageRendererProps> = ({
                       <span>Nevada State Contractors Board (NSCB)</span>
                     </div>
                     <p className="text-xs text-slate-700 leading-relaxed">
-                      Dispatch referrals strictly adhere to active Nevada State Contractors Board C-1 plumbing and contractor licensing standards, liability coverage, and county building codes statewide.
+                      Dispatch referrals strictly adhere to active Nevada State Contractors Board C-1 plumbing and contractor licensing standards, liability coverage, and Carson City Building Division codes.
                     </p>
                   </div>
 
                   <div className="p-4 rounded-xl border border-slate-200 bg-slate-50/70 space-y-2">
                     <div className="flex items-center gap-2 text-xs font-bold text-[#0F2942] uppercase tracking-wider">
                       <Clock className="w-4 h-4 text-amber-600" />
-                      <span>24/7 Statewide Dispatch Desk</span>
+                      <span>24/7 Carson City Dispatch Desk</span>
                     </div>
                     <p className="text-xs text-slate-700 leading-relaxed">
-                      Headquartered at 6875 Groveview Ln, Las Vegas, NV 89103, routing urgent water, slab, pool, and gas calls across Las Vegas, Henderson, Reno, Sparks, Carson City, and rural Nevada.
+                      Routing urgent water, freeze-burst, slab, pool, well-line, and gas calls across Downtown Carson City (89701), Westside (89703), North Carson (89706), Clearview (89705), and Empire Ranch.
                     </p>
                   </div>
 
@@ -1015,10 +967,10 @@ export const PageRenderer: React.FC<PageRendererProps> = ({
                   <div className="p-4 rounded-xl border border-slate-200 bg-slate-50/70 space-y-2">
                     <div className="flex items-center gap-2 text-xs font-bold text-[#0F2942] uppercase tracking-wider">
                       <FileText className="w-4 h-4 text-sky-600" />
-                      <span>Gas PPM &amp; Nevada Utility Reports</span>
+                      <span>Gas PPM &amp; Carson City Utility Reports</span>
                     </div>
                     <p className="text-xs text-slate-700 leading-relaxed">
-                      Calibrated PPM combustible gas sniffers and itemized diagnostic logs formatted for Southwest Gas / NV Energy clearances, insurance claims, and LVVWD / TMWA credits.
+                      Calibrated PPM combustible gas sniffers and itemized diagnostic logs formatted for Southwest Gas clearances, insurance claims, and Carson City Public Works water billing reviews.
                     </p>
                   </div>
                 </div>
@@ -1032,10 +984,10 @@ export const PageRenderer: React.FC<PageRendererProps> = ({
                 <span>Professional Quality Standards</span>
               </div>
               <h3 className="text-xl sm:text-2xl font-bold font-display">
-                Licensed Leak Detection &amp; Repair {page.type === 'location' ? `in ${page.navTitle}, NV` : 'Across Nevada'}
+                Licensed Leak Detection &amp; Repair {page.type === 'location' ? `in ${page.navTitle}` : 'in Carson City, Nevada'}
               </h3>
               <p className="text-sm text-slate-300 leading-relaxed">
-                {BRAND_NAME} connects property owners across all Nevada cities with independent, licensed professionals adhering to Nevada State Contractors Board (NSCB) standards and municipal plumbing codes.
+                {BRAND_NAME} connects Carson City property owners with independent, licensed professionals adhering to Nevada State Contractors Board (NSCB) standards and Carson City municipal plumbing codes.
               </p>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
@@ -1183,34 +1135,29 @@ export const PageRenderer: React.FC<PageRendererProps> = ({
                         <a href="/emergency-leak-repair/" onClick={(e) => { e.preventDefault(); onNavigate('emergency-leak-repair'); }} className="font-bold text-[#1E70B8] hover:underline block text-sm">
                           24/7 Emergency Leak Diagnostics
                         </a>
-                        <span className="text-slate-600">30–60 minute rapid on-site technician response across Clark County.</span>
+                        <span className="text-slate-600">24/7 rapid on-site technician response in Carson City, NV.</span>
                       </li>
                     </ul>
                   </div>
 
-                  {/* Category 2: Nevada Cities & Communities */}
+                  {/* Category 2: Carson City Districts & Communities */}
                   <div className="bg-slate-50 border border-slate-200 rounded-xl p-5 space-y-3">
                     <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-[#0F2942]">
                       <MapPin className="w-4 h-4 text-amber-500" />
-                      <span>Nevada Cities &amp; Communities (15 Pages)</span>
+                      <span>Carson City Districts &amp; Service Areas (10 Pages)</span>
                     </div>
                     <ul className="space-y-2 text-xs">
                       {[
-                        { slug: 'las-vegas', title: 'Las Vegas Metro (Downtown, Paradise, Enterprise, Summerlin)', desc: 'All Las Vegas ZIP codes 89101–89149 • LVVWD & slab repair.' },
-                        { slug: 'henderson', title: 'Henderson & Green Valley (89002–89074)', desc: 'Anthem, Seven Hills, Inspirada, Lake Las Vegas & Whitney Ranch.' },
-                        { slug: 'north-las-vegas', title: 'North Las Vegas (89030–89086)', desc: 'Aliante, Eldorado, Craig Ranch, Tule Springs & Apex.' },
-                        { slug: 'reno', title: 'Reno & Lake Tahoe (89501–89523 / 89451)', desc: 'Midtown, South Reno, Damonte Ranch, Somersett, Verdi & Incline Village.' },
-                        { slug: 'sparks', title: 'Sparks & Spanish Springs (89431–89441)', desc: 'Wingfield Springs, Sun Valley & Sparks Marina.' },
-                        { slug: 'carson-city', title: 'Carson City, Minden & Dayton (89701 / 89423)', desc: 'State Capital corridor, Carson Valley & Gardnerville.' },
-                        { slug: 'pahrump', title: 'Pahrump & Nye County (89048 / 89060 / 89061)', desc: 'Well water mains, desert slabs & propane lines.' },
-                        { slug: 'mesquite', title: 'Mesquite & Virgin Valley (89027)', desc: 'Sun City Mesquite, Bunkerville & resort golf pools.' },
-                        { slug: 'boulder-city', title: 'Boulder City & Laughlin (89005 / 89029)', desc: 'Historic Downtown mains & Colorado River corridor.' },
-                        { slug: 'elko-rural-nevada', title: 'Elko, Fernley, Fallon & Rural NV (89801 / 89408)', desc: 'Spring Creek, Winnemucca, Lovelock, Battle Mountain & Ely.' },
-                        { slug: 'spring-valley-center', title: 'Spring Valley Core & Rainbow Corridor (89103)', desc: 'Headquarters hub at 6875 Groveview Ln.' },
-                        { slug: 'the-lakes', title: 'The Lakes & Peccole Ranch (89117)', desc: 'Sahara Ave & Fort Apache Rd.' },
-                        { slug: 'spanish-trail', title: 'Spanish Trail Estates (89113)', desc: 'Guard-gated estate slab & pool diagnostics.' },
-                        { slug: 'summerlin-south', title: 'Summerlin South & 215 Beltway (89135 / 89148)', desc: 'Town Center Dr & Desert Foothills.' },
-                        { slug: 'rhodes-ranch', title: 'Rhodes Ranch & Sunset Corridor (89148)', desc: 'Durango Dr & Sunset Rd.' },
+                        { slug: 'carson-city', title: 'Downtown Carson City & Capitol District (89701)', desc: 'Historic Capitol corridor, crawlspaces & Carson City Public Works mains.' },
+                        { slug: 'west-carson-lakeview', title: 'Westside, Kings Canyon & Lakeview (89703)', desc: 'Sierra foothill pressure zones, Ash Canyon & freeze-thaw lines.' },
+                        { slug: 'north-carson-silver-oak', title: 'North Carson, Lompa & Silver Oak (89706)', desc: 'Post-tension slabs, golf-course pools & Northridge subdivisions.' },
+                        { slug: 'south-carson-clearview', title: 'South Carson, Clearview & Stewart (89701 / 89705)', desc: 'Carson River corridor, high water table & S Carson St commercial lines.' },
+                        { slug: 'east-carson-empire-ranch', title: 'East Carson, Empire Ranch & Pinion Hills', desc: 'Highway 50 E corridor, private well mains & buried propane lines.' },
+                        { slug: 'spring-valley-center', title: 'Spring Valley Core & Rainbow Corridor (89103)', desc: 'Office dispatch hub at 6875 Groveview Ln, Las Vegas, NV.' },
+                        { slug: 'the-lakes', title: 'The Lakes & Peccole Ranch (89117)', desc: 'Legacy Clark County community page.' },
+                        { slug: 'spanish-trail', title: 'Spanish Trail Estates (89113)', desc: 'Legacy Clark County estate page.' },
+                        { slug: 'summerlin-south', title: 'Summerlin South (89135 / 89148)', desc: 'Legacy Clark County community page.' },
+                        { slug: 'rhodes-ranch', title: 'Rhodes Ranch (89148)', desc: 'Legacy Clark County community page.' },
                       ].map((loc) => (
                         <li key={loc.slug}>
                           <a href={`/${loc.slug}/`} onClick={(e) => { e.preventDefault(); onNavigate(loc.slug); }} className="font-bold text-[#1E70B8] hover:underline block text-sm">
@@ -1315,10 +1262,10 @@ export const PageRenderer: React.FC<PageRendererProps> = ({
                   <div>
                     <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-amber-700 font-display">
                       <BookOpen className="w-4 h-4 text-amber-600" />
-                      <span>Nevada Diagnostic Knowledge Base</span>
+                      <span>Homeowner Diagnostic Knowledge Base</span>
                     </div>
                     <h2 className="text-xl sm:text-2xl font-bold text-slate-900 mt-1 font-display">
-                      Additional Nevada Prevention &amp; Utility Guides
+                      Additional Leak Prevention &amp; Utility Guides
                     </h2>
                   </div>
                   <a
@@ -1420,13 +1367,13 @@ export const PageRenderer: React.FC<PageRendererProps> = ({
             <section className="p-8 rounded-2xl bg-linear-to-br from-[#0F2942] to-slate-900 text-white space-y-6 shadow-xl">
               <div className="max-w-2xl space-y-2">
                 <span className="text-xs font-bold uppercase tracking-wider text-amber-400 font-display">
-                  24/7 Nevada Statewide Dispatch
+                  24/7 Carson City, NV Dispatch
                 </span>
                 <h3 className="text-2xl sm:text-3xl font-extrabold tracking-tight font-display">
                   Need Immediate Help With {page.name}?
                 </h3>
                 <p className="text-sm text-slate-300 leading-relaxed">
-                  Protect your Nevada property from costly water, gas, slab, or pool damage. Connect 24/7 with NSCB-licensed specialists equipped with non-invasive diagnostic tools.
+                  Protect your Carson City property from costly water, gas, slab, or pool damage. Connect 24/7 with NSCB-licensed specialists equipped with non-invasive diagnostic tools.
                 </p>
               </div>
 
@@ -1454,7 +1401,7 @@ export const PageRenderer: React.FC<PageRendererProps> = ({
             
             {/* Interactive Inline Emergency Call & Callback Card */}
             <SidebarDispatchForm
-              currentLocationName={page.type === 'location' ? page.navTitle : 'All Nevada Cities'}
+              currentLocationName={page.type === 'location' ? page.navTitle : 'Carson City, NV'}
               currentServiceType={page.type === 'service' ? page.name : 'Water Leak (Indoor / Wall)'}
             />
 
@@ -1546,11 +1493,11 @@ export const PageRenderer: React.FC<PageRendererProps> = ({
                 </div>
               )}
 
-              {/* Related Nevada Cities Box */}
+              {/* Related Carson City Service Areas Box */}
               {page.relatedLocations && page.relatedLocations.length > 0 && (
                 <div className="pt-4 border-t border-slate-100 space-y-3">
                   <h5 className="text-xs font-bold uppercase tracking-wider text-slate-700 font-display">
-                    Nevada Cities &amp; Service Areas
+                    Carson City Service Areas
                   </h5>
                   <div className="space-y-1.5">
                     {page.relatedLocations.map((rl) => (
@@ -1577,7 +1524,7 @@ export const PageRenderer: React.FC<PageRendererProps> = ({
               {/* Link back to Homepage Anchor */}
               {page.slug !== '' && (
                 <div className="pt-4 border-t border-slate-100 text-xs text-slate-500">
-                  <span>Explore all cities and services on our </span>
+                  <span>Explore all neighborhoods and services on our </span>
                   <a
                     href="/"
                     onClick={(e) => {
@@ -1586,7 +1533,7 @@ export const PageRenderer: React.FC<PageRendererProps> = ({
                     }}
                     className="text-[#1E70B8] font-bold hover:underline"
                   >
-                    Nevada leak detection
+                    Carson City leak detection
                   </a>
                   <span> main hub.</span>
                 </div>

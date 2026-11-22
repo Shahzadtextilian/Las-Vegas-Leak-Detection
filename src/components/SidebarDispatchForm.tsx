@@ -8,7 +8,7 @@ interface SidebarDispatchFormProps {
 }
 
 export const SidebarDispatchForm: React.FC<SidebarDispatchFormProps> = ({
-  currentLocationName = 'All Nevada Cities',
+  currentLocationName = 'Carson City, NV',
   currentServiceType = 'Water Leak (Indoor / Wall)',
 }) => {
   return (
@@ -20,7 +20,7 @@ export const SidebarDispatchForm: React.FC<SidebarDispatchFormProps> = ({
             <span className="w-2 h-2 rounded-full bg-amber-400 animate-pulse"></span>
             24/7 Emergency Dispatch
           </span>
-          <span className="text-slate-300 font-normal">Nevada Statewide</span>
+          <span className="text-slate-300 font-normal">Carson City, NV</span>
         </div>
         
         <div>
@@ -28,7 +28,7 @@ export const SidebarDispatchForm: React.FC<SidebarDispatchFormProps> = ({
             Need Immediate Assistance?
           </h4>
           <p className="text-xs text-slate-300 mt-1 leading-relaxed">
-            Call our 24/7 dispatch line directly for fast regional routing in {currentLocationName}:
+            Call our 24/7 dispatch line directly for fast local service in {currentLocationName}:
           </p>
         </div>
 
@@ -42,7 +42,7 @@ export const SidebarDispatchForm: React.FC<SidebarDispatchFormProps> = ({
 
         <div className="flex items-center justify-center gap-1.5 text-[11px] text-slate-300 pt-1">
           <Clock className="w-3.5 h-3.5 text-amber-400" />
-          <span>30–60 min metro dispatch • Statewide coverage</span>
+          <span>Fast Carson City dispatch • 89701–89706</span>
         </div>
       </div>
 
@@ -56,21 +56,21 @@ export const SidebarDispatchForm: React.FC<SidebarDispatchFormProps> = ({
             <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" />
             <div>
               <strong className="text-slate-900 block">Service Focus</strong>
-              <span>Equipped for {currentServiceType} diagnostics & repair</span>
+              <span>Equipped for {currentServiceType} diagnostics &amp; repair</span>
             </div>
           </div>
           <div className="flex items-start gap-2.5 p-2.5 rounded-lg bg-slate-50 border border-slate-100">
             <Clock className="w-4 h-4 text-[#1E70B8] shrink-0 mt-0.5" />
             <div>
               <strong className="text-slate-900 block">Round-The-Clock Standby</strong>
-              <span>Available 24 hours a day, weekends and holidays included</span>
+              <span>Available 24 hours a day across Carson City, weekends &amp; holidays included</span>
             </div>
           </div>
           <div className="flex items-start gap-2.5 p-2.5 rounded-lg bg-slate-50 border border-slate-100">
             <AlertTriangle className="w-4 h-4 text-amber-600 shrink-0 mt-0.5" />
             <div>
               <strong className="text-slate-900 block">Emergency Protocol</strong>
-              <span>If you suspect a gas leak or active flood, call immediately from a safe location</span>
+              <span>If you smell gas or see active flooding, evacuate/shut off main and call immediately</span>
             </div>
           </div>
         </div>

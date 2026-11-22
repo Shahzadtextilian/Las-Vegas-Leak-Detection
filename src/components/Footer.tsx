@@ -24,12 +24,12 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
                 </svg>
               </div>
               <span className="text-lg font-bold text-white tracking-tight font-display">
-                {BRAND_NAME}
+                {BRAND_NAME} — Carson City
               </span>
             </div>
             
             <p className="text-sm text-slate-400 leading-relaxed max-w-sm">
-              24/7 non-invasive water, gas, slab, and swimming pool leak detection across all Nevada cities—including Las Vegas, Henderson, North Las Vegas, Spring Valley, Reno, Sparks, Carson City, Pahrump, Mesquite &amp; Elko.
+              24/7 non-invasive water, gas, slab, and swimming pool leak detection in Carson City, Nevada—serving Downtown &amp; Capitol District (89701), Westside &amp; Kings Canyon (89703), North Carson &amp; Silver Oak (89706), Clearview (89705), and Empire Ranch.
             </p>
 
             <div className="pt-2 flex flex-col gap-2 text-xs text-slate-400">
@@ -88,7 +88,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
                   onClick={(e) => { e.preventDefault(); onNavigate('gas-leak-detection'); }}
                   className="hover:text-white transition-colors"
                 >
-                  Gas Leak Detection & Repair
+                  Gas Leak Detection &amp; Repair
                 </a>
               </li>
               <li>
@@ -115,7 +115,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
                   onClick={(e) => { e.preventDefault(); onNavigate('underground-leak-detection'); }}
                   className="hover:text-white transition-colors"
                 >
-                  Underground & Yard Leaks
+                  Underground &amp; Well Leaks
                 </a>
               </li>
               <li>
@@ -130,82 +130,55 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
             </ul>
           </div>
 
-          {/* Column 3: Nevada Cities Served */}
+          {/* Column 3: Carson City Areas Served */}
           <div>
             <h4 className="text-xs font-semibold uppercase tracking-wider text-slate-100 mb-4 font-display">
-              Nevada Cities Served
+              Carson City Areas
             </h4>
             <ul className="space-y-2 text-sm">
-              <li>
-                <a
-                  href="/las-vegas/"
-                  onClick={(e) => { e.preventDefault(); onNavigate('las-vegas'); }}
-                  className="hover:text-white transition-colors"
-                >
-                  Las Vegas Metro
-                </a>
-              </li>
-              <li>
-                <a
-                  href="/henderson/"
-                  onClick={(e) => { e.preventDefault(); onNavigate('henderson'); }}
-                  className="hover:text-white transition-colors"
-                >
-                  Henderson &amp; Green Valley
-                </a>
-              </li>
-              <li>
-                <a
-                  href="/north-las-vegas/"
-                  onClick={(e) => { e.preventDefault(); onNavigate('north-las-vegas'); }}
-                  className="hover:text-white transition-colors"
-                >
-                  North Las Vegas
-                </a>
-              </li>
-              <li>
-                <a
-                  href="/reno/"
-                  onClick={(e) => { e.preventDefault(); onNavigate('reno'); }}
-                  className="hover:text-white transition-colors"
-                >
-                  Reno &amp; Lake Tahoe
-                </a>
-              </li>
-              <li>
-                <a
-                  href="/sparks/"
-                  onClick={(e) => { e.preventDefault(); onNavigate('sparks'); }}
-                  className="hover:text-white transition-colors"
-                >
-                  Sparks &amp; Spanish Springs
-                </a>
-              </li>
               <li>
                 <a
                   href="/carson-city/"
                   onClick={(e) => { e.preventDefault(); onNavigate('carson-city'); }}
                   className="hover:text-white transition-colors"
                 >
-                  Carson City &amp; Minden
+                  Downtown &amp; Capitol (89701)
                 </a>
               </li>
               <li>
                 <a
-                  href="/spring-valley-center/"
-                  onClick={(e) => { e.preventDefault(); onNavigate('spring-valley-center'); }}
+                  href="/west-carson-lakeview/"
+                  onClick={(e) => { e.preventDefault(); onNavigate('west-carson-lakeview'); }}
                   className="hover:text-white transition-colors"
                 >
-                  Spring Valley (89103)
+                  Westside &amp; Kings Canyon (89703)
                 </a>
               </li>
               <li>
                 <a
-                  href="/elko-rural-nevada/"
-                  onClick={(e) => { e.preventDefault(); onNavigate('elko-rural-nevada'); }}
+                  href="/north-carson-silver-oak/"
+                  onClick={(e) => { e.preventDefault(); onNavigate('north-carson-silver-oak'); }}
                   className="hover:text-white transition-colors"
                 >
-                  Elko, Fernley &amp; Rural NV
+                  North Carson &amp; Silver Oak (89706)
+                </a>
+              </li>
+              <li>
+                <a
+                  href="/south-carson-clearview/"
+                  onClick={(e) => { e.preventDefault(); onNavigate('south-carson-clearview'); }}
+                  className="hover:text-white transition-colors"
+                >
+                  South Carson &amp; Clearview (89705)
+                </a>
+              </li>
+              <li>
+                <a
+                  href="/east-carson-empire-ranch/"
+                  onClick={(e) => { e.preventDefault(); onNavigate('east-carson-empire-ranch'); }}
+                  className="hover:text-white transition-colors"
+                >
+                  Empire Ranch &amp; Pinion Hills
                 </a>
               </li>
             </ul>
@@ -214,7 +187,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
           {/* Column 4: Company & Knowledge Base */}
           <div>
             <h4 className="text-xs font-semibold uppercase tracking-wider text-slate-100 mb-4 font-display">
-              Company & Guides
+              Company &amp; Guides
             </h4>
             <ul className="space-y-2.5 text-sm">
               <li>
@@ -232,7 +205,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
                   onClick={(e) => { e.preventDefault(); onNavigate('blog'); }}
                   className="hover:text-amber-400 font-semibold transition-colors flex items-center gap-1.5"
                 >
-                  <span>Blog & Leak Guides</span>
+                  <span>Blog &amp; Leak Guides</span>
                   <span className="text-[10px] bg-amber-500/20 text-amber-300 px-1.5 py-0.2 rounded">New</span>
                 </a>
               </li>
@@ -242,7 +215,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
                   onClick={(e) => { e.preventDefault(); onNavigate('contact'); }}
                   className="hover:text-white transition-colors"
                 >
-                  Contact & NAP (Map)
+                  Contact &amp; NAP (Map)
                 </a>
               </li>
               <li>
@@ -269,7 +242,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
                   onClick={(e) => { e.preventDefault(); onNavigate('disclaimer'); }}
                   className="hover:text-white transition-colors text-slate-400 font-medium"
                 >
-                  Disclaimer & Licensing
+                  Disclaimer &amp; Licensing
                 </a>
               </li>
               <li>
@@ -351,11 +324,11 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
           </div>
         </div>
 
-        {/* Quality Standards & Statewide Service Notice */}
+        {/* Quality Standards & Carson City Service Notice */}
         <div className="pt-8 space-y-4 text-xs text-slate-400 leading-relaxed">
           <div className="p-4 rounded-xl bg-slate-900/60 border border-slate-800 text-slate-400">
-            <span className="font-semibold text-slate-200">Statewide Nevada Service Notice: </span>
-            {BRAND_NAME} coordinates 24/7 non-invasive diagnostic testing and repair across all Nevada cities—including Las Vegas, Henderson, North Las Vegas, Spring Valley, Reno, Sparks, Carson City, Pahrump, Mesquite, Boulder City, and Elko. Headquartered at {BUSINESS_ADDRESS.streetAddress}, {BUSINESS_ADDRESS.addressLocality}, {BUSINESS_ADDRESS.addressRegion} {BUSINESS_ADDRESS.postalCode}. Work is performed by independent licensed contractors adhering to Nevada State Contractors Board (NSCB) standards.
+            <span className="font-semibold text-slate-200">Carson City, Nevada Service Notice: </span>
+            {BRAND_NAME} coordinates 24/7 non-invasive leak detection and repair across Carson City, Nevada—including Downtown Capitol District (89701), Westside &amp; Kings Canyon (89703), North Carson &amp; Silver Oak (89706), South Carson &amp; Clearview (89705), and Empire Ranch. Main office located at {BUSINESS_ADDRESS.streetAddress}, {BUSINESS_ADDRESS.addressLocality}, {BUSINESS_ADDRESS.addressRegion} {BUSINESS_ADDRESS.postalCode}. Work is performed by independent licensed contractors adhering to Nevada State Contractors Board (NSCB) standards.
           </div>
 
           <div className="flex flex-col sm:flex-row items-center justify-between gap-4 text-slate-500 pt-2">
@@ -363,7 +336,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
               © 2026 {BRAND_NAME}. All rights reserved.
             </div>
             <div className="flex items-center gap-4">
-              <span>All Nevada Cities Statewide</span>
+              <span>Carson City, Nevada (89701–89706)</span>
               <span>•</span>
               <span>24/7 Emergency Line: {PHONE_NUMBER}</span>
             </div>

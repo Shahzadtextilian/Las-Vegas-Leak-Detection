@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <!-- Homepage -->
+  <!-- Homepage (Carson City, Nevada) -->
   <url>
     <loc>https://www.leakdetectionnv.com/</loc>
     <lastmod>2026-11-22</lastmod>
@@ -46,120 +46,92 @@
     <priority>0.9</priority>
   </url>
 
-  <!-- Major Nevada Cities & Statewide Service Areas -->
-  <url>
-    <loc>https://www.leakdetectionnv.com/las-vegas/</loc>
-    <lastmod>2026-11-22</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://www.leakdetectionnv.com/henderson/</loc>
-    <lastmod>2026-11-22</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://www.leakdetectionnv.com/north-las-vegas/</loc>
-    <lastmod>2026-11-22</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.85</priority>
-  </url>
-  <url>
-    <loc>https://www.leakdetectionnv.com/reno/</loc>
-    <lastmod>2026-11-22</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://www.leakdetectionnv.com/sparks/</loc>
-    <lastmod>2026-11-22</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.85</priority>
-  </url>
+  <!-- Carson City, Nevada Service Districts -->
   <url>
     <loc>https://www.leakdetectionnv.com/carson-city/</loc>
     <lastmod>2026-11-22</lastmod>
     <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.leakdetectionnv.com/west-carson-lakeview/</loc>
+    <lastmod>2026-11-22</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
-    <loc>https://www.leakdetectionnv.com/pahrump/</loc>
+    <loc>https://www.leakdetectionnv.com/north-carson-silver-oak/</loc>
     <lastmod>2026-11-22</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.85</priority>
   </url>
   <url>
-    <loc>https://www.leakdetectionnv.com/mesquite/</loc>
+    <loc>https://www.leakdetectionnv.com/south-carson-clearview/</loc>
     <lastmod>2026-11-22</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.85</priority>
   </url>
   <url>
-    <loc>https://www.leakdetectionnv.com/boulder-city/</loc>
+    <loc>https://www.leakdetectionnv.com/east-carson-empire-ranch/</loc>
     <lastmod>2026-11-22</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.85</priority>
   </url>
-  <url>
-    <loc>https://www.leakdetectionnv.com/elko-rural-nevada/</loc>
-    <lastmod>2026-11-22</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
+
+  <!-- Clark County Community Pages -->
   <url>
     <loc>https://www.leakdetectionnv.com/spring-valley-center/</loc>
-    <lastmod>2026-11-22</lastmod>
+    <lastmod>2026-10-19</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.leakdetectionnv.com/the-lakes/</loc>
     <lastmod>2026-10-19</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.leakdetectionnv.com/spanish-trail/</loc>
     <lastmod>2026-10-19</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.leakdetectionnv.com/summerlin-south/</loc>
     <lastmod>2026-10-19</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.leakdetectionnv.com/rhodes-ranch/</loc>
     <lastmod>2026-10-19</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.7</priority>
   </url>
 
   <!-- Company & Process Pages -->
   <url>
     <loc>https://www.leakdetectionnv.com/how-it-works/</loc>
-    <lastmod>2026-10-19</lastmod>
+    <lastmod>2026-11-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.leakdetectionnv.com/about/</loc>
-    <lastmod>2026-10-19</lastmod>
+    <lastmod>2026-11-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.leakdetectionnv.com/contact/</loc>
-    <lastmod>2026-10-19</lastmod>
+    <lastmod>2026-11-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.leakdetectionnv.com/blog/</loc>
-    <lastmod>2026-10-19</lastmod>
+    <lastmod>2026-11-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -169,13 +141,13 @@
     <loc>https://www.leakdetectionnv.com/pool-irrigation-leak-detection-spring-valley/</loc>
     <lastmod>2026-11-18</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.85</priority>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.leakdetectionnv.com/blog/spring-valley-leak-detection-guide/</loc>
     <lastmod>2026-11-09</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.85</priority>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.leakdetectionnv.com/blog/signs-of-slab-leak-in-las-vegas-homes/</loc>
@@ -211,7 +183,7 @@
     <loc>https://www.leakdetectionnv.com/blog/how-to-get-lvvwd-leak-credit-water-bill/</loc>
     <lastmod>2026-10-19</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.7</priority>
   </url>
 
   <!-- Legal & Compliance -->
@@ -229,7 +201,7 @@
   </url>
   <url>
     <loc>https://www.leakdetectionnv.com/sitemap/</loc>
-    <lastmod>2026-10-29</lastmod>
+    <lastmod>2026-11-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>

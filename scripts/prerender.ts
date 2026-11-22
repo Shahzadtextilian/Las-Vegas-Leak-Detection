@@ -195,6 +195,15 @@ const redirectAliases: { from: string; to: string }[] = [
   { from: 'slab-leak', to: '/slab-leak-detection/' },
   { from: 'pool-leak', to: '/pool-leak-detection/' },
   { from: 'privacy', to: '/privacy-policy/' },
+  { from: 'las-vegas', to: '/carson-city/' },
+  { from: 'henderson', to: '/carson-city/' },
+  { from: 'north-las-vegas', to: '/carson-city/' },
+  { from: 'reno', to: '/carson-city/' },
+  { from: 'sparks', to: '/carson-city/' },
+  { from: 'pahrump', to: '/carson-city/' },
+  { from: 'mesquite', to: '/carson-city/' },
+  { from: 'boulder-city', to: '/carson-city/' },
+  { from: 'elko-rural-nevada', to: '/carson-city/' },
 ];
 
 for (const alias of redirectAliases) {
@@ -241,13 +250,13 @@ const notFoundBody = `
       <div style="font-size: 3rem; font-weight: 900; color: #F59E0B; margin-bottom: 0.5rem;">404</div>
       <h1 style="font-size: 1.5rem; font-weight: 700; margin-bottom: 0.75rem;">Page Not Found</h1>
       <p style="color: #94A3B8; font-size: 0.95rem; line-height: 1.5; margin-bottom: 1.75rem;">
-        The requested resource could not be found. If you have an active water leak, natural gas odor, slab leak, or pool leak anywhere in Nevada, contact our 24/7 emergency dispatch desk immediately.
+        The requested resource could not be found. If you have an active water leak, natural gas odor, slab leak, or pool leak in Carson City, Nevada, contact our 24/7 emergency dispatch desk immediately.
       </p>
       <a href="${PHONE_HREF}" style="display: block; background: #1E70B8; color: #fff; font-weight: bold; text-decoration: none; padding: 0.875rem 1.5rem; border-radius: 0.75rem; margin-bottom: 1rem; font-size: 1.1rem;">
         Emergency Call: ${PHONE_NUMBER}
       </a>
       <a href="/" style="display: inline-block; color: #38BDF8; font-size: 0.9rem; text-decoration: underline;">
-        Return to Nevada Home
+        Return to Carson City Home
       </a>
       <div style="margin-top: 1.5rem; padding-top: 1.25rem; border-top: 1px solid rgba(255,255,255,0.1); font-size: 0.8rem; color: #CBD5E1;">
         Headquarters: ${BUSINESS_ADDRESS.streetAddress}, ${BUSINESS_ADDRESS.addressLocality}, NV ${BUSINESS_ADDRESS.postalCode}

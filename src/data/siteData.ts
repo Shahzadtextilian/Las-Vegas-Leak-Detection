@@ -1,7 +1,7 @@
 /**
  * Site content and SEO architecture data for Leak Detection NV.
- * Specializing in Water, Gas, Slab, and Swimming Pool Leak Detection & Repair.
- * Statewide Nevada coverage across Southern, Northern & Rural Nevada cities.
+ * Specializing in Water, Gas, Slab, Well-Line & Swimming Pool Leak Detection & Repair.
+ * Target City: Carson City, Nevada (ZIP codes 89701, 89702, 89703, 89705, 89706).
  */
 
 export interface FAQItem {
@@ -54,175 +54,169 @@ export const BUSINESS_ADDRESS = {
   addressLocality: "Las Vegas",
   addressRegion: "NV",
   postalCode: "89103",
-  targetArea: "Nevada Statewide",
+  targetArea: "Carson City, NV",
   telephone: "+1-725-313-0108",
 };
 
 export const sitePages: Record<string, PageContent> = {
-  // 1. HOMEPAGE: NEVADA STATEWIDE AUTHORITY HUB
+  // 1. HOMEPAGE: CARSON CITY, NEVADA AUTHORITY HUB
   home: {
     slug: "",
     urlPath: "/",
     type: "home",
-    name: "Leak Detection NV — Statewide Water, Gas, Slab & Pool Specialists",
+    name: "Carson City Leak Detection — Water, Gas, Slab & Pool Specialists",
     navTitle: "Home",
-    metaTitle: "Leak Detection Across Nevada | All NV Cities (725) 313-0108",
-    metaDescription: "Hidden water, slab, pool or gas leak anywhere in Nevada? Connect 24/7 with NSCB-licensed pros in Las Vegas, Henderson, Reno, Sparks & Carson City. Call (725) 313-0108.",
-    primaryKeyword: "leak detection Nevada",
+    metaTitle: "Leak Detection in Carson City, NV | Water, Slab & Gas (725) 313-0108",
+    metaDescription: "Hidden water, slab, pool or gas leak in Carson City, NV? Connect 24/7 with NSCB-licensed specialists serving 89701, 89703 & 89706. Call (725) 313-0108.",
+    primaryKeyword: "leak detection Carson City NV",
     secondaryKeywords: [
-      "water leak detection Las Vegas NV",
-      "leak detection Reno Sparks NV",
-      "slab leak repair Henderson NV",
-      "gas leak detection Carson City Nevada",
-      "pool leak detection North Las Vegas",
-      "leak detection Spring Valley NV"
+      "water leak detection Carson City Nevada",
+      "slab leak repair Carson City NV",
+      "gas leak detection Carson City",
+      "pool leak detection Carson City",
+      "underground well leak detection 89701 89703 89706"
     ],
     semanticEntities: [
+      "Carson City Public Works Water Utility",
       "Nevada State Contractors Board (NSCB)",
-      "Las Vegas Valley Water District (LVVWD)",
-      "Truckee Meadows Water Authority (TMWA)",
-      "Southwest Gas & NV Energy safety protocols",
-      "Southern Nevada caliche soil & Northern Nevada freeze-thaw",
+      "Southwest Gas Carson City safety protocols",
+      "Eagle Valley freeze-thaw & crawlspace plumbing",
+      "Post-tension concrete slab acoustic diagnostics",
       "Hydrophone underwater acoustic sensors",
       "Combustible gas electronic sniffing"
     ],
-    h1: "Precision Water, Gas, Slab & Pool Leak Detection Across All Nevada Cities",
-    heroKicker: "Nevada Statewide 24/7 Dispatch • Southern, Northern & Rural Cities",
-    heroSubheadline: "Hidden water leaks, hazardous gas odors, sub-slab ruptures, and vanishing pool water threaten Nevada properties from Las Vegas, Henderson, and Spring Valley to Reno, Sparks, and Carson City. Connect 24/7 with NSCB-licensed specialists near you.",
-    directAnswer: "Leak Detection NV provides 24/7 non-invasive electronic water, natural gas, concrete slab, and swimming pool leak detection across every major city in Nevada—including Las Vegas, Henderson, North Las Vegas, Spring Valley, Summerlin, Reno, Sparks, Carson City, Pahrump, Mesquite, Boulder City, and Elko. Coordinated from our Las Vegas hub at 6875 Groveview Ln (89103), our Nevada State Contractors Board (NSCB) licensed contractor network dispatches technicians equipped with ultrasonic acoustic locators, FLIR thermal imaging, pool hydrophones, and digital gas sniffers to isolate leaks within inches. Call (725) 313-0108 for 24/7 dispatch.",
+    h1: "Precision Water, Gas, Slab & Pool Leak Detection in Carson City, NV",
+    heroKicker: "Serving Carson City, Nevada • Downtown, Westside, Silver Oak, Clearview & Empire Ranch",
+    heroSubheadline: "Hidden crawlspace leaks, winter freeze-thaw pipe bursts, sub-slab ruptures, hazardous gas odors, and leaking yard mains threaten properties across Carson City. Connect 24/7 with NSCB-licensed specialists serving 89701, 89702, 89703, 89705 & 89706.",
+    directAnswer: "Leak Detection NV coordinates 24/7 non-invasive electronic water, natural gas, concrete slab, private well-line, and swimming pool leak detection in Carson City, Nevada. Whether you live near Downtown & Capitol District (89701), Westside & Kings Canyon (89703), North Carson & Silver Oak (89706), Clearview (89705), or Empire Ranch, our Nevada State Contractors Board (NSCB) licensed contractor network dispatches technicians with ultrasonic acoustic locators, FLIR thermal imaging, tracer gas, and digital gas sniffers to isolate leaks within inches. Call (725) 313-0108.",
     featuredImage: "/images/hero_emergency_plumbing_1791566119640.webp",
-    imageAlt: "Nevada statewide emergency leak detection and plumbing diagnostic service",
-    imageCaption: "Non-invasive electronic acoustic, thermal, and hydrophone diagnostics dispatched across Nevada cities 24/7.",
+    imageAlt: "Emergency leak detection and plumbing diagnostic service in Carson City Nevada",
+    imageCaption: "Non-invasive electronic acoustic, FLIR thermal, and tracer gas diagnostics dispatched in Carson City, NV 24/7.",
     sections: [
       {
-        heading: "Four Specialized Leak Detection Capabilities Across Nevada",
-        subheading: "Comprehensive protection for residential, commercial, and HOA properties statewide",
+        heading: "Four Specialized Leak Detection Capabilities in Carson City, NV",
+        subheading: "Non-destructive diagnostics for historic homes, modern slabs, and commercial properties",
         paragraphs: [
-          "From extreme Mojave Desert heat in Clark County to sub-freezing Sierra Nevada winters in Washoe, Carson, and Elko counties, Nevada plumbing systems endure intense thermal stress. Our statewide dispatch network connects property owners with specialists across four critical disciplines: potable water systems, hazardous natural gas and propane lines, concrete slab foundations, and backyard swimming pools.",
-          "Rather than tearing up driveways, jackhammering random tile floors, or draining pools prematurely, dispatched Nevada technicians deploy amplified acoustic ground microphones, FLIR thermal imaging cameras, combustible gas PPM sniffers, and underwater hydrophones to locate the exact leak point without exploratory demolition."
+          "Sitting at nearly 4,700 feet in Eagle Valley at the foot of the Sierra Nevada Carson Range, Carson City homes face severe seasonal temperature swings—from hot, dry summer days above 95°F to sub-freezing winter nights well below 15°F. That cycle places heavy expansion and contraction stress on copper, galvanized, and PEX plumbing lines.",
+          "Rather than tearing open historic plaster walls in Downtown Carson City or jackhammering finished concrete slabs in Silver Oak or Lompa Ranch, dispatched specialists deploy amplified acoustic ground microphones, FLIR infrared thermal cameras, combustible gas PPM sniffers, and underwater hydrophones to pinpoint the exact rupture cleanly."
         ],
         bulletPoints: [
-          "Water Leak Detection: Pinpointing concealed supply lines, high-pressure yard main breaks, freeze-burst pipes, and hidden wall cavity leaks",
-          "Gas Leak Detection: Rapid identification of natural gas and propane line leaks, meter lock clearances, and code-compliant black iron or CSST re-piping",
-          "Slab Leak Detection: Non-invasive sub-foundation acoustic diagnostics, isolating copper and PEX ruptures beneath post-tension concrete slabs",
-          "Pool & Spa Leak Detection: Electronic listening and precision dye testing for pool skimmers, returns, light conduits, and underground suction lines"
+          "Water Leak Detection: Locating concealed wall, crawlspace freeze-burst, and high-pressure yard main breaks",
+          "Gas Leak Detection: Rapid identification of natural gas and propane line leaks, Southwest Gas meter clearances, and code-compliant repairs",
+          "Slab Leak Detection: Non-invasive sub-foundation acoustic diagnostics isolating copper and PEX ruptures under concrete slabs",
+          "Pool & Spa Leak Detection: Electronic hydrophone listening and precision dye testing for pool skimmers, returns, and underground pipes"
         ]
       },
       {
-        heading: "Full Nevada City & Regional Coverage: Southern, Northern & Rural NV",
-        subheading: "Dedicated regional dispatch spanning every major Nevada municipality",
+        heading: "Carson City Neighborhood Coverage: 89701, 89702, 89703, 89705 & 89706",
+        subheading: "Fast 24/7 dispatch across every Carson City district",
         paragraphs: [
-          "Headquartered in Clark County at 6875 Groveview Ln, Las Vegas, NV 89103, Leak Detection NV coordinates licensed regional contractors across the entire Silver State—from dense metropolitan corridors in Southern Nevada to high-elevation valleys along the Sierra front and I-80 rural communities.",
-          "Whether you need rapid 30–60 minute emergency response in Las Vegas, Spring Valley, Henderson, or North Las Vegas, or same-day diagnostic dispatch in Reno, Sparks, Carson City, Tahoe, Pahrump, Mesquite, Boulder City, or Elko, one call routes you directly to vetted regional pros."
+          "Every district of Nevada's State Capital presents distinct plumbing infrastructure—from century-old raised crawlspaces around the Capitol and Westside Historic District to newer slab-on-grade homes along Lompa Lane, Silver Oak, and Empire Ranch, plus rural domestic well lines in Lakeview and Pinion Hills.",
+          "Call (725) 313-0108 any hour of the day or night to connect directly with licensed local technicians equipped for Carson City's exact housing stock and geology."
         ],
         bulletPoints: [
-          "Clark County & Southern NV: Las Vegas, Henderson, North Las Vegas, Spring Valley, Paradise, Enterprise, Summerlin South, Whitney, Sunrise Manor, Boulder City, Mesquite & Laughlin",
-          "Washoe County & Lake Tahoe: Reno, Sparks, Spanish Springs, Sun Valley, Verdi, Incline Village & Crystal Bay",
-          "Capital, Western & Nye Corridor: Carson City, Minden, Gardnerville, Dayton, Fernley, Fallon & Pahrump",
-          "Northern & Eastern Rural Nevada: Elko, Spring Creek, Winnemucca, Lovelock, Ely & Tonopah"
+          "Downtown & Capitol District (89701): Historic crawlspaces, vintage galvanized/copper lines & commercial corridors along Carson St",
+          "Westside, Kings Canyon & Lakeview (89703): Foothill booster zones, freeze-exposed supply runs & mountain-edge well mains",
+          "North Carson, Lompa & Silver Oak (89706): Post-tension concrete slabs, Northridge subdivisions & backyard swimming pools",
+          "South Carson, Clearview & Stewart (89701 / 89705): Carson River floodplain high water table & S Carson St service mains",
+          "East Carson, Empire Ranch & Pinion Hills: High-desert clay/granite strata, long acreage well runs & buried propane feeds"
         ]
       },
       {
-        heading: "Nevada Climate Hazards: Caliche Heat vs. Northern Freeze-Thaw",
-        subheading: "Why properties across Nevada experience severe underground pipe failures",
+        heading: "Why Carson City Homes Develop Hidden Plumbing & Slab Leaks",
+        subheading: "Freeze-thaw bursts, Sierra fault movement, and aging pipe materials",
         paragraphs: [
-          "Southern Nevada cities like Las Vegas, Henderson, Spring Valley, and Mesquite sit atop rock-hard calcium carbonate caliche layers paired with 110°F+ summer heat and high municipal water pressure. Copper pipes embedded under concrete slabs rub against abrasive caliche during thermal expansion until pinhole leaks form.",
-          "Across Northern and Central Nevada—including Reno, Sparks, Carson City, Incline Village, Fernley, and Elko—winter overnight freezes below 10°F, seismic valley shifting, and aging galvanized or copper supply lines cause exterior hose bibs, crawlspace manifolds, and buried service mains to split without immediate surface flooding."
+          "In Westside, Kings Canyon, and downtown Carson City, overnight winter freezes often split copper or CPVC lines inside unheated crawlspaces, garages, and exterior walls—staying frozen until daytime temperatures rise and water begins leaking invisibly beneath subfloors.",
+          "Across Eagle Valley and the Carson River corridor, alluvial clay shifting, high water tables, and granitic gravel wear underground water mains and slab penetrations until low-flow meter dials spin continuously or warm spots appear on tile floors."
         ],
         callout: {
-          title: "Statewide Emergency Gas Leak Protocol",
-          body: "If you smell rotten eggs (mercaptan) or hear hissing near a gas meter, furnace, or propane tank anywhere in Nevada, evacuate all occupants immediately on foot. Do not flip switches or use phones indoors. From outside, call 911 or your local gas utility (Southwest Gas or NV Energy), then call (725) 313-0108 for certified pressure testing and repair."
+          title: "Carson City Emergency Gas Leak Protocol",
+          body: "If you smell rotten eggs (mercaptan) or hear hissing near a gas meter, furnace, water heater, or propane tank in Carson City, evacuate all occupants immediately on foot. Do not flip light switches or use phones indoors. From outside, call 911 or Southwest Gas, then call (725) 313-0108 for certified pressure testing and repair."
         }
       },
       {
         heading: "Advanced Non-Invasive Diagnostic Technology & Equipment",
-        subheading: "Pinpoint accuracy that protects your slab, walls, and landscaping",
+        subheading: "Pinpoint accuracy that protects your crawlspace, slab, and yard",
         paragraphs: [
-          "Every dispatched team in our Nevada network utilizes calibrated, non-invasive electronic diagnostic instruments to verify exact leak coordinates before opening a single wall or section of concrete.",
-          "By combining ultrasonic ground listening discs, high-resolution FLIR thermal cameras, inert tracer gas sniffing, and submersible pool hydrophones, contractors isolate leaks accurately while cutting restoration costs dramatically."
+          "Every dispatched team serving Carson City uses calibrated, non-invasive electronic diagnostic instruments to verify exact leak coordinates before opening a wall, subfloor, or patch of concrete.",
+          "Combining ultrasonic ground listening discs, high-resolution FLIR thermal cameras, inert tracer gas sniffing, and submersible hydrophones limits repair footprints and slashes restoration expense."
         ],
         bulletPoints: [
-          "Ultrasonic acoustic sensors to hear pressurized water escaping beneath concrete slabs and asphalt",
-          "FLIR thermal infrared cameras revealing concealed moisture trails behind walls and subfloors",
-          "Digital PPM combustible gas wands for natural gas and rural propane distribution lines",
+          "Ultrasonic acoustic sensors to hear pressurized water escaping beneath slabs, asphalt, and crawlspaces",
+          "FLIR thermal infrared cameras revealing concealed moisture trails and hot-water slab lines",
+          "Digital PPM combustible gas wands for natural gas and Pinion Hills / perimeter propane lines",
           "Underwater hydrophone listening and precision dye testing for residential and HOA pools"
         ]
       },
       {
-        heading: "Nevada Water Utility Credits & Homeowners Insurance Support",
-        subheading: "Documentation formatted for LVVWD, TMWA, Henderson Utilities & NV insurers",
+        heading: "Carson City Water Utility Leak Reports & Insurance Support",
+        subheading: "Itemized documentation for Carson City Public Works & homeowners insurers",
         paragraphs: [
-          "A hidden yard main or slab break can trigger massive tiered surcharges from Nevada water agencies—including the Las Vegas Valley Water District (LVVWD), City of Henderson Utilities, North Las Vegas Utilities, Truckee Meadows Water Authority (TMWA) in Reno/Sparks, Carson City Public Works, and Virgin Valley Water District.",
-          "Upon completing diagnostics and repairs, dispatched contractors provide detailed, timestamped written reports and repair invoices designed to support municipal leak credit adjustments as well as Nevada homeowners insurance access-and-egress claims."
+          "A concealed yard main break, leaking crawlspace pipe, or running toilet/well fault can quickly inflate your monthly bill from Carson City Public Works (Water Utility Division).",
+          "Once diagnostics and repairs are finished, dispatched contractors supply detailed written inspection findings, static pressure verification results, and itemized repair invoices designed for municipal utility leak adjustment inquiries and homeowners insurance claims."
         ]
       },
       {
-        heading: "Licensed Nevada Contractors Under Strict NSCB C-1 Standards",
-        subheading: "Transparent upfront pricing and verified trade compliance statewide",
+        heading: "Licensed Contractors Under Strict Nevada NSCB C-1 Standards",
+        subheading: "Upfront itemized estimates and verified code compliance in Carson City",
         paragraphs: [
-          "Plumbing, gas piping, and pressurized fire or potable line repairs across Nevada are regulated by the Nevada State Contractors Board (NSCB). Working with unvetted general handymen risks code violations, denied utility unlocks, and invalid insurance paperwork.",
-          "Our statewide matching desk connects you strictly with independent plumbing and leak detection contractors maintaining active NSCB licensing, liability coverage, and calibrated non-destructive leak testing instrumentation."
+          "Plumbing, gas piping, and pressurized water line repairs in Carson City are regulated by the Nevada State Contractors Board (NSCB) and the Carson City Building Division. Hiring unlicensed handymen risks failed pressure inspections, denied utility gas unlocks, and rejected insurance documentation.",
+          "Our dispatch desk connects Carson City property owners strictly with independent contractors maintaining active NSCB licensing, general liability insurance, and calibrated non-destructive leak locating instrumentation."
         ],
         bulletPoints: [
           "Clear written diagnostic and repair estimates prior to invasive work",
-          "Static pressure decay testing to confirm complete system integrity post-repair",
-          "Direct spot repairs, trenchless yard pulls, or overhead PEX repipe solutions",
-          "24/7/365 phone triage at (725) 313-0108 for urgent residential and commercial calls"
+          "Static pressure decay testing confirming complete repair integrity",
+          "Direct spot repairs, trenchless yard pulls, or overhead PEX repipe options",
+          "24/7/365 emergency phone triage at (725) 313-0108"
         ]
       }
     ],
     faqs: [
       {
-        question: "Which cities in Nevada do you cover for leak detection?",
-        answer: "Leak Detection NV coordinates licensed leak detection specialists across all major Nevada cities—including Las Vegas, Henderson, North Las Vegas, Spring Valley, Summerlin, Boulder City, Mesquite, Laughlin, Pahrump, Reno, Sparks, Carson City, Incline Village, Fernley, Fallon, Winnemucca, and Elko. Call (725) 313-0108 for 24/7 dispatch."
+        question: "Which neighborhoods in Carson City, NV do you serve?",
+        answer: "Leak Detection NV coordinates 24/7 licensed leak detection specialists across every Carson City, Nevada district—including Downtown & Capitol District (89701), Westside Historic District & Kings Canyon (89703), Lakeview, North Carson & Silver Oak (89706), South Carson, Clearview & Stewart (89705), and Empire Ranch / Pinion Hills. Call (725) 313-0108."
       },
       {
-        question: "Who should I call for verified leak detection in Nevada?",
-        answer: "Leak Detection NV connects homeowners and property managers with specialists adhering to Nevada State Contractors Board (NSCB) C-1 plumbing and contractor licensing standards. Coordinated 24/7 from our Las Vegas hub at 6875 Groveview Ln, dispatched technicians use ultrasonic acoustic ground geophones, FLIR infrared thermal cameras, pool hydrophones, and calibrated PPM combustible gas sniffers. Call (725) 313-0108."
+        question: "Who should I call for verified leak detection in Carson City, Nevada?",
+        answer: "Leak Detection NV connects Carson City homeowners and commercial property owners with independent specialists adhering to Nevada State Contractors Board (NSCB) C-1 plumbing and contractor licensing standards. Dispatched technicians use ultrasonic acoustic ground geophones, FLIR infrared thermal cameras, tracer gas sniffers, and calibrated PPM combustible gas detectors. Call (725) 313-0108."
       },
       {
-        question: "How fast can an emergency leak technician arrive?",
-        answer: "Across the Las Vegas Valley (Las Vegas, Spring Valley, Henderson, North Las Vegas) and major Reno/Sparks metro corridors, mobile emergency arrival averages 30 to 60 minutes. Same-day and priority dispatch is available across Carson City, Pahrump, Mesquite, Boulder City, and surrounding Nevada communities 24 hours a day."
+        question: "Do you locate winter freeze-burst pipe leaks inside Carson City crawlspaces and walls?",
+        answer: "Yes. Freezing Sierra nights frequently cause pinhole splits inside exterior walls, crawlspaces, and unheated garages. Dispatched technicians use FLIR thermal imaging and acoustic sensors to pinpoint hidden freeze breaks without tearing out entire walls."
       },
       {
-        question: "How do you detect a hidden water leak without breaking floors or walls?",
-        answer: "Dispatched specialists use electronic acoustic listening devices that amplify pressurized water escaping pipes beneath concrete or behind drywall, paired with FLIR thermal imaging and safe tracer gas to mark the exact rupture point before any repair begins."
+        question: "Can you find a leak on a private domestic well line in Lakeview or Pinion Hills?",
+        answer: "Yes. By isolating pressure at the wellhead tank and pressurizing the buried line with inert nitrogen-hydrogen tracer gas paired with acoustic listening, technicians trace long underground well runs directly to the break."
       },
       {
-        question: "How much does leak detection cost in Nevada?",
-        answer: "Non-invasive electronic leak detection across Nevada generally ranges from $195 to $395 depending on property size and system complexity (interior supply line vs. concrete slab manifold or pool hydrophone inspection). Dispatched contractors provide upfront pricing before work starts and supply documentation suitable for insurance and municipal utility credits."
+        question: "How much does leak detection cost in Carson City, NV?",
+        answer: "Non-invasive electronic leak detection in Carson City typically ranges from $195 to $395 depending on property size and system complexity (interior crawlspace/wall line vs. concrete slab manifold or swimming pool hydrophone testing). Dispatched contractors provide upfront pricing before testing or repair work begins."
       },
       {
-        question: "Do Northern Nevada homes have different leak risks than Southern Nevada?",
-        answer: "Yes. Southern Nevada properties (Las Vegas, Henderson, Spring Valley, Mesquite) most often suffer copper slab abrasion from caliche soil, extreme heat, and high municipal PSI, while Northern Nevada cities (Reno, Sparks, Carson City, Tahoe, Elko) face winter freeze-thaw pipe bursts, crawlspace manifold splits, and seismic ground movement."
+        question: "Can your repair report help with a high Carson City Public Works water bill?",
+        answer: "Yes. After isolating and repairing a concealed leak, your dispatched contractor supplies an itemized written invoice and pressure-test record you can submit to Carson City Public Works Water Utility for leak adjustment review."
       },
       {
-        question: "How do I qualify for a water bill leak credit with LVVWD or TMWA?",
-        answer: "After locating and fixing a concealed leak, submit your licensed contractor's itemized diagnostic invoice and proof of repair to your utility—such as the Las Vegas Valley Water District (LVVWD), City of Henderson, or Truckee Meadows Water Authority (TMWA). Utilities evaluate documented hidden leaks for excess consumption credits."
+        question: "Does homeowners insurance cover slab or crawlspace leak detection in Carson City?",
+        answer: "Many Nevada homeowners policies cover the tear-out access cost and resultant water damage restoration from sudden pipe bursts, while pipe replacement coverage varies by policy. Dispatched technicians supply detailed documentation for your adjuster."
       },
       {
-        question: "Does homeowners insurance cover slab leak detection and repair in Nevada?",
-        answer: "Many Nevada homeowners policies cover the cost of locating a sudden slab leak, opening access through flooring/concrete, and restoring resultant water damage, while actual pipe replacement may vary by policy. Dispatched contractors provide detailed diagnostic documentation for your adjuster."
-      },
-      {
-        question: "What should I do if I smell natural gas or propane in my home?",
-        answer: "Immediately evacuate all people and pets outdoors to fresh air. Do not operate light switches, phones, or garage doors inside. Call 911 and your utility (Southwest Gas or NV Energy) from outside, then call (725) 313-0108 for certified pressure testing and gas line repair."
+        question: "What should I do if I smell natural gas or propane in my Carson City home?",
+        answer: "Immediately evacuate all people and pets outdoors to fresh air. Do not operate light switches, phones, or garage doors indoors. Call 911 and Southwest Gas from outside, then call (725) 313-0108 for certified manometer testing and gas line repair."
       }
     ],
     relatedServices: [
-      { title: "Water Leak Detection & Repair", slug: "water-leak-detection", description: "Pinpoint hidden supply lines and indoor leaks across Nevada." },
+      { title: "Water Leak Detection & Repair", slug: "water-leak-detection", description: "Pinpoint hidden supply lines and freeze splits in Carson City." },
       { title: "Gas Leak Detection & Emergency Repair", slug: "gas-leak-detection", description: "Electronic sniffing and code-compliant gas pipe repairs." },
-      { title: "Precision Slab Leak Detection", slug: "slab-leak-detection", description: "Sub-foundation acoustic and thermal testing statewide." },
+      { title: "Precision Slab Leak Detection", slug: "slab-leak-detection", description: "Sub-foundation acoustic and thermal testing." },
       { title: "Swimming Pool Leak Detection", slug: "pool-leak-detection", description: "Hydrophone and dye testing for pools and spas." }
     ],
     relatedLocations: [
-      { name: "Las Vegas Metro", slug: "las-vegas", context: "Full Las Vegas Valley 24/7 dispatch." },
-      { name: "Henderson & Green Valley", slug: "henderson", context: "Southern Clark County residential & pool leaks." },
-      { name: "North Las Vegas", slug: "north-las-vegas", context: "Aliante, Eldorado & commercial water mains." },
-      { name: "Reno & Lake Tahoe", slug: "reno", context: "Northern Nevada freeze-thaw & TMWA leak diagnostics." },
-      { name: "Sparks & Spanish Springs", slug: "sparks", context: "Washoe Valley slab, yard & crawlspace leaks." },
-      { name: "Carson City & Minden", slug: "carson-city", context: "Capital corridor & Carson Valley diagnostics." },
-      { name: "Spring Valley Core", slug: "spring-valley-center", context: "Central 6875 Groveview Ln dispatch hub." }
+      { name: "Downtown & Capitol (89701)", slug: "carson-city", context: "Historic homes, crawlspaces & Capitol corridor." },
+      { name: "Westside & Kings Canyon (89703)", slug: "west-carson-lakeview", context: "Foothill freeze-thaw & booster zones." },
+      { name: "North Carson & Silver Oak (89706)", slug: "north-carson-silver-oak", context: "Slab foundations & Northridge homes." },
+      { name: "South Carson & Clearview (89705)", slug: "south-carson-clearview", context: "Carson River corridor & commercial mains." },
+      { name: "Empire Ranch & Pinion Hills", slug: "east-carson-empire-ranch", context: "Private wells, acreage mains & propane lines." }
     ],
     schemaType: "LocalBusiness",
     showMap: true
@@ -235,85 +229,84 @@ export const sitePages: Record<string, PageContent> = {
     type: "service",
     name: "Water Leak Detection & Repair",
     navTitle: "Water Leaks",
-    metaTitle: "Water & Slab Leak Detection Across Nevada | No Digging (725) 313-0108",
-    metaDescription: "High water bill or wet spots anywhere in Nevada? Acoustic and thermal imaging pinpoints hidden pipe leaks from Las Vegas to Reno without tearing up floors. Call (725) 313-0108.",
-    primaryKeyword: "water leak detection Nevada",
+    metaTitle: "Water Leak Detection Carson City, NV | No Digging (725) 313-0108",
+    metaDescription: "High water bill or wet spots in Carson City, NV? Acoustic and thermal imaging pinpoints wall, crawlspace & slab pipe leaks without tearing up floors. Call (725) 313-0108.",
+    primaryKeyword: "water leak detection Carson City NV",
     secondaryKeywords: [
-      "hidden water leak repair Las Vegas NV",
-      "water pipe leak detection Reno Sparks",
-      "high water bill leak detection Henderson",
-      "main water line leak repair Nevada"
+      "hidden water leak repair Carson City Nevada",
+      "crawlspace leak detection Carson City",
+      "frozen pipe leak repair 89701 89703",
+      "high water bill leak detection Carson City"
     ],
     semanticEntities: [
-      "Las Vegas Valley Water District (LVVWD) & TMWA smart meter alerts",
+      "Carson City Public Works Water Utility",
       "Ultrasonic acoustic pipe listening",
       "FLIR infrared thermal moisture detection",
       "Potable water supply line pressure decay",
-      "Pinhole copper pipe corrosion & freeze-thaw splits"
+      "Crawlspace copper & PEX freeze-thaw splits"
     ],
-    h1: "Non-Invasive Water Leak Detection & Repair Across Nevada",
-    heroKicker: "All Nevada Cities • Stop Water Damage Without Exploratory Demolition",
-    heroSubheadline: "Pressurized potable water leaks inside walls, ceilings, crawlspaces, and yard lines trigger costly structural damage and utility spikes. Connect 24/7 with licensed leak specialists across Las Vegas, Henderson, Reno, Sparks, Carson City, and statewide.",
-    directAnswer: "Water leak detection employs ultrasonic listening devices, thermal imaging, and digital pressure-decay testing to pinpoint hidden leaks without unnecessary drywall cutting or excavation. Dispatched Nevada technicians locate the rupture across Southern and Northern NV cities and perform durable copper, PEX, or main line repairs.",
+    h1: "Non-Invasive Water Leak Detection & Repair in Carson City, NV",
+    heroKicker: "Serving Carson City, Nevada • Protect Walls, Crawlspaces & Slabs",
+    heroSubheadline: "Pressurized potable water leaks inside walls, raised crawlspaces, slabs, and yard lines trigger costly structural damage and utility spikes. Connect 24/7 with licensed Carson City leak specialists.",
+    directAnswer: "Water leak detection in Carson City uses ultrasonic listening devices, FLIR thermal imaging, and digital pressure-decay testing to pinpoint hidden leaks without unnecessary drywall cutting or floor demolition. Dispatched specialists locate the rupture anywhere in 89701–89706 and perform durable copper, PEX, or main line repairs.",
     featuredImage: "/images/hero_emergency_plumbing_1791566119640.webp",
-    imageAlt: "Service technician performing non-invasive water leak diagnostics in Nevada",
-    imageCaption: "Mobile leak detection units carry acoustic locators and digital line-pressurizing equipment across Nevada.",
+    imageAlt: "Service technician performing non-invasive water leak diagnostics in Carson City Nevada",
+    imageCaption: "Mobile leak detection units carry acoustic locators and digital line-pressurizing equipment across Carson City.",
     sections: [
       {
-        heading: "Detecting Hidden Potable Water Leaks in Spring Valley",
-        subheading: "Advanced non-destructive diagnostic methodology",
+        heading: "Detecting Hidden Potable Water Leaks in Carson City",
+        subheading: "Advanced non-destructive diagnostic methodology for crawlspaces and slabs",
         paragraphs: [
-          "A small pinhole leak measuring just 1/16th of an inch can waste over 25,000 gallons of water per month, leading to exorbitant penalties from the Las Vegas Valley Water District. Even worse, water escaping behind drywall creates mold blooms within 48 hours in warm Nevada climates.",
-          "Dispatched technicians never guess where water is coming from. By combining digital acoustic ground microphones that capture the high-frequency hiss of pressurized water with FLIR thermal imaging cameras that detect temperature changes caused by moisture, technicians pinpoint the rupture within inches."
+          "A pinhole leak measuring just 1/16th of an inch wastes over 25,000 gallons of water per month—driving up municipal water bills from Carson City Public Works and saturating wooden floor joists, subfloors, or drywall cavities.",
+          "Dispatched technicians never tear open walls blindly. By combining digital acoustic ground microphones that capture the high-frequency hiss of pressurized water with FLIR thermal imaging cameras that reveal hidden moisture trails, technicians pinpoint leaks within inches."
         ],
         bulletPoints: [
-          "Pinpoint leaks behind painted drywall, under cabinets, and within ceiling spaces",
-          "Pressure isolation testing to determine whether leaks originate indoors or in main yard lines",
-          "Digital inspection documentation for homeowner insurance property claims",
-          "Durable spot repairs using commercial-grade braze fittings or freeze-resilient PEX piping"
+          "Pinpoint leaks behind plaster or drywall, under cabinets, and inside crawlspaces",
+          "Pressure isolation testing separating indoor piping from exterior yard or well lines",
+          "Digital inspection documentation for homeowners insurance property claims",
+          "Durable repairs using commercial-grade copper fittings or freeze-resilient PEX piping"
         ]
       },
       {
-        heading: "Common Sources of Domestic Water Leaks",
-        subheading: "Where residential water supply lines fail most frequently",
+        heading: "Common Sources of Water Leaks in Carson City Homes",
+        subheading: "Aging galvanized lines, freeze-thaw splits, and high foothill pressure",
         paragraphs: [
-          "In Spring Valley homes constructed between 1980 and 2010, type-M copper piping is frequently installed. The mineral-heavy municipal water supply gradually erodes the inner walls of copper lines, particularly near soldered elbows and tee connections.",
-          "Additionally, high municipal water pressure exceeding 80 PSI can stress supply lines to toilets, washing machines, and reverse osmosis filtration systems. Dispatched plumbers evaluate system pressure and install Pressure Reducing Valves (PRVs) to safeguard your home against future ruptures."
+          "Older residences in Downtown Carson City and the Westside Historic District often retain aging galvanized steel or early Type M copper piping susceptible to internal mineral scaling and corrosion at threaded or soldered joints.",
+          "Meanwhile, steep elevation gradients along Kings Canyon, Lakeview, and foothill pressure zones can push static municipal water pressure above 80 PSI—stressing PRVs (Pressure Reducing Valves), water heaters, and winter-exposed hose bibs."
         ]
       },
       {
-        heading: "Local Spring Valley Water Utility Alignment",
-        subheading: "Resolving smart meter continuous flow notifications",
+        heading: "Carson City Public Works Water Meter Alignment",
+        subheading: "Resolving continuous meter spin and unexpected utility bill spikes",
         paragraphs: [
-          "The Las Vegas Valley Water District (LVVWD) utilizes smart automated water meters that alert homeowners to continuous water flow. If you receive an automated leak alert or high consumption warning, call our dispatch line immediately.",
-          "Dispatched technicians verify whether the leak is on the customer side of the meter and provide an official repair receipt suitable for submitting an LVVWD leak adjustment credit."
+          "If the low-flow dial on your Carson City water meter keeps spinning while every indoor faucet and appliance is turned off, water is escaping between the curb box and your home or underneath your foundation.",
+          "Dispatched technicians isolate whether the leak sits on your customer service main or indoors and issue an official repair invoice suitable for Carson City Public Works billing review."
         ]
       }
     ],
     faqs: [
       {
-        question: "How much does water leak detection cost in Spring Valley?",
-        answer: "Standard electronic water leak detection pricing depends on the size of the home and whether the leak is indoors or underground. Dispatched contractors provide transparent, upfront pricing before beginning testing."
+        question: "How much does water leak detection cost in Carson City, NV?",
+        answer: "Standard electronic water leak detection in Carson City depends on home size and whether the leak is inside walls/crawlspaces or underground. Dispatched contractors provide upfront pricing before beginning testing."
       },
       {
-        question: "Can an acoustic locator find a leak underneath tile flooring?",
-        answer: "Yes. Advanced acoustic sensors are designed to detect sound waves traveling through concrete, tile, and hardwood without damaging finished floor surfaces."
+        question: "Can an acoustic locator find a leak underneath hardwood or tile flooring?",
+        answer: "Yes. Amplified acoustic sensors detect sound waves traveling through concrete, tile, and subfloors without damaging finished flooring surfaces."
       },
       {
-        question: "How long does a typical water leak detection service take?",
-        answer: "Most residential water leak detection inspections are completed within 1.5 to 3 hours, including pressure testing and acoustic pinpointing."
+        question: "How long does a typical water leak inspection take in Carson City?",
+        answer: "Most residential water leak inspections take 1.5 to 3 hours, including pressure decay testing and exact target marking."
       }
     ],
     relatedServices: [
       { title: "Slab Leak Detection & Repair", slug: "slab-leak-detection", description: "Pinpoint leaks beneath concrete slabs." },
-      { title: "Swimming Pool Leak Detection", slug: "pool-leak-detection", description: "Detect leaks in outdoor pool plumbing." },
-      { title: "Underground Pipe Leak Detection", slug: "underground-leak-detection", description: "Locate buried main yard and irrigation lines." }
+      { title: "Underground Pipe Leak Detection", slug: "underground-leak-detection", description: "Locate buried main yard and well lines." },
+      { title: "24/7 Emergency Leak Repair", slug: "emergency-leak-repair", description: "Immediate shutoff and freeze-burst containment." }
     ],
     relatedLocations: [
-      { name: "Las Vegas Metro", slug: "las-vegas", context: "LVVWD continuous flow & copper leak repairs." },
-      { name: "Henderson & Green Valley", slug: "henderson", context: "High-pressure residential supply lines." },
-      { name: "Reno & Lake Tahoe", slug: "reno", context: "Freeze-thaw and crawlspace potable leaks." },
-      { name: "Sparks & Spanish Springs", slug: "sparks", context: "Washoe Valley main line diagnostics." }
+      { name: "Downtown & Capitol (89701)", slug: "carson-city", context: "Historic crawlspaces & older supply lines." },
+      { name: "Westside & Kings Canyon (89703)", slug: "west-carson-lakeview", context: "High-PSI booster & freeze-exposed lines." },
+      { name: "North Carson & Silver Oak (89706)", slug: "north-carson-silver-oak", context: "Residential supply & slab diagnostics." }
     ],
     schemaType: "Service"
   },
@@ -325,84 +318,83 @@ export const sitePages: Record<string, PageContent> = {
     type: "service",
     name: "Gas Leak Detection & Emergency Repair",
     navTitle: "Gas Leaks",
-    metaTitle: "Gas Leak Detection Across Nevada | 24/7 Emergency Help (725) 313-0108",
-    metaDescription: "Smell gas anywhere in Nevada? Leave the home and call 911 or Southwest Gas / NV Energy first. Then call (725) 313-0108 for licensed gas leak testing in Las Vegas, Reno & statewide.",
-    primaryKeyword: "gas leak detection Nevada",
+    metaTitle: "Gas Leak Detection Carson City, NV | 24/7 Emergency (725) 313-0108",
+    metaDescription: "Smell gas in Carson City, NV? Leave the home and call 911 or Southwest Gas first. Then call (725) 313-0108 for licensed gas leak testing in Carson City 89701–89706.",
+    primaryKeyword: "gas leak detection Carson City NV",
     secondaryKeywords: [
-      "gas leak repair Las Vegas NV",
-      "emergency gas line plumber Reno Sparks",
-      "natural gas leak detection Henderson Carson City",
-      "propane leak repair Nevada"
+      "gas leak repair Carson City Nevada",
+      "Southwest Gas meter lock test Carson City",
+      "natural gas plumber 89701 89706",
+      "propane leak repair Carson City NV"
     ],
     semanticEntities: [
-      "Southwest Gas & NV Energy meter lock clearances",
+      "Southwest Gas meter lock clearances",
       "Mercaptan odorant detection",
       "Combustible gas electronic sniffing wand",
       "Black iron & CSST gas pipe threading",
       "Manometer gas pressure decay testing"
     ],
-    h1: "24/7 Emergency Gas Leak Detection & Repair Across Nevada",
-    heroKicker: "Hazardous Gas Containment • Statewide 24/7 Dispatch",
-    heroSubheadline: "Natural gas and propane leaks pose severe fire and explosion risks. When you smell sulfur or need a locked gas meter re-certified anywhere in Nevada, connect 24/7 with NSCB-licensed gas piping specialists.",
-    directAnswer: "Gas leak detection uses parts-per-million (PPM) electronic combustible gas sniffers, ultrasonic sensors, and calibrated digital manometers to locate natural gas or propane leaks along supply lines, meters, and appliances. Dispatched Nevada technicians isolate the leak, execute code-compliant repairs, and certify pressure tests for utility unlock.",
+    h1: "24/7 Emergency Gas Leak Detection & Repair in Carson City, NV",
+    heroKicker: "Hazardous Gas Containment • 24/7 Carson City Dispatch",
+    heroSubheadline: "Natural gas and propane leaks pose severe fire and explosion hazards during winter heating season and year-round. Connect 24/7 with NSCB-licensed gas piping specialists serving Carson City, Nevada.",
+    directAnswer: "Gas leak detection in Carson City uses parts-per-million (PPM) electronic combustible gas sniffers, ultrasonic sensors, and calibrated digital manometers to locate natural gas or propane leaks along supply lines, meters, and heating appliances. Dispatched technicians isolate the leak, execute code-compliant repairs, and certify pressure tests for Southwest Gas unlock.",
     featuredImage: "/images/gas_leak_detection_1791567732913.webp",
     imageAlt: "Plumbing technician using electronic gas leak detector on natural gas supply line",
-    imageCaption: "Digital combustible gas sniffing wands locate leaks along gas valves, fittings, and appliance connections across Nevada.",
+    imageCaption: "Digital combustible gas sniffing wands locate leaks along gas valves, fittings, and furnace connections in Carson City.",
     sections: [
       {
-        heading: "Urgent Warning Signs of a Gas Leak",
+        heading: "Urgent Warning Signs of a Gas Leak in Carson City",
         subheading: "Recognizing physical, acoustic, and environmental danger indicators",
         paragraphs: [
-          "Utilities inject mercaptan—a sulfur-like rotten-egg odorant—into natural gas and propane so leaks are detectable by scent. However, slow leaks inside crawlspaces, exterior meter risers, or underground yard trenches can go unnoticed until gas accumulates.",
-          "If you smell gas, hear a hissing sound near a gas appliance, or notice dying vegetation along buried gas routes anywhere in Nevada, evacuate outside immediately, alert 911 or your gas utility, and call (725) 313-0108 for certified repair."
+          "Southwest Gas and propane suppliers inject mercaptan—a sulfur-like rotten-egg odorant—into fuel gas so leaks are detectable by smell. Slow leaks inside crawlspaces, exterior meter risers, or buried ranch propane runs can linger undetected until gas builds up.",
+          "If you smell gas, hear hissing near a furnace or water heater, or notice dead vegetation along a buried gas line in Carson City, evacuate outside immediately, alert 911 or Southwest Gas, and call (725) 313-0108 for certified repair."
         ],
         bulletPoints: [
-          "Rotten-egg or sulfur odor lingering near kitchens, garages, utility closets, or exterior meters",
-          "Hissing, roaring, or whistling sound near gas furnaces, water heaters, or supply valves",
+          "Rotten-egg or sulfur odor near kitchens, garages, crawlspaces, or exterior meters",
+          "Hissing, roaring, or whistling sound near gas furnaces, boilers, or supply valves",
           "Physical symptoms among occupants: dizziness, headaches, nausea, or eye irritation",
-          "Dead grass or blistering soil above buried natural gas or propane lines"
+          "Dead grass or soil bubbling above buried natural gas or propane trenches"
         ]
       },
       {
-        heading: "Southwest Gas & NV Energy Meter Shutoff Re-Certification",
-        subheading: "Restoring service quickly when your Nevada gas meter is locked or red-tagged",
+        heading: "Southwest Gas Meter Shutoff & Pressure Re-Certification",
+        subheading: "Restoring heating and hot water quickly when your meter is locked",
         paragraphs: [
-          "If Southwest Gas (Southern & Northern NV) or NV Energy responds to an odor call, utility technicians lock and red-tag the meter until a licensed contractor repairs the breach and completes a certified pressure test.",
-          "Dispatched NSCB C-1 contractors arrive with calibrated manometers to pressure-test the entire gas tree, replace corroded black iron, galvanized, or CSST piping, pull required municipal permits, and submit test signoffs for service restoration."
+          "When Southwest Gas responds to an odor complaint in Carson City, technicians lock and red-tag the gas meter until a licensed contractor locates the leak, completes code-compliant repairs, and passes an inspection.",
+          "Dispatched NSCB C-1 contractors arrive with calibrated manometers to pressure-test the gas distribution tree, replace leaking black iron, galvanized, or CSST lines, pull required Carson City permits, and clear the path for utility unlock."
         ]
       },
       {
-        heading: "Residential, Commercial & Rural Propane Gas Systems",
-        subheading: "Serving Las Vegas pool heaters, Reno furnaces, and rural Nevada propane tanks",
+        heading: "Natural Gas & Rural Propane Piping Systems",
+        subheading: "Serving winter home furnaces, commercial kitchens, and perimeter propane tanks",
         paragraphs: [
-          "Whether servicing high-BTU pool heaters and outdoor kitchens in Las Vegas and Henderson, winter forced-air furnaces in Reno, Sparks, and Carson City, or buried rural propane lines in Pahrump and Elko, dispatched technicians inspect every run to strict Nevada code standards."
+          "Whether servicing forced-air furnaces and hydronic boilers in Downtown and Westside Carson City or buried propane tanks in Empire Ranch and Pinion Hills, dispatched technicians pressure-verify every run to strict Nevada code standards."
         ]
       }
     ],
     faqs: [
       {
         question: "Can I use soapy water to check for a gas leak myself?",
-        answer: "While dish soap can show bubbles on an exposed fitting, concealed leaks inside walls, crawlspaces, or underground trenches require calibrated electronic combustible gas sniffers and manometer pressure-drop testing."
+        answer: "While soap solution can bubble on an accessible exposed union, hidden leaks inside crawlspaces, walls, or underground trenches require calibrated PPM combustible gas sniffers and manometer pressure-drop testing."
       },
       {
-        question: "How long does gas line repair take after a Nevada utility locks the meter?",
-        answer: "Most residential gas leak isolations, pipe repairs, and manometer pressure tests are completed the same day so your utility can unlock service promptly."
+        question: "How long does gas line repair take after Southwest Gas locks my Carson City meter?",
+        answer: "Most residential gas leak isolations, pipe repairs, and manometer pressure tests are completed the same day so Southwest Gas can unlock service promptly."
       },
       {
-        question: "Are contractors licensed to repair gas piping across Nevada?",
+        question: "Are technicians licensed to work on gas lines in Carson City?",
         answer: "Yes. All gas piping diagnostics and repairs are routed to independent contractors holding active Nevada State Contractors Board (NSCB) C-1 plumbing/heating credentials."
       }
     ],
     relatedServices: [
-      { title: "Water Leak Detection & Repair", slug: "water-leak-detection", description: "Potable supply and indoor water leak services." },
-      { title: "Swimming Pool Leak Detection", slug: "pool-leak-detection", description: "Outdoor pool heater and plumbing line testing." },
+      { title: "Water Leak Detection & Repair", slug: "water-leak-detection", description: "Potable supply and freeze-burst water leak services." },
+      { title: "Underground Pipe Leak Detection", slug: "underground-leak-detection", description: "Buried yard & well line testing." },
       { title: "24/7 Emergency Leak Repair", slug: "emergency-leak-repair", description: "Immediate dispatch for hazardous leaks." }
     ],
     relatedLocations: [
-      { name: "Las Vegas Metro", slug: "las-vegas", context: "Southwest Gas meter & appliance leak testing." },
-      { name: "Reno & Lake Tahoe", slug: "reno", context: "Winter heating & NV Energy gas line certifications." },
-      { name: "Henderson & Green Valley", slug: "henderson", context: "Pool heater & outdoor kitchen gas lines." },
-      { name: "Carson City & Minden", slug: "carson-city", context: "Residential & commercial gas line diagnostics." }
+      { name: "Downtown & Capitol (89701)", slug: "carson-city", context: "Southwest Gas meter & furnace leak testing." },
+      { name: "Empire Ranch & Pinion Hills", slug: "east-carson-empire-ranch", context: "Natural gas & buried propane line testing." },
+      { name: "South Carson & Clearview (89705)", slug: "south-carson-clearview", context: "Residential & commercial gas lines." }
     ],
     schemaType: "Service"
   },
@@ -414,92 +406,91 @@ export const sitePages: Record<string, PageContent> = {
     type: "service",
     name: "Precision Slab Leak Detection & Repair",
     navTitle: "Slab Leaks",
-    metaTitle: "Slab Leak Detection Across Nevada | Foundation Repair (725) 313-0108",
-    metaDescription: "Warm floor spot or high water bill in Nevada? Non-invasive acoustic & thermal slab leak detection across Las Vegas, Henderson, Reno & statewide. Call (725) 313-0108.",
-    primaryKeyword: "slab leak detection Nevada",
+    metaTitle: "Slab Leak Detection Carson City, NV | No Digging (725) 313-0108",
+    metaDescription: "Warm floor spot or high water bill in Carson City, NV? Non-invasive acoustic & thermal slab leak detection in North Carson, Silver Oak & 89701–89706. Call (725) 313-0108.",
+    primaryKeyword: "slab leak detection Carson City NV",
     secondaryKeywords: [
-      "slab leak repair Las Vegas NV",
-      "concrete slab water leak Henderson",
-      "foundation leak repair Reno Sparks",
-      "sub slab plumbing repair Nevada"
+      "slab leak repair Carson City Nevada",
+      "foundation water leak Silver Oak Carson City",
+      "sub slab plumbing repair 89706 89701",
+      "hot water slab leak Carson City"
     ],
     semanticEntities: [
       "Post-tension concrete slab foundation",
-      "Desert caliche sub-base abrasion & valley soil settling",
+      "Eagle Valley clay & granitic soil movement",
       "Electromagnetic pipe and cable locator",
       "Acoustic ground sensor listening disc",
       "Overhead PEX re-route bypass"
     ],
-    h1: "Non-Invasive Slab Leak Detection & Repair Across Nevada",
-    heroKicker: "Protect Your Concrete Foundation • Pinpoint Acoustic Sensors Statewide",
-    heroSubheadline: "Sub-slab copper and PEX pipe ruptures undermine concrete foundations and ruin expensive flooring. Connect with Nevada slab leak technicians who locate leaks within inches without destructive jackhammering.",
-    directAnswer: "A slab leak occurs when pressurized water lines beneath a home's concrete foundation rupture due to caliche rock abrasion, soil settling, freeze stress, or corrosion. Dispatched Nevada technicians use acoustic ground listening discs, line tracing transmitters, and thermal imaging to pinpoint sub-slab leaks before executing spot repairs or overhead PEX re-routes.",
+    h1: "Non-Invasive Slab Leak Detection & Repair in Carson City, NV",
+    heroKicker: "Protect Your Concrete Foundation • Pinpoint Acoustic Sensors",
+    heroSubheadline: "Sub-slab copper and PEX pipe ruptures beneath North Carson, Lompa, Clearview, and Silver Oak concrete foundations damage flooring and soils. Connect with technicians who locate leaks within inches.",
+    directAnswer: "A slab leak in Carson City occurs when pressurized water lines beneath a home's concrete foundation rupture due to Eagle Valley clay shifting, thermal contraction, abrasive rock contact, or corrosion. Dispatched specialists use acoustic ground listening discs, pipe locators, and FLIR thermal imaging to pinpoint the break before executing spot repairs or overhead PEX re-routes.",
     featuredImage: "/images/slab_leak_inspection_1791566136409.webp",
-    imageAlt: "Technician operating acoustic slab leak detector on residential flooring in Nevada",
-    imageCaption: "Non-invasive electronic acoustic sensors detect pressurized water leaks beneath concrete slabs across Nevada.",
+    imageAlt: "Technician operating acoustic slab leak detector on residential flooring in Carson City",
+    imageCaption: "Non-invasive electronic acoustic sensors detect pressurized water leaks beneath concrete slabs in Carson City.",
     sections: [
       {
-        heading: "Why Slab Leaks Occur in Nevada Homes",
-        subheading: "Caliche soil abrasion, high water pressure, and thermal foundation movement",
+        heading: "Why Slab Leaks Occur in Carson City Homes",
+        subheading: "Seasonal soil contraction, seismic stress, and pipe abrasion",
         paragraphs: [
-          "Across Las Vegas, Henderson, Spring Valley, North Las Vegas, Mesquite, Pahrump, and newer master-planned communities in Reno and Sparks, most homes rest on post-tension concrete slab foundations with pressurized lines routed below.",
-          "In Southern Nevada, sharp calcium carbonate caliche wears pinholes into expanding copper tubing, while in Northern Nevada valley clay expansion and seismic micro-shifts stress joints and slab penetrations."
+          "Modern neighborhoods across North Carson, Silver Oak, Lompa Ranch, Clearview, and Empire Ranch are commonly built on post-tension concrete slabs with hot and cold supply piping routed beneath the concrete pour.",
+          "As Eagle Valley clay swells with snowmelt or high water tables and shifts along Carson Range seismic micro-faults, pressurized copper pipes rub against buried rocks or flex at slab penetrations until pinholes form."
         ],
         bulletPoints: [
-          "Thermal expansion cycles causing sub-slab copper to rub against caliche rock",
-          "High municipal water pressure accelerating erosion at solder elbows and tees",
-          "Hard mineral groundwater causing electrochemical pinhole pitting",
-          "Seasonal soil contraction and settling beneath post-tension slabs"
+          "Thermal expansion and winter-to-summer contraction friction under concrete",
+          "Foothill municipal water pressure stressing soldered elbows and manifolds",
+          "Electrochemical corrosion in mineral-rich soils along the Carson River valley",
+          "Ground settling beneath post-tension slabs and garage aprons"
         ]
       },
       {
         heading: "Warning Signs of a Foundation Slab Leak",
         subheading: "Identify sub-slab water loss before structural cracking occurs",
         paragraphs: [
-          "Because water travels horizontally beneath concrete before surfacing, subtle warning signs appear first. Noticeable warm floor patches, running water sounds when all taps are shut, or a climbing water bill warrant immediate inspection.",
-          "Call (725) 313-0108 anywhere in Nevada for non-invasive acoustic isolation before opening floors."
+          "Because water spreads horizontally beneath concrete before wicking upward, subtle clues emerge first: localized warm spots on tile or LVP, continuous running water sounds at night, or sudden spikes on your Carson City water bill.",
+          "Call (725) 313-0108 for non-invasive acoustic isolation before breaking concrete or tearing up flooring."
         ],
         bulletPoints: [
-          "Isolated warm or hot spots on tile, hardwood, or LVP flooring",
-          "Sound of hissing or rushing water when all indoor fixtures are shut off",
-          "Water heater running continuously or drop in hot water pressure",
-          "Cracks appearing in drywall joints, baseboard trim, or tile grout",
-          "Unexplained spike on LVVWD, Henderson, or TMWA water utility bills"
+          "Isolated warm or hot patches underfoot on tile, laminate, or hardwood",
+          "Sound of hissing or rushing water when every faucet and appliance is shut off",
+          "Water heater running nonstop or noticeable drop in hot water pressure",
+          "Cracking grout, buckled hardwood planks, or musty odors along baseboards",
+          "Unexplained jump on your Carson City Public Works water bill"
         ]
       },
       {
         heading: "Repair Solutions: Direct Spot Repair vs. Overhead PEX Bypass",
-        subheading: "Choosing the right long-term fix for your Nevada property",
+        subheading: "Choosing the right long-term fix for your Carson City property",
         paragraphs: [
-          "Once acoustic sensors pinpoint the break, contractors review repair paths with you. A Direct Spot Repair opens a small localized tile/concrete patch to repair the damaged pipe segment.",
-          "For properties with aging Type M copper, an Overhead PEX Re-Route caps the abandoned sub-slab run and routes seamless freeze-resilient PEX through attic or wall cavities, eliminating future under-slab risk."
+          "Once acoustic sensors isolate the break within inches, contractors review clear options with you. A Direct Spot Repair opens a small localized patch above the pipe segment to braze or replace the damaged section.",
+          "If your home has aging Type M copper prone to repeat pinholes, an Overhead PEX Re-Route abandons the under-slab line and runs freeze-resilient insulated PEX through conditioned attic or interior wall chases."
         ]
       }
     ],
     faqs: [
       {
-        question: "Does homeowners insurance cover slab leak repair in Nevada?",
-        answer: "Most Nevada homeowners policies cover access tear-out and restoration of flooring and concrete required to reach the leak, plus resultant water damage, while the pipe fix itself varies by carrier. Dispatched technicians supply detailed diagnostic reports for adjusters."
+        question: "Does homeowners insurance cover slab leak repair in Carson City?",
+        answer: "Most Nevada homeowners policies cover access tear-out and restoration of flooring and concrete required to reach the leak, plus resultant water damage, while actual pipe repair varies by policy. Dispatched technicians provide detailed diagnostic reports for adjusters."
       },
       {
         question: "How accurate is electronic acoustic slab leak detection?",
-        answer: "Trained specialists using amplified ground geophones and FLIR thermal cameras isolate sub-slab leaks within a tight 6-to-12-inch target radius, avoiding unnecessary demolition."
+        answer: "Using amplified ground geophones and FLIR infrared cameras, specialists isolate sub-slab leaks within a tight 6-to-12-inch target radius—avoiding destructive guesswork trenching."
       },
       {
-        question: "Is an overhead PEX re-route better than breaking concrete?",
-        answer: "An overhead PEX re-route avoids jackhammering post-tension slabs and preserves costly tile or hardwood. It is strongly recommended if a home has experienced multiple copper pinholes."
+        question: "Is an overhead PEX re-route safer than breaking a post-tension slab?",
+        answer: "Yes. Post-tension slabs contain high-tension steel cables. An overhead insulated PEX re-route avoids cutting near tension cables and preserves finished flooring."
       }
     ],
     relatedServices: [
-      { title: "Water Leak Detection & Repair", slug: "water-leak-detection", description: "Detect hidden indoor and main line leaks." },
+      { title: "Water Leak Detection & Repair", slug: "water-leak-detection", description: "Detect hidden indoor and crawlspace leaks." },
       { title: "24/7 Emergency Leak Repair", slug: "emergency-leak-repair", description: "Immediate water shutoff and emergency response." },
-      { title: "Underground Pipe Leak Detection", slug: "underground-leak-detection", description: "Yard and exterior line leak detection." }
+      { title: "Underground Pipe Leak Detection", slug: "underground-leak-detection", description: "Yard and well line leak detection." }
     ],
     relatedLocations: [
-      { name: "Las Vegas Metro", slug: "las-vegas", context: "1980s–2010s copper post-tension slab homes." },
-      { name: "Henderson & Green Valley", slug: "henderson", context: "Master-planned concrete slab diagnostics." },
-      { name: "North Las Vegas", slug: "north-las-vegas", context: "High-PSI slab pinhole detection." },
-      { name: "Reno & Lake Tahoe", slug: "reno", context: "Thermal & ultrasonic slab locating." }
+      { name: "North Carson & Silver Oak (89706)", slug: "north-carson-silver-oak", context: "Post-tension concrete slab neighborhoods." },
+      { name: "South Carson & Clearview (89705)", slug: "south-carson-clearview", context: "Residential & commercial slab diagnostics." },
+      { name: "Empire Ranch & Pinion Hills", slug: "east-carson-empire-ranch", context: "East Carson slab & foundation leaks." }
     ],
     schemaType: "Service"
   },
@@ -511,86 +502,76 @@ export const sitePages: Record<string, PageContent> = {
     type: "service",
     name: "Swimming Pool Leak Detection & Repair",
     navTitle: "Pool Leaks",
-    metaTitle: "Pool Leak Detection Across Nevada | Swimming Pool Repair (725) 313-0108",
-    metaDescription: "Losing pool water anywhere in Nevada? Call (725) 313-0108 for hydrophone acoustic sensors & dye testing across Las Vegas, Henderson, Mesquite, Reno & statewide.",
-    primaryKeyword: "pool leak detection Nevada",
+    metaTitle: "Pool Leak Detection Carson City, NV | Dye & Hydrophone (725) 313-0108",
+    metaDescription: "Losing pool or spa water in Carson City, NV? Call (725) 313-0108 for hydrophone acoustic sensors, pressure testing & dye testing without draining your pool.",
+    primaryKeyword: "pool leak detection Carson City NV",
     secondaryKeywords: [
-      "swimming pool leak repair Las Vegas NV",
-      "pool pipe leak detection Henderson",
-      "pool skimmer leak repair Reno Sparks",
-      "inground pool leak detection Mesquite"
+      "swimming pool leak repair Carson City",
+      "spa leak detection Silver Oak Carson City",
+      "pool skimmer leak repair 89701 89706",
+      "underground pool pipe leak Carson City"
     ],
     semanticEntities: [
       "Hydrophone underwater acoustic sensor",
       "Fluorescent dye syringe testing",
-      "Skimmer throat and throat-faceplate bond",
+      "Skimmer throat and faceplate sealing",
       "Underground return and suction line pressure test",
-      "Nevada evaporation bucket test"
+      "Evaporation bucket test"
     ],
-    h1: "Swimming Pool Leak Detection & Repair Across Nevada",
-    heroKicker: "Stop Vanishing Pool Water • Hydrophone Acoustic Diagnostics Statewide",
-    heroSubheadline: "Across Nevada's desert and high-altitude valleys, a swimming pool leak wastes thousands of gallons of water and erodes pool deck soil. Dispatched specialists diagnose structural, skimmer, and underground line leaks without draining your pool.",
-    directAnswer: "Swimming pool leak detection combines underwater hydrophone acoustic listening, precision dye testing at skimmers and light niches, and pneumatic line-pressure testing on returns, suction lines, and main drains. Dispatched Nevada technicians pinpoint leaks in Las Vegas, Henderson, Mesquite, Reno, and statewide without draining your pool.",
+    h1: "Swimming Pool & Spa Leak Detection in Carson City, NV",
+    heroKicker: "Stop Vanishing Pool Water • Hydrophone Acoustic Diagnostics",
+    heroSubheadline: "High-altitude winds and winter freezes in Carson City strain pool skimmers, underground PVC returns, and spa plumbing. Dispatched specialists pinpoint structural and underground leaks without draining your pool.",
+    directAnswer: "Swimming pool leak detection in Carson City combines underwater hydrophone acoustic listening, precision dye testing at skimmers and light niches, and pneumatic line-pressure testing on returns, suction lines, and main drains. Dispatched technicians isolate leaks cleanly across Silver Oak, Westside, Clearview, and Empire Ranch with your pool full.",
     featuredImage: "/images/pool_leak_detection_1791567711591.webp",
-    imageAlt: "Pool leak detection specialist using dye syringe and underwater acoustic hydrophone in Nevada",
+    imageAlt: "Pool leak detection specialist using dye syringe and underwater acoustic hydrophone",
     imageCaption: "Underwater hydrophone microphones and precision dye testing locate leaks in pool shells, lights, and underground pipes.",
     sections: [
       {
-        heading: "Is Your Nevada Pool Leaking or Just Evaporating?",
-        subheading: "Understanding the bucket test in desert heat and mountain winds",
+        heading: "Is Your Carson City Pool Leaking or Just Evaporating?",
+        subheading: "Separating windy Eagle Valley evaporation from active structural leaks",
         paragraphs: [
-          "Across Las Vegas, Henderson, Mesquite, and Laughlin—and in windy high-desert valleys like Reno, Sparks, and Carson City—pools routinely lose 1/4 to 1/2 inch of water daily during peak summer heat and low humidity.",
-          "However, if your autofill valve runs constantly, chemical balance fluctuates wildly, or daily water loss exceeds 1/2 inch beyond a benchmark bucket test, water is escaping through a structural crack, skimmer separation, or broken underground PVC line."
+          "Dry mountain air and afternoon Washoe Zephyr winds across Carson City naturally accelerate pool evaporation. However, water loss exceeding 1/2 inch per day, a nonstop autofill line, or dropping water levels with the cover on points directly to a leak.",
+          "Freeze-thaw winters also crack PVC fittings near pool equipment pads, skimmer throats, and shallow return lines right below deck expansion joints."
         ],
         bulletPoints: [
-          "Automatic pool water leveler running continuously day and night",
-          "Pool dropping noticeably faster than a 24-hour bucket test control",
-          "Air bubbles blowing out of pool return jets (underground suction leak)",
-          "Sinking or cracking concrete pavers and deck expansion joints",
-          "Damp soil or unusually lush growth near the pool equipment pad"
+          "Automatic pool leveler running continuously day and night",
+          "Pool water dropping noticeably faster than a 24-hour bucket test control",
+          "Air bubbles blowing from return jets when the pump runs (suction leak)",
+          "Shifting deck pavers, damp turf, or wet ground near the equipment pad"
         ]
       },
       {
-        heading: "Advanced Pool Diagnostic Methodology",
-        subheading: "Non-invasive testing with the pool completely full",
+        heading: "Non-Invasive Testing With Your Pool Completely Full",
+        subheading: "Hydrophones, dye syringes, and isolated line pressure checks",
         paragraphs: [
-          "Draining a pool in Nevada heat or freeze cycles risks plaster delamination and structural popping. Dispatched specialists conduct diagnostics with the pool full and clear.",
-          "Using submersible hydrophones, divers and technicians listen for pressurized suction signatures around light niches, hydro-therapy returns, and main drains, verifying micro-cracks with non-toxic dye syringes."
-        ]
-      },
-      {
-        heading: "Underground Pool Plumbing Pressure Testing & Repair",
-        subheading: "Isolating returns, skimmers, and spa jets beneath decking",
-        paragraphs: [
-          "Technicians isolate individual underground plumbing runs with inflatable test plugs and pneumatic gauges to verify which line fails pressure.",
-          "Electronic line locators mark the exact underground break beneath concrete decking so contractors can perform clean, localized repairs."
+          "Draining a swimming pool risks hydrostatic shell pop in high-water-table zones along the Carson River or plaster cracking. Dispatched specialists perform testing with the pool full.",
+          "Technicians inspect light conduits, main drains, and skimmer throats with inert dye syringes while isolating underground suction and return lines with pneumatic gauges."
         ]
       }
     ],
     faqs: [
       {
-        question: "How do I perform a bucket test to verify a pool leak?",
-        answer: "Fill a 5-gallon bucket with pool water, place it on the first pool step, and mark the water level inside and outside the bucket. Compare both marks after 24 hours with normal pump operation—if the pool drops noticeably more than the bucket, a leak is likely."
+        question: "How do I perform a bucket test to verify a pool leak in Carson City?",
+        answer: "Fill a 5-gallon bucket with pool water, set it on a top pool step, and mark water lines inside and outside the bucket. Check after 24 hours—if the pool dropped noticeably more than the water inside the bucket, a leak is present."
       },
       {
         question: "Do you have to drain my pool to find the leak?",
-        answer: "No. Hydrophone listening, pneumatic pressure testing, and dye testing require the pool to remain full and operational."
+        answer: "No. Submersible hydrophone listening, dye testing, and line pressure testing all operate with the pool full."
       },
       {
-        question: "Can an underground pool pipe leak damage my deck or foundation?",
-        answer: "Yes. Water escaping from pressurized pool plumbing erodes or swells soil beneath pavers and concrete decks, causing cracking and settling."
+        question: "Can winter freezes crack underground pool plumbing in Carson City?",
+        answer: "Yes. If lines or skimmer housings are not winterized thoroughly, freezing water splits PVC tees and deck returns, causing leaks when the pump restarts in spring."
       }
     ],
     relatedServices: [
-      { title: "Water Leak Detection & Repair", slug: "water-leak-detection", description: "Indoor and domestic water supply leak services." },
-      { title: "Gas Leak Detection & Repair", slug: "gas-leak-detection", description: "Pool heater gas line leak diagnostics." },
+      { title: "Water Leak Detection & Repair", slug: "water-leak-detection", description: "Domestic supply and autofill water lines." },
+      { title: "Gas Leak Detection & Repair", slug: "gas-leak-detection", description: "Pool heater natural gas & propane line testing." },
       { title: "Underground Pipe Leak Detection", slug: "underground-leak-detection", description: "Buried yard and main line leak testing." }
     ],
     relatedLocations: [
-      { name: "Las Vegas Metro", slug: "las-vegas", context: "Backyard residential & HOA community pools." },
-      { name: "Henderson & Green Valley", slug: "henderson", context: "Luxury pool, spa & infinity edge diagnostics." },
-      { name: "Mesquite & Virgin Valley", slug: "mesquite", context: "Resort golf pools & high-mineral equipment lines." },
-      { name: "Boulder City & Laughlin", slug: "boulder-city", context: "Colorado River corridor pools & spas." }
+      { name: "North Carson & Silver Oak (89706)", slug: "north-carson-silver-oak", context: "Backyard residential & HOA pool diagnostics." },
+      { name: "South Carson & Clearview (89705)", slug: "south-carson-clearview", context: "High water table & pool shell checks." },
+      { name: "Westside & Kings Canyon (89703)", slug: "west-carson-lakeview", context: "Foothill pool & spa freeze diagnostics." }
     ],
     schemaType: "Service"
   },
@@ -600,74 +581,73 @@ export const sitePages: Record<string, PageContent> = {
     slug: "underground-leak-detection",
     urlPath: "/underground-leak-detection/",
     type: "service",
-    name: "Underground Pipe & Irrigation Leak Detection",
+    name: "Underground Pipe, Yard & Well Leak Detection",
     navTitle: "Underground Leaks",
-    metaTitle: "Underground Leak Detection Across Nevada | Main Line & Yard Leaks (725) 313-0108",
-    metaDescription: "Buried water line, well line or irrigation leak anywhere in Nevada? Call (725) 313-0108 for electromagnetic tracing & acoustic yard leak detection statewide.",
-    primaryKeyword: "underground leak detection Nevada",
+    metaTitle: "Underground & Well Leak Detection Carson City, NV | (725) 313-0108",
+    metaDescription: "Buried main water line, private well pipe or irrigation leak in Carson City, NV? Call (725) 313-0108 for tracer gas & acoustic underground leak locating.",
+    primaryKeyword: "underground leak detection Carson City NV",
     secondaryKeywords: [
-      "main water service line leak Las Vegas",
-      "yard leak detection Reno Sparks NV",
-      "irrigation leak repair Henderson Nevada",
-      "buried pipe leak locator Nevada"
+      "main water service line leak Carson City",
+      "well line leak detection Pinion Hills Lakeview",
+      "yard irrigation leak repair Carson City NV",
+      "buried pipe leak locator 89701 89703 89706"
     ],
     semanticEntities: [
       "Electromagnetic pipe and cable locator",
       "Tracer gas hydrogen-nitrogen sniffing",
+      "Private domestic well supply main",
       "Underground irrigation manifold repair",
-      "Main water service line trenchless pull",
-      "Caliche rock & northern freeze-zone excavation"
+      "Carson City frost-depth buried lines"
     ],
-    h1: "Underground Pipe & Irrigation Leak Detection Across Nevada",
-    heroKicker: "Locate Buried Pipe Leaks Statewide • Zero Unnecessary Digging",
-    heroSubheadline: "Leaks in buried main water lines, rural well mains, and irrigation piping waste thousands of gallons underground before surfacing. Connect with specialized underground line locators across Nevada.",
-    directAnswer: "Underground leak detection uses electromagnetic pipe locators, acoustic ground microphones, and non-toxic tracer gas to pinpoint leaks in buried main service lines, rural well runs, and irrigation manifolds without trenching your entire property. Dispatched Nevada technicians isolate the break for surgical repair.",
+    h1: "Underground Main, Yard & Well-Line Leak Detection in Carson City, NV",
+    heroKicker: "Locate Buried Pipe Leaks • Zero Unnecessary Yard Trenching",
+    heroSubheadline: "Leaks in street-to-home water mains, long private well runs, and irrigation lines waste thousands of gallons beneath frost depth before surfacing. Connect with underground line locators in Carson City.",
+    directAnswer: "Underground leak detection in Carson City uses electromagnetic pipe locators, acoustic ground microphones, and non-toxic tracer gas to pinpoint breaks in buried water service mains, private domestic well lines, and irrigation manifolds without trenching your driveway or yard.",
     featuredImage: "/images/diagnostic_tech_1791662650738.webp",
-    imageAlt: "Technician tracing underground pipe lines in residential Nevada neighborhood",
-    imageCaption: "Electromagnetic line locators and acoustic ground sensors identify buried water line breaks across Nevada.",
+    imageAlt: "Technician tracing buried water lines in Carson City Nevada neighborhood",
+    imageCaption: "Electromagnetic line locators and tracer gas sniffers identify buried water main and well leaks in Carson City.",
     sections: [
       {
-        heading: "Buried Main Water Lines vs. Irrigation & Well Leaks",
-        subheading: "Differentiating continuous supply breaks from timer-activated zones",
+        heading: "Street Meter Mains vs. Private Well & Irrigation Leaks",
+        subheading: "Pinpointing buried failures across urban parcels and 1+ acre Carson City lots",
         paragraphs: [
-          "Nevada properties rely on pressurized buried piping: the municipal main line or well supply running to the structure, plus desert drip irrigation or lawn sprinkler zones. Main line breaks leak 24/7, while zone leaks lose pressure during scheduled cycles.",
-          "Dispatched specialists perform pressure-decay isolation tests at backflow preventers and curb shutoffs before scanning underground runs."
+          "Properties across Carson City rely on deep-buried supply lines set below winter frost depth—either from a Carson City Public Works street meter or from a private wellhead pressure tank in Lakeview, Pinion Hills, or South Carson.",
+          "When sandy alluvial soil or decomposed granite swallows escaping water without visible puddles, pressurized tracer gas rises straight to the surface above the break so technicians can mark the exact excavation point."
         ],
         bulletPoints: [
-          "Main service line testing from street water meter or wellhead to foundation",
-          "Backflow preventer and pressure vacuum breaker (PVB) diagnostic testing",
-          "Landscape drip line and PVC irrigation manifold leak pinpointing",
-          "Trenchless pipe pulling to replace failed mains without destroying driveways"
+          "Main service line testing from street curb meter or wellhead to foundation",
+          "Well pump short-cycling isolation and pressure decay verification",
+          "Backflow preventer and lawn sprinkler manifold leak pinpointing",
+          "Trenchless pipe pulling to replace failed lines without destroying driveways"
         ]
       },
       {
-        heading: "Preventing Subterranean Erosion & Sinkholes",
-        subheading: "Protecting driveways, retaining walls, and desert hardscapes",
+        heading: "Preventing Driveway Washouts & Foundation Settling",
+        subheading: "Stopping subterranean soil erosion before concrete buckles",
         paragraphs: [
-          "Pressurized water eroding soil beneath concrete driveways, walkways, and pavers creates hidden voids that can collapse suddenly. Early underground pinpointing saves landscaping and structural hardscaping statewide."
+          "Pressurized water eroding Eagle Valley silt or gravel beneath driveways, sidewalks, and porch slabs creates hidden voids that can settle or crack. Early acoustic pinpointing saves landscaping and concrete flatwork."
         ]
       }
     ],
     faqs: [
       {
-        question: "How do you find a buried plastic PVC or poly pipe underground?",
-        answer: "Technicians insert a traceable fiberglass sonde rod with a transmitter into the line or pressurize it with safe hydrogen-nitrogen tracer gas detected above ground at parts-per-million sensitivity."
+        question: "How do you locate a buried plastic PVC or poly well pipe?",
+        answer: "Technicians insert a traceable fiberglass sonde line or pressurize the pipe with safe hydrogen-nitrogen tracer gas, then scan the ground surface with calibrated electronic sniffers to mark the exact break."
       },
       {
-        question: "Can an underground water line leak be replaced without digging up my entire yard?",
-        answer: "Yes. Where full replacement is needed, dispatched Nevada contractors frequently use trenchless pipe pulling or directional boring to minimize surface disturbance."
+        question: "Can a broken underground main be repaired without digging up my entire driveway?",
+        answer: "Yes. Pinpointing the break restricts digging to a single targeted access pit, or contractors can use trenchless pipe pulling for aging lines."
       }
     ],
     relatedServices: [
-      { title: "Water Leak Detection & Repair", slug: "water-leak-detection", description: "Indoor and domestic water line diagnostics." },
-      { title: "Swimming Pool Leak Detection", slug: "pool-leak-detection", description: "Buried pool suction and return line testing." },
-      { title: "Slab Leak Detection & Repair", slug: "slab-leak-detection", description: "Leaks underneath foundation slabs." }
+      { title: "Water Leak Detection & Repair", slug: "water-leak-detection", description: "Indoor and crawlspace water line diagnostics." },
+      { title: "Slab Leak Detection & Repair", slug: "slab-leak-detection", description: "Leaks underneath foundation slabs." },
+      { title: "24/7 Emergency Leak Repair", slug: "emergency-leak-repair", description: "Rapid shutoff and burst main containment." }
     ],
     relatedLocations: [
-      { name: "Las Vegas Metro", slug: "las-vegas", context: "Buried desert yard mains & drip manifolds." },
-      { name: "Pahrump & Nye County", slug: "pahrump", context: "Long-run well water mains & rural supply lines." },
-      { name: "Sparks & Spanish Springs", slug: "sparks", context: "Sub-frost-line irrigation & yard lines." },
-      { name: "Elko & Rural Nevada", slug: "elko-rural-nevada", context: "Deep-buried rural water service lines." }
+      { name: "Empire Ranch & Pinion Hills", slug: "east-carson-empire-ranch", context: "Long-run well mains & acreage piping." },
+      { name: "Westside & Kings Canyon (89703)", slug: "west-carson-lakeview", context: "Lakeview & foothill buried mains." },
+      { name: "Downtown & Capitol (89701)", slug: "carson-city", context: "Historic curb-to-home water mains." }
     ],
     schemaType: "Service"
   },
@@ -679,52 +659,52 @@ export const sitePages: Record<string, PageContent> = {
     type: "service",
     name: "24/7 Emergency Leak Repair Dispatch",
     navTitle: "Emergency Repair",
-    metaTitle: "24/7 Emergency Leak Repair Across Nevada | Rapid Dispatch (725) 313-0108",
-    metaDescription: "Active water flood, burst pipe or gas emergency anywhere in Nevada? Call (725) 313-0108 for 24/7 emergency dispatch in Las Vegas, Henderson, Reno, Sparks & statewide.",
-    primaryKeyword: "emergency leak repair Nevada",
+    metaTitle: "24/7 Emergency Leak Repair Carson City, NV | Rapid Dispatch (725) 313-0108",
+    metaDescription: "Active water flood, freeze-burst pipe or gas emergency in Carson City, NV? Call (725) 313-0108 24/7 for rapid dispatch across 89701, 89702, 89703, 89705 & 89706.",
+    primaryKeyword: "emergency leak repair Carson City NV",
     secondaryKeywords: [
-      "24/7 leak detection Las Vegas NV",
-      "emergency plumber Reno Sparks NV",
-      "urgent water leak repair Henderson",
-      "emergency gas leak shutoff Nevada"
+      "24/7 leak detection Carson City",
+      "emergency plumber Carson City Nevada",
+      "frozen pipe burst repair Carson City",
+      "emergency gas leak shutoff 89701"
     ],
     semanticEntities: [
       "Immediate main meter emergency shutoff",
       "Nevada State Contractors Board (NSCB) licensed response",
       "24/7 on-call mobile technician vans",
-      "High-pressure pipe clamp and PEX crimp containment"
+      "Freeze-burst pipe clamp and PEX containment"
     ],
-    h1: "24/7 Emergency Leak Repair & Rapid Dispatch Across Nevada",
-    heroKicker: "Active Leaks • 24/7 Statewide Response • Licensed Specialists",
-    heroSubheadline: "Burst pipes, frozen supply lines, active indoor floods, and hazardous gas odors demand instant containment. Call our 24/7 dispatch line to connect immediately with on-call Nevada contractors.",
-    directAnswer: "Emergency leak repair delivers rapid containment and permanent restoration for active water floods, freeze bursts, and gas line ruptures anywhere in Nevada. Calling (725) 313-0108 routes your emergency directly to on-call NSCB-licensed technicians equipped with electronic locators and repair hardware.",
+    h1: "24/7 Emergency Leak Repair & Rapid Dispatch in Carson City, NV",
+    heroKicker: "Active Leaks • 24/7 Carson City Response • Licensed Specialists",
+    heroSubheadline: "Winter freeze-burst pipes, flooded crawlspaces, sudden slab ruptures, and hazardous gas odors demand instant containment. Call our 24/7 dispatch line to connect immediately with on-call contractors serving Carson City.",
+    directAnswer: "Emergency leak repair in Carson City delivers rapid containment and permanent restoration for active water floods, freeze bursts, and gas line ruptures across 89701–89706. Calling (725) 313-0108 routes your emergency directly to on-call NSCB-licensed technicians equipped with electronic locators and repair hardware.",
     featuredImage: "/images/drain_hydro_jetting_1791566153107.webp",
-    imageAlt: "Emergency leak repair mobile dispatch unit in Nevada",
-    imageCaption: "Mobile service units carry pipe clamps, PEX fittings, and emergency valves for fast on-site containment across Nevada.",
+    imageAlt: "Emergency leak repair mobile dispatch unit serving Carson City Nevada",
+    imageCaption: "Mobile service units carry pipe clamps, PEX fittings, and emergency shutoff valves for fast on-site containment in Carson City.",
     sections: [
       {
-        heading: "What to Do in a Water or Gas Emergency",
+        heading: "What to Do in a Water or Gas Emergency in Carson City",
         subheading: "Immediate steps to protect life and property while awaiting dispatch",
         paragraphs: [
-          "The first minutes of a severe rupture dictate whether you face minor cleanup or catastrophic restoration bills. For active water leaks, close your home's main water shutoff valve (garage, utility room, crawlspace, or curb meter box).",
+          "The first minutes of a freeze-burst pipe or ruptured supply line determine whether you face minor cleanup or major structural dry-out. Close your home's main water shutoff valve (garage, crawlspace, basement, or curb meter key).",
           "For natural gas or propane odors, never try to locate the leak yourself. Evacuate everyone outside immediately and call from a safe distance."
         ],
         bulletPoints: [
-          "Shut off the main water supply valve clockwise to halt pressurized flooding",
-          "Switch off electrical breakers to flooded rooms only if safe to access the panel",
-          "For gas odors: evacuate immediately, touch no switches, and call 911 / utility / dispatch",
-          "Keep your telephone clear for the dispatched Nevada technician's arrival call"
+          "Turn the main water shutoff valve clockwise to stop pressurized indoor flooding",
+          "Switch off electrical breakers to flooded areas only if safe to access the panel",
+          "For gas odors: evacuate outdoors immediately, touch no switches, and call 911 / Southwest Gas / (725) 313-0108",
+          "Keep your phone line open for the dispatched technician's arrival update"
         ]
       }
     ],
     faqs: [
       {
-        question: "How fast can an emergency leak technician arrive in Nevada cities?",
-        answer: "Average arrival times across major Las Vegas Valley and Reno/Sparks metro corridors are 30 to 60 minutes, with priority same-day emergency dispatch across Carson City, Pahrump, Mesquite, Boulder City, and rural Nevada."
+        question: "Are technicians available 24/7 in Carson City for winter freeze-burst emergencies?",
+        answer: "Yes. Our dispatch line at (725) 313-0108 and on-call contractor network operate 24 hours a day, 7 days a week, 365 days a year—including freezing overnight emergencies and holidays."
       },
       {
-        question: "Is your Nevada dispatch desk open on weekends and holidays?",
-        answer: "Yes. Our dispatch line at (725) 313-0108 and on-call contractor network operate 24 hours a day, 7 days a week, 365 days a year."
+        question: "Which Carson City ZIP codes do you cover for emergency service?",
+        answer: "All Carson City ZIP codes including 89701, 89702, 89703, 89705, and 89706."
       }
     ],
     relatedServices: [
@@ -733,10 +713,9 @@ export const sitePages: Record<string, PageContent> = {
       { title: "Slab Leak Detection & Repair", slug: "slab-leak-detection", description: "Foundation leak diagnostics." }
     ],
     relatedLocations: [
-      { name: "Las Vegas Metro", slug: "las-vegas", context: "24/7 Clark County rapid dispatch." },
-      { name: "Reno & Lake Tahoe", slug: "reno", context: "24/7 freeze-burst & emergency diagnostics." },
-      { name: "Henderson & Green Valley", slug: "henderson", context: "Emergency residential & commercial dispatch." },
-      { name: "North Las Vegas", slug: "north-las-vegas", context: "Urgent main & slab leak response." }
+      { name: "Downtown & Capitol (89701)", slug: "carson-city", context: "24/7 central Carson City dispatch." },
+      { name: "Westside & Kings Canyon (89703)", slug: "west-carson-lakeview", context: "Freeze-burst & foothill emergency response." },
+      { name: "North Carson & Silver Oak (89706)", slug: "north-carson-silver-oak", context: "24/7 residential emergency service." }
     ],
     schemaType: "EmergencyService"
   },
@@ -1031,677 +1010,337 @@ export const sitePages: Record<string, PageContent> = {
     schemaType: "LocalBusiness"
   },
 
-  // 12B. NEVADA CITIES: LAS VEGAS METRO
-  "las-vegas": {
-    slug: "las-vegas",
-    urlPath: "/las-vegas/",
-    type: "location",
-    name: "Las Vegas Leak Detection & Repair",
-    navTitle: "Las Vegas",
-    metaTitle: "Leak Detection Las Vegas NV | Water, Slab, Gas & Pool (725) 313-0108",
-    metaDescription: "Hidden water, slab, pool or gas leak in Las Vegas, NV? 24/7 dispatch across Paradise, Enterprise, Summerlin, Downtown & Centennial Hills. Call (725) 313-0108.",
-    primaryKeyword: "leak detection Las Vegas NV",
-    secondaryKeywords: [
-      "water leak detection Las Vegas",
-      "slab leak repair Las Vegas NV",
-      "pool leak detection Las Vegas",
-      "gas leak repair Las Vegas 89101 89103 89149"
-    ],
-    semanticEntities: [
-      "Las Vegas Valley Water District (LVVWD)",
-      "Paradise, Enterprise, Sunrise Manor & Summerlin corridors",
-      "Caliche hardpan concrete slab foundations",
-      "Southwest Gas emergency service lockouts"
-    ],
-    h1: "24/7 Water, Gas, Slab & Pool Leak Detection in Las Vegas, NV",
-    heroKicker: "Serving All Las Vegas ZIP Codes • Paradise, Enterprise, Summerlin & Downtown",
-    heroSubheadline: "From historic downtown neighborhoods and Strip-adjacent commercial properties to Paradise, Enterprise, Sunrise Manor, Whitney, and Centennial Hills, dispatched specialists pinpoint leaks cleanly across the entire Las Vegas Valley.",
-    directAnswer: "Leak Detection NV dispatches NSCB-licensed specialists across every Las Vegas neighborhood—including Downtown (89101), Spring Valley (89103), Paradise, Enterprise, Summerlin, and Centennial Hills—within 30–60 minutes. Technicians deploy acoustic geophones, FLIR thermal imaging, pool hydrophones, and digital gas sniffers without exploratory destruction. Call (725) 313-0108.",
-    featuredImage: "/images/hero_emergency_plumbing_1791566119640.webp",
-    imageAlt: "Leak detection specialist serving Las Vegas Valley residential and commercial properties",
-    imageCaption: "Rapid 24/7 mobile dispatch across Downtown Las Vegas, Paradise, Enterprise, Summerlin, and Centennial Hills.",
-    sections: [
-      {
-        heading: "Las Vegas Valley Plumbing & Soil Challenges",
-        subheading: "Protecting slabs, pools, and high-PSI potable lines across Clark County",
-        paragraphs: [
-          "Las Vegas properties endure extreme 110°F+ summers, abrasive caliche bedrock beneath concrete slabs, and elevated LVVWD municipal delivery pressures often exceeding 80 PSI. Over time, Type M copper pipes beneath slabs develop pinhole perforations while buried PVC irrigation lines crack from soil expansion.",
-          "Dispatched specialists isolate breaks through marble, travertine, porcelain tile, and concrete decking using electronic correlation and produce certified repair reports eligible for LVVWD high-bill leak credits."
-        ],
-        bulletPoints: [
-          "Full coverage across Downtown, Arts District, Westside, Paradise & Enterprise",
-          "Northwest coverage across Summerlin, Lone Mountain & Centennial Hills",
-          "East Valley dispatch for Sunrise Manor, Whitney & Nellis corridor",
-          "LVVWD Tier-3 excess leak credit documentation included upon repair"
-        ]
-      }
-    ],
-    faqs: [
-      {
-        question: "How quickly can a technician reach my Las Vegas property?",
-        answer: "From our central Las Vegas dispatch hub at 6875 Groveview Ln (89103), mobile units typically arrive within 30 to 60 minutes across Las Vegas, Paradise, Enterprise, Summerlin, and Sunrise Manor."
-      },
-      {
-        question: "Do you service Las Vegas commercial buildings, HOAs, and pools?",
-        answer: "Yes. Dispatched NSCB C-1 contractors handle single-family homes, guard-gated HOAs, multifamily complexes, commercial mains, and commercial/residential pools."
-      }
-    ],
-    relatedServices: [
-      { title: "Water Leak Detection & Repair", slug: "water-leak-detection", description: "Indoor & main line diagnostics." },
-      { title: "Slab Leak Detection & Repair", slug: "slab-leak-detection", description: "Concrete slab acoustic locating." },
-      { title: "Swimming Pool Leak Detection", slug: "pool-leak-detection", description: "Hydrophone & dye testing." }
-    ],
-    relatedLocations: [
-      { name: "Henderson & Green Valley", slug: "henderson", context: "Adjacent southeast Clark County metro." },
-      { name: "North Las Vegas", slug: "north-las-vegas", context: "Northern Las Vegas Valley dispatch." },
-      { name: "Spring Valley Core", slug: "spring-valley-center", context: "Southwest valley headquarters." }
-    ],
-    schemaType: "LocalBusiness"
-  },
-
-  // 12C. NEVADA CITIES: HENDERSON
-  "henderson": {
-    slug: "henderson",
-    urlPath: "/henderson/",
-    type: "location",
-    name: "Henderson Leak Detection & Repair",
-    navTitle: "Henderson",
-    metaTitle: "Leak Detection Henderson NV | Green Valley, Anthem & Seven Hills (725) 313-0108",
-    metaDescription: "Water, slab, pool or gas leak in Henderson, NV? Fast non-invasive detection across Green Valley, Anthem, Seven Hills, Inspirada & Lake Las Vegas. Call (725) 313-0108.",
-    primaryKeyword: "leak detection Henderson NV",
-    secondaryKeywords: [
-      "slab leak detection Henderson NV",
-      "pool leak detection Green Valley Henderson",
-      "water leak repair Anthem Seven Hills 89052",
-      "gas leak detection Henderson Nevada"
-    ],
-    semanticEntities: [
-      "City of Henderson Department of Utility Services",
-      "Green Valley, Anthem, Seven Hills, MacDonald Highlands & Lake Las Vegas",
-      "High-elevation hillside water pressure zones",
-      "Post-tension concrete slab & resort pool diagnostics"
-    ],
-    h1: "Water, Gas, Slab & Pool Leak Detection in Henderson, NV",
-    heroKicker: "Serving Green Valley, Anthem, Seven Hills, Inspirada & Lake Las Vegas",
-    heroSubheadline: "Hillside pressure zones, custom swimming pools, and post-tension slab foundations across Henderson demand precision non-invasive leak locating. Call 24/7 for rapid dispatch across 89002, 89012, 89014, 89044, 89052, and 89074.",
-    directAnswer: "Leak Detection NV dispatches licensed Henderson specialists across Green Valley, Anthem, Seven Hills, MacDonald Highlands, Inspirada, Whitney Ranch, and Lake Las Vegas. Using acoustic geophones, FLIR thermal cameras, and pool hydrophones, technicians pinpoint leaks cleanly and provide documentation formatted for City of Henderson utility adjustments. Call (725) 313-0108.",
-    featuredImage: "/images/pool_leak_detection_1791567711591.webp",
-    imageAlt: "Technician performing pool and slab leak detection in Henderson Nevada",
-    imageCaption: "Non-invasive pool, slab, and potable water diagnostics serving Henderson and Green Valley.",
-    sections: [
-      {
-        heading: "Elevated Pressure & Hillside Plumbing in Henderson",
-        subheading: "Managing PRVs, custom pools, and concrete slabs in 89052 & 89012",
-        paragraphs: [
-          "Neighborhoods along Anthem, Seven Hills, and MacDonald Highlands experience significant elevation changes, placing heavy hydrostatic pressure on pressure-reducing valves (PRVs), domestic copper risers, and pool equipment loops.",
-          "Dispatched specialists isolate hidden leaks in Green Valley, Cadence, and Lake Las Vegas without disturbing custom stone decking or interior finishes, and supply repair paperwork compatible with City of Henderson Utilities billing reviews."
-        ],
-        bulletPoints: [
-          "Green Valley, Green Valley Ranch & Whitney Ranch (89014, 89074)",
-          "Anthem, Seven Hills, Sun City Anthem & Inspirada (89052, 89044)",
-          "Lake Las Vegas, Cadence & Downtown Water Street District (89011, 89015)",
-          "MacDonald Highlands & Foothills elevated estate diagnostics (89012, 89002)"
-        ]
-      }
-    ],
-    faqs: [
-      {
-        question: "Do you serve Sun City Anthem, Seven Hills, and Lake Las Vegas in Henderson?",
-        answer: "Yes. Dispatched mobile technicians cover all Henderson ZIP codes including 89002, 89011, 89012, 89014, 89015, 89044, 89052, and 89074."
-      },
-      {
-        question: "Can you inspect high water bills from the City of Henderson Utilities?",
-        answer: "Yes. Technicians perform meter-to-home static pressure tests, locate the exact indoor or yard leak, and issue detailed repair documentation for utility credit consideration."
-      }
-    ],
-    relatedServices: [
-      { title: "Swimming Pool Leak Detection", slug: "pool-leak-detection", description: "Resort pool, spa & skimmer testing." },
-      { title: "Slab Leak Detection & Repair", slug: "slab-leak-detection", description: "Sub-slab pinpointing without floor demolition." },
-      { title: "Gas Leak Detection & Emergency Repair", slug: "gas-leak-detection", description: "Outdoor BBQ, fire pit & furnace gas testing." }
-    ],
-    relatedLocations: [
-      { name: "Las Vegas Metro", slug: "las-vegas", context: "Adjacent Clark County valley dispatch." },
-      { name: "Boulder City & Laughlin", slug: "boulder-city", context: "Highway 93 / 95 southeast corridor." },
-      { name: "Spring Valley Core", slug: "spring-valley-center", context: "West valley operations center." }
-    ],
-    schemaType: "LocalBusiness"
-  },
-
-  // 12D. NEVADA CITIES: NORTH LAS VEGAS
-  "north-las-vegas": {
-    slug: "north-las-vegas",
-    urlPath: "/north-las-vegas/",
-    type: "location",
-    name: "North Las Vegas Leak Detection & Repair",
-    navTitle: "North Las Vegas",
-    metaTitle: "Leak Detection North Las Vegas NV | Aliante & Craig Ranch (725) 313-0108",
-    metaDescription: "Water, slab, gas or yard leak in North Las Vegas? 24/7 non-invasive diagnostics across Aliante, Eldorado, Craig Ranch & Apex Industrial. Call (725) 313-0108.",
-    primaryKeyword: "leak detection North Las Vegas NV",
-    secondaryKeywords: [
-      "water leak repair North Las Vegas",
-      "slab leak detection Aliante NV 89084",
-      "underground leak detection North Las Vegas 89031",
-      "gas leak plumber North Las Vegas"
-    ],
-    semanticEntities: [
-      "City of North Las Vegas Utilities Department",
-      "Aliante, Eldorado, Craig Ranch & Tule Springs",
-      "Expansive alluvial desert clay & caliche soils",
-      "Commercial & industrial pressurized fire/water mains"
-    ],
-    h1: "Water, Gas, Slab & Pool Leak Detection in North Las Vegas, NV",
-    heroKicker: "Serving Aliante, Eldorado, Craig Ranch, Tule Springs & 89030–89086",
-    heroSubheadline: "Rapid growth across North Las Vegas neighborhoods and industrial corridors brings hard water erosion, high-PSI main breaks, and sub-slab pinholes. Connect 24/7 with licensed leak specialists near you.",
-    directAnswer: "Leak Detection NV dispatches NSCB-licensed technicians throughout North Las Vegas—including Aliante, Eldorado, Craig Ranch, Sun City Aliante, and Downtown NLV (89030, 89031, 89032, 89081, 89084, 89086). Electronic acoustic listening, tracer gas, and thermal imaging locate leaks quickly without guesswork excavation. Call (725) 313-0108.",
-    featuredImage: "/images/slab_leak_inspection_1791566136409.webp",
-    imageAlt: "Acoustic slab and water line leak detection in North Las Vegas NV",
-    imageCaption: "Non-invasive leak detection serving Aliante, Craig Ranch, Eldorado, and commercial facilities in North Las Vegas.",
-    sections: [
-      {
-        heading: "Protecting North Las Vegas Residential & Commercial Lines",
-        subheading: "Addressing soil shifting, irrigation manifolds, and high water bills",
-        paragraphs: [
-          "North Las Vegas spans older mid-century homes along Cheyenne and Lake Mead Blvd as well as newer subdivisions in Aliante, Valley Vista, and Villages at Tule Springs. High mineral hardness and fluctuating soil compaction put steady stress on service mains and sub-slab lines.",
-          "Dispatched specialists provide fast meter-isolation testing, pinpoint yard and slab ruptures accurately, and supply detailed reports for City of North Las Vegas Utilities billing inquiries."
-        ],
-        bulletPoints: [
-          "Aliante, Sun City Aliante & Tule Springs (89084, 89085, 89086)",
-          "Eldorado, Craig Ranch & Losee Rd Corridors (89031, 89081)",
-          "Downtown North Las Vegas, Cheyenne & Lamb Industrial (89030, 89032)"
-        ]
-      }
-    ],
-    faqs: [
-      {
-        question: "How fast can emergency crews reach Aliante or Craig Ranch?",
-        answer: "Mobile emergency dispatch typically arrives within 30 to 60 minutes throughout North Las Vegas neighborhoods and business parks."
-      },
-      {
-        question: "Can you locate leaks in large commercial warehouses near Apex or I-15?",
-        answer: "Yes. Dispatched contractors carry long-range acoustic correlators and inert tracer gas gear suited for buried commercial water mains and warehouse slab lines."
-      }
-    ],
-    relatedServices: [
-      { title: "Underground Pipe Leak Detection", slug: "underground-leak-detection", description: "Buried yard & commercial main line tracing." },
-      { title: "Slab Leak Detection & Repair", slug: "slab-leak-detection", description: "Concrete foundation acoustic testing." },
-      { title: "24/7 Emergency Leak Repair", slug: "emergency-leak-repair", description: "Immediate shutoff and emergency repair." }
-    ],
-    relatedLocations: [
-      { name: "Las Vegas Metro", slug: "las-vegas", context: "Central Clark County corridor." },
-      { name: "Henderson & Green Valley", slug: "henderson", context: "Southeast valley coverage." },
-      { name: "Mesquite & Virgin Valley", slug: "mesquite", context: "I-15 Northeast Clark County corridor." }
-    ],
-    schemaType: "LocalBusiness"
-  },
-
-  // 12E. NEVADA CITIES: RENO & LAKE TAHOE
-  "reno": {
-    slug: "reno",
-    urlPath: "/reno/",
-    type: "location",
-    name: "Reno & Lake Tahoe Leak Detection",
-    navTitle: "Reno & Tahoe",
-    metaTitle: "Leak Detection Reno NV | Water, Slab, Gas & Freeze Pipes (725) 313-0108",
-    metaDescription: "Hidden water, gas or freeze-burst leak in Reno, Midtown, South Reno or Lake Tahoe? 24/7 NSCB-licensed acoustic & thermal detection. Call (725) 313-0108.",
-    primaryKeyword: "leak detection Reno NV",
-    secondaryKeywords: [
-      "water leak detection Reno Nevada",
-      "slab leak repair South Reno 89511 89521",
-      "frozen pipe leak repair Reno NV",
-      "gas leak detection Reno Incline Village"
-    ],
-    semanticEntities: [
-      "Truckee Meadows Water Authority (TMWA)",
-      "NV Energy natural gas safety clearances",
-      "Midtown, Old Southwest, Damonte Ranch, Somersett, Verdi & Incline Village",
-      "High-Sierra freeze-thaw burst piping & crawlspace manifolds"
-    ],
-    h1: "Water, Gas, Slab & Freeze-Pipe Leak Detection in Reno & Tahoe, NV",
-    heroKicker: "Northern Nevada Dispatch • Midtown, South Reno, Somersett & Incline Village",
-    heroSubheadline: "Sub-freezing Sierra nights, seismic valley shifts, and aging Truckee Meadows supply lines cause silent crawlspace, slab, and yard leaks. Connect 24/7 with NSCB-licensed Northern Nevada leak detection pros.",
-    directAnswer: "Leak Detection NV coordinates 24/7 non-invasive leak detection across Reno, Old Southwest, Midtown, Damonte Ranch, Double Diamond, Somersett, Verdi, and Incline Village / Crystal Bay (Lake Tahoe). Equipped with acoustic listening sensors, FLIR thermal imaging, and digital gas detectors, technicians pinpoint freeze splits, slab leaks, and underground breaks cleanly. Call (725) 313-0108.",
-    featuredImage: "/images/diagnostic_tech_1791662650738.webp",
-    imageAlt: "Technician performing thermal and acoustic leak detection in Reno Nevada",
-    imageCaption: "Non-invasive acoustic and FLIR thermal diagnostics across Reno, South Reno, and Lake Tahoe communities.",
-    sections: [
-      {
-        heading: "Northern Nevada Plumbing Challenges: Freeze-Thaw & Seismic Stress",
-        subheading: "Protecting crawlspaces, mountain cabins, and Washoe County slabs",
-        paragraphs: [
-          "Unlike Southern Nevada, Reno and the Sierra front experience 100+ freeze-thaw days each year. Uninsulated exterior wall lines, crawlspace copper manifolds, and shallow yard mains split during cold snaps and thaw silently behind finishes.",
-          "Meanwhile, newer South Reno and Damonte Ranch neighborhoods rest on slab foundations exposed to Washoe Valley soil movement. Dispatched technicians pinpoint concealed moisture through radiant-heated floors, hardwood, and concrete without damaging historic Midtown plaster or luxury Tahoe finishes."
-        ],
-        bulletPoints: [
-          "Downtown Reno, Midtown & Old Southwest historic homes (89501, 89502, 89509)",
-          "South Reno, Damonte Ranch, Double Diamond & ArrowCreek (89511, 89521)",
-          "Northwest Reno, Somersett, Caughlin Ranch & Verdi (89503, 89523, 89439)",
-          "Incline Village & Crystal Bay Lake Tahoe luxury properties (89451, 89402)",
-          "TMWA (Truckee Meadows Water Authority) smart-meter leak verification support"
-        ]
-      }
-    ],
-    faqs: [
-      {
-        question: "Do you handle winter freeze-burst pipe detection in Reno and Incline Village?",
-        answer: "Yes. Dispatched technicians use FLIR infrared thermal cameras and acoustic sensors to pinpoint pinhole splits inside exterior walls, attics, and crawlspaces after winter freezes."
-      },
-      {
-        question: "Can diagnostic documentation help with a high TMWA water bill?",
-        answer: "Yes. Licensed contractors supply itemized repair invoices and pressure-test findings suitable for Truckee Meadows Water Authority (TMWA) high-usage inquiries."
-      }
-    ],
-    relatedServices: [
-      { title: "Water Leak Detection & Repair", slug: "water-leak-detection", description: "Wall, crawlspace & radiant floor leaks." },
-      { title: "Gas Leak Detection & Emergency Repair", slug: "gas-leak-detection", description: "Furnace, boiler & NV Energy meter testing." },
-      { title: "24/7 Emergency Leak Repair", slug: "emergency-leak-repair", description: "Rapid freeze-burst emergency containment." }
-    ],
-    relatedLocations: [
-      { name: "Sparks & Spanish Springs", slug: "sparks", context: "East Truckee Meadows metro coverage." },
-      { name: "Carson City & Minden", slug: "carson-city", context: "South along I-580 / Hwy 395 corridor." },
-      { name: "Elko & Rural Nevada", slug: "elko-rural-nevada", context: "I-80 Fernley, Fallon & Northern NV." }
-    ],
-    schemaType: "LocalBusiness"
-  },
-
-  // 12F. NEVADA CITIES: SPARKS
-  "sparks": {
-    slug: "sparks",
-    urlPath: "/sparks/",
-    type: "location",
-    name: "Sparks & Spanish Springs Leak Detection",
-    navTitle: "Sparks",
-    metaTitle: "Leak Detection Sparks NV | Spanish Springs & Wingfield (725) 313-0108",
-    metaDescription: "Water, slab, gas or underground leak in Sparks, Spanish Springs, Wingfield Springs or Sun Valley, NV? 24/7 acoustic & thermal detection. Call (725) 313-0108.",
-    primaryKeyword: "leak detection Sparks NV",
-    secondaryKeywords: [
-      "water leak detection Sparks Nevada",
-      "underground leak repair Spanish Springs 89436",
-      "slab leak detection Wingfield Springs",
-      "gas leak repair Sparks NV 89431"
-    ],
-    semanticEntities: [
-      "Spanish Springs, Wingfield Springs, Sun Valley & Sparks Marina",
-      "Truckee Meadows Water Authority & Washoe County utilities",
-      "High-iron / mineral groundwater scaling & frost-depth mains",
-      "Industrial warehouse & residential slab diagnostics"
-    ],
-    h1: "Water, Gas, Slab & Yard Leak Detection in Sparks, NV",
-    heroKicker: "Serving Sparks, Spanish Springs, Wingfield Springs, Sun Valley & 89431–89441",
-    heroSubheadline: "From older residential corridors near Victorian Square to rapidly expanding homes in Spanish Springs and Wingfield Springs, dispatched technicians isolate buried yard, slab, and crawlspace leaks without tearing up property.",
-    directAnswer: "Leak Detection NV dispatches licensed leak specialists across Sparks, Spanish Springs, Wingfield Springs, Sun Valley, and the Tahoe-Reno Industrial Center corridor. Ultrasonic acoustic listening, tracer gas, and thermal imaging locate buried potable mains, sub-slab breaks, and gas leaks cleanly. Call (725) 313-0108.",
-    featuredImage: "/images/water_heater_repair_1791566167061.webp",
-    imageAlt: "Leak detection technician servicing Sparks and Spanish Springs residence",
-    imageCaption: "Acoustic and thermal leak locating across Sparks, Spanish Springs, and Wingfield Springs.",
-    sections: [
-      {
-        heading: "Underground Mains & Irrigation Systems in Sparks & Spanish Springs",
-        subheading: "Pinpointing deep frost-line service lines and mineral-worn copper",
-        paragraphs: [
-          "Properties in Spanish Springs and Wingfield Springs often sit on spacious lots with long underground water service lines, pressurized lawn manifolds, and concrete patios. Meanwhile, established Sparks neighborhoods contend with aging galvanized and copper piping.",
-          "Using tracer gas pressurization and ground microphones, dispatched contractors mark the exact spot of underground breaks without trenching driveways or lawns."
-        ],
-        bulletPoints: [
-          "Downtown Sparks, Sparks Marina & Glendale Industrial (89431, 89434)",
-          "Spanish Springs, Wingfield Springs & Red Hawk communities (89436, 89441)",
-          "Sun Valley, Lockwood & I-80 East / Fernley connector (89433)"
-        ]
-      }
-    ],
-    faqs: [
-      {
-        question: "Can you locate buried yard leaks in Spanish Springs on large acreage lots?",
-        answer: "Yes. Dispatched specialists utilize electromagnetic line tracers and nitrogen-hydrogen tracer gas to trace long service runs from street meters or wellheads directly to the break."
-      },
-      {
-        question: "Are technicians available 24/7 in Sparks for winter pipe bursts?",
-        answer: "Yes. Emergency dispatch operates 24 hours a day year-round across Sparks and Washoe County."
-      }
-    ],
-    relatedServices: [
-      { title: "Underground Pipe Leak Detection", slug: "underground-leak-detection", description: "Long yard main & sprinkler line tracing." },
-      { title: "Water Leak Detection & Repair", slug: "water-leak-detection", description: "Indoor supply & crawlspace diagnostics." },
-      { title: "Gas Leak Detection & Emergency Repair", slug: "gas-leak-detection", description: "24/7 combustible gas testing." }
-    ],
-    relatedLocations: [
-      { name: "Reno & Lake Tahoe", slug: "reno", context: "Adjacent Washoe County metro." },
-      { name: "Carson City & Minden", slug: "carson-city", context: "Carson Valley south corridor." },
-      { name: "Elko & Rural Nevada", slug: "elko-rural-nevada", context: "Fernley, Fallon & East I-80 corridor." }
-    ],
-    schemaType: "LocalBusiness"
-  },
-
-  // 12G. NEVADA CITIES: CARSON CITY & CARSON VALLEY
+  // 12B. CARSON CITY DISTRICT 1: DOWNTOWN CARSON CITY & CAPITOL CORRIDOR (89701)
   "carson-city": {
     slug: "carson-city",
     urlPath: "/carson-city/",
     type: "location",
-    name: "Carson City & Carson Valley Leak Detection",
-    navTitle: "Carson City",
-    metaTitle: "Leak Detection Carson City NV | Minden, Gardnerville & Dayton (725) 313-0108",
-    metaDescription: "Water, slab, gas or well line leak in Carson City, Minden, Gardnerville or Dayton, NV? Non-invasive acoustic & thermal locating 24/7. Call (725) 313-0108.",
+    name: "Downtown Carson City & Capitol District Leak Detection",
+    navTitle: "Downtown Carson (89701)",
+    metaTitle: "Leak Detection Carson City NV | Water, Slab & Gas (725) 313-0108",
+    metaDescription: "Water, crawlspace, slab or gas leak in Downtown Carson City, NV (89701)? 24/7 non-invasive acoustic, thermal & tracer gas locating. Call (725) 313-0108.",
     primaryKeyword: "leak detection Carson City NV",
     secondaryKeywords: [
-      "water leak detection Carson City Nevada",
-      "leak repair Minden Gardnerville NV",
-      "slab leak detection Dayton NV",
-      "gas leak detection Carson City 89701"
+      "water leak detection Carson City 89701",
+      "crawlspace leak repair Downtown Carson City",
+      "slab leak detection Carson City NV",
+      "gas leak detection Capitol District Carson City"
     ],
     semanticEntities: [
       "Carson City Public Works Water Utility",
-      "Carson Valley, Minden, Gardnerville, Genoa & Dayton",
-      "Historic Capitol district & ranch well supply lines",
-      "Winter freeze-thaw & seismic fault-zone pipe stress"
+      "Downtown Carson Street & State Capitol Historic District",
+      "Governor’s Mansion Historic Zone & Stewart Street",
+      "Winter freeze-thaw crawlspace & aging galvanized mains"
     ],
-    h1: "Water, Gas, Slab & Well-Line Leak Detection in Carson City, NV",
-    heroKicker: "Serving Carson City, Minden, Gardnerville, Genoa & Dayton (89701–89423)",
-    heroSubheadline: "Whether protecting historic Carson City homes, state capital commercial buildings, or Carson Valley properties in Minden, Gardnerville, and Dayton, dispatched technicians pinpoint leaks without exploratory damage.",
-    directAnswer: "Leak Detection NV coordinates 24/7 non-invasive leak detection across Carson City (89701, 89703, 89706), Dayton, Minden, Gardnerville, and Genoa. Licensed specialists locate hidden water, slab, crawlspace, well-main, and natural gas/propane leaks with acoustic, thermal, and tracer gas equipment. Call (725) 313-0108.",
+    h1: "Water, Gas, Crawlspace & Slab Leak Detection in Carson City, NV (89701)",
+    heroKicker: "Serving Downtown Carson City, Capitol Corridor & Historic Westside (89701)",
+    heroSubheadline: "Century-old raised crawlspaces, historic brick commercial buildings along Carson Street, and seasonal freeze-thaw cycles in 89701 require pinpoint acoustic and thermal diagnostics—without damaging vintage plaster or hardwood floors.",
+    directAnswer: "Leak Detection NV coordinates 24/7 non-invasive leak detection across Downtown Carson City and the Capitol District (89701). Licensed Nevada specialists locate concealed crawlspace splits, slab leaks, yard main ruptures, and Southwest Gas meter-side leaks using ultrasonic acoustic microphones, FLIR thermal imaging, and tracer gas. Call (725) 313-0108.",
     featuredImage: "/images/hero_emergency_plumbing_1791566119640.webp",
-    imageAlt: "Leak detection specialist serving Carson City and Carson Valley Nevada",
-    imageCaption: "Non-invasive electronic leak diagnostics across Carson City, Dayton, Minden, and Gardnerville.",
+    imageAlt: "Technician performing non-invasive leak detection in Downtown Carson City NV",
+    imageCaption: "Non-invasive electronic leak diagnostics serving Downtown Carson City, Capitol District, and 89701 properties.",
     sections: [
       {
-        heading: "Capital Corridor & Carson Valley Diagnostics",
-        subheading: "Municipal water lines, high water tables, and rural ranch piping",
+        heading: "Historic Crawlspaces & Downtown Mains in Carson City (89701)",
+        subheading: "Pinpointing leaks cleanly beneath vintage homes and commercial corridors",
         paragraphs: [
-          "Carson City and Douglas/Lyon County homes feature diverse plumbing infrastructure: 19th- and mid-20th-century crawlspaces downtown, modern post-tension slabs in newer subdivisions, and pressurized domestic well lines across Minden, Gardnerville, and Dayton.",
-          "Dispatched NSCB-licensed technicians isolate silent water losses under driveways, beneath hardwood floors, and along propane or natural gas feeds with pinpoint non-destructive instruments."
+          "Downtown Carson City properties around the Nevada State Capitol, Robinson Street, and the Governor’s Mansion Historic Zone include 19th- and mid-20th-century crawlspace foundations paired with updated copper or PEX service risers. Winter cold snaps below 15°F and shifting alluvial soil stress buried galvanized and cast-iron feeds.",
+          "Dispatched NSCB-licensed technicians trace silent water losses under driveways, beneath original hardwood subfloors, and along commercial service lines without exploratory demolition—and provide itemized documentation compatible with Carson City Public Works leak credit reviews."
         ],
         bulletPoints: [
-          "Downtown Carson City, Westside & Stewart corridor (89701, 89703, 89706)",
-          "Minden, Gardnerville, Gardnerville Ranchos & Genoa (89410, 89423, 89411)",
-          "Dayton, Mound House & Highway 50 East properties (89403)"
+          "Downtown Carson Street, 5th Street & State Capitol commercial corridors (89701)",
+          "Historic Westside crawlspace freeze-split and supply riser pinpointing",
+          "Carson City Public Works Water Utility high-bill diagnostic documentation"
         ]
       }
     ],
     faqs: [
       {
-        question: "Do your technicians travel to Minden, Gardnerville, and Dayton as well as Carson City?",
-        answer: "Yes. Regional Northern/Western Nevada dispatch covers Carson City, Douglas County (Minden, Gardnerville, Genoa, Zephyr Cove), and Lyon County (Dayton, Silver Springs)."
+        question: "Can you locate a water leak beneath historic hardwood floors or crawlspaces in Downtown Carson City?",
+        answer: "Yes. Dispatched specialists use FLIR infrared thermal cameras and ultrasonic acoustic listening sensors to isolate sub-floor and crawlspace leaks without tearing out historic plaster or wood finishes."
       },
       {
-        question: "Can you find a leak on a private domestic well line in Carson Valley?",
-        answer: "Yes. Using pressure isolation at the wellhead pressure tank paired with acoustic ground microphones and tracer gas, technicians locate underground breaks between the well and house."
+        question: "Do your diagnostic reports support Carson City Public Works water bill adjustments?",
+        answer: "Yes. Technicians perform meter-isolation testing and furnish an itemized location and repair report formatted for Carson City Public Works high-usage billing reviews."
       }
     ],
     relatedServices: [
       { title: "Water Leak Detection & Repair", slug: "water-leak-detection", description: "Crawlspace, wall & main line testing." },
-      { title: "Underground Pipe Leak Detection", slug: "underground-leak-detection", description: "Private well & buried yard line locating." },
-      { title: "Gas Leak Detection & Emergency Repair", slug: "gas-leak-detection", description: "Natural gas & propane leak diagnostics." }
+      { title: "Underground Pipe Leak Detection", slug: "underground-leak-detection", description: "Buried yard & municipal supply locating." },
+      { title: "Gas Leak Detection & Emergency Repair", slug: "gas-leak-detection", description: "Natural gas & Southwest Gas testing." }
     ],
     relatedLocations: [
-      { name: "Reno & Lake Tahoe", slug: "reno", context: "North along Hwy 395 & Lake Tahoe." },
-      { name: "Sparks & Spanish Springs", slug: "sparks", context: "Truckee Meadows east corridor." },
-      { name: "Elko & Rural Nevada", slug: "elko-rural-nevada", context: "Fernley, Fallon & Central/Northern NV." }
+      { name: "Westside & Lakeview (89703)", slug: "west-carson-lakeview", context: "Adjacent Kings Canyon & Sierra foothills." },
+      { name: "North Carson & Silver Oak (89706)", slug: "north-carson-silver-oak", context: "Lompa Lane & Northridge slabs." },
+      { name: "South Carson & Clearview (89705)", slug: "south-carson-clearview", context: "S Carson St & Snyder Ave corridor." }
     ],
     schemaType: "LocalBusiness"
   },
 
-  // 12H. NEVADA CITIES: PAHRUMP
-  "pahrump": {
-    slug: "pahrump",
-    urlPath: "/pahrump/",
+  // 12C. CARSON CITY DISTRICT 2: WESTSIDE, KINGS CANYON & LAKEVIEW (89703)
+  "west-carson-lakeview": {
+    slug: "west-carson-lakeview",
+    urlPath: "/west-carson-lakeview/",
     type: "location",
-    name: "Pahrump & Nye County Leak Detection",
-    navTitle: "Pahrump",
-    metaTitle: "Leak Detection Pahrump NV | Well Lines, Slab & Propane (725) 313-0108",
-    metaDescription: "Water, well main, slab or propane gas leak in Pahrump, NV (89048, 89060, 89061)? 24/7 non-invasive acoustic & tracer gas locating. Call (725) 313-0108.",
-    primaryKeyword: "leak detection Pahrump NV",
+    name: "Westside, Kings Canyon & Lakeview Leak Detection",
+    navTitle: "West Carson & Lakeview (89703)",
+    metaTitle: "Leak Detection West Carson City & Lakeview NV 89703 | (725) 313-0108",
+    metaDescription: "Water, well main, freeze-burst or gas leak in West Carson City, Kings Canyon or Lakeview (89703)? 24/7 acoustic & tracer gas locating. Call (725) 313-0108.",
+    primaryKeyword: "leak detection West Carson City NV 89703",
     secondaryKeywords: [
-      "water leak detection Pahrump Nevada",
-      "well line leak repair Pahrump 89048",
-      "slab leak detection Pahrump NV 89060",
-      "propane gas leak repair Pahrump"
+      "water leak detection Lakeview Carson City",
+      "well line leak repair Kings Canyon 89703",
+      "frozen pipe repair Westside Carson City",
+      "gas leak detection 89703 Carson City NV"
     ],
     semanticEntities: [
-      "Nye County / Pahrump Valley",
-      "Private domestic water wells & booster pump systems",
-      "Great Basin Utilities & rural acreage supply runs",
-      "Buried propane & Mojave caliche slab foundations"
+      "Kings Canyon Road, Ash Canyon & Foothill Drive",
+      "Lakeview Estates & Highway 50 West corridor",
+      "Sierra Nevada granite foothills & high-PSI pressure zones",
+      "Private domestic well lines & winter freeze-thaw bursts"
     ],
-    h1: "Water, Slab, Well-Main & Gas Leak Detection in Pahrump, NV",
-    heroKicker: "Serving Pahrump Valley • ZIP Codes 89048, 89060 & 89061",
-    heroSubheadline: "Just west over the Spring Mountains, Pahrump homes rely on private wells, long acreage supply lines, post-tension slabs, and propane systems. Connect 24/7 with specialists equipped for rural and suburban diagnostics.",
-    directAnswer: "Leak Detection NV provides 24/7 dispatch to Pahrump (89048, 89060, 89061) and southern Nye County. Whether your well pump cycles nonstop, your water bill spikes on Great Basin Utilities, or a propane line loses pressure, technicians pinpoint hidden breaks without trenching your acreage. Call (725) 313-0108.",
+    h1: "Water, Freeze-Pipe, Well & Gas Leak Detection in West Carson & Lakeview (89703)",
+    heroKicker: "Serving Westside, Kings Canyon, Ash Canyon & Lakeview • ZIP Code 89703",
+    heroSubheadline: "Foothill elevation pressure zones, granite boulder terrain, and deep winter freezes along Kings Canyon and Lakeview put constant strain on main shutoffs, private well lines, and exterior wall piping.",
+    directAnswer: "Leak Detection NV dispatches licensed technicians 24/7 across West Carson City, Kings Canyon, Ash Canyon, and Lakeview (89703). Equipped with hydrogen-nitrogen tracer gas, acoustic ground microphones, and FLIR thermal cameras, specialists isolate buried well-main breaks, foothill PRV leaks, and freeze-split wall pipes cleanly. Call (725) 313-0108.",
     featuredImage: "/images/diagnostic_tech_1791662650738.webp",
-    imageAlt: "Technician tracing buried well and water lines in Pahrump Nevada",
-    imageCaption: "Acoustic and tracer-gas diagnostics for Pahrump slabs, long-run well lines, and propane feeds.",
+    imageAlt: "Acoustic and thermal leak detection serving West Carson City and Lakeview 89703",
+    imageCaption: "Non-invasive acoustic, thermal, and tracer-gas diagnostics in West Carson City and Lakeview (89703).",
     sections: [
       {
-        heading: "Well Pump Rapid-Cycling & Long Yard Lines in Pahrump",
-        subheading: "Pinpointing underground leaks across 1-to-5-acre Mojave desert parcels",
+        heading: "Foothill Pressure Zones & Freeze Protection in 89703",
+        subheading: "Tracing underground runs through Sierra granite and foothill gravel",
         paragraphs: [
-          "When a private well pump in Pahrump cycles on every few minutes with indoor taps shut, pressurized water is escaping underground between the well casing, storage tank, and home—or beneath your concrete slab.",
-          "Because desert gravel and caliche absorb thousands of gallons without forming surface puddles, electronic tracer gas and ground microphones pinpoint the exact spot cleanly."
+          "Neighborhoods along Kings Canyon Road, Ash Canyon, and Lakeview sit against the eastern slope of the Carson Range, where colder canyon air drains overnight and elevation differences spike water delivery pressures. Rocky granite soil hides underground leaks easily while failed pressure-reducing valves (PRVs) accelerate indoor pinhole splits.",
+          "Rather than excavating long hillside driveways or tearing open finished walls, dispatched specialists pinpoint the exact breach with tracer gas and acoustic correlation."
         ],
         bulletPoints: [
-          "Well-to-house main line isolation and pressure decay testing",
-          "Mountain Falls, Calvada Valley & Winery Estates slab & pool diagnostics",
-          "Buried propane tank-to-home line electronic PPM sniffing"
+          "Westside Historic District, Kings Canyon & Ash Canyon foothill homes (89703)",
+          "Lakeview Estates well-to-house main isolation & pressure decay testing",
+          "PRV high-pressure diagnostics & winter freeze-burst thermal scanning"
         ]
       }
     ],
     faqs: [
       {
-        question: "Why does my Pahrump well pump keep turning on when no water is running?",
-        answer: "Continuous short-cycling indicates either a failed pressure-tank check valve or an underground water leak between the wellhead and household fixtures. Dispatched technicians isolate each section to pinpoint the exact break."
+        question: "Why does my Lakeview or Kings Canyon well pump keep short-cycling?",
+        answer: "Frequent pump cycling with indoor fixtures shut usually points to a leaking underground check valve or a fractured supply line between the well casing and home. Dispatched specialists isolate each section to mark the exact break."
       },
       {
-        question: "Do you dispatch to Mountain Falls, Calvada Valley, and north Pahrump?",
-        answer: "Yes. Priority Highway 160 dispatch covers all of 89048, 89060, and 89061."
+        question: "Can tracer gas find water leaks under rocky Sierra foothill soil or paved driveways?",
+        answer: "Yes. Safe nitrogen-hydrogen tracer gas rises cleanly through granite gravel, soil, and asphalt so electronic sensors pinpoint the leak within inches."
       }
     ],
     relatedServices: [
-      { title: "Underground Pipe Leak Detection", slug: "underground-leak-detection", description: "Well-main & buried yard pipe locating." },
-      { title: "Slab Leak Detection & Repair", slug: "slab-leak-detection", description: "Concrete slab acoustic pinpointing." },
+      { title: "Underground Pipe Leak Detection", slug: "underground-leak-detection", description: "Well-main & buried hillside line tracing." },
+      { title: "Water Leak Detection & Repair", slug: "water-leak-detection", description: "Freeze-burst wall & PRV line testing." },
+      { title: "24/7 Emergency Leak Repair", slug: "emergency-leak-repair", description: "Immediate shutoff & winter pipe containment." }
+    ],
+    relatedLocations: [
+      { name: "Downtown & Capitol (89701)", slug: "carson-city", context: "Central Carson City corridor." },
+      { name: "North Carson & Silver Oak (89706)", slug: "north-carson-silver-oak", context: "Northridge & Lompa neighborhoods." },
+      { name: "South Carson & Clearview (89705)", slug: "south-carson-clearview", context: "Foothill Drive south to Clearview." }
+    ],
+    schemaType: "LocalBusiness"
+  },
+
+  // 12D. CARSON CITY DISTRICT 3: NORTH CARSON, LOMPA & SILVER OAK (89706)
+  "north-carson-silver-oak": {
+    slug: "north-carson-silver-oak",
+    urlPath: "/north-carson-silver-oak/",
+    type: "location",
+    name: "North Carson, Lompa & Silver Oak Leak Detection",
+    navTitle: "North Carson & Silver Oak (89706)",
+    metaTitle: "Leak Detection North Carson & Silver Oak NV 89706 | (725) 313-0108",
+    metaDescription: "Slab, pool, sprinkler or gas leak in North Carson, Lompa Lane or Silver Oak (89706)? 24/7 non-invasive acoustic & thermal diagnostics. Call (725) 313-0108.",
+    primaryKeyword: "leak detection North Carson City NV 89706",
+    secondaryKeywords: [
+      "slab leak detection Silver Oak Carson City",
+      "pool leak detection North Carson 89706",
+      "water leak repair Lompa Lane Carson City",
+      "gas leak repair Northridge 89706"
+    ],
+    semanticEntities: [
+      "Silver Oak Golf Course, Northridge & Lompa Ranch",
+      "College Parkway & North Carson Street corridor",
+      "Post-tension concrete slab copper pinholes",
+      "Residential swimming pool & irrigation manifolds"
+    ],
+    h1: "Slab, Pool, Water & Gas Leak Detection in North Carson & Silver Oak (89706)",
+    heroKicker: "Serving Silver Oak, Lompa Lane, College Parkway & Northridge • 89706",
+    heroSubheadline: "Modern concrete slab homes in Silver Oak, Lompa Ranch, and Northridge frequently develop silent sub-slab hot water pinholes, irrigation manifold splits, and pool plumbing leaks. Call 24/7 for non-destructive pinpointing.",
+    directAnswer: "Leak Detection NV connects North Carson and Silver Oak homeowners (89706) with NSCB-licensed technicians equipped for sub-slab acoustic testing, FLIR thermal floor scanning, swimming pool hydrophone testing, and gas line safety checks. Pinpoint leaks without breaking tile or draining pools. Call (725) 313-0108.",
+    featuredImage: "/images/slab_leak_inspection_1791566136409.webp",
+    imageAlt: "Acoustic slab leak detection inside North Carson and Silver Oak 89706 home",
+    imageCaption: "Non-invasive slab, pool, and irrigation leak diagnostics serving North Carson and Silver Oak (89706).",
+    sections: [
+      {
+        heading: "Post-Tension Slab & Backyard Pool Diagnostics in 89706",
+        subheading: "Protecting finished flooring and landscaped yards across North Carson",
+        paragraphs: [
+          "Subdivisions around Silver Oak, Lompa Lane, and College Parkway feature slab-on-grade and post-tension foundations where hot water copper manifolds run directly under concrete floors, tile, and engineered hardwood. Early symptoms include warm floor spots, unexplained water meter movement, or damp baseboards.",
+          "Dispatched specialists isolate hot vs. cold slab lines using ultrasonic ground geophones and FLIR thermal imaging, enabling targeted spot access or clean overhead PEX rerouting."
+        ],
+        bulletPoints: [
+          "Silver Oak, Northridge & College Parkway sub-slab acoustic localization",
+          "Lompa Lane & Arrowhead corridor commercial and residential main testing",
+          "Hydrophone & dye testing for backyard pools without draining water"
+        ]
+      }
+    ],
+    faqs: [
+      {
+        question: "How do technicians locate a slab leak in Silver Oak without jackhammering my whole floor?",
+        answer: "By isolating individual hot and cold lines and sweeping the concrete slab with ultrasonic acoustic sensors and FLIR infrared cameras, specialists mark the exact leak point within inches before any repair access begins."
+      },
+      {
+        question: "Can you test leaking swimming pools and lawn drip zones in 89706?",
+        answer: "Yes. Dispatched pros pressure-test pool return and suction lines with underwater hydrophones and trace buried yard irrigation manifolds with electronic correlators."
+      }
+    ],
+    relatedServices: [
+      { title: "Slab Leak Detection & Repair", slug: "slab-leak-detection", description: "Non-invasive concrete slab pinpointing." },
+      { title: "Swimming Pool Leak Detection", slug: "pool-leak-detection", description: "Hydrophone & skimmer dye diagnostics." },
+      { title: "Water Leak Detection & Repair", slug: "water-leak-detection", description: "Indoor supply & meter leak locating." }
+    ],
+    relatedLocations: [
+      { name: "Downtown & Capitol (89701)", slug: "carson-city", context: "South along N Carson St." },
+      { name: "East Carson & Empire Ranch (89706)", slug: "east-carson-empire-ranch", context: "East along Fairview & Hwy 50 E." },
+      { name: "Westside & Lakeview (89703)", slug: "west-carson-lakeview", context: "West across I-580 / Ash Canyon." }
+    ],
+    schemaType: "LocalBusiness"
+  },
+
+  // 12E. CARSON CITY DISTRICT 4: SOUTH CARSON, CLEARVIEW & STEWART (89701 / 89705)
+  "south-carson-clearview": {
+    slug: "south-carson-clearview",
+    urlPath: "/south-carson-clearview/",
+    type: "location",
+    name: "South Carson, Clearview & Stewart Leak Detection",
+    navTitle: "South Carson & Clearview (89705)",
+    metaTitle: "Leak Detection South Carson City & Clearview NV | (725) 313-0108",
+    metaDescription: "Water, slab, yard main or gas leak in South Carson City, Clearview, Koontz Ln or Stewart (89701/89705)? 24/7 licensed diagnostics. Call (725) 313-0108.",
+    primaryKeyword: "leak detection South Carson City NV",
+    secondaryKeywords: [
+      "water leak detection Clearview Carson City 89705",
+      "underground leak repair South Carson Street",
+      "slab leak detection Koontz Lane Carson City",
+      "gas leak repair Stewart Carson City NV"
+    ],
+    semanticEntities: [
+      "South Carson Street, Clearview Drive & Snyder Avenue",
+      "Koontz Lane, Stewart & Carson River Road corridor",
+      "High water table floodplain loam & granite fill",
+      "Commercial service mains & multi-family slab lines"
+    ],
+    h1: "Water, Slab, Yard Main & Gas Leak Detection in South Carson & Clearview (89705)",
+    heroKicker: "Serving South Carson St, Clearview, Snyder Ave & Stewart • 89701 / 89705",
+    heroSubheadline: "High groundwater near the Carson River corridor, busy South Carson commercial mains, and residential slab lines around Clearview and Snyder Avenue demand fast electronic pinpointing before moisture damages foundations.",
+    directAnswer: "Leak Detection NV coordinates 24/7 leak detection across South Carson City, Clearview, Snyder Avenue, Koontz Lane, and Stewart (89701 / 89705). Certified technicians distinguish true pressurized pipe leaks from seasonal groundwater using acoustic correlation, water-chemistry testing, thermal imaging, and digital gas sniffers. Call (725) 313-0108.",
+    featuredImage: "/images/water_heater_repair_1791566167061.webp",
+    imageAlt: "Water and underground main leak detection in South Carson City and Clearview NV",
+    imageCaption: "Precision acoustic and pressure diagnostics across South Carson Street, Clearview, and Stewart.",
+    sections: [
+      {
+        heading: "South Carson Commercial Mains & High-Water-Table Diagnostics",
+        subheading: "Separating pressurized plumbing breaks from seasonal Carson River moisture",
+        paragraphs: [
+          "Along South Carson Street, Snyder Avenue, and Carson River Road, sandy floodplain soils and seasonal runoff can mimic subsurface water leaks. Conversely, commercial fire/water mains and older copper slab lines can leak quietly beneath parking lots and home foundations.",
+          "Dispatched specialists combine pressure-decay isolation, chlorine/fluoride moisture tracing, and nitrogen tracer gas to confirm whether moisture stems from a broken potable pipe or groundwater—saving property owners unnecessary trenching."
+        ],
+        bulletPoints: [
+          "South Carson Street retail, automotive & multi-family commercial main locating",
+          "Clearview Drive, Snyder Ave & Koontz Ln slab and crawlspace diagnostics",
+          "Natural gas & propane line leak testing for residential and light commercial sites"
+        ]
+      }
+    ],
+    faqs: [
+      {
+        question: "How can you tell if dampness near Clearview or Carson River Rd is a pipe leak or groundwater?",
+        answer: "Technicians perform static meter isolation pressure tests and test standing moisture for municipal chlorine/fluoride traces, combined with acoustic listening to confirm active pipe flow."
+      },
+      {
+        question: "Do you handle commercial water mains along South Carson Street?",
+        answer: "Yes. Dispatched NSCB C-1 contractors carry long-range acoustic correlators and tracer gas kits for commercial supply lines and parking lot mains."
+      }
+    ],
+    relatedServices: [
+      { title: "Underground Pipe Leak Detection", slug: "underground-leak-detection", description: "Commercial & yard main leak tracing." },
+      { title: "Water Leak Detection & Repair", slug: "water-leak-detection", description: "Meter isolation & indoor supply testing." },
+      { title: "Gas Leak Detection & Emergency Repair", slug: "gas-leak-detection", description: "24/7 combustible gas testing." }
+    ],
+    relatedLocations: [
+      { name: "Downtown & Capitol (89701)", slug: "carson-city", context: "North along S Carson St." },
+      { name: "East Carson & Empire Ranch", slug: "east-carson-empire-ranch", context: "Northeast toward Hwy 50 E & Pinion Hills." },
+      { name: "Westside & Lakeview (89703)", slug: "west-carson-lakeview", context: "West toward Foothill Dr." }
+    ],
+    schemaType: "LocalBusiness"
+  },
+
+  // 12F. CARSON CITY DISTRICT 5: EAST CARSON, EMPIRE RANCH & PINION HILLS
+  "east-carson-empire-ranch": {
+    slug: "east-carson-empire-ranch",
+    urlPath: "/east-carson-empire-ranch/",
+    type: "location",
+    name: "East Carson, Empire Ranch & Pinion Hills Leak Detection",
+    navTitle: "East Carson & Empire Ranch",
+    metaTitle: "Leak Detection East Carson City & Empire Ranch NV | (725) 313-0108",
+    metaDescription: "Water, slab, well line or propane leak in East Carson City, Empire Ranch or Pinion Hills? 24/7 non-invasive acoustic & tracer gas locating. Call (725) 313-0108.",
+    primaryKeyword: "leak detection East Carson City NV",
+    secondaryKeywords: [
+      "water leak detection Empire Ranch Carson City",
+      "well line leak repair Pinion Hills Carson City",
+      "slab leak detection East Carson 89701",
+      "propane gas leak detection Pinion Hills NV"
+    ],
+    semanticEntities: [
+      "Empire Ranch, Pinion Hills & Deer Run Road",
+      "Highway 50 East & Fairview Drive corridor",
+      "High-desert clay hardpan & granitic sand strata",
+      "Acreage private domestic wells & buried propane lines"
+    ],
+    h1: "Water, Well-Main, Slab & Gas Leak Detection in East Carson & Empire Ranch",
+    heroKicker: "Serving Empire Ranch, Pinion Hills, Deer Run Rd & Hwy 50 East • 89701 / 89706",
+    heroSubheadline: "East Carson combines modern golf-course slab homes in Empire Ranch with expansive acreage lots, private wells, and buried propane systems along Pinion Hills and Deer Run Road. Call 24/7 for precision non-invasive leak detection.",
+    directAnswer: "Leak Detection NV coordinates 24/7 non-invasive leak diagnostics across East Carson City, Empire Ranch, Pinion Hills, Fairview Drive, and Deer Run Road (89701 / 89706). Specialists trace long underground well lines, concrete slab pinholes, irrigation mains, and buried propane/natural gas feeds cleanly without tearing up driveways or pastures. Call (725) 313-0108.",
+    featuredImage: "/images/gas_leak_detection_1791567732913.webp",
+    imageAlt: "Acoustic and tracer gas leak detection in East Carson City and Empire Ranch NV",
+    imageCaption: "Tracer gas, acoustic slab, and well-line leak diagnostics serving Empire Ranch and Pinion Hills.",
+    sections: [
+      {
+        heading: "Empire Ranch Slabs & Pinion Hills Well Mains",
+        subheading: "Locating deep buried breaks across hardpan clay and acreage driveways",
+        paragraphs: [
+          "High-desert clay hardpan and compacted granite sand in East Carson absorb thousands of gallons of leaked water before any damp patch surfaces. Homes along Deer Run Road and Pinion Hills often rely on 100-to-300-foot buried service lines from wellheads or street meters, while Empire Ranch properties rely on sub-slab copper manifolds and pressurized yard irrigation.",
+          "Using inert hydrogen-nitrogen tracer gas, electromagnetic pipe locators, and calibrated PPM gas sniffers, dispatched specialists mark the exact fault spot above ground cleanly."
+        ],
+        bulletPoints: [
+          "Empire Ranch & Fairview Drive concrete slab acoustic & thermal diagnostics",
+          "Pinion Hills & Deer Run Rd long-run well main and pressure-tank isolation",
+          "Buried propane and Southwest Gas natural gas line PPM sniffing"
+        ]
+      }
+    ],
+    faqs: [
+      {
+        question: "Can you locate a buried leak on a 200-foot driveway well line in Pinion Hills?",
+        answer: "Yes. Technicians trace the buried pipe path electromagnetically and pressurize the line with tracer gas and acoustic sensors to pinpoint the leak without trenching the entire driveway."
+      },
+      {
+        question: "Do you inspect buried propane lines as well as natural gas lines in East Carson?",
+        answer: "Yes. Dispatched specialists use manometer drop testing and calibrated digital PPM sniffers compatible with both propane and Southwest Gas natural gas systems."
+      }
+    ],
+    relatedServices: [
+      { title: "Underground Pipe Leak Detection", slug: "underground-leak-detection", description: "Long well-main & yard pipe tracing." },
+      { title: "Slab Leak Detection & Repair", slug: "slab-leak-detection", description: "Empire Ranch slab acoustic diagnostics." },
       { title: "Gas Leak Detection & Emergency Repair", slug: "gas-leak-detection", description: "Propane & natural gas leak testing." }
     ],
     relatedLocations: [
-      { name: "Las Vegas Metro", slug: "las-vegas", context: "Highway 160 Clark County dispatch." },
-      { name: "Spring Valley Core", slug: "spring-valley-center", context: "West valley dispatch hub." },
-      { name: "Carson City & Minden", slug: "carson-city", context: "Western Nevada rural & well service." }
-    ],
-    schemaType: "LocalBusiness"
-  },
-
-  // 12I. NEVADA CITIES: MESQUITE
-  "mesquite": {
-    slug: "mesquite",
-    urlPath: "/mesquite/",
-    type: "location",
-    name: "Mesquite & Virgin Valley Leak Detection",
-    navTitle: "Mesquite",
-    metaTitle: "Leak Detection Mesquite NV | Sun City & Virgin Valley (725) 313-0108",
-    metaDescription: "Water, slab, pool or gas leak in Mesquite or Bunkerville, NV (89027)? Non-invasive acoustic, thermal & pool hydrophone testing. Call (725) 313-0108.",
-    primaryKeyword: "leak detection Mesquite NV",
-    secondaryKeywords: [
-      "water leak detection Mesquite Nevada",
-      "slab leak repair Sun City Mesquite",
-      "pool leak detection Mesquite 89027",
-      "irrigation leak repair Virgin Valley"
-    ],
-    semanticEntities: [
-      "Virgin Valley Water District (VVWD)",
-      "Sun City Mesquite, Oasis, Falcon Ridge & Bunkerville",
-      "High-mineral geothermal/hard water scaling",
-      "Golf community swimming pools & post-tension slabs"
-    ],
-    h1: "Water, Slab, Pool & Gas Leak Detection in Mesquite, NV",
-    heroKicker: "Serving Mesquite, Sun City Mesquite, Bunkerville & Virgin Valley (89027)",
-    heroSubheadline: "High-mineral Virgin Valley water, scorching Mojave summers, and resort golf community slabs and pools require accurate, non-destructive leak diagnostics. Call 24/7 for licensed dispatch in Mesquite.",
-    directAnswer: "Leak Detection NV connects Mesquite and Bunkerville homeowners (89027) with licensed technicians for water, slab, swimming pool, irrigation, and gas leak diagnostics. Equipment includes ultrasonic ground sensors, FLIR thermal imaging, and pool hydrophones to minimize property disruption and support Virgin Valley Water District leak reviews. Call (725) 313-0108.",
-    featuredImage: "/images/pool_leak_detection_1791567711591.webp",
-    imageAlt: "Pool and slab leak detection serving Mesquite and Virgin Valley Nevada",
-    imageCaption: "Non-invasive pool hydrophone and acoustic slab diagnostics in Mesquite, NV.",
-    sections: [
-      {
-        heading: "Hard Water & Desert Soil Leaks in the Virgin Valley",
-        subheading: "Protecting Sun City Mesquite slabs, resort pools, and drip lines",
-        paragraphs: [
-          "Mesquite tap water carries high mineral concentrations that accelerate pinhole corrosion inside copper manifolds, water heaters, and angle stops. Combined with 115°F summer ground heat, concrete slab lines and pool skimmers face intense stress.",
-          "Dispatched technicians diagnose Sun City Mesquite, Falcon Ridge, and Bunkerville properties cleanly without breaking tile or draining pools."
-        ],
-        bulletPoints: [
-          "Sun City Mesquite, Falcon Ridge & Canyon Crest slab and water diagnostics",
-          "HOA and private backyard swimming pool dye & hydrophone inspections",
-          "Virgin Valley Water District (VVWD) leak repair documentation"
-        ]
-      }
-    ],
-    faqs: [
-      {
-        question: "Do you serve Sun City Mesquite and Bunkerville?",
-        answer: "Yes. Dispatched specialists cover all neighborhoods in Mesquite and Bunkerville across ZIP codes 89027 and 89007."
-      },
-      {
-        question: "Can you locate a pool leak in Mesquite without draining the pool?",
-        answer: "Yes. Technicians use underwater hydrophones, dye testing, and pressure plugs while the pool stays completely full."
-      }
-    ],
-    relatedServices: [
-      { title: "Swimming Pool Leak Detection", slug: "pool-leak-detection", description: "Resort & backyard pool hydrophone testing." },
-      { title: "Slab Leak Detection & Repair", slug: "slab-leak-detection", description: "Pinpointing under-tile copper leaks." },
-      { title: "Water Leak Detection & Repair", slug: "water-leak-detection", description: "Main line & indoor leak locating." }
-    ],
-    relatedLocations: [
-      { name: "North Las Vegas", slug: "north-las-vegas", context: "Southwest along the I-15 corridor." },
-      { name: "Las Vegas Metro", slug: "las-vegas", context: "Clark County regional hub." },
-      { name: "Boulder City & Laughlin", slug: "boulder-city", context: "Southern Nevada Colorado River corridor." }
-    ],
-    schemaType: "LocalBusiness"
-  },
-
-  // 12J. NEVADA CITIES: BOULDER CITY & LAUGHLIN
-  "boulder-city": {
-    slug: "boulder-city",
-    urlPath: "/boulder-city/",
-    type: "location",
-    name: "Boulder City & Laughlin Leak Detection",
-    navTitle: "Boulder City",
-    metaTitle: "Leak Detection Boulder City & Laughlin NV | (725) 313-0108",
-    metaDescription: "Water, slab, pool or gas leak in Boulder City (89005) or Laughlin (89029)? 24/7 non-invasive acoustic, thermal & pool leak diagnostics. Call (725) 313-0108.",
-    primaryKeyword: "leak detection Boulder City NV",
-    secondaryKeywords: [
-      "water leak detection Boulder City",
-      "leak detection Laughlin NV 89029",
-      "slab leak repair Boulder City 89005",
-      "pool leak detection Boulder City"
-    ],
-    semanticEntities: [
-      "Boulder City Historic District & Lake Mead corridor",
-      "Laughlin Colorado River residential & resort corridor",
-      "City of Boulder City Utilities & Big Bend Water District",
-      "Vintage galvanized mains & desert caliche slabs"
-    ],
-    h1: "Water, Gas, Slab & Pool Leak Detection in Boulder City & Laughlin, NV",
-    heroKicker: "Serving Boulder City (89005), Lake Mead & Laughlin (89029)",
-    heroSubheadline: "From 1930s historic homes near Downtown Boulder City to riverfront properties and slabs in Laughlin, dispatched technicians deliver fast, non-invasive electronic leak pinpointing.",
-    directAnswer: "Leak Detection NV dispatches NSCB-licensed specialists along the U.S. 93 / 95 corridor to Boulder City (89005) and Laughlin (89029). Electronic acoustic geophones, thermal cameras, and pool hydrophones locate corroded historic mains, concrete slab ruptures, and pool leaks cleanly. Call (725) 313-0108.",
-    featuredImage: "/images/water_heater_repair_1791566167061.webp",
-    imageAlt: "Leak detection technician servicing Boulder City and Laughlin Nevada homes",
-    imageCaption: "Non-invasive leak detection serving Boulder City historic homes and Laughlin riverfront properties.",
-    sections: [
-      {
-        heading: "Historic Plumbing & Colorado River Corridor Challenges",
-        subheading: "Aging galvanized supply runs, river-heat pool loss, and rocky subsoils",
-        paragraphs: [
-          "Boulder City features historic 1930s–1970s homes with aging galvanized or early copper lines running through rocky Lake Mead basalt and caliche. Meanwhile, Laughlin endures some of the highest summer temperatures in the United States, straining pool lines, slab foundations, and main shutoffs.",
-          "Dispatched specialists locate hidden leaks cleanly and furnish documentation compatible with Boulder City Municipal Utilities and Big Bend Water District reviews."
-        ],
-        bulletPoints: [
-          "Historic Downtown Boulder City, Lakeview & Hemenway Valley (89005)",
-          "Laughlin residential subdivisions, riverfront condos & hospitality properties (89029)",
-          "Non-invasive locating tailored for vintage plaster, tile, and rocky terrain"
-        ]
-      }
-    ],
-    faqs: [
-      {
-        question: "Do you service both Boulder City and Laughlin?",
-        answer: "Yes. Southern Clark County dispatch covers Boulder City, Searchlight, and Laughlin 24/7."
-      },
-      {
-        question: "Can you trace aging galvanized yard lines in historic Boulder City neighborhoods?",
-        answer: "Yes. Electromagnetic pipe locators easily trace metallic galvanized and copper mains from street meters to older foundations."
-      }
-    ],
-    relatedServices: [
-      { title: "Water Leak Detection & Repair", slug: "water-leak-detection", description: "Historic supply & yard main locating." },
-      { title: "Swimming Pool Leak Detection", slug: "pool-leak-detection", description: "Desert pool & spa diagnostics." },
-      { title: "Slab Leak Detection & Repair", slug: "slab-leak-detection", description: "Sub-concrete pinhole detection." }
-    ],
-    relatedLocations: [
-      { name: "Henderson & Green Valley", slug: "henderson", context: "Adjacent northwest Clark County city." },
-      { name: "Las Vegas Metro", slug: "las-vegas", context: "Regional dispatch center." },
-      { name: "Mesquite & Virgin Valley", slug: "mesquite", context: "Eastern Clark County service area." }
-    ],
-    schemaType: "LocalBusiness"
-  },
-
-  // 12K. NEVADA CITIES: ELKO, FERNLEY, FALLON, WINNEMUCCA & RURAL NEVADA
-  "elko-rural-nevada": {
-    slug: "elko-rural-nevada",
-    urlPath: "/elko-rural-nevada/",
-    type: "location",
-    name: "Elko, Fernley, Fallon & Rural Nevada Leak Detection",
-    navTitle: "Elko & Rural NV",
-    metaTitle: "Leak Detection Elko, Fernley, Fallon & Winnemucca NV (725) 313-0108",
-    metaDescription: "Freeze-burst pipe, water, well or gas leak in Elko, Spring Creek, Fernley, Fallon, Winnemucca or Ely, NV? 24/7 licensed detection. Call (725) 313-0108.",
-    primaryKeyword: "leak detection Elko NV",
-    secondaryKeywords: [
-      "water leak detection Fernley Fallon NV",
-      "frozen pipe leak repair Elko Spring Creek 89801",
-      "underground leak detection Winnemucca Lovelock",
-      "gas leak repair Ely Tonopah Nevada"
-    ],
-    semanticEntities: [
-      "Elko, Spring Creek, Winnemucca, Lovelock, Battle Mountain & Ely",
-      "Fernley, Fallon, Yerington & Hawthorne Western NV",
-      "Sub-zero winter freeze-thaw burst piping",
-      "Deep-buried rural well mains, ranches & propane distribution"
-    ],
-    h1: "Water, Freeze-Burst, Well & Gas Leak Detection in Elko & Rural Nevada",
-    heroKicker: "Serving Elko, Spring Creek, Fernley, Fallon, Winnemucca, Lovelock & Ely",
-    heroSubheadline: "Sub-zero high-desert winters, expansive ranch well systems, and remote municipal mains across Northern and Eastern Nevada require specialized non-invasive acoustic and tracer-gas leak detection. Call 24/7 for regional contractor matching.",
-    directAnswer: "Leak Detection NV coordinates licensed leak detection specialists across Northern, Central, and Eastern Nevada—including Elko (89801), Spring Creek (89815), Fernley (89408), Fallon (89406), Winnemucca (89445), Lovelock, Battle Mountain, Ely (89301), and Tonopah. Technicians locate freeze-burst indoor lines, buried well mains, and propane leaks accurately. Call (725) 313-0108.",
-    featuredImage: "/images/gas_leak_detection_1791567732913.webp",
-    imageAlt: "Technician using electronic gas and acoustic water detectors in Northern Nevada",
-    imageCaption: "Electronic tracer gas and thermal leak diagnostics serving Elko, Fernley, Fallon, Winnemucca, and Ely.",
-    sections: [
-      {
-        heading: "Deep Freeze & Rural Infrastructure Diagnostics Across the I-80 & Hwy 50 Corridors",
-        subheading: "Pinpointing buried mains and crawlspace freeze splits across northern valleys",
-        paragraphs: [
-          "Across Elko, Spring Creek, Winnemucca, and Ely, winter temperatures regularly drop well below zero, freezing uninsulated crawlspace pipes, ranch hydrants, and shallow municipal connections. Meanwhile, rapidly growing western towns like Fernley and Fallon contend with aging irrigation ditches, high groundwater tables, and slab leaks.",
-          "Using helium-nitrogen tracer gas, acoustic ground microphones, and FLIR thermal cameras, dispatched pros find exact underground leaks without tearing up frozen gravel drives or ranch landscaping."
-        ],
-        bulletPoints: [
-          "I-80 Corridor: Fernley, Lovelock, Winnemucca, Battle Mountain, Elko & Spring Creek",
-          "Lahontan & Mineral Basins: Fallon, Yerington & Hawthorne",
-          "U.S. 50 & U.S. 95 / 6: Austin, Eureka, Ely & Tonopah",
-          "Commercial, ranch, municipal water main & propane leak pinpointing"
-        ]
-      }
-    ],
-    faqs: [
-      {
-        question: "Do you serve Fernley, Fallon, and Winnemucca in addition to Elko?",
-        answer: "Yes. Our Northern and Rural Nevada dispatch network covers Fernley (89408), Fallon (89406), Winnemucca (89445), Lovelock (89419), Elko (89801), Spring Creek (89815), and Ely (89301)."
-      },
-      {
-        question: "Can tracer gas find a water leak buried 4 feet deep below the frost line?",
-        answer: "Yes. Non-toxic hydrogen-nitrogen tracer gas rises upward through soil, compacted gravel, and asphalt, allowing technicians to pinpoint deep frost-line leaks accurately."
-      }
-    ],
-    relatedServices: [
-      { title: "Underground Pipe Leak Detection", slug: "underground-leak-detection", description: "Deep well-main & yard line tracer gas." },
-      { title: "Water Leak Detection & Repair", slug: "water-leak-detection", description: "Freeze-burst wall & crawlspace locating." },
-      { title: "Gas Leak Detection & Emergency Repair", slug: "gas-leak-detection", description: "Propane & natural gas safety testing." }
-    ],
-    relatedLocations: [
-      { name: "Sparks & Spanish Springs", slug: "sparks", context: "West along I-80 Truckee Meadows." },
-      { name: "Reno & Lake Tahoe", slug: "reno", context: "Northern Nevada regional metro." },
-      { name: "Carson City & Minden", slug: "carson-city", context: "Hwy 50 / Carson Valley connection." }
+      { name: "North Carson & Silver Oak (89706)", slug: "north-carson-silver-oak", context: "Northwest via Airport Rd & Hwy 50." },
+      { name: "Downtown & Capitol (89701)", slug: "carson-city", context: "West along Fairview Dr & 5th St." },
+      { name: "South Carson & Clearview (89705)", slug: "south-carson-clearview", context: "Southwest toward Carson River Rd." }
     ],
     schemaType: "LocalBusiness"
   },
@@ -1713,14 +1352,14 @@ export const sitePages: Record<string, PageContent> = {
     type: "about",
     name: "How Leak Detection & Repair Works",
     navTitle: "How It Works",
-    metaTitle: "How It Works | Nevada Non-Invasive Leak Detection Process (725) 313-0108",
-    metaDescription: "Our 5-step non-invasive leak detection process for water, gas, slab & pool leaks across all Nevada cities. Acoustic, thermal & hydrophone testing. Call (725) 313-0108.",
-    primaryKeyword: "how leak detection works Nevada",
+    metaTitle: "How It Works | Carson City Non-Invasive Leak Detection (725) 313-0108",
+    metaDescription: "Our 5-step non-invasive leak detection process for water, gas, slab & pool leaks in Carson City, Nevada. Acoustic, thermal & hydrophone testing. Call (725) 313-0108.",
+    primaryKeyword: "how leak detection works Carson City NV",
     secondaryKeywords: [
-      "leak detection process Las Vegas Reno",
+      "leak detection process Carson City",
       "non-invasive leak diagnostics",
-      "slab leak detection procedure Nevada",
-      "leak repair workflow statewide"
+      "slab leak detection procedure Carson City",
+      "leak repair workflow Nevada"
     ],
     semanticEntities: [
       "Non-invasive ultrasonic acoustic diagnostics",
@@ -1729,25 +1368,25 @@ export const sitePages: Record<string, PageContent> = {
       "Combustible gas PPM sniffers",
       "Nevada State Contractors Board (NSCB) standards"
     ],
-    h1: "How Our Precision Leak Detection & Repair Process Works Across Nevada",
+    h1: "How Our Precision Leak Detection & Repair Process Works in Carson City",
     heroKicker: "5-Step Non-Invasive Diagnostic & Permanent Repair Process",
-    heroSubheadline: "From 24/7 emergency intake to acoustic and thermal localization anywhere in Nevada, here is how our licensed contractor network protects your property without destructive guesswork.",
-    directAnswer: "Our Nevada leak detection process follows five systematic stages: 24/7 rapid triage, non-invasive electronic diagnostics (acoustic ground microphones, thermal imaging, combustible gas sniffers, and pool hydrophones), pinpoint target marking within inches, upfront written itemized estimates, and NSCB code-compliant repairs with pressure verification. Call (725) 313-0108.",
+    heroSubheadline: "From 24/7 emergency intake to acoustic and thermal localization in Carson City, NV, here is how our licensed contractor network protects your property without destructive guesswork.",
+    directAnswer: "Our Carson City leak detection process follows five systematic stages: 24/7 rapid triage, non-invasive electronic diagnostics (acoustic ground microphones, thermal imaging, combustible gas sniffers, and pool hydrophones), pinpoint target marking within inches, upfront written itemized estimates, and NSCB code-compliant repairs with pressure verification. Call (725) 313-0108.",
     featuredImage: "/images/diagnostic_tech_1791662650738.webp",
-    imageAlt: "Nevada technician conducting non-invasive acoustic and thermal leak diagnostics",
-    imageCaption: "Mobile diagnostic technicians using ultrasonic acoustic listening and digital scanning tools across Nevada.",
+    imageAlt: "Technician conducting non-invasive acoustic and thermal leak diagnostics in Carson City",
+    imageCaption: "Mobile diagnostic technicians using ultrasonic acoustic listening and digital scanning tools in Carson City.",
     sections: [
       {
-        heading: "Step 1: Rapid 24/7 Assessment & Regional Dispatch",
-        subheading: "Immediate telephone triage to protect your Nevada property",
+        heading: "Step 1: Rapid 24/7 Assessment & Carson City Dispatch",
+        subheading: "Immediate telephone triage to protect your property",
         paragraphs: [
-          "When you call (725) 313-0108 from any city in Nevada, an intake coordinator assesses your leak symptoms immediately and guides you through safe main water or gas shutoff precautions if needed.",
-          "Your request is dispatched directly to qualified regional technicians serving Las Vegas, Henderson, North Las Vegas, Spring Valley, Reno, Sparks, Carson City, Pahrump, Mesquite, Boulder City, or rural NV."
+          "When you call (725) 313-0108 from anywhere in Carson City, an intake coordinator assesses your leak symptoms immediately and guides you through safe main water or gas shutoff precautions if needed.",
+          "Your request is dispatched directly to qualified technicians serving Downtown Carson City (89701), Westside & Kings Canyon (89703), North Carson & Silver Oak (89706), Clearview (89705), and Empire Ranch."
         ],
         bulletPoints: [
-          "24/7/365 phone triage across all Nevada ZIP codes",
+          "24/7/365 phone triage across all Carson City ZIP codes (89701–89706)",
           "Immediate shutoff guidance to limit active water or gas exposure",
-          "Regional matching with NSCB-licensed specialists carrying calibrated gear"
+          "Matching with NSCB-licensed specialists carrying calibrated diagnostic gear"
         ]
       },
       {
@@ -1758,17 +1397,17 @@ export const sitePages: Record<string, PageContent> = {
           "Technicians deploy FLIR thermal cameras, ultrasonic ground geophones, calibrated gas sniffers, tracer gas, and underwater hydrophones to track exact pressure drops and leak frequencies."
         ],
         bulletPoints: [
-          "Ultrasonic acoustic sensors to hear pressurized water beneath concrete slabs",
+          "Ultrasonic acoustic sensors to hear pressurized water beneath concrete slabs & crawlspaces",
           "Thermal infrared imaging to map hidden moisture trails behind walls and floors",
           "Hydrophones and dye testing for swimming pools and spas without draining",
-          "Digital PPM combustible gas wands for natural gas and rural propane systems"
+          "Digital PPM combustible gas wands for natural gas and propane systems"
         ]
       },
       {
         heading: "Step 3: Pinpoint Leak Location Identification",
         subheading: "Isolating pipe ruptures to within inches",
         paragraphs: [
-          "By cross-referencing acoustic frequencies and thermal gradients, technicians mark the exact breach beneath foundation slabs, inside wall cavities, or under pool decking—minimizing any repair access footprint."
+          "By cross-referencing acoustic frequencies and thermal gradients, technicians mark the exact breach beneath foundation slabs, inside crawlspace joists, or under pool decking—minimizing any repair access footprint."
         ]
       },
       {
@@ -1780,9 +1419,9 @@ export const sitePages: Record<string, PageContent> = {
       },
       {
         heading: "Step 5: NSCB Code-Compliant Repair & Pressure Verification",
-        subheading: "Permanent craftsmanship plus utility rebate documentation",
+        subheading: "Permanent craftsmanship plus Carson City Public Works documentation",
         paragraphs: [
-          "All repairs conform to Nevada State Contractors Board (NSCB) regulations and local municipal codes. Post-repair static pressure testing verifies airtight and watertight integrity, with repair documentation prepared for insurance or utility credits (LVVWD, Henderson, TMWA, VVWD)."
+          "All repairs conform to Nevada State Contractors Board (NSCB) regulations and Carson City plumbing codes. Post-repair static pressure testing verifies airtight and watertight integrity, with itemized repair documentation prepared for insurance or Carson City Public Works utility review."
         ]
       }
     ],
@@ -1796,8 +1435,8 @@ export const sitePages: Record<string, PageContent> = {
         answer: "Yes. You receive clear repair options and itemized written pricing prior to authorizing repair work."
       },
       {
-        question: "Are technicians licensed and insured in Nevada?",
-        answer: "Yes. Work is performed by independent licensed contractors complying with Nevada State Contractors Board (NSCB) standards and local codes statewide."
+        question: "Are technicians licensed and insured for Carson City work?",
+        answer: "Yes. Work is performed by independent licensed contractors complying with Nevada State Contractors Board (NSCB) standards and Carson City municipal codes."
       }
     ],
     relatedServices: [
@@ -1807,9 +1446,9 @@ export const sitePages: Record<string, PageContent> = {
       { title: "Gas Leak Detection & Emergency Repair", slug: "gas-leak-detection", description: "Combustible gas safety testing." }
     ],
     relatedLocations: [
-      { name: "Las Vegas Metro", slug: "las-vegas", context: "Southern Nevada rapid response." },
-      { name: "Reno & Lake Tahoe", slug: "reno", context: "Northern Nevada diagnostics." },
-      { name: "Henderson & Green Valley", slug: "henderson", context: "Clark County residential coverage." }
+      { name: "Downtown & Capitol (89701)", slug: "carson-city", context: "Central Carson City dispatch." },
+      { name: "Westside & Kings Canyon (89703)", slug: "west-carson-lakeview", context: "West Carson diagnostics." },
+      { name: "North Carson & Silver Oak (89706)", slug: "north-carson-silver-oak", context: "North Carson slab & pool coverage." }
     ],
     schemaType: "HowTo"
   },
@@ -1819,51 +1458,51 @@ export const sitePages: Record<string, PageContent> = {
     slug: "about",
     urlPath: "/about/",
     type: "about",
-    name: "About Leak Detection NV | Statewide Plumber Network",
+    name: "About Leak Detection NV | Carson City Specialist Network",
     navTitle: "About Us",
-    metaTitle: "About Leak Detection NV | Nevada Licensed Plumber Network",
-    metaDescription: "We connect homeowners across Las Vegas, Henderson, Reno, Sparks, Carson City & all Nevada cities with pre-screened, NSCB-licensed leak detection pros. Call (725) 313-0108.",
-    primaryKeyword: "Leak Detection NV network",
+    metaTitle: "About Leak Detection NV | Carson City Licensed Plumber Network",
+    metaDescription: "We connect Carson City, Nevada property owners with pre-screened, NSCB-licensed leak detection specialists serving 89701–89706. Call (725) 313-0108.",
+    primaryKeyword: "Leak Detection NV Carson City",
     secondaryKeywords: [
       "about Leak Detection NV",
-      "leak detection specialists Nevada",
-      "water gas slab pool leak repair statewide",
+      "leak detection specialists Carson City Nevada",
+      "water gas slab pool leak repair Carson City",
       "6875 Groveview Ln Las Vegas"
     ],
     semanticEntities: [
+      "Carson City, Nevada local dispatch",
       "Nevada State Contractors Board (NSCB) standards",
       "Non-invasive ultrasonic acoustic diagnostics",
-      "FLIR thermal infrared moisture inspection",
-      "Statewide Nevada contractor matching"
+      "FLIR thermal infrared moisture inspection"
     ],
-    h1: "About Leak Detection NV — Statewide Licensed Specialist Network",
-    heroKicker: "Precision Non-Invasive Diagnostics • Serving All Nevada Cities",
-    heroSubheadline: "Coordinating 24/7 emergency water, gas, slab, and swimming pool leak detection across Las Vegas, Henderson, North Las Vegas, Spring Valley, Reno, Sparks, Carson City, and rural Nevada.",
-    directAnswer: "Leak Detection NV connects residential and commercial property owners across the entire state of Nevada with pre-screened, independent Nevada State Contractors Board (NSCB) licensed leak detection specialists. Headquartered at 6875 Groveview Ln, Las Vegas, NV 89103, our 24/7 dispatch network coordinates acoustic, thermal, tracer-gas, and hydrophone diagnostics statewide. Call (725) 313-0108.",
+    h1: "About Leak Detection NV — Carson City Licensed Specialist Network",
+    heroKicker: "Precision Non-Invasive Diagnostics • Serving Carson City, Nevada",
+    heroSubheadline: "Coordinating 24/7 emergency water, gas, slab, well-line, and swimming pool leak detection across Downtown Carson City, Westside, Silver Oak, Clearview, and Empire Ranch.",
+    directAnswer: "Leak Detection NV connects residential and commercial property owners in Carson City, Nevada with pre-screened, independent Nevada State Contractors Board (NSCB) licensed leak detection specialists. Coordinated 24/7 from our dispatch desk at 6875 Groveview Ln, Las Vegas, NV 89103, our network matches Carson City calls with acoustic, thermal, tracer-gas, and hydrophone diagnostics. Call (725) 313-0108.",
     featuredImage: "/images/hero_emergency_plumbing_1791566119640.webp",
-    imageAlt: "Leak Detection NV statewide diagnostic equipment and technical standards",
-    imageCaption: "Matching Nevada property owners 24/7 with NSCB-licensed acoustic and thermal leak specialists.",
+    imageAlt: "Leak Detection NV diagnostic equipment and technical standards for Carson City",
+    imageCaption: "Matching Carson City property owners 24/7 with NSCB-licensed acoustic and thermal leak specialists.",
     sections: [
       {
-        heading: "Our Mission: Non-Invasive Precision Across Every Nevada City",
-        subheading: "Eliminating guesswork and protecting Nevada homes from Las Vegas to Reno",
+        heading: "Our Mission: Non-Invasive Precision Across Carson City, NV",
+        subheading: "Eliminating guesswork and protecting Eagle Valley homes",
         paragraphs: [
-          "Hidden water, slab, gas, and pool leaks can silently cause severe structural damage. Exploratory demolition—breaking through post-tension concrete slabs or tearing open walls blindly—frequently costs more than the pipe repair itself.",
-          "Leak Detection NV bridges property owners across Southern, Northern, and Rural Nevada with vetted independent specialists equipped with electronic acoustic listening gear, FLIR infrared thermography, calibrated gas sniffers, and underwater pool hydrophones."
+          "Hidden water, freeze-burst, slab, gas, and well leaks can silently damage residential crawlspaces and foundations. Exploratory demolition—breaking through concrete slabs or tearing open historic plaster blindly—frequently costs more than fixing the pipe itself.",
+          "Leak Detection NV bridges Carson City property owners with vetted independent specialists equipped with electronic acoustic listening gear, FLIR infrared thermography, calibrated gas sniffers, and underwater pool hydrophones."
         ],
         bulletPoints: [
-          "24/7 Rapid Emergency Dispatch across Southern, Northern & Rural Nevada",
+          "24/7 Rapid Emergency Dispatch across Carson City (89701, 89702, 89703, 89705, 89706)",
           "Non-invasive acoustic, thermal, tracer gas, and hydrophone leak detection",
           "Pre-screened independent contractors complying with NSCB C-1 standards",
-          "Documentation formatted for LVVWD, Henderson, TMWA & insurance claims"
+          "Documentation formatted for Carson City Public Works & insurance claims"
         ]
       },
       {
-        heading: "Headquartered in Las Vegas, Dispatched Statewide",
-        subheading: "Strict licensing verification and transparent estimates",
+        heading: "Verified Licensing & Transparent Upfront Estimates",
+        subheading: "Strict Nevada State Contractors Board verification",
         paragraphs: [
-          "From our Las Vegas coordination office at 6875 Groveview Ln, our intake desk routes urgent and scheduled inspections to qualified regional contractors in Las Vegas, Henderson, North Las Vegas, Spring Valley, Reno, Sparks, Carson City, Pahrump, Mesquite, Boulder City, and Elko.",
-          "All contractors are responsible for adhering to Nevada building codes and providing transparent written quotes before repair work commences."
+          "From our coordination office at 6875 Groveview Ln, Las Vegas, NV 89103, our intake desk routes urgent and scheduled inspections directly to qualified contractors serving Carson City.",
+          "All servicing contractors are responsible for adhering to Carson City Building Division codes and providing transparent written quotes before repair work commences."
         ]
       }
     ],
@@ -1873,7 +1512,7 @@ export const sitePages: Record<string, PageContent> = {
         answer: "Yes. Specialists conduct non-invasive diagnostics and present itemized written quotes before starting repairs."
       },
       {
-        question: "How can I verify a plumber's license in Nevada?",
+        question: "How can I verify a plumber's license in Carson City, Nevada?",
         answer: "You can verify any contractor's license and bond status through the official Nevada State Contractors Board public database at nscb.nv.gov."
       }
     ],
@@ -1883,9 +1522,9 @@ export const sitePages: Record<string, PageContent> = {
       { title: "Swimming Pool Leak Detection", slug: "pool-leak-detection", description: "Pool and spa leak diagnostics." }
     ],
     relatedLocations: [
-      { name: "Las Vegas Metro", slug: "las-vegas", context: "Las Vegas Valley regional hub." },
-      { name: "Reno & Lake Tahoe", slug: "reno", context: "Northern Nevada & Washoe metro." },
-      { name: "Henderson & Green Valley", slug: "henderson", context: "Southeast Clark County metro." }
+      { name: "Downtown & Capitol (89701)", slug: "carson-city", context: "Central Carson City district." },
+      { name: "Westside & Kings Canyon (89703)", slug: "west-carson-lakeview", context: "West Carson foothills." },
+      { name: "North Carson & Silver Oak (89706)", slug: "north-carson-silver-oak", context: "North Carson suburbs." }
     ],
     schemaType: "AboutPage"
   },
@@ -1895,72 +1534,72 @@ export const sitePages: Record<string, PageContent> = {
     slug: "contact",
     urlPath: "/contact/",
     type: "contact",
-    name: "Contact & NAP | Leak Detection NV",
+    name: "Contact & Dispatch | Leak Detection NV — Carson City",
     navTitle: "Contact & NAP",
-    metaTitle: "Contact Leak Detection NV | Statewide 24/7 Dispatch (725) 313-0108",
-    metaDescription: "Request 24/7 leak detection anywhere in Nevada. Call (725) 313-0108 anytime for Las Vegas, Henderson, Reno, Sparks, Carson City & Spring Valley. HQ: 6875 Groveview Ln, Las Vegas, NV 89103.",
-    primaryKeyword: "contact Leak Detection NV",
+    metaTitle: "Contact Leak Detection NV | Carson City 24/7 Dispatch (725) 313-0108",
+    metaDescription: "Request 24/7 leak detection in Carson City, NV (89701–89706). Call (725) 313-0108 anytime for fast acoustic, slab, well & gas leak dispatch.",
+    primaryKeyword: "contact Leak Detection NV Carson City",
     secondaryKeywords: [
       "Leak Detection NV phone number",
       "6875 Groveview Ln Las Vegas NV 89103",
-      "call leak detection Nevada",
-      "emergency leak repair phone Las Vegas Reno"
+      "call leak detection Carson City NV",
+      "emergency leak repair phone Carson City"
     ],
     semanticEntities: [
       "Telephone: (725) 313-0108",
-      "Headquarters address: 6875 Groveview Ln, Las Vegas, NV 89103",
-      "Target service area: All Nevada Cities Statewide",
+      "Business office address: 6875 Groveview Ln, Las Vegas, NV 89103",
+      "Target service area: Carson City, Nevada (89701–89706)",
       "24/7 emergency dispatch coordination"
     ],
-    h1: "Contact Leak Detection NV — 24/7 Statewide Dispatch",
-    heroKicker: "24/7 Emergency Line: (725) 313-0108 • HQ: 6875 Groveview Ln, Las Vegas, NV 89103",
-    heroSubheadline: "Have an active water leak, natural gas odor, sub-slab rupture, or leaking pool anywhere in Nevada? Call our 24/7 dispatch desk directly for immediate regional routing.",
-    directAnswer: "For urgent water, gas, slab, and swimming pool leaks anywhere in Nevada, calling directly gives you the fastest triage. Dial (725) 313-0108 to reach our 24/7 dispatch desk headquartered at 6875 Groveview Ln, Las Vegas, NV 89103 for service across Las Vegas, Henderson, North Las Vegas, Spring Valley, Reno, Sparks, Carson City, Pahrump, Mesquite, Boulder City, and Elko.",
+    h1: "Contact Leak Detection NV — 24/7 Carson City Dispatch",
+    heroKicker: "24/7 Emergency Line: (725) 313-0108 • Serving Carson City, NV (89701–89706)",
+    heroSubheadline: "Have an active water leak, freeze-burst pipe, natural gas odor, or sub-slab rupture in Carson City, Nevada? Call our 24/7 dispatch desk directly for immediate local matching.",
+    directAnswer: "For urgent water, gas, slab, well-line, and swimming pool leaks in Carson City, NV, calling directly gives you the fastest triage. Dial (725) 313-0108 to reach our 24/7 dispatch desk (business office: 6875 Groveview Ln, Las Vegas, NV 89103) for rapid contractor matching across 89701, 89702, 89703, 89705, and 89706.",
     featuredImage: "/images/contact_office_1791662625889.webp",
-    imageAlt: "Leak Detection NV dispatch office and coordination center at 6875 Groveview Ln",
-    imageCaption: "Live 24/7 emergency telephone support and statewide Nevada service coordination from 6875 Groveview Ln.",
+    imageAlt: "Leak Detection NV dispatch office and coordination center",
+    imageCaption: "Live 24/7 emergency telephone support serving Carson City, Nevada.",
     sections: [
       {
-        heading: "Official Business Information & NAP Details",
-        subheading: "Verified headquarters in Las Vegas serving all Nevada municipalities",
+        heading: "Official Business Information & Carson City Dispatch",
+        subheading: "24/7 live triage for Carson City homes and businesses",
         paragraphs: [
-          "Leak Detection NV operates 24 hours a day, 7 days a week from our Las Vegas coordination office. When you call (725) 313-0108, our desk immediately triages your issue, shares shutoff safety guidance, and matches your address with a licensed specialist in your Nevada city.",
-          "Our physical headquarters is located at 6875 Groveview Ln, Las Vegas, NV 89103, supporting priority Clark County dispatch and regional contractor routing across Northern, Central, and Southern Nevada."
+          "Leak Detection NV operates 24 hours a day, 7 days a week. When you call (725) 313-0108 from Carson City, our desk immediately triages your issue, shares main shutoff safety guidance, and matches your address with a licensed specialist serving your neighborhood.",
+          "Our administrative dispatch office is located at 6875 Groveview Ln, Las Vegas, NV 89103, coordinating dedicated NSCB-licensed technicians throughout Carson City (89701–89706)."
         ],
         bulletPoints: [
           "Company Name: Leak Detection NV",
-          "Headquarters Address: 6875 Groveview Ln, Las Vegas, NV 89103",
+          "Target Service City: Carson City, Nevada (89701, 89702, 89703, 89705, 89706)",
           "Primary 24/7 Telephone: (725) 313-0108",
+          "Administrative Office: 6875 Groveview Ln, Las Vegas, NV 89103",
           "Operating Hours: 24 Hours a Day, 7 Days a Week, 365 Days a Year",
-          "Statewide Coverage: Las Vegas, Henderson, North Las Vegas, Spring Valley, Reno, Sparks, Carson City, Pahrump, Mesquite, Boulder City & Elko",
-          "Core Services: Water Leak Detection, Slab Leak Detection, Pool Leak Detection, Gas Leak Detection"
+          "Core Services: Water Leak Detection, Slab Leak Detection, Well & Yard Lines, Pool & Gas Leak Detection"
         ]
       }
     ],
     faqs: [
       {
-        question: "Is your phone line answered 24 hours a day across all of Nevada?",
-        answer: "Yes. Our dispatch line at (725) 313-0108 is answered 24/7/365 for urgent water, gas, slab, and pool emergencies in every Nevada city."
+        question: "Is your phone line answered 24 hours a day for Carson City emergencies?",
+        answer: "Yes. Our dispatch line at (725) 313-0108 is answered 24/7/365 for urgent water, freeze-burst, gas, slab, and pool emergencies in Carson City, NV."
       },
       {
         question: "What should I do while waiting for a technician to arrive?",
-        answer: "If water is actively flooding, shut off your main water shutoff valve (garage, crawlspace, or curb meter box). If you smell natural gas or propane, evacuate immediately and call from outside."
+        answer: "If water is actively flooding, shut off your main water shutoff valve (garage, crawlspace, wellhead, or curb meter box). If you smell natural gas or propane, evacuate immediately and call from outside."
       },
       {
-        question: "Can I schedule non-emergency pool, well, or slab testing in advance?",
-        answer: "Yes. Call (725) 313-0108 anytime to schedule preventative acoustic inspections, pool bucket evaluations, or pre-purchase plumbing leak checks."
+        question: "Can I schedule non-emergency pool, well, or crawlspace testing in advance?",
+        answer: "Yes. Call (725) 313-0108 anytime to schedule preventative acoustic inspections or pre-purchase plumbing leak checks in Carson City."
       }
     ],
     relatedServices: [
-      { title: "Water Leak Detection & Repair", slug: "water-leak-detection", description: "Indoor and domestic water supply lines." },
+      { title: "Water Leak Detection & Repair", slug: "water-leak-detection", description: "Indoor, crawlspace & domestic supply lines." },
       { title: "Slab Leak Detection & Repair", slug: "slab-leak-detection", description: "Under-foundation acoustic diagnostics." },
       { title: "Swimming Pool Leak Detection", slug: "pool-leak-detection", description: "Hydrophone pool and spa diagnostics." },
       { title: "Gas Leak Detection & Repair", slug: "gas-leak-detection", description: "Natural gas & propane line testing." }
     ],
     relatedLocations: [
-      { name: "Las Vegas Metro", slug: "las-vegas", context: "Clark County metro dispatch." },
-      { name: "Reno & Lake Tahoe", slug: "reno", context: "Washoe County & Tahoe dispatch." },
-      { name: "Henderson & Green Valley", slug: "henderson", context: "Southeast valley dispatch." }
+      { name: "Downtown & Capitol (89701)", slug: "carson-city", context: "Central Carson City dispatch." },
+      { name: "Westside & Kings Canyon (89703)", slug: "west-carson-lakeview", context: "West Carson & Lakeview dispatch." },
+      { name: "North Carson & Silver Oak (89706)", slug: "north-carson-silver-oak", context: "North Carson dispatch." }
     ],
     schemaType: "ContactPage",
     showMap: true
@@ -1973,25 +1612,25 @@ export const sitePages: Record<string, PageContent> = {
     type: "about",
     name: "Leak Detection Blog & Knowledge Base",
     navTitle: "Blog",
-    metaTitle: "Leak Detection Cost in Nevada & Price Guide (2026) | Leak Detection NV",
-    metaDescription: "How much does leak detection cost in Nevada? See 2026 price ranges for Las Vegas, Henderson, Reno & statewide, plus insurance & utility credit guides.",
-    primaryKeyword: "Nevada leak detection blog",
+    metaTitle: "Leak Detection Cost & Homeowner Guides (2026) | Leak Detection NV",
+    metaDescription: "How much does leak detection cost? See 2026 price ranges, DIY meter checks, pool bucket test steps, gas emergency protocols & utility leak credit guides.",
+    primaryKeyword: "Carson City leak detection blog",
     secondaryKeywords: [
-      "slab leak warning signs Las Vegas Reno",
+      "slab leak warning signs",
       "pool bucket test guide",
       "smell gas emergency protocol",
-      "caliche soil pipe damage"
+      "leak detection cost guide 2026"
     ],
     semanticEntities: [
       "Slab leak diagnostics",
       "Swimming pool 24-hour bucket test",
       "Combustible natural gas safety",
-      "Nevada soil & freeze-thaw geology"
+      "Water meter leak verification"
     ],
     h1: "Leak Detection NV Blog & Homeowner Diagnostic Guides",
-    heroKicker: "Technical Guides • DIY Diagnostics • Emergency Protocols Statewide",
-    heroSubheadline: "Practical homeowner guides and technical insights from licensed leak detection specialists serving Nevada cities.",
-    directAnswer: "Explore in-depth guides covering slab leak warning signs, the swimming pool bucket test, natural gas safety procedures, water meter checks, and Nevada utility leak credits. For 24/7 dispatch anywhere in Nevada, call (725) 313-0108.",
+    heroKicker: "Technical Guides • DIY Diagnostics • Emergency Protocols",
+    heroSubheadline: "Practical homeowner guides and technical insights from licensed leak detection specialists serving Carson City, Nevada.",
+    directAnswer: "Explore in-depth guides covering slab leak warning signs, the swimming pool bucket test, natural gas safety procedures, water meter checks, and municipal leak credit documentation. For 24/7 dispatch in Carson City, NV, call (725) 313-0108.",
     sections: [],
     faqs: [],
     schemaType: "Blog"
@@ -2018,15 +1657,15 @@ export const sitePages: Record<string, PageContent> = {
       "Nevada consumer privacy regulations"
     ],
     h1: "Privacy Policy for Leak Detection NV",
-    heroKicker: "Effective Date: October 2026 • HQ: 6875 Groveview Ln, Las Vegas, NV 89103",
-    heroSubheadline: "This Privacy Policy describes how Leak Detection NV collects, uses, and safeguards information when you visit our website or contact our statewide service line.",
-    directAnswer: "Leak Detection NV operates from 6875 Groveview Ln, Las Vegas, NV 89103. We collect only necessary contact and property information (name, telephone number, Nevada service address, and leak description) to coordinate leak detection and repair services across Nevada.",
+    heroKicker: "Effective Date: October 2026 • Office: 6875 Groveview Ln, Las Vegas, NV 89103",
+    heroSubheadline: "This Privacy Policy describes how Leak Detection NV collects, uses, and safeguards information when you visit our website or contact our Carson City service line.",
+    directAnswer: "Leak Detection NV maintains its business office at 6875 Groveview Ln, Las Vegas, NV 89103. We collect only necessary contact and property information (name, telephone number, Carson City service address, and leak description) to coordinate leak detection and repair services.",
     sections: [
       {
         heading: "1. Information We Collect",
         subheading: "Data gathered to coordinate diagnostic and repair services",
         paragraphs: [
-          "When you contact our team by calling (725) 313-0108 or submitting an inquiry, we collect personal information you voluntarily provide, including your full name, telephone number, service address in Nevada, email address, and details regarding your water, gas, slab, or pool leak issue.",
+          "When you contact our team by calling (725) 313-0108 or submitting an inquiry, we collect personal information you voluntarily provide, including your full name, telephone number, service address, email address, and details regarding your water, gas, slab, or pool leak issue.",
           "We do not collect sensitive financial data such as credit card numbers or banking passwords through our website. Payment transactions are handled directly with the servicing contractor."
         ]
       },
@@ -2034,7 +1673,7 @@ export const sitePages: Record<string, PageContent> = {
         heading: "2. How We Use Your Information",
         subheading: "Purpose of service scheduling and communication",
         paragraphs: [
-          "The information you provide is used strictly to communicate with you regarding your service request, connect you with regional Nevada technicians, provide upfront written estimates, and coordinate service delivery.",
+          "The information you provide is used strictly to communicate with you regarding your service request, connect you with licensed local technicians, provide upfront written estimates, and coordinate service delivery.",
           "We never sell, rent, or trade your personal information to unrelated commercial data brokers."
         ]
       },
@@ -2077,8 +1716,8 @@ export const sitePages: Record<string, PageContent> = {
       { title: "Swimming Pool Leak Detection", slug: "pool-leak-detection", description: "Pool shell and plumbing line testing." }
     ],
     relatedLocations: [
-      { name: "Las Vegas Metro", slug: "las-vegas", context: "Las Vegas headquarters area." },
-      { name: "Reno & Lake Tahoe", slug: "reno", context: "Northern Nevada coverage." }
+      { name: "Downtown & Capitol (89701)", slug: "carson-city", context: "Central Carson City service area." },
+      { name: "North Carson & Silver Oak (89706)", slug: "north-carson-silver-oak", context: "North Carson service area." }
     ],
     schemaType: "WebPage"
   },
@@ -2091,11 +1730,11 @@ export const sitePages: Record<string, PageContent> = {
     name: "Legal Disclaimer & Licensing",
     navTitle: "Disclaimer",
     metaTitle: "Legal Disclaimer & Licensing | Leak Detection NV",
-    metaDescription: "Leak Detection NV is a referral service. Work across Nevada is performed by independent licensed contractors. Read our licensing and service terms.",
+    metaDescription: "Leak Detection NV is a referral service. Work in Carson City, NV is performed by independent licensed contractors. Read our licensing and service terms.",
     primaryKeyword: "Leak Detection NV disclaimer licensing",
     secondaryKeywords: [
       "leak detection referral service",
-      "independent licensed contractors Nevada",
+      "independent licensed contractors Carson City NV",
       "NSCB plumbing licensing terms",
       "Nevada contractor referral"
     ],
@@ -2103,26 +1742,26 @@ export const sitePages: Record<string, PageContent> = {
       "Nevada State Contractors Board (NSCB)",
       "Independent contractor referral service",
       "Limitation of liability terms",
-      "Nevada statewide service agreements"
+      "Carson City service agreements"
     ],
     h1: "Legal Disclaimer & Contractor Licensing Information",
-    heroKicker: "Referral Service Terms • Independent Licensed Nevada Contractors",
-    heroSubheadline: "Transparency and licensing standards for homeowners and commercial property owners across all Nevada cities.",
-    directAnswer: "Leak Detection NV is a customer referral and matching service. All leak detection, plumbing, gas piping, slab excavation, and restoration services across Nevada are performed exclusively by independent, third-party licensed contractors holding valid Nevada State Contractors Board (NSCB) licenses. Leak Detection NV does not directly employ plumbers or perform plumbing work.",
+    heroKicker: "Referral Service Terms • Independent Licensed Contractors Serving Carson City",
+    heroSubheadline: "Transparency and licensing standards for homeowners and commercial property owners in Carson City, Nevada.",
+    directAnswer: "Leak Detection NV is a customer referral and matching service. All leak detection, plumbing, gas piping, slab excavation, and restoration services in Carson City, NV are performed exclusively by independent, third-party licensed contractors holding valid Nevada State Contractors Board (NSCB) licenses. Leak Detection NV does not directly employ plumbers or perform plumbing work.",
     sections: [
       {
         heading: "1. Contractor Matching & Referral Service",
-        subheading: "Independent plumbing and leak specialists across Nevada",
+        subheading: "Independent plumbing and leak specialists serving Carson City, NV",
         paragraphs: [
-          "Leak Detection NV operates as an independent lead generation and customer matching portal connecting property owners across Nevada—including Las Vegas, Henderson, North Las Vegas, Spring Valley, Reno, Sparks, Carson City, Pahrump, Mesquite, Boulder City, and rural Nevada—with pre-screened, independent plumbing contractors.",
-          "When you contact our dispatch line at (725) 313-0108, your request is routed to an independent contractor possessing appropriate state trade licenses, commercial liability insurance, and electronic leak detection equipment."
+          "Leak Detection NV operates as an independent lead generation and customer matching portal connecting property owners in Carson City, Nevada—including Downtown Capitol District (89701), Westside & Kings Canyon (89703), North Carson & Silver Oak (89706), Clearview (89705), and Empire Ranch—with pre-screened, independent plumbing contractors.",
+          "When you contact our dispatch line at (725) 313-0108, your request is routed to an independent contractor possessing appropriate Nevada state trade licenses, commercial liability insurance, and electronic leak detection equipment."
         ]
       },
       {
         heading: "2. Independent Contractor Responsibility & Licensing",
         subheading: "Nevada State Contractors Board (NSCB) compliance",
         paragraphs: [
-          "Each independent contractor dispatched to your property is solely responsible for evaluating job site conditions, executing technical diagnostics, providing itemized repair estimates, and completing all plumbing or gas repairs in compliance with the Nevada State Contractors Board (NSCB) and applicable county/municipal plumbing codes.",
+          "Each independent contractor dispatched to your property is solely responsible for evaluating job site conditions, executing technical diagnostics, providing itemized repair estimates, and completing all plumbing or gas repairs in compliance with the Nevada State Contractors Board (NSCB) and Carson City municipal codes.",
           "Property owners are encouraged to verify contractor license numbers, bond standing, and insurance coverage directly with the servicing contractor prior to authorizing major excavation or repair work."
         ]
       },
@@ -2131,24 +1770,24 @@ export const sitePages: Record<string, PageContent> = {
         subheading: "Service terms and guarantees",
         paragraphs: [
           "Leak Detection NV does not guarantee, warrant, or assume liability for the work, acts, omissions, or representations of independent service providers. Any warranties, guarantees, or service contracts are entered into directly between the property owner and the servicing contractor.",
-          "Emergency dispatch arrival estimates (such as 30–60 minute metro response windows) depend on regional traffic, weather conditions, distance, and call volumes."
+          "Emergency dispatch arrival estimates depend on traffic, winter mountain weather conditions, distance, and active call volumes."
         ]
       },
       {
         heading: "4. Business Office & Questions",
-        subheading: "Contact our Las Vegas headquarters",
+        subheading: "Contact our administrative office",
         paragraphs: [
-          "If you have questions regarding these licensing disclosures or service policies, contact our headquarters at 6875 Groveview Ln, Las Vegas, NV 89103, or call (725) 313-0108."
+          "If you have questions regarding these licensing disclosures or service policies, contact our office at 6875 Groveview Ln, Las Vegas, NV 89103, or call (725) 313-0108."
         ]
       }
     ],
     faqs: [
       {
         question: "Does Leak Detection NV perform plumbing work directly?",
-        answer: "No. Leak Detection NV connects Nevada homeowners with pre-screened, independent plumbing contractors licensed by the Nevada State Contractors Board (NSCB)."
+        answer: "No. Leak Detection NV connects property owners with pre-screened, independent plumbing contractors licensed by the Nevada State Contractors Board (NSCB)."
       },
       {
-        question: "Are dispatched contractors licensed and insured?",
+        question: "Are dispatched contractors licensed and insured in Nevada?",
         answer: "Yes. Independent plumbing professionals in our network maintain active NSCB licenses, general liability insurance, and workers' compensation coverage."
       }
     ],
@@ -2158,8 +1797,8 @@ export const sitePages: Record<string, PageContent> = {
       { title: "Slab Leak Detection & Repair", slug: "slab-leak-detection", description: "Sub-foundation acoustic diagnostics." }
     ],
     relatedLocations: [
-      { name: "Las Vegas Metro", slug: "las-vegas", context: "Southern Nevada service area." },
-      { name: "Reno & Lake Tahoe", slug: "reno", context: "Northern Nevada service area." }
+      { name: "Downtown & Capitol (89701)", slug: "carson-city", context: "Central Carson City service area." },
+      { name: "Westside & Kings Canyon (89703)", slug: "west-carson-lakeview", context: "West Carson service area." }
     ],
     schemaType: "WebPage"
   },
@@ -2169,83 +1808,83 @@ export const sitePages: Record<string, PageContent> = {
     slug: "sitemap",
     urlPath: "/sitemap/",
     type: "about",
-    name: "Sitemap | Leak Detection NV Statewide",
+    name: "Sitemap | Leak Detection NV — Carson City, Nevada",
     navTitle: "Sitemap",
-    metaTitle: "Sitemap | Leak Detection NV All Nevada Cities Directory",
-    metaDescription: "Browse every Leak Detection NV page: water, gas, slab & pool leak detection, plus city pages for Las Vegas, Henderson, Reno, Sparks, Carson City, Spring Valley & rural NV.",
-    primaryKeyword: "Leak Detection NV sitemap Nevada",
+    metaTitle: "Sitemap | Leak Detection NV Carson City, Nevada Directory",
+    metaDescription: "Browse every Leak Detection NV page: water, gas, slab & pool leak detection, plus Carson City, NV neighborhood pages across 89701, 89703, 89705 & 89706.",
+    primaryKeyword: "Leak Detection NV sitemap Carson City",
     secondaryKeywords: [
-      "Nevada leak detection pages directory",
-      "Las Vegas Reno plumbing site map",
+      "Carson City leak detection directory",
+      "Carson City plumbing site map",
       "water gas slab pool leak navigation"
     ],
     semanticEntities: [
       "Leak Detection NV site index",
-      "Nevada statewide city navigation directory",
-      "Clark, Washoe, Carson, Nye & Elko County pages"
+      "Carson City district navigation directory",
+      "Carson City 89701 89703 89705 89706 service pages"
     ],
-    h1: "Leak Detection NV Sitemap & Statewide Directory",
-    heroKicker: "Complete Directory • All Nevada Cities & Services",
-    heroSubheadline: "Easily navigate every service page, Nevada city dispatch guide, technical article, and company policy.",
-    directAnswer: "Browse every page on Leak Detection NV: water leak detection, 24/7 gas leak testing, slab leak acoustic locating, swimming pool hydrophone testing, cost guides, and dedicated city pages across Las Vegas, Henderson, North Las Vegas, Spring Valley, Reno, Sparks, Carson City, Pahrump, Mesquite, Boulder City, and Elko.",
+    h1: "Leak Detection NV Sitemap & Carson City Directory",
+    heroKicker: "Complete Directory • Carson City, Nevada Services & Districts",
+    heroSubheadline: "Easily navigate every leak detection service page, Carson City district guide, technical article, and company policy.",
+    directAnswer: "Browse every page on Leak Detection NV: water leak detection, 24/7 gas leak testing, slab leak acoustic locating, swimming pool hydrophone testing, cost guides, and dedicated Carson City neighborhood pages covering 89701, 89702, 89703, 89705, and 89706.",
     sections: [
       {
         heading: "Core Leak Detection Service Pages",
-        subheading: "Non-invasive electronic diagnostic capabilities statewide",
+        subheading: "Non-invasive electronic diagnostic capabilities in Carson City",
         paragraphs: [
-          "Specialized non-destructive services protecting homes, slabs, yards, and pools across Nevada:"
+          "Specialized non-destructive services protecting homes, crawlspaces, slabs, wells, and pools in Carson City, NV:"
         ],
         bulletPoints: [
-          "Home / Main Hub: Statewide Water, Gas, Slab & Pool Leak Detection",
+          "Home / Main Hub: Carson City Water, Gas, Slab & Pool Leak Detection",
           "Water Leak Detection & Repair: Acoustic & thermal diagnostics for hidden pipes",
-          "Gas Leak Detection & Emergency Repair: 24/7 electronic sniffing and utility clearances",
+          "Gas Leak Detection & Emergency Repair: 24/7 electronic sniffing and Southwest Gas clearances",
           "Slab Leak Detection & Repair: Sub-concrete foundation acoustic geophones & infrared",
           "Pool Leak Detection & Repair: Underwater hydrophones & precision dye testing",
-          "Underground & Yard Pipe Leaks: Buried potable mains, wells & irrigation lines",
-          "24/7 Emergency Leak Diagnostics: Immediate statewide rapid dispatch"
+          "Underground & Well Pipe Leaks: Buried potable mains, wells & irrigation lines",
+          "24/7 Emergency Leak Diagnostics: Immediate rapid dispatch in Carson City"
         ]
       },
       {
-        heading: "Nevada Cities & Regional Dispatch Coverage",
-        subheading: "Southern, Northern, Capital, Western & Rural Nevada",
+        heading: "Carson City, Nevada Districts & Service Areas",
+        subheading: "Complete coverage across ZIP codes 89701–89706",
         paragraphs: [
-          "Dedicated city hubs covering soil conditions, freeze-thaw exposure, and municipal utility rebate filings:"
+          "Dedicated local district pages addressing Carson City's freeze-thaw patterns, crawlspaces, concrete slabs, and private well mains:"
         ],
         bulletPoints: [
-          "Las Vegas, Henderson, North Las Vegas & Boulder City / Laughlin",
-          "Spring Valley Core, The Lakes, Spanish Trail, Summerlin South & Rhodes Ranch",
-          "Reno, Lake Tahoe (Incline Village), Sparks & Spanish Springs",
-          "Carson City, Minden, Gardnerville, Dayton, Pahrump & Mesquite",
-          "Elko, Spring Creek, Fernley, Fallon, Winnemucca, Lovelock & Ely"
+          "Downtown Carson City & Capitol District (89701)",
+          "Westside, Kings Canyon & Lakeview (89703)",
+          "North Carson, Lompa Lane & Silver Oak (89706)",
+          "South Carson, Clearview & Stewart (89701 / 89705)",
+          "East Carson, Empire Ranch & Pinion Hills"
         ]
       },
       {
         heading: "Educational Guides & Cost Resources",
         subheading: "Technical knowledge base and price guides",
         paragraphs: [
-          "In-depth articles covering DIY leak testing, water bill rebates, and Nevada leak pricing:"
+          "In-depth articles covering DIY leak testing, water bill credits, and leak detection pricing:"
         ],
         bulletPoints: [
           "Blog & Knowledge Base Main Hub",
-          "Pool, Sprinkler & Backyard Leaks in Spring Valley, Las Vegas",
-          "Spring Valley Leak Detection: A Desert Homeowner’s Guide (2026)",
-          "5 Warning Signs of a Slab Leak in Spring Valley & Las Vegas Homes",
+          "Pool, Sprinkler & Backyard Leaks Guide",
+          "Desert Homeowner’s Leak Detection Guide (2026)",
+          "5 Warning Signs of a Slab Leak",
           "The 24-Hour Bucket Test: How to Tell if Your Pool is Leaking or Evaporating",
           "What to Do When You Smell Natural Gas in Your Home: Step-by-Step Safety Guide",
-          "How Desert Caliche Soil Destroys Underground Plumbing in Southern Nevada",
+          "How Caliche & Subsurface Soil Impact Underground Plumbing",
           "How to Read Your Water Meter to Detect Hidden Leaks Before a High Bill",
-          "How to Get a Leak Credit on Your Las Vegas Valley Water District (LVVWD) Bill"
+          "How to Get a Utility Leak Credit on High Water Bills"
         ]
       },
       {
         heading: "Company Information & Legal",
-        subheading: "Headquarters, licensing, and policies",
+        subheading: "Office details, licensing, and policies",
         paragraphs: [
-          "Transparency and compliance information for our Las Vegas headquarters at 6875 Groveview Ln, Las Vegas, NV 89103:"
+          "Transparency and compliance information for Leak Detection NV (office: 6875 Groveview Ln, Las Vegas, NV 89103; telephone: (725) 313-0108):"
         ],
         bulletPoints: [
-          "About Us: Nevada Statewide Licensed Specialist Network",
-          "Contact & Location: 24/7 Dispatch Desk & Embedded Google Map",
+          "About Us: Carson City Licensed Specialist Network",
+          "Contact & Dispatch: 24/7 Emergency Line & Office Info",
           "How It Works: 5-Step Non-Invasive Diagnostic Process",
           "Privacy Policy: Consumer data protection & TCPA compliance",
           "Legal Disclaimer & Licensing: Referral service terms & NSCB contractor disclosures"
@@ -2254,8 +1893,8 @@ export const sitePages: Record<string, PageContent> = {
     ],
     faqs: [
       {
-        question: "Where is Leak Detection NV physically headquartered?",
-        answer: "Our dispatch headquarters is located at 6875 Groveview Ln, Las Vegas, NV 89103, coordinating licensed leak specialists across all Nevada cities 24/7. Call (725) 313-0108."
+        question: "Which city does Leak Detection NV primarily target?",
+        answer: "Leak Detection NV serves Carson City, Nevada—covering Downtown & Capitol District (89701), Westside & Kings Canyon (89703), North Carson & Silver Oak (89706), Clearview (89705), and Empire Ranch. Call (725) 313-0108."
       }
     ],
     relatedServices: [
@@ -2263,8 +1902,8 @@ export const sitePages: Record<string, PageContent> = {
       { title: "Gas Leak Detection", slug: "gas-leak-detection", description: "24/7 gas line safety testing." }
     ],
     relatedLocations: [
-      { name: "Las Vegas Metro", slug: "las-vegas", context: "Southern Nevada hub." },
-      { name: "Reno & Lake Tahoe", slug: "reno", context: "Northern Nevada hub." }
+      { name: "Downtown & Capitol (89701)", slug: "carson-city", context: "Central Carson City hub." },
+      { name: "Westside & Kings Canyon (89703)", slug: "west-carson-lakeview", context: "West Carson hub." }
     ],
     schemaType: "WebPage"
   },

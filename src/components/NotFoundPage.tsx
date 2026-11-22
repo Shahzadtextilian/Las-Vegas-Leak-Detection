@@ -8,7 +8,7 @@ interface NotFoundPageProps {
 
 export const NotFoundPage: React.FC<NotFoundPageProps> = ({ onNavigate }) => {
   useEffect(() => {
-    document.title = 'Page Not Found (404) | Leak Detection NV';
+    document.title = 'Page Not Found (404) | Leak Detection NV — Carson City';
 
     // Set noindex for 404 page to prevent soft-404 and indexing issues
     let metaRobots = document.querySelector('meta[name="robots"]');
@@ -32,18 +32,16 @@ export const NotFoundPage: React.FC<NotFoundPageProps> = ({ onNavigate }) => {
     { name: 'Gas Leak Detection & Repair', slug: 'gas-leak-detection', icon: Flame, desc: 'Combustible gas sniffers & safety shutoff' },
     { name: 'Concrete Slab Leak Detection', slug: 'slab-leak-detection', icon: Wrench, desc: 'Sub-slab acoustic sensor pinpointing' },
     { name: 'Swimming Pool Leak Detection', slug: 'pool-leak-detection', icon: Waves, desc: 'Hydrophone & dye testing for pool shells' },
-    { name: 'Underground & Yard Leaks', slug: 'underground-leak-detection', icon: ShieldCheck, desc: 'Main line & irrigation line diagnostics' },
-    { name: '24/7 Emergency Leak Diagnostics', slug: 'emergency-leak-repair', icon: AlertTriangle, desc: 'Rapid 24/7 dispatch across Nevada' },
+    { name: 'Underground & Well Leaks', slug: 'underground-leak-detection', icon: ShieldCheck, desc: 'Main line & irrigation line diagnostics' },
+    { name: '24/7 Emergency Leak Diagnostics', slug: 'emergency-leak-repair', icon: AlertTriangle, desc: 'Rapid 24/7 dispatch in Carson City, NV' },
   ];
 
   const locationLinks = [
-    { name: 'Las Vegas', slug: 'las-vegas' },
-    { name: 'Henderson', slug: 'henderson' },
-    { name: 'North Las Vegas', slug: 'north-las-vegas' },
-    { name: 'Reno & Tahoe', slug: 'reno' },
-    { name: 'Sparks', slug: 'sparks' },
-    { name: 'Carson City', slug: 'carson-city' },
-    { name: 'Spring Valley', slug: 'spring-valley-center' },
+    { name: 'Downtown & Capitol', slug: 'carson-city' },
+    { name: 'Westside & Kings Canyon', slug: 'west-carson-lakeview' },
+    { name: 'North Carson & Silver Oak', slug: 'north-carson-silver-oak' },
+    { name: 'South Carson & Clearview', slug: 'south-carson-clearview' },
+    { name: 'Empire Ranch & Pinion Hills', slug: 'east-carson-empire-ranch' },
   ];
 
   return (
@@ -61,7 +59,7 @@ export const NotFoundPage: React.FC<NotFoundPageProps> = ({ onNavigate }) => {
           </h1>
 
           <p className="text-base sm:text-lg text-slate-600 max-w-2xl mx-auto leading-relaxed mb-8">
-            The URL you entered does not exist or has been updated. If you have an active water leak, natural gas odor, slab leak, or swimming pool loss anywhere in Nevada, contact our 24/7 emergency desk immediately.
+            The URL you entered does not exist or has been updated. If you have an active water leak, natural gas odor, freeze-burst pipe, or slab leak in Carson City, Nevada, contact our 24/7 emergency desk immediately.
           </p>
 
           {/* Emergency Call Box */}
@@ -69,12 +67,12 @@ export const NotFoundPage: React.FC<NotFoundPageProps> = ({ onNavigate }) => {
             <div className="flex items-center justify-center gap-2 mb-2">
               <span className="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse"></span>
               <span className="text-xs font-bold uppercase tracking-wider text-emerald-800">
-                24/7 Nevada Statewide Dispatch Active
+                24/7 Carson City, NV Dispatch Active
               </span>
             </div>
 
             <p className="text-xs text-slate-500 mb-4">
-              Direct line to licensed Nevada leak detection diagnostic specialists:
+              Direct line to licensed leak detection diagnostic specialists serving Carson City:
             </p>
 
             <a
@@ -95,7 +93,7 @@ export const NotFoundPage: React.FC<NotFoundPageProps> = ({ onNavigate }) => {
         {/* Directory of Valid Target Pages */}
         <div className="bg-white rounded-2xl p-6 sm:p-8 border border-slate-200 shadow-xs mb-8">
           <h2 className="text-lg font-bold text-slate-950 mb-2 font-display">
-            Looking for a Specific Leak Detection Service?
+            Looking for a Specific Leak Detection Service in Carson City?
           </h2>
           <p className="text-xs sm:text-sm text-slate-600 mb-6">
             Select one of our specialized non-invasive diagnostic capabilities below:
@@ -134,7 +132,7 @@ export const NotFoundPage: React.FC<NotFoundPageProps> = ({ onNavigate }) => {
         {/* Local Service Areas & Home Return */}
         <div className="flex flex-col sm:flex-row items-center justify-between gap-4 pt-4 border-t border-slate-200 text-sm">
           <div className="flex flex-wrap items-center gap-2 text-xs text-slate-600">
-            <span className="font-bold text-slate-900">Service Areas:</span>
+            <span className="font-bold text-slate-900">Carson City Areas:</span>
             {locationLinks.map((loc, idx) => (
               <React.Fragment key={loc.slug}>
                 <a
@@ -161,7 +159,7 @@ export const NotFoundPage: React.FC<NotFoundPageProps> = ({ onNavigate }) => {
             className="inline-flex items-center gap-2 text-sm font-bold text-[#1E70B8] hover:underline shrink-0"
           >
             <ArrowLeft className="w-4 h-4" />
-            <span>Return to Nevada Home</span>
+            <span>Return to Carson City Home</span>
           </a>
         </div>
       </div>
