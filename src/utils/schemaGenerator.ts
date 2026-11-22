@@ -8,24 +8,20 @@ export function generateSchemaForPage(page: PageContent, blogPost?: BlogPost | n
 
   const schemas: any[] = [];
 
-  // 1. Breadcrumbs Schema (Nevada > Clark County > Spring Valley Hub)
-  const breadcrumbItems = [
+  // 1. Breadcrumbs Schema (Nevada Statewide / Regional / City)
+  const springValleySuburbs = new Set([
+    "spring-valley-center",
+    "the-lakes",
+    "spanish-trail",
+    "summerlin-south",
+    "rhodes-ranch",
+  ]);
+
+  const breadcrumbItems: Array<{ "@type": string; position: number; name: string; item: string }> = [
     {
       "@type": "ListItem",
       "position": 1,
       "name": "Nevada",
-      "item": `${DOMAIN_URL}/#nevada`
-    },
-    {
-      "@type": "ListItem",
-      "position": 2,
-      "name": "Clark County",
-      "item": `${DOMAIN_URL}/#clark-county`
-    },
-    {
-      "@type": "ListItem",
-      "position": 3,
-      "name": "Spring Valley",
       "item": `${DOMAIN_URL}/`
     }
   ];
@@ -33,20 +29,53 @@ export function generateSchemaForPage(page: PageContent, blogPost?: BlogPost | n
   if (blogPost) {
     breadcrumbItems.push({
       "@type": "ListItem",
-      "position": 4,
+      "position": 2,
       "name": "Blog & Guides",
       "item": `${DOMAIN_URL}/blog/`
     });
     breadcrumbItems.push({
       "@type": "ListItem",
-      "position": 5,
+      "position": 3,
       "name": blogPost.title,
       "item": pageUrl
     });
-  } else if (page.slug !== "") {
+  } else if (page.slug === "") {
     breadcrumbItems.push({
       "@type": "ListItem",
-      "position": 4,
+      "position": 2,
+      "name": "All Nevada Cities",
+      "item": `${DOMAIN_URL}/#nevada-cities`
+    });
+  } else if (springValleySuburbs.has(page.slug)) {
+    breadcrumbItems.push({
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Clark County & Spring Valley",
+      "item": `${DOMAIN_URL}/las-vegas/`
+    });
+    breadcrumbItems.push({
+      "@type": "ListItem",
+      "position": 3,
+      "name": page.navTitle,
+      "item": pageUrl
+    });
+  } else if (page.type === "location") {
+    breadcrumbItems.push({
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Nevada Cities",
+      "item": `${DOMAIN_URL}/sitemap/`
+    });
+    breadcrumbItems.push({
+      "@type": "ListItem",
+      "position": 3,
+      "name": page.navTitle,
+      "item": pageUrl
+    });
+  } else {
+    breadcrumbItems.push({
+      "@type": "ListItem",
+      "position": 2,
       "name": page.name,
       "item": pageUrl
     });
@@ -58,16 +87,16 @@ export function generateSchemaForPage(page: PageContent, blogPost?: BlogPost | n
     "itemListElement": breadcrumbItems
   });
 
-  // 2. Base Plumber / LocalBusiness Schema with exact NAP, GeoCoordinates & AreaServed
+  // 2. Base Plumber / LocalBusiness Schema with exact HQ NAP, GeoCoordinates & Statewide AreaServed
   const localBusinessSchema = {
     "@context": "https://schema.org",
     "@type": ["Plumber", "LocalBusiness"],
     "@id": `${DOMAIN_URL}/#organization`,
     "name": BRAND_NAME,
     "alternateName": [
-      "Spring Valley Leak Specialists",
-      "Leak Detection Spring Valley NV",
-      "Spring Valley 24/7 Leak Detection & Repair"
+      "Leak Detection Nevada Statewide",
+      "Spring Valley Leak Detection & Repair",
+      "Nevada Water, Slab, Pool & Gas Leak Specialists"
     ],
     "url": `${DOMAIN_URL}/`,
     "logo": `${DOMAIN_URL}/logo.svg`,
@@ -76,8 +105,7 @@ export function generateSchemaForPage(page: PageContent, blogPost?: BlogPost | n
     "priceRange": "$$",
     "sameAs": [
       FACEBOOK_URL,
-      "https://en.wikipedia.org/wiki/Spring_Valley,_Nevada",
-      "https://www.wikidata.org/wiki/Q1007421",
+      "https://en.wikipedia.org/wiki/Nevada",
       "https://www.google.com/maps/place/6875+Groveview+Ln,+Las+Vegas,+NV+89103"
     ],
     "address": {
@@ -97,67 +125,62 @@ export function generateSchemaForPage(page: PageContent, blogPost?: BlogPost | n
       "@type": "GeoCircle",
       "geoMidpoint": {
         "@type": "GeoCoordinates",
-        "latitude": 36.1105,
-        "longitude": -115.2415
+        "latitude": 38.8026,
+        "longitude": -116.4194
       },
-      "geoRadius": "25000"
+      "geoRadius": "480000"
     },
-    "description": "Licensed 24/7 non-invasive water, gas, slab, and swimming pool leak detection and precision repair across Spring Valley, NV and Clark County.",
+    "description": "24/7 non-invasive water, gas, slab, and swimming pool leak detection across all Nevada cities including Las Vegas, Henderson, North Las Vegas, Spring Valley, Reno, Sparks, Carson City, Pahrump, Mesquite, Boulder City, and Elko.",
     "speakable": {
       "@type": "SpeakableSpecification",
       "cssSelector": ["#hero-headline", "#direct-answer-summary", ".speakable-answer"]
     },
     "areaServed": [
-      {
-        "@type": "City",
-        "name": "Spring Valley",
-        "sameAs": "https://en.wikipedia.org/wiki/Spring_Valley,_Nevada"
-      },
-      {
-        "@type": "Place",
-        "name": "The Lakes"
-      },
-      {
-        "@type": "Place",
-        "name": "Spanish Trail"
-      },
-      {
-        "@type": "Place",
-        "name": "Rhodes Ranch"
-      },
-      {
-        "@type": "Place",
-        "name": "Summerlin South"
-      },
-      {
-        "@type": "GeoShape",
-        "postalCode": "89103"
-      },
-      {
-        "@type": "GeoShape",
-        "postalCode": "89113"
-      },
-      {
-        "@type": "GeoShape",
-        "postalCode": "89117"
-      },
-      {
-        "@type": "GeoShape",
-        "postalCode": "89147"
-      },
-      {
-        "@type": "GeoShape",
-        "postalCode": "89148"
-      }
+      { "@type": "State", "name": "Nevada", "sameAs": "https://en.wikipedia.org/wiki/Nevada" },
+      { "@type": "City", "name": "Las Vegas" },
+      { "@type": "City", "name": "Henderson" },
+      { "@type": "City", "name": "North Las Vegas" },
+      { "@type": "City", "name": "Spring Valley" },
+      { "@type": "City", "name": "Reno" },
+      { "@type": "City", "name": "Sparks" },
+      { "@type": "City", "name": "Carson City" },
+      { "@type": "City", "name": "Pahrump" },
+      { "@type": "City", "name": "Mesquite" },
+      { "@type": "City", "name": "Boulder City" },
+      { "@type": "City", "name": "Fernley" },
+      { "@type": "City", "name": "Fallon" },
+      { "@type": "City", "name": "Elko" },
+      { "@type": "City", "name": "Winnemucca" },
+      { "@type": "City", "name": "Incline Village" },
+      { "@type": "City", "name": "Laughlin" },
+      { "@type": "Place", "name": "The Lakes" },
+      { "@type": "Place", "name": "Spanish Trail" },
+      { "@type": "Place", "name": "Rhodes Ranch" },
+      { "@type": "Place", "name": "Summerlin South" },
+      { "@type": "GeoShape", "postalCode": "89103" },
+      { "@type": "GeoShape", "postalCode": "89113" },
+      { "@type": "GeoShape", "postalCode": "89117" },
+      { "@type": "GeoShape", "postalCode": "89147" },
+      { "@type": "GeoShape", "postalCode": "89148" },
+      { "@type": "GeoShape", "postalCode": "89052" },
+      { "@type": "GeoShape", "postalCode": "89014" },
+      { "@type": "GeoShape", "postalCode": "89031" },
+      { "@type": "GeoShape", "postalCode": "89501" },
+      { "@type": "GeoShape", "postalCode": "89431" },
+      { "@type": "GeoShape", "postalCode": "89701" },
+      { "@type": "GeoShape", "postalCode": "89048" },
+      { "@type": "GeoShape", "postalCode": "89027" },
+      { "@type": "GeoShape", "postalCode": "89005" },
+      { "@type": "GeoShape", "postalCode": "89801" }
     ],
     "knowsAbout": [
       "Non-Invasive Electronic Water Leak Detection",
       "Acoustic Slab Leak Foundation Isolation",
       "Combustible Natural Gas and Propane Leak Sniffing",
       "Underwater Swimming Pool Dye and Hydrophone Testing",
-      "Underground Yard Main Line Pressure Testing",
-      "Las Vegas Valley Water District (LVVWD) Rebate and Leak Credit Filings",
-      "Caliche Hardpan Soil Sub-Foundation Excavation",
+      "Underground Yard Main & Well Line Pressure Testing",
+      "Las Vegas Valley Water District (LVVWD) & TMWA Rebate Documentation",
+      "Caliche Soil & Northern Freeze-Thaw Pipe Diagnostics",
       "Nevada State Contractors Board (NSCB) Compliance"
     ],
     "hasOfferCatalog": {
@@ -244,7 +267,7 @@ export function generateSchemaForPage(page: PageContent, blogPost?: BlogPost | n
         : blogPost.slug === 'spring-valley-leak-detection-guide'
         ? "2026-11-05T07:00:00-08:00"
         : "2026-10-08T08:00:00-07:00",
-      "dateModified": "2026-11-18T23:30:00-08:00",
+      "dateModified": "2026-11-22T08:00:00-08:00",
       "author": {
         "@type": "Organization",
         "name": blogPost.author,
@@ -287,8 +310,8 @@ export function generateSchemaForPage(page: PageContent, blogPost?: BlogPost | n
         }
       },
       "areaServed": {
-        "@type": "Place",
-        "name": "Spring Valley, Clark County, NV"
+        "@type": "State",
+        "name": "Nevada"
       },
       "description": page.metaDescription,
       "url": pageUrl
@@ -311,7 +334,7 @@ export function generateSchemaForPage(page: PageContent, blogPost?: BlogPost | n
       },
       "areaServed": {
         "@type": "Place",
-        "name": `${page.navTitle}, Spring Valley, NV`
+        "name": `${page.navTitle}, Nevada`
       },
       "openingHoursSpecification": {
         "@type": "OpeningHoursSpecification",

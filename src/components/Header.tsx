@@ -26,11 +26,17 @@ export const Header: React.FC<HeaderProps> = ({
   ];
 
   const locations = [
+    { name: 'Las Vegas Metro', slug: 'las-vegas' },
+    { name: 'Henderson & Green Valley', slug: 'henderson' },
+    { name: 'North Las Vegas', slug: 'north-las-vegas' },
     { name: 'Spring Valley Core', slug: 'spring-valley-center' },
-    { name: 'The Lakes & Peccole Ranch', slug: 'the-lakes' },
-    { name: 'Spanish Trail Estates', slug: 'spanish-trail' },
-    { name: 'Summerlin South', slug: 'summerlin-south' },
-    { name: 'Rhodes Ranch', slug: 'rhodes-ranch' },
+    { name: 'Reno & Lake Tahoe', slug: 'reno' },
+    { name: 'Sparks & Spanish Springs', slug: 'sparks' },
+    { name: 'Carson City & Minden', slug: 'carson-city' },
+    { name: 'Pahrump & Nye County', slug: 'pahrump' },
+    { name: 'Mesquite & Virgin Valley', slug: 'mesquite' },
+    { name: 'Boulder City & Laughlin', slug: 'boulder-city' },
+    { name: 'Elko, Fernley & Rural NV', slug: 'elko-rural-nevada' },
   ];
 
   return (
@@ -40,8 +46,8 @@ export const Header: React.FC<HeaderProps> = ({
         <div className="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-2">
           <div className="flex items-center gap-2">
             <span className="inline-block w-2 h-2 rounded-full bg-emerald-400"></span>
-            <span className="font-medium text-slate-100">Spring Valley Emergency Line:</span>
-            <span className="text-slate-300">Licensed NSCB leak specialists on call in Clark County, NV</span>
+            <span className="font-medium text-slate-100">Nevada Statewide Line:</span>
+            <span className="text-slate-300">Licensed NSCB leak specialists serving all Nevada cities 24/7</span>
           </div>
           <div className="flex items-center gap-4">
             <span className="text-slate-300 flex items-center gap-1.5 text-xs">
@@ -78,7 +84,7 @@ export const Header: React.FC<HeaderProps> = ({
                 onNavigate('');
               }}
               className="flex items-center gap-3 group"
-              aria-label="Spring Valley Leak Detection & Repair - Home"
+              aria-label="Leak Detection NV - All Nevada Cities Home"
             >
               <div className="w-10 h-10 rounded-xl bg-linear-to-br from-[#0F2942] to-[#1E70B8] flex items-center justify-center text-white font-black shadow-sm group-hover:scale-105 transition-transform">
                 <svg className="w-6 h-6" viewBox="0 0 48 48" fill="none">
@@ -90,10 +96,10 @@ export const Header: React.FC<HeaderProps> = ({
 
               <div className="leading-tight">
                 <span className="font-extrabold text-base sm:text-lg text-slate-900 tracking-tight block font-display">
-                  Spring Valley Leak Detection
+                  {BRAND_NAME}
                 </span>
                 <span className="block text-xs font-semibold text-[#1E70B8] tracking-wider uppercase">
-                  Water • Slab • Pool • Gas
+                  All NV Cities • Water • Slab • Gas
                 </span>
               </div>
             </a>
@@ -142,19 +148,19 @@ export const Header: React.FC<HeaderProps> = ({
               </div>
             </div>
 
-            {/* Neighborhoods Dropdown */}
+            {/* Nevada Cities Dropdown */}
             <div className="relative group">
               <button
                 onClick={() => setLocationsOpen(!locationsOpen)}
                 className="flex items-center gap-1 hover:text-[#1E70B8] transition-colors whitespace-nowrap shrink-0 cursor-pointer py-2"
               >
-                <span>Service Areas</span>
+                <span>Nevada Cities</span>
                 <ChevronDown className="w-4 h-4 text-slate-400 group-hover:text-[#1E70B8] transition-transform duration-200" />
               </button>
 
-              <div className="absolute top-full left-0 w-64 bg-white rounded-xl shadow-xl border border-slate-200 py-2 hidden group-hover:block transition-all">
+              <div className="absolute top-full left-0 w-72 bg-white rounded-xl shadow-xl border border-slate-200 py-2 hidden group-hover:block transition-all max-h-[75vh] overflow-y-auto">
                 <div className="px-4 py-1.5 text-xs font-semibold uppercase tracking-wider text-slate-400">
-                  Spring Valley Sectors
+                  Nevada Statewide Coverage
                 </div>
                 {locations.map((item) => (
                   <a
@@ -169,6 +175,18 @@ export const Header: React.FC<HeaderProps> = ({
                     {item.name}
                   </a>
                 ))}
+                <div className="border-t border-slate-100 mt-1 pt-1">
+                  <a
+                    href="/sitemap/"
+                    onClick={(e) => {
+                      e.preventDefault();
+                      onNavigate('sitemap');
+                    }}
+                    className="block px-4 py-2 text-xs font-bold text-[#1E70B8] hover:bg-slate-50"
+                  >
+                    View Full NV City Directory →
+                  </a>
+                </div>
               </div>
             </div>
 
@@ -308,7 +326,7 @@ export const Header: React.FC<HeaderProps> = ({
             </div>
 
             <div className="space-y-1 border-t border-slate-100 pt-2">
-              <div className="text-xs font-semibold text-slate-400 uppercase tracking-wider px-3 py-1">Spring Valley Sectors</div>
+              <div className="text-xs font-semibold text-slate-400 uppercase tracking-wider px-3 py-1">Nevada Cities Served</div>
               {locations.map((loc) => (
                 <button
                   key={loc.slug}

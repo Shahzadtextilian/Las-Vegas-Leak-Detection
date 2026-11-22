@@ -88,7 +88,7 @@ for (const post of BLOG_POSTS) {
   routesToPrerender.push({
     slug: postSlug,
     urlPath,
-    metaTitle: post.metaTitle || `${post.title} | Spring Valley Leak Detection & Repair`,
+    metaTitle: post.metaTitle || `${post.title} | ${BRAND_NAME}`,
     metaDescription: post.metaDescription || post.excerpt,
     canonicalUrl,
     schemaJson,
@@ -241,13 +241,13 @@ const notFoundBody = `
       <div style="font-size: 3rem; font-weight: 900; color: #F59E0B; margin-bottom: 0.5rem;">404</div>
       <h1 style="font-size: 1.5rem; font-weight: 700; margin-bottom: 0.75rem;">Page Not Found</h1>
       <p style="color: #94A3B8; font-size: 0.95rem; line-height: 1.5; margin-bottom: 1.75rem;">
-        The requested resource could not be found. If you have an active water leak, natural gas odor, slab leak, or pool leak in Spring Valley, contact our 24/7 emergency dispatch desk immediately.
+        The requested resource could not be found. If you have an active water leak, natural gas odor, slab leak, or pool leak anywhere in Nevada, contact our 24/7 emergency dispatch desk immediately.
       </p>
       <a href="${PHONE_HREF}" style="display: block; background: #1E70B8; color: #fff; font-weight: bold; text-decoration: none; padding: 0.875rem 1.5rem; border-radius: 0.75rem; margin-bottom: 1rem; font-size: 1.1rem;">
         Emergency Call: ${PHONE_NUMBER}
       </a>
       <a href="/" style="display: inline-block; color: #38BDF8; font-size: 0.9rem; text-decoration: underline;">
-        Return to Spring Valley Home
+        Return to Nevada Home
       </a>
       <div style="margin-top: 1.5rem; padding-top: 1.25rem; border-top: 1px solid rgba(255,255,255,0.1); font-size: 0.8rem; color: #CBD5E1;">
         Headquarters: ${BUSINESS_ADDRESS.streetAddress}, ${BUSINESS_ADDRESS.addressLocality}, NV ${BUSINESS_ADDRESS.postalCode}

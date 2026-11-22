@@ -8,7 +8,7 @@ interface SidebarDispatchFormProps {
 }
 
 export const SidebarDispatchForm: React.FC<SidebarDispatchFormProps> = ({
-  currentLocationName = 'Spring Valley Core',
+  currentLocationName = 'All Nevada Cities',
   currentServiceType = 'Water Leak (Indoor / Wall)',
 }) => {
   return (
@@ -20,7 +20,7 @@ export const SidebarDispatchForm: React.FC<SidebarDispatchFormProps> = ({
             <span className="w-2 h-2 rounded-full bg-amber-400 animate-pulse"></span>
             24/7 Emergency Dispatch
           </span>
-          <span className="text-slate-300 font-normal">Spring Valley, NV</span>
+          <span className="text-slate-300 font-normal">Nevada Statewide</span>
         </div>
         
         <div>
@@ -28,7 +28,7 @@ export const SidebarDispatchForm: React.FC<SidebarDispatchFormProps> = ({
             Need Immediate Assistance?
           </h4>
           <p className="text-xs text-slate-300 mt-1 leading-relaxed">
-            Call our local emergency team directly for immediate response in {currentLocationName}:
+            Call our 24/7 dispatch line directly for fast regional routing in {currentLocationName}:
           </p>
         </div>
 
@@ -42,7 +42,7 @@ export const SidebarDispatchForm: React.FC<SidebarDispatchFormProps> = ({
 
         <div className="flex items-center justify-center gap-1.5 text-[11px] text-slate-300 pt-1">
           <Clock className="w-3.5 h-3.5 text-amber-400" />
-          <span>Average arrival: 30–60 minutes</span>
+          <span>30–60 min metro dispatch • Statewide coverage</span>
         </div>
       </div>
 

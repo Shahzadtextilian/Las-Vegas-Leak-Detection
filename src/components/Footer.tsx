@@ -29,14 +29,14 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
             </div>
             
             <p className="text-sm text-slate-400 leading-relaxed max-w-sm">
-              24/7 non-invasive water, gas, slab, and swimming pool leak detection and repair across Spring Valley and Clark County, NV. Utilizing advanced acoustic listening discs, infrared thermal imaging, and electronic hydrophones.
+              24/7 non-invasive water, gas, slab, and swimming pool leak detection across all Nevada cities—including Las Vegas, Henderson, North Las Vegas, Spring Valley, Reno, Sparks, Carson City, Pahrump, Mesquite &amp; Elko.
             </p>
 
             <div className="pt-2 flex flex-col gap-2 text-xs text-slate-400">
               <div className="flex items-start gap-2">
                 <MapPin className="w-4 h-4 text-amber-500 shrink-0 mt-0.5" />
                 <span>
-                  <strong>Office Location:</strong> {BUSINESS_ADDRESS.streetAddress}, {BUSINESS_ADDRESS.addressLocality}, {BUSINESS_ADDRESS.addressRegion} {BUSINESS_ADDRESS.postalCode} (Spring Valley / Clark County)
+                  <strong>Dispatch HQ:</strong> {BUSINESS_ADDRESS.streetAddress}, {BUSINESS_ADDRESS.addressLocality}, {BUSINESS_ADDRESS.addressRegion} {BUSINESS_ADDRESS.postalCode}
                 </span>
               </div>
               <div className="flex items-center gap-2">
@@ -130,55 +130,82 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
             </ul>
           </div>
 
-          {/* Column 3: Service Areas */}
+          {/* Column 3: Nevada Cities Served */}
           <div>
             <h4 className="text-xs font-semibold uppercase tracking-wider text-slate-100 mb-4 font-display">
-              Spring Valley Sectors
+              Nevada Cities Served
             </h4>
-            <ul className="space-y-2.5 text-sm">
+            <ul className="space-y-2 text-sm">
+              <li>
+                <a
+                  href="/las-vegas/"
+                  onClick={(e) => { e.preventDefault(); onNavigate('las-vegas'); }}
+                  className="hover:text-white transition-colors"
+                >
+                  Las Vegas Metro
+                </a>
+              </li>
+              <li>
+                <a
+                  href="/henderson/"
+                  onClick={(e) => { e.preventDefault(); onNavigate('henderson'); }}
+                  className="hover:text-white transition-colors"
+                >
+                  Henderson &amp; Green Valley
+                </a>
+              </li>
+              <li>
+                <a
+                  href="/north-las-vegas/"
+                  onClick={(e) => { e.preventDefault(); onNavigate('north-las-vegas'); }}
+                  className="hover:text-white transition-colors"
+                >
+                  North Las Vegas
+                </a>
+              </li>
+              <li>
+                <a
+                  href="/reno/"
+                  onClick={(e) => { e.preventDefault(); onNavigate('reno'); }}
+                  className="hover:text-white transition-colors"
+                >
+                  Reno &amp; Lake Tahoe
+                </a>
+              </li>
+              <li>
+                <a
+                  href="/sparks/"
+                  onClick={(e) => { e.preventDefault(); onNavigate('sparks'); }}
+                  className="hover:text-white transition-colors"
+                >
+                  Sparks &amp; Spanish Springs
+                </a>
+              </li>
+              <li>
+                <a
+                  href="/carson-city/"
+                  onClick={(e) => { e.preventDefault(); onNavigate('carson-city'); }}
+                  className="hover:text-white transition-colors"
+                >
+                  Carson City &amp; Minden
+                </a>
+              </li>
               <li>
                 <a
                   href="/spring-valley-center/"
                   onClick={(e) => { e.preventDefault(); onNavigate('spring-valley-center'); }}
                   className="hover:text-white transition-colors"
                 >
-                  Spring Valley Core (89103)
+                  Spring Valley (89103)
                 </a>
               </li>
               <li>
                 <a
-                  href="/the-lakes/"
-                  onClick={(e) => { e.preventDefault(); onNavigate('the-lakes'); }}
+                  href="/elko-rural-nevada/"
+                  onClick={(e) => { e.preventDefault(); onNavigate('elko-rural-nevada'); }}
                   className="hover:text-white transition-colors"
                 >
-                  The Lakes & Peccole Ranch
-                </a>
-              </li>
-              <li>
-                <a
-                  href="/spanish-trail/"
-                  onClick={(e) => { e.preventDefault(); onNavigate('spanish-trail'); }}
-                  className="hover:text-white transition-colors"
-                >
-                  Spanish Trail Estates
-                </a>
-              </li>
-              <li>
-                <a
-                  href="/summerlin-south/"
-                  onClick={(e) => { e.preventDefault(); onNavigate('summerlin-south'); }}
-                  className="hover:text-white transition-colors"
-                >
-                  Summerlin South (89135)
-                </a>
-              </li>
-              <li>
-                <a
-                  href="/rhodes-ranch/"
-                  onClick={(e) => { e.preventDefault(); onNavigate('rhodes-ranch'); }}
-                  className="hover:text-white transition-colors"
-                >
-                  Rhodes Ranch & SW Vegas
+                  Elko, Fernley &amp; Rural NV
                 </a>
               </li>
             </ul>
@@ -324,11 +351,11 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
           </div>
         </div>
 
-        {/* Quality Standards & Local Service Notice */}
+        {/* Quality Standards & Statewide Service Notice */}
         <div className="pt-8 space-y-4 text-xs text-slate-400 leading-relaxed">
           <div className="p-4 rounded-xl bg-slate-900/60 border border-slate-800 text-slate-400">
-            <span className="font-semibold text-slate-200">Local Service Notice: </span>
-            {BRAND_NAME} provides 24/7 non-invasive diagnostic testing and precision leak repair across Spring Valley and Clark County, NV. Headquartered at {BUSINESS_ADDRESS.streetAddress}, {BUSINESS_ADDRESS.addressLocality}, {BUSINESS_ADDRESS.addressRegion} {BUSINESS_ADDRESS.postalCode}. All water, gas, slab, and swimming pool repairs are executed to strict Nevada State Contractors Board (NSCB) standards and Clark County plumbing codes.
+            <span className="font-semibold text-slate-200">Statewide Nevada Service Notice: </span>
+            {BRAND_NAME} coordinates 24/7 non-invasive diagnostic testing and repair across all Nevada cities—including Las Vegas, Henderson, North Las Vegas, Spring Valley, Reno, Sparks, Carson City, Pahrump, Mesquite, Boulder City, and Elko. Headquartered at {BUSINESS_ADDRESS.streetAddress}, {BUSINESS_ADDRESS.addressLocality}, {BUSINESS_ADDRESS.addressRegion} {BUSINESS_ADDRESS.postalCode}. Work is performed by independent licensed contractors adhering to Nevada State Contractors Board (NSCB) standards.
           </div>
 
           <div className="flex flex-col sm:flex-row items-center justify-between gap-4 text-slate-500 pt-2">
@@ -336,7 +363,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
               © 2026 {BRAND_NAME}. All rights reserved.
             </div>
             <div className="flex items-center gap-4">
-              <span>Spring Valley, Clark County, NV</span>
+              <span>All Nevada Cities Statewide</span>
               <span>•</span>
               <span>24/7 Emergency Line: {PHONE_NUMBER}</span>
             </div>

@@ -62,10 +62,6 @@ export const BlogPage: React.FC<BlogPageProps> = ({ onNavigate, activePostSlug }
         <div className="bg-white border-b border-slate-200">
           <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-3">
             <nav aria-label="Breadcrumb" className="flex flex-wrap items-center gap-1.5 text-xs text-slate-500 font-medium">
-              <span>Nevada</span>
-              <span className="text-slate-300">&gt;</span>
-              <span>Clark County</span>
-              <span className="text-slate-300">&gt;</span>
               <a
                 href="/"
                 onClick={(e) => {
@@ -74,7 +70,7 @@ export const BlogPage: React.FC<BlogPageProps> = ({ onNavigate, activePostSlug }
                 }}
                 className="hover:text-[#1E70B8] transition-colors"
               >
-                Spring Valley
+                Nevada Statewide
               </a>
               <span className="text-slate-300">&gt;</span>
               <a
@@ -358,10 +354,10 @@ export const BlogPage: React.FC<BlogPageProps> = ({ onNavigate, activePostSlug }
                   <span>24/7 Leak Assistance</span>
                 </div>
                 <h3 className="text-lg font-bold text-slate-900 font-display">
-                  Have an Active Leak in Spring Valley?
+                  Have an Active Leak in Nevada?
                 </h3>
                 <p className="text-xs text-slate-600 leading-relaxed">
-                  Don't let hidden moisture damage your slab, walls, or foundation. Our specialists provide non-invasive detection across Clark County.
+                  Don't let hidden moisture damage your slab, walls, or foundation. Connect 24/7 with NSCB-licensed specialists across Nevada.
                 </p>
                 <a
                   href={PHONE_HREF}
@@ -438,13 +434,13 @@ export const BlogPage: React.FC<BlogPageProps> = ({ onNavigate, activePostSlug }
           <div className="max-w-3xl">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-50 text-amber-900 text-xs font-bold border border-amber-200/80 mb-3 font-display">
               <BookOpen className="w-3.5 h-3.5 text-amber-600" />
-              <span>Spring Valley Leak Knowledge Base</span>
+              <span>Nevada Leak Knowledge Base</span>
             </div>
             <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-950 tracking-tight leading-tight mb-4 font-display">
               Leak Detection Guides & Expert Prevention Tips
             </h1>
             <p className="text-base sm:text-lg text-slate-600 leading-relaxed">
-              Technical insights, DIY diagnostic procedures, and emergency safety protocols for water, gas, slab, and swimming pool leaks in Spring Valley and Clark County, NV.
+              Technical insights, DIY diagnostic procedures, and emergency safety protocols for water, gas, slab, and swimming pool leaks across Nevada cities.
             </p>
           </div>
 
@@ -587,7 +583,7 @@ export const BlogPage: React.FC<BlogPageProps> = ({ onNavigate, activePostSlug }
               Suspect an Active Leak on Your Property?
             </h3>
             <p className="text-xs sm:text-sm text-slate-300 leading-relaxed">
-              Don't wait for moisture to damage foundations or spike your utility bills. Speak directly with our Spring Valley leak specialists today.
+              Don't wait for moisture to damage foundations or spike your utility bills. Speak directly with our 24/7 Nevada dispatch desk today.
             </p>
           </div>
 

@@ -27,66 +27,94 @@ import {
 } from 'lucide-react';
 import { SidebarDispatchForm } from './SidebarDispatchForm';
 
-const SPRING_VALLEY_NEIGHBORHOODS = [
+const NEVADA_CITY_REGIONS = [
   {
-    name: 'Spring Valley Core & Rainbow Corridor',
-    zip: '89103',
-    crossStreets: 'Rainbow Blvd & Tropicana Ave / Flamingo Rd',
-    etaMinutes: '20–30 Min',
-    activeVans: '2 Mobile Units',
+    name: 'Las Vegas & Paradise Metro',
+    slug: 'las-vegas',
+    zip: '89101–89149',
+    crossStreets: 'Downtown, Paradise, Enterprise, Summerlin & Centennial Hills',
+    etaMinutes: '30–45 Min',
+    activeVans: 'Clark County Metro',
     soilType: 'Dense Caliche Limestone (Grade 4/5)',
-    pipeRisk: '1980s Type M Copper Sub-Slab Rubbing',
-    lvvwdOffice: 'South Valley District / Direct Filing'
+    pipeRisk: 'Copper Sub-Slab Pinholes & 80+ PSI Mains',
+    utilityOffice: 'LVVWD Tier-3 Leak Credit Filing'
   },
   {
-    name: 'The Lakes & Peccole Ranch',
-    zip: '89117',
-    crossStreets: 'Sahara Ave & Fort Apache Rd / Lake Sahara',
-    etaMinutes: '25–35 Min',
-    activeVans: '1 Mobile Unit',
-    soilType: 'Man-made Shoreline Silt over Caliche',
-    pipeRisk: 'Swimming Pool Returns & Main Line Settlement',
-    lvvwdOffice: 'West Valley District / Direct Filing'
+    name: 'Henderson & Green Valley',
+    slug: 'henderson',
+    zip: '89002–89074',
+    crossStreets: 'Green Valley, Anthem, Seven Hills, Inspirada & Lake Las Vegas',
+    etaMinutes: '30–50 Min',
+    activeVans: 'Southeast Valley',
+    soilType: 'Foothill Bedrock & Caliche Strata',
+    pipeRisk: 'Hillside PRV Failures & Pool Suction Lines',
+    utilityOffice: 'City of Henderson Utilities Credit'
   },
   {
-    name: 'Spanish Trail Estates',
-    zip: '89113',
-    crossStreets: 'Tropicana Ave & Buffalo Dr',
-    etaMinutes: '20–30 Min',
-    activeVans: '2 Mobile Units',
-    soilType: 'Golf Course Hardpan & High-Mineral Clay',
-    pipeRisk: 'Luxury Travertine / Sub-Slab Hydronic Pinhole',
-    lvvwdOffice: 'South Valley District / Direct Filing'
+    name: 'North Las Vegas',
+    slug: 'north-las-vegas',
+    zip: '89030–89086',
+    crossStreets: 'Aliante, Eldorado, Craig Ranch, Tule Springs & Apex',
+    etaMinutes: '30–50 Min',
+    activeVans: 'North Valley',
+    soilType: 'Expansive Alluvial Clay & Hardpan',
+    pipeRisk: 'Yard Main Breaks & Post-Tension Slab Lines',
+    utilityOffice: 'North Las Vegas Utilities Review'
   },
   {
-    name: 'Rhodes Ranch & Sunset Corridor',
-    zip: '89148',
-    crossStreets: 'Durango Dr & Sunset Rd / Fort Apache Rd',
-    etaMinutes: '30–40 Min',
-    activeVans: '1 Mobile Unit',
-    soilType: 'Desert Hardpan & Volcanic Clay Layers',
-    pipeRisk: 'Pressurized Irrigation Manifolds & Slab Fittings',
-    lvvwdOffice: 'South Valley District / Direct Filing'
+    name: 'Spring Valley & SW Vegas',
+    slug: 'spring-valley-center',
+    zip: '89103 / 89117 / 89147',
+    crossStreets: 'Rainbow Blvd, Flamingo Rd, The Lakes, Spanish Trail & Rhodes Ranch',
+    etaMinutes: '20–35 Min',
+    activeVans: 'HQ Dispatch Zone',
+    soilType: 'Caliche Cementation & High-Mineral Soil',
+    pipeRisk: '1980s–2000s Type M Copper & Pool Skimmers',
+    utilityOffice: 'LVVWD South/West Valley Direct Filing'
   },
   {
-    name: 'Desert Breeze & Durango Corridor',
-    zip: '89147',
-    crossStreets: 'Spring Mountain Rd & Durango Dr / Desert Breeze',
-    etaMinutes: '25–35 Min',
-    activeVans: '1 Mobile Unit',
-    soilType: 'Caliche Cementation at 24-inch depth',
-    pipeRisk: 'Natural Gas Meter Flex & Water Yard Mains',
-    lvvwdOffice: 'West Valley District / Direct Filing'
+    name: 'Reno & Lake Tahoe',
+    slug: 'reno',
+    zip: '89501–89523 / 89451',
+    crossStreets: 'Midtown, Old Southwest, Damonte Ranch, Somersett, Verdi & Incline Village',
+    etaMinutes: '35–60 Min',
+    activeVans: 'Truckee Meadows',
+    soilType: 'Sierra Granite Alluvium & Valley Clay',
+    pipeRisk: 'Winter Freeze-Thaw Bursts & Crawlspace Splits',
+    utilityOffice: 'TMWA (Truckee Meadows Water) Support'
   },
   {
-    name: 'Summerlin South & 215 Beltway',
-    zip: '89135 / 89148',
-    crossStreets: 'Town Center Dr & Maule Ave / 215 Beltway',
-    etaMinutes: '30–40 Min',
-    activeVans: '1 Mobile Unit',
-    soilType: 'Foothill Bedrock & Rocky Alkaline Caliche',
-    pipeRisk: 'High Water Pressure (85-95 PSI) Pinhole Ruptures',
-    lvvwdOffice: 'West Valley District / Direct Filing'
+    name: 'Sparks & Spanish Springs',
+    slug: 'sparks',
+    zip: '89431–89441',
+    crossStreets: 'Victorian Square, Sparks Marina, Spanish Springs, Wingfield & Sun Valley',
+    etaMinutes: '35–60 Min',
+    activeVans: 'East Washoe',
+    soilType: 'High-Desert Gravel & Frost-Line Clay',
+    pipeRisk: 'Long Acreage Yard Mains & Frost-Line PVC',
+    utilityOffice: 'TMWA / Washoe County Documentation'
+  },
+  {
+    name: 'Carson City, Minden & Dayton',
+    slug: 'carson-city',
+    zip: '89701–89706 / 89423',
+    crossStreets: 'Carson City, Minden, Gardnerville, Genoa & Dayton',
+    etaMinutes: 'Same-Day / 60 Min',
+    activeVans: 'Carson Valley',
+    soilType: 'Sierra Fault Silt & High Water Table',
+    pipeRisk: 'Historic Crawlspace Lines & Ranch Well Mains',
+    utilityOffice: 'Carson City Public Works & Well Reports'
+  },
+  {
+    name: 'Pahrump, Mesquite & Elko NV',
+    slug: 'elko-rural-nevada',
+    zip: '89048 / 89027 / 89801',
+    crossStreets: 'Pahrump, Mesquite, Boulder City, Fernley, Fallon, Winnemucca & Elko',
+    etaMinutes: 'Priority Regional',
+    activeVans: 'Statewide Rural',
+    soilType: 'Mojave Caliche to Sub-Zero I-80 Frost',
+    pipeRisk: 'Well Pump Short-Cycling & Deep Freeze Mains',
+    utilityOffice: 'VVWD / Great Basin / Rural Municipal Filing'
   }
 ];
 
@@ -94,12 +122,12 @@ const SYMPTOM_DATA = {
   slab: {
     tabLabel: 'Warm Floor / Slab Sound',
     title: 'Warm Tile Floor, Sound of Running Water, or Damp Baseboards',
-    diagnosis: 'Active Sub-Slab Foundation Copper Rupture',
-    urgency: 'HIGH PRIORITY • 30–60 Min Dispatch',
+    diagnosis: 'Active Sub-Slab Foundation Pipe Rupture',
+    urgency: 'HIGH PRIORITY • 24/7 Dispatch',
     equipment: 'Acoustic Ground Geophones & FLIR Infrared Thermal Imager',
-    action: 'Turn off the main shutoff valve near your front hose bib or curb box. Avoid exploratory jackhammering until our ultrasonic sensors isolate the exact leak spot.',
+    action: 'Turn off the main shutoff valve near your garage, curb box, or wellhead. Avoid exploratory jackhammering until ultrasonic sensors isolate the exact leak spot.',
     costRange: '$195 – $345 Non-Invasive Diagnostic',
-    rebate: 'Eligible for LVVWD Tier-3 Excess Consumption Credit'
+    rebate: 'Documentation formatted for LVVWD, Henderson & TMWA Leak Credits'
   },
   pool: {
     tabLabel: 'Pool Water Loss',
@@ -107,29 +135,29 @@ const SYMPTOM_DATA = {
     diagnosis: 'Swimming Pool Underground Suction, Return, or Skimmer Leak',
     urgency: 'MODERATE URGENCY • Same-Day Service',
     equipment: 'Submersible Hydrophone Acoustic Sensor & Heavy-Dye Syringes',
-    action: 'Run the bucket test (mark water level inside and outside a bucket on pool steps). Do not drain your pool in Nevada summer heat, as empty plaster shells can crack or pop in dry soil.',
+    action: 'Run the bucket test (mark water level inside and outside a bucket on pool steps). Do not drain your pool in Nevada heat, as empty plaster shells can crack or pop.',
     costRange: '$275 – $395 Complete Hydrophone Diagnostic',
-    rebate: 'Rebate documentation provided for excess evaporation fee waivers'
+    rebate: 'Certified inspection report provided for water district reviews'
   },
   gas: {
     tabLabel: 'Rotten Egg / Gas Odor',
     title: 'Rotten-Egg Sulfur Odor or Hissing Gas Line',
     diagnosis: 'Combustible Natural Gas or Propane Hazard',
     urgency: 'CRITICAL EMERGENCY • Immediate Action Required',
-    equipment: 'Digital PPM Combustible Gas Sniffing Wand & Electronic Sniffer',
-    action: 'Evacuate all family members and pets to the street immediately. Do not flip switches, use phones, or ring doorbells inside. Call our emergency dispatch line (725) 313-0108 from outside.',
+    equipment: 'Digital PPM Combustible Gas Sniffing Wand & Manometer Drop Test',
+    action: 'Evacuate all family members and pets outside immediately. Do not flip switches or use phones indoors. Call 911 / Southwest Gas / NV Energy, then call (725) 313-0108 from outside.',
     costRange: 'Emergency Diagnostic & Immediate Safety Shutoff',
-    rebate: 'Full Southwest Gas Inspection Signoff Support'
+    rebate: 'Certified pressure testing for Southwest Gas & NV Energy unlocks'
   },
   meter: {
     tabLabel: 'High Bill / Meter Spin',
-    title: 'Water Meter Dial Spinning Continuously or LVVWD Bill Spike',
-    diagnosis: 'Underground Potable Main Yard Line or Irrigation Breach',
-    urgency: 'HIGH PRIORITY • 24/7 Mobile Response',
+    title: 'Water Meter Dial Spinning Continuously or Utility Bill Spike',
+    diagnosis: 'Underground Potable Main Line, Well Run, or Irrigation Breach',
+    urgency: 'HIGH PRIORITY • 24/7 Statewide Response',
     equipment: 'Nitrogen Tracer Gas Pressurization & Line Pressure Decay Gauges',
-    action: 'Check if the low-flow indicator triangle on your water meter spins when all indoor fixtures are off. If yes, water is escaping between the street meter and your house foundation.',
+    action: 'Check if the low-flow triangle on your water meter spins (or well pump cycles) with all indoor taps off. If yes, water is escaping underground before your foundation.',
     costRange: '$195 – $325 Yard Line Diagnostic',
-    rebate: 'Official LVVWD 50% Excess Leak Credit Certification Included'
+    rebate: 'Official repair report for Nevada water utility bill credits'
   }
 };
 
@@ -159,11 +187,7 @@ export const PageRenderer: React.FC<PageRendererProps> = ({
   // Helper to render text with contextual in-paragraph links
   const renderParagraphWithLinks = (text: string) => {
     const linkReplacements: { phrase: string; slug: string }[] = [
-      { phrase: 'leak detection in Spring Valley', slug: '' },
-      { phrase: 'Spring Valley leak detection', slug: '' },
-      { phrase: 'local leak specialists in Spring Valley', slug: '' },
-      { phrase: 'leak detection specialists across Spring Valley', slug: '' },
-      { phrase: 'Spring Valley Leak Detection & Repair', slug: '' },
+      { phrase: 'Leak Detection NV', slug: '' },
       { phrase: 'water leak detection', slug: 'water-leak-detection' },
       { phrase: 'Water Leak Detection', slug: 'water-leak-detection' },
       { phrase: 'gas leak detection', slug: 'gas-leak-detection' },
@@ -175,6 +199,16 @@ export const PageRenderer: React.FC<PageRendererProps> = ({
       { phrase: 'Swimming Pool Leak Detection', slug: 'pool-leak-detection' },
       { phrase: 'underground leak detection', slug: 'underground-leak-detection' },
       { phrase: 'emergency leak repair', slug: 'emergency-leak-repair' },
+      { phrase: 'North Las Vegas', slug: 'north-las-vegas' },
+      { phrase: 'Las Vegas', slug: 'las-vegas' },
+      { phrase: 'Henderson', slug: 'henderson' },
+      { phrase: 'Carson City', slug: 'carson-city' },
+      { phrase: 'Boulder City', slug: 'boulder-city' },
+      { phrase: 'Reno', slug: 'reno' },
+      { phrase: 'Sparks', slug: 'sparks' },
+      { phrase: 'Pahrump', slug: 'pahrump' },
+      { phrase: 'Mesquite', slug: 'mesquite' },
+      { phrase: 'Elko', slug: 'elko-rural-nevada' },
       { phrase: 'Spring Valley Center', slug: 'spring-valley-center' },
       { phrase: 'The Lakes', slug: 'the-lakes' },
       { phrase: 'Peccole Ranch', slug: 'the-lakes' },
@@ -218,18 +252,18 @@ export const PageRenderer: React.FC<PageRendererProps> = ({
   return (
     <article className="min-h-screen bg-slate-50 text-slate-900 pb-20">
       
-      {/* Breadcrumb Navigation (Nevada > Clark County > Spring Valley Hub) */}
+      {/* Breadcrumb Navigation (Nevada Statewide Hierarchy) */}
       <div className="bg-white border-b border-slate-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3">
           <nav aria-label="Breadcrumb" className="flex flex-wrap items-center gap-1.5 text-xs text-slate-500 font-medium">
-            <span>Nevada</span>
-            <span className="text-slate-300">&gt;</span>
-            <span>Clark County</span>
-            <span className="text-slate-300">&gt;</span>
             {page.slug === '' ? (
-              <span className="text-slate-900 font-semibold" aria-current="page">
-                Spring Valley
-              </span>
+              <>
+                <span className="font-semibold text-slate-700">Nevada</span>
+                <span className="text-slate-300">&gt;</span>
+                <span className="text-slate-900 font-semibold" aria-current="page">
+                  All Cities Statewide
+                </span>
+              </>
             ) : (
               <>
                 <a
@@ -237,17 +271,32 @@ export const PageRenderer: React.FC<PageRendererProps> = ({
                   onClick={(e) => { e.preventDefault(); onNavigate(''); }}
                   className="hover:text-[#1E70B8] transition-colors"
                 >
-                  Spring Valley
+                  Nevada Statewide
                 </a>
                 <span className="text-slate-300">&gt;</span>
-                <span className="text-slate-400 capitalize">
-                  {page.type === 'service'
-                    ? 'Leak Services'
-                    : page.type === 'location'
-                    ? 'Spring Valley Service Areas'
-                    : 'Information'}
-                </span>
-                <span className="text-slate-300">&gt;</span>
+                {['spring-valley-center', 'the-lakes', 'spanish-trail', 'summerlin-south', 'rhodes-ranch'].includes(page.slug) ? (
+                  <>
+                    <a
+                      href="/las-vegas/"
+                      onClick={(e) => { e.preventDefault(); onNavigate('las-vegas'); }}
+                      className="hover:text-[#1E70B8] transition-colors"
+                    >
+                      Clark County
+                    </a>
+                    <span className="text-slate-300">&gt;</span>
+                  </>
+                ) : (
+                  <>
+                    <span className="text-slate-400">
+                      {page.type === 'service'
+                        ? 'Leak Services'
+                        : page.type === 'location'
+                        ? 'Nevada Cities'
+                        : 'Information'}
+                    </span>
+                    <span className="text-slate-300">&gt;</span>
+                  </>
+                )}
                 <span className="text-slate-900 font-semibold" aria-current="page">
                   {page.navTitle}
                 </span>
@@ -469,7 +518,7 @@ export const PageRenderer: React.FC<PageRendererProps> = ({
                     Immediate Phone Dispatch — No Waiting on Web Forms
                   </h3>
                   <p className="text-xs sm:text-sm text-slate-600 mt-1 leading-relaxed">
-                    Active water leaks, pipe bursts, and combustible gas odors require instantaneous human triage. Rather than waiting on web forms or delayed emails, call our 24/7 Spring Valley dispatch desk directly at <a href={PHONE_HREF} className="text-[#1E70B8] font-bold underline font-mono">{PHONE_NUMBER}</a> for 30–60 minute on-site technician arrival.
+                    Active water leaks, freeze-burst pipes, and combustible gas odors require instantaneous human triage. Call our 24/7 dispatch desk at <a href={PHONE_HREF} className="text-[#1E70B8] font-bold underline font-mono">{PHONE_NUMBER}</a> for rapid regional contractor matching anywhere in Nevada.
                   </p>
                 </div>
 
@@ -480,7 +529,7 @@ export const PageRenderer: React.FC<PageRendererProps> = ({
                     </div>
                     <div>
                       <h4 className="text-sm font-bold text-slate-900 font-display">24/7 Emergency Line</h4>
-                      <p className="text-xs text-slate-500 mt-0.5">Staffed 24/7/365 by local dispatchers</p>
+                      <p className="text-xs text-slate-500 mt-0.5">Staffed 24/7/365 statewide</p>
                     </div>
                     <a
                       href={PHONE_HREF}
@@ -495,8 +544,8 @@ export const PageRenderer: React.FC<PageRendererProps> = ({
                       <MapPin className="w-5 h-5" />
                     </div>
                     <div>
-                      <h4 className="text-sm font-bold text-slate-900 font-display">Physical Location</h4>
-                      <p className="text-xs text-slate-500 mt-0.5">Spring Valley dispatch office</p>
+                      <h4 className="text-sm font-bold text-slate-900 font-display">Dispatch Headquarters</h4>
+                      <p className="text-xs text-slate-500 mt-0.5">Central Las Vegas hub</p>
                     </div>
                     <div className="text-xs font-semibold text-slate-800 leading-snug">
                       6875 Groveview Ln<br />Las Vegas, NV 89103
@@ -508,11 +557,11 @@ export const PageRenderer: React.FC<PageRendererProps> = ({
                       <Clock className="w-5 h-5" />
                     </div>
                     <div>
-                      <h4 className="text-sm font-bold text-slate-900 font-display">Rapid Dispatch</h4>
-                      <p className="text-xs text-slate-500 mt-0.5">Spring Valley & Clark County</p>
+                      <h4 className="text-sm font-bold text-slate-900 font-display">Statewide Coverage</h4>
+                      <p className="text-xs text-slate-500 mt-0.5">Southern, Northern &amp; Rural NV</p>
                     </div>
                     <div className="text-xs font-semibold text-emerald-700">
-                      Mobile Diagnostic Trucks On Standby
+                      Las Vegas • Henderson • Reno • Sparks • Carson City
                     </div>
                   </div>
                 </div>
@@ -526,10 +575,10 @@ export const PageRenderer: React.FC<PageRendererProps> = ({
                   <div>
                     <div className="flex items-center gap-1.5 text-xs font-bold text-[#1E70B8] uppercase tracking-wider font-display mb-1">
                       <MapPin className="w-4 h-4 text-amber-500" />
-                      <span>Official Business Location & Service Area</span>
+                      <span>Headquarters Address &amp; Statewide Dispatch</span>
                     </div>
                     <h3 className="text-xl sm:text-2xl font-bold text-slate-900 font-display">
-                      Spring Valley Location & Map
+                      Nevada Headquarters Location &amp; Map
                     </h3>
                   </div>
                   <div className="text-xs text-slate-600 sm:text-right">
@@ -549,16 +598,16 @@ export const PageRenderer: React.FC<PageRendererProps> = ({
                     <strong className="text-slate-900 block mt-0.5">6875 Groveview Ln, Las Vegas, NV 89103</strong>
                   </div>
                   <div>
-                    <span className="text-slate-400 block font-medium uppercase tracking-wider text-[10px]">Telephone & Hours</span>
+                    <span className="text-slate-400 block font-medium uppercase tracking-wider text-[10px]">Telephone &amp; Hours</span>
                     <strong className="text-slate-900 block mt-0.5 font-mono">{PHONE_NUMBER} • Open 24/7</strong>
                   </div>
                 </div>
 
                 <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
-                  Centrally based at 6875 Groveview Ln in Spring Valley, our mobile diagnostic units provide rapid response for domestic water, hazardous gas, concrete slab, and swimming pool leak emergencies throughout Clark County, NV.
+                  Headquartered at 6875 Groveview Ln in Las Vegas, NV 89103, our 24/7 dispatch network matches homeowners and businesses with licensed leak specialists across Las Vegas, Henderson, North Las Vegas, Spring Valley, Reno, Sparks, Carson City, Pahrump, Mesquite, Boulder City, and Elko.
                 </p>
 
-                {/* Embedded Responsive Google Map (User's Exact Embed URL) */}
+                {/* Embedded Responsive Google Map */}
                 <div className="w-full h-80 sm:h-96 rounded-xl overflow-hidden border border-slate-200 shadow-inner bg-slate-100">
                   <iframe
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d228.32573332633928!2d-115.24263393980249!3d36.10665393950978!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c8c718b3b90839%3A0x478991a6983539e5!2s6875%20Groveview%20Ln%2C%20Las%20Vegas%2C%20NV%2089103%2C%20USA!5e0!3m2!1sen!2sve!4v1791569926749!5m2!1sen!2sve"
@@ -568,7 +617,7 @@ export const PageRenderer: React.FC<PageRendererProps> = ({
                     allowFullScreen={false}
                     loading="lazy"
                     referrerPolicy="strict-origin-when-cross-origin"
-                    title="Spring Valley Leak Detection Location - 6875 Groveview Ln, Las Vegas, NV 89103"
+                    title="Leak Detection NV Headquarters - 6875 Groveview Ln, Las Vegas, NV 89103"
                     className="w-full h-full"
                   />
                 </div>
@@ -576,7 +625,7 @@ export const PageRenderer: React.FC<PageRendererProps> = ({
                 <div className="flex flex-wrap items-center justify-between gap-3 pt-2 text-xs text-slate-500 border-t border-slate-100">
                   <div className="flex items-center gap-2">
                     <span className="w-2 h-2 rounded-full bg-emerald-500"></span>
-                    <span>Coverage: Spring Valley, The Lakes, Spanish Trail, Summerlin South & Rhodes Ranch</span>
+                    <span>Statewide Dispatch: Las Vegas Valley, Reno/Tahoe, Carson City, Mesquite, Pahrump &amp; Elko</span>
                   </div>
                   <a
                     href={PHONE_HREF}
@@ -603,7 +652,7 @@ export const PageRenderer: React.FC<PageRendererProps> = ({
                         Official Facebook Page
                       </h4>
                       <p className="text-xs text-slate-500">
-                        Follow our Spring Valley dispatch team for emergency tips, pipe diagnostic updates, and customer reviews.
+                        Follow Leak Detection NV for statewide emergency prevention tips and seasonal freeze/heat alerts.
                       </p>
                     </div>
                   </div>
@@ -620,27 +669,27 @@ export const PageRenderer: React.FC<PageRendererProps> = ({
                 </div>
               </section>
             )}
-            {/* HOMEPAGE RANKING AUTHORITY: SPRING VALLEY NEIGHBORHOOD DISPATCH ESTIMATOR */}
+            {/* HOMEPAGE RANKING AUTHORITY: NEVADA STATEWIDE CITIES & REGIONAL DISPATCH ESTIMATOR */}
             {page.slug === '' && (
-              <section className="bg-white rounded-2xl p-6 sm:p-8 border border-slate-200 shadow-xs space-y-6">
+              <section id="nevada-cities" className="bg-white rounded-2xl p-6 sm:p-8 border border-slate-200 shadow-xs space-y-6">
                 <div>
                   <div className="flex items-center gap-2 text-xs font-bold text-[#1E70B8] uppercase tracking-wider font-display mb-1">
                     <Navigation className="w-4 h-4 text-amber-500" />
-                    <span>Spring Valley Mobile Diagnostic Coverage</span>
+                    <span>Nevada Statewide Coverage • Southern, Northern &amp; Rural NV</span>
                   </div>
                   <h3 className="text-xl sm:text-2xl font-bold text-slate-900 font-display">
-                    Spring Valley Response Times & Neighborhood Dispatch Estimator
+                    All Nevada Cities Leak Detection &amp; Regional Dispatch Explorer
                   </h3>
                   <p className="text-xs sm:text-sm text-slate-600 mt-1 leading-relaxed">
-                    Select your Spring Valley neighborhood to view active mobile units, local caliche soil conditions, estimated arrival time, and utility rebate qualifications:
+                    Select any Nevada metro or region to inspect local soil &amp; freeze-thaw conditions, pipe failure risks, response availability, and municipal utility credit support:
                   </p>
                 </div>
 
-                {/* Neighborhood Buttons */}
-                <div className="grid grid-cols-2 sm:grid-cols-3 gap-2.5">
-                  {SPRING_VALLEY_NEIGHBORHOODS.map((nh, idx) => (
+                {/* Regional City Selector Buttons */}
+                <div className="grid grid-cols-2 sm:grid-cols-4 gap-2.5">
+                  {NEVADA_CITY_REGIONS.map((nh, idx) => (
                     <button
-                      key={nh.zip}
+                      key={nh.slug}
                       onClick={() => setSelectedAreaIdx(idx)}
                       className={`p-3 rounded-xl border text-left transition-all cursor-pointer ${
                         selectedAreaIdx === idx
@@ -648,28 +697,28 @@ export const PageRenderer: React.FC<PageRendererProps> = ({
                           : 'border-slate-200 bg-slate-50/70 hover:bg-white text-slate-700'
                       }`}
                     >
-                      <span className="block text-xs font-bold font-display">{nh.name}</span>
-                      <span className="text-[11px] font-semibold text-[#1E70B8]">ZIP {nh.zip}</span>
+                      <span className="block text-xs font-bold font-display leading-snug">{nh.name}</span>
+                      <span className="text-[11px] font-semibold text-[#1E70B8]">{nh.zip}</span>
                     </button>
                   ))}
                 </div>
 
-                {/* Selected Neighborhood Real-Time Data Card */}
+                {/* Selected Region Data Card */}
                 {(() => {
-                  const area = SPRING_VALLEY_NEIGHBORHOODS[selectedAreaIdx];
+                  const area = NEVADA_CITY_REGIONS[selectedAreaIdx] || NEVADA_CITY_REGIONS[0];
                   return (
                     <div className="bg-linear-to-br from-slate-900 to-[#0F2942] rounded-xl p-5 text-white space-y-4 shadow-sm border border-slate-800">
                       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pb-3 border-b border-slate-700/80">
                         <div>
                           <div className="flex items-center gap-2 text-xs text-amber-400 font-bold uppercase tracking-wider">
                             <MapPin className="w-3.5 h-3.5" />
-                            <span>{area.name} (ZIP {area.zip})</span>
+                            <span>{area.name} ({area.zip})</span>
                           </div>
                           <div className="text-xs text-slate-300 mt-0.5">
-                            Cross Streets: {area.crossStreets}
+                            Areas: {area.crossStreets}
                           </div>
                         </div>
-                        <div className="flex items-center gap-2">
+                        <div className="flex items-center gap-2 flex-wrap">
                           <span className="px-2.5 py-1 rounded-full bg-emerald-500/20 text-emerald-300 text-xs font-bold border border-emerald-500/30 flex items-center gap-1.5">
                             <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
                             {area.activeVans}
@@ -682,34 +731,85 @@ export const PageRenderer: React.FC<PageRendererProps> = ({
 
                       <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 text-xs">
                         <div className="p-3 rounded-lg bg-slate-800/80 border border-slate-700">
-                          <span className="text-slate-400 block mb-1 font-medium">Sub-Surface Geology:</span>
+                          <span className="text-slate-400 block mb-1 font-medium">Regional Geology &amp; Climate:</span>
                           <span className="text-slate-200 font-bold">{area.soilType}</span>
                         </div>
                         <div className="p-3 rounded-lg bg-slate-800/80 border border-slate-700">
-                          <span className="text-slate-400 block mb-1 font-medium">Primary Rupture Risk:</span>
+                          <span className="text-slate-400 block mb-1 font-medium">Primary Pipe Risk:</span>
                           <span className="text-slate-200 font-bold">{area.pipeRisk}</span>
                         </div>
                         <div className="p-3 rounded-lg bg-slate-800/80 border border-slate-700">
-                          <span className="text-slate-400 block mb-1 font-medium">LVVWD Rebate Office:</span>
-                          <span className="text-slate-200 font-bold">{area.lvvwdOffice}</span>
+                          <span className="text-slate-400 block mb-1 font-medium">Utility Documentation:</span>
+                          <span className="text-slate-200 font-bold">{area.utilityOffice}</span>
                         </div>
                       </div>
 
                       <div className="pt-2 flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-3">
-                        <span className="text-xs text-slate-300">
-                          Have an active water leak, pool loss, or gas odor in {area.name}?
-                        </span>
+                        <a
+                          href={`/${area.slug}/`}
+                          onClick={(e) => {
+                            e.preventDefault();
+                            onNavigate(area.slug);
+                          }}
+                          className="text-xs font-bold text-[#38BDF8] hover:text-white flex items-center gap-1"
+                        >
+                          <span>View {area.name} Local Guide</span>
+                          <ArrowRight className="w-3.5 h-3.5" />
+                        </a>
                         <a
                           href={PHONE_HREF}
                           className="px-4 py-2 bg-amber-500 hover:bg-amber-400 text-slate-950 font-bold text-xs rounded-lg transition-colors flex items-center justify-center gap-1.5 shrink-0"
                         >
                           <Phone className="w-3.5 h-3.5 text-slate-950" />
-                          <span>Dispatch Tech to {area.zip}</span>
+                          <span>Dispatch Tech to {area.name.split(' ')[0]}</span>
                         </a>
                       </div>
                     </div>
                   );
                 })()}
+
+                {/* Complete Nevada City Hub Directory Strip (Zero Orphan Pages) */}
+                <div className="pt-2 border-t border-slate-200 space-y-3">
+                  <div className="flex flex-wrap items-center justify-between gap-2">
+                    <span className="text-xs font-bold uppercase tracking-wider text-slate-700 font-display">
+                      Dedicated Nevada City &amp; Community Pages
+                    </span>
+                    <span className="text-[11px] text-slate-500">
+                      Plus Paradise, Enterprise, Summerlin, Spanish Springs, Fernley, Fallon, Winnemucca, Ely &amp; Laughlin
+                    </span>
+                  </div>
+                  <div className="flex flex-wrap gap-2">
+                    {[
+                      { label: 'Las Vegas', slug: 'las-vegas' },
+                      { label: 'Henderson', slug: 'henderson' },
+                      { label: 'North Las Vegas', slug: 'north-las-vegas' },
+                      { label: 'Reno & Lake Tahoe', slug: 'reno' },
+                      { label: 'Sparks', slug: 'sparks' },
+                      { label: 'Carson City & Minden', slug: 'carson-city' },
+                      { label: 'Pahrump', slug: 'pahrump' },
+                      { label: 'Mesquite', slug: 'mesquite' },
+                      { label: 'Boulder City & Laughlin', slug: 'boulder-city' },
+                      { label: 'Elko, Fernley & Fallon', slug: 'elko-rural-nevada' },
+                      { label: 'Spring Valley Core', slug: 'spring-valley-center' },
+                      { label: 'The Lakes', slug: 'the-lakes' },
+                      { label: 'Spanish Trail', slug: 'spanish-trail' },
+                      { label: 'Summerlin South', slug: 'summerlin-south' },
+                      { label: 'Rhodes Ranch', slug: 'rhodes-ranch' },
+                    ].map((city) => (
+                      <a
+                        key={city.slug}
+                        href={`/${city.slug}/`}
+                        onClick={(e) => {
+                          e.preventDefault();
+                          onNavigate(city.slug);
+                        }}
+                        className="px-3 py-1.5 rounded-lg bg-slate-100 hover:bg-[#0F2942] text-slate-800 hover:text-white text-xs font-semibold border border-slate-200 transition-colors"
+                      >
+                        {city.label}
+                      </a>
+                    ))}
+                  </div>
+                </div>
               </section>
             )}
 
@@ -722,10 +822,10 @@ export const PageRenderer: React.FC<PageRendererProps> = ({
                     <span>Emergency Diagnostic Triage</span>
                   </div>
                   <h3 className="text-xl sm:text-2xl font-bold text-slate-900 font-display">
-                    What Type of Leak Are You Experiencing in Spring Valley?
+                    What Type of Leak Are You Experiencing in Nevada?
                   </h3>
                   <p className="text-xs sm:text-sm text-slate-600 mt-1">
-                    Select your symptoms below for immediate diagnostic protocols, safety procedures, and estimated pricing:
+                    Select your symptoms below for immediate diagnostic protocols, safety steps, and pricing guidance:
                   </p>
                 </div>
 
@@ -818,10 +918,10 @@ export const PageRenderer: React.FC<PageRendererProps> = ({
                     <span>The Non-Invasive Advantage</span>
                   </div>
                   <h3 className="text-xl sm:text-2xl font-bold text-slate-900 font-display">
-                    Spring Valley Leak Detection Specialists vs. Conventional Plumbers
+                    Leak Detection NV Specialists vs. Conventional General Plumbers
                   </h3>
                   <p className="text-xs sm:text-sm text-slate-600 mt-1 leading-relaxed">
-                    Why hiring a dedicated electronic leak detection contractor saves Spring Valley property owners thousands of dollars compared to general plumbing contractors:
+                    Why working with a dedicated electronic leak detection specialist protects Nevada homeowners from destructive exploratory demolition:
                   </p>
                 </div>
 
@@ -830,35 +930,35 @@ export const PageRenderer: React.FC<PageRendererProps> = ({
                     <thead className="bg-[#0F2942] text-white">
                       <tr>
                         <th className="py-3 px-4 font-bold">Diagnostic Capability</th>
-                        <th className="py-3 px-4 font-bold text-amber-300">Spring Valley Leak Detection</th>
+                        <th className="py-3 px-4 font-bold text-amber-300">Leak Detection NV Network</th>
                         <th className="py-3 px-4 font-bold text-slate-300">Conventional General Plumbers</th>
                       </tr>
                     </thead>
                     <tbody className="divide-y divide-slate-200 bg-white">
                       <tr className="hover:bg-slate-50">
                         <td className="py-3 px-4 font-bold text-slate-900">Concrete Slab Leak Pinpointing</td>
-                        <td className="py-3 px-4 text-emerald-700 font-semibold">Ultrasonic sensors locate leak within 1 inch ($0 floor damage)</td>
+                        <td className="py-3 px-4 text-emerald-700 font-semibold">Ultrasonic sensors locate leak within inches (minimal access)</td>
                         <td className="py-3 px-4 text-slate-600">Guesswork jackhammering of multiple floor tiles</td>
                       </tr>
                       <tr className="hover:bg-slate-50">
                         <td className="py-3 px-4 font-bold text-slate-900">Swimming Pool Diagnostics</td>
                         <td className="py-3 px-4 text-emerald-700 font-semibold">Submersible hydrophones + dye test without draining pool</td>
-                        <td className="py-3 px-4 text-slate-600">Require full draining (damaging pool plaster in desert heat)</td>
+                        <td className="py-3 px-4 text-slate-600">Require full draining (risking plaster damage in heat)</td>
                       </tr>
                       <tr className="hover:bg-slate-50">
-                        <td className="py-3 px-4 font-bold text-slate-900">Emergency Dispatch Time</td>
-                        <td className="py-3 px-4 text-emerald-700 font-semibold">Guaranteed 30–60 minutes across Spring Valley & 89103</td>
-                        <td className="py-3 px-4 text-slate-600">4 to 8 hour appointment windows next day</td>
+                        <td className="py-3 px-4 font-bold text-slate-900">Statewide Nevada Dispatch</td>
+                        <td className="py-3 px-4 text-emerald-700 font-semibold">30–60 min metro dispatch across Clark &amp; Washoe + rural NV</td>
+                        <td className="py-3 px-4 text-slate-600">Single-neighborhood hours or next-day windows</td>
                       </tr>
                       <tr className="hover:bg-slate-50">
-                        <td className="py-3 px-4 font-bold text-slate-900">LVVWD Bill Credit Assistance</td>
-                        <td className="py-3 px-4 text-emerald-700 font-semibold">Certified technical report accepted by LVVWD online portal</td>
-                        <td className="py-3 px-4 text-slate-600">Basic invoice often rejected for water rebate credit</td>
+                        <td className="py-3 px-4 font-bold text-slate-900">Utility Leak Credit Documentation</td>
+                        <td className="py-3 px-4 text-emerald-700 font-semibold">Detailed reports formatted for LVVWD, Henderson &amp; TMWA</td>
+                        <td className="py-3 px-4 text-slate-600">Basic receipt often missing required repair details</td>
                       </tr>
                       <tr className="hover:bg-slate-50">
-                        <td className="py-3 px-4 font-bold text-slate-900">Caliche Soil Trenching Method</td>
-                        <td className="py-3 px-4 text-emerald-700 font-semibold">Precision acoustic correlation minimizes excavation footprint</td>
-                        <td className="py-3 px-4 text-slate-600">Extensive backhoe trenching through yard landscaping</td>
+                        <td className="py-3 px-4 font-bold text-slate-900">Caliche &amp; Frost-Line Tracing</td>
+                        <td className="py-3 px-4 text-emerald-700 font-semibold">Acoustic correlation &amp; tracer gas minimize trenching</td>
+                        <td className="py-3 px-4 text-slate-600">Wide backhoe trenching across yard or driveway</td>
                       </tr>
                     </tbody>
                   </table>
@@ -876,7 +976,7 @@ export const PageRenderer: React.FC<PageRendererProps> = ({
                       <span>Verifiable Licensing, Dispatch &amp; Equipment Standards</span>
                     </div>
                     <h3 className="text-xl sm:text-2xl font-bold text-slate-900 font-display">
-                      Spring Valley Diagnostic Benchmarks &amp; Contractor Compliance
+                      Nevada Statewide Diagnostic Benchmarks &amp; NSCB Compliance
                     </h3>
                   </div>
                 </div>
@@ -888,17 +988,17 @@ export const PageRenderer: React.FC<PageRendererProps> = ({
                       <span>Nevada State Contractors Board (NSCB)</span>
                     </div>
                     <p className="text-xs text-slate-700 leading-relaxed">
-                      Referrals and dispatch assignments strictly enforce active Nevada State Contractors Board C-1 plumbing and contractor licensing standards, general liability coverage, and Clark County code compliance.
+                      Dispatch referrals strictly adhere to active Nevada State Contractors Board C-1 plumbing and contractor licensing standards, liability coverage, and county building codes statewide.
                     </p>
                   </div>
 
                   <div className="p-4 rounded-xl border border-slate-200 bg-slate-50/70 space-y-2">
                     <div className="flex items-center gap-2 text-xs font-bold text-[#0F2942] uppercase tracking-wider">
                       <Clock className="w-4 h-4 text-amber-600" />
-                      <span>24/7 Local Dispatch Availability</span>
+                      <span>24/7 Statewide Dispatch Desk</span>
                     </div>
                     <p className="text-xs text-slate-700 leading-relaxed">
-                      Operating round the clock from 6875 Groveview Ln, Las Vegas, NV 89103 with 30–60 minute rapid dispatch across 89103, 89113, 89117, 89147, and 89148.
+                      Headquartered at 6875 Groveview Ln, Las Vegas, NV 89103, routing urgent water, slab, pool, and gas calls across Las Vegas, Henderson, Reno, Sparks, Carson City, and rural Nevada.
                     </p>
                   </div>
 
@@ -908,17 +1008,17 @@ export const PageRenderer: React.FC<PageRendererProps> = ({
                       <span>Ultrasonic Acoustic &amp; Thermal Specs</span>
                     </div>
                     <p className="text-xs text-slate-700 leading-relaxed">
-                      Equipped with amplified ground geophones (sub-slab frequency filtering), FLIR high-resolution infrared cameras, and submersible pool hydrophones to isolate leaks non-invasively.
+                      Equipped with amplified ground geophones, FLIR infrared cameras, safe hydrogen-nitrogen tracer gas, and submersible pool hydrophones to isolate leaks non-invasively.
                     </p>
                   </div>
 
                   <div className="p-4 rounded-xl border border-slate-200 bg-slate-50/70 space-y-2">
                     <div className="flex items-center gap-2 text-xs font-bold text-[#0F2942] uppercase tracking-wider">
                       <FileText className="w-4 h-4 text-sky-600" />
-                      <span>Gas PPM &amp; LVVWD Documentation</span>
+                      <span>Gas PPM &amp; Nevada Utility Reports</span>
                     </div>
                     <p className="text-xs text-slate-700 leading-relaxed">
-                      Calibrated parts-per-million (PPM) combustible gas sniffers and itemized diagnostic repair logs formatted for Southwest Gas clearances, insurance claims, and LVVWD leak credits.
+                      Calibrated PPM combustible gas sniffers and itemized diagnostic logs formatted for Southwest Gas / NV Energy clearances, insurance claims, and LVVWD / TMWA credits.
                     </p>
                   </div>
                 </div>
@@ -932,10 +1032,10 @@ export const PageRenderer: React.FC<PageRendererProps> = ({
                 <span>Professional Quality Standards</span>
               </div>
               <h3 className="text-xl sm:text-2xl font-bold font-display">
-                Certified Leak Detection & Repair in Spring Valley, NV
+                Licensed Leak Detection &amp; Repair {page.type === 'location' ? `in ${page.navTitle}, NV` : 'Across Nevada'}
               </h3>
               <p className="text-sm text-slate-300 leading-relaxed">
-                {BRAND_NAME} provides 24/7 non-invasive emergency leak diagnostics and durable repair across Spring Valley and Clark County. All services are performed by licensed, insured professionals adhering to strict Nevada State Contractors Board (NSCB) standards.
+                {BRAND_NAME} connects property owners across all Nevada cities with independent, licensed professionals adhering to Nevada State Contractors Board (NSCB) standards and municipal plumbing codes.
               </p>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
@@ -944,7 +1044,7 @@ export const PageRenderer: React.FC<PageRendererProps> = ({
                     Nevada State Licensure
                   </h4>
                   <p className="text-xs text-slate-300 leading-relaxed">
-                    Contractors hold active C-1 Plumbing & Heating or specialized leak detection licenses issued and verified by the Nevada State Contractors Board (NSCB).
+                    Dispatched contractors hold active C-1 Plumbing &amp; Heating or specialized leak detection licenses issued and verified by the Nevada State Contractors Board (NSCB).
                   </p>
                 </div>
 
@@ -953,7 +1053,7 @@ export const PageRenderer: React.FC<PageRendererProps> = ({
                     Upfront Itemized Estimates
                   </h4>
                   <p className="text-xs text-slate-300 leading-relaxed">
-                    Technicians thoroughly test and inspect your property, providing clear, itemized quotes before beginning any water, gas, slab, or pool leak repair.
+                    Technicians inspect and pinpoint the leak accurately, providing clear itemized quotes before beginning any water, gas, slab, or pool leak repair.
                   </p>
                 </div>
               </div>
@@ -968,10 +1068,10 @@ export const PageRenderer: React.FC<PageRendererProps> = ({
                     <span>Frequently Asked Questions</span>
                   </div>
                   <h3 className="text-xl sm:text-2xl font-bold text-slate-900 font-display">
-                    Questions About {page.name} in Spring Valley, NV
+                    Questions About {page.name}
                   </h3>
                   <p className="text-xs text-slate-500 mt-1">
-                    Specific answers to common technical, diagnostic, and pricing inquiries.
+                    Specific answers to common technical, diagnostic, utility, and pricing inquiries.
                   </p>
                 </div>
 
@@ -1088,43 +1188,37 @@ export const PageRenderer: React.FC<PageRendererProps> = ({
                     </ul>
                   </div>
 
-                  {/* Category 2: Neighborhoods */}
+                  {/* Category 2: Nevada Cities & Communities */}
                   <div className="bg-slate-50 border border-slate-200 rounded-xl p-5 space-y-3">
                     <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-[#0F2942]">
                       <MapPin className="w-4 h-4 text-amber-500" />
-                      <span>Spring Valley Service Sectors (5 Pages)</span>
+                      <span>Nevada Cities &amp; Communities (15 Pages)</span>
                     </div>
-                    <ul className="space-y-2.5 text-xs">
-                      <li>
-                        <a href="/spring-valley-center/" onClick={(e) => { e.preventDefault(); onNavigate('spring-valley-center'); }} className="font-bold text-[#1E70B8] hover:underline block text-sm">
-                          Spring Valley Core & Rainbow Corridor (89103)
-                        </a>
-                        <span className="text-slate-600">Rainbow Blvd & Tropicana Ave / Flamingo Rd • ETA 20–30 min.</span>
-                      </li>
-                      <li>
-                        <a href="/the-lakes/" onClick={(e) => { e.preventDefault(); onNavigate('the-lakes'); }} className="font-bold text-[#1E70B8] hover:underline block text-sm">
-                          The Lakes & Peccole Ranch (89117)
-                        </a>
-                        <span className="text-slate-600">Sahara Ave & Fort Apache Rd • ETA 25–35 min.</span>
-                      </li>
-                      <li>
-                        <a href="/spanish-trail/" onClick={(e) => { e.preventDefault(); onNavigate('spanish-trail'); }} className="font-bold text-[#1E70B8] hover:underline block text-sm">
-                          Spanish Trail Estates (89113)
-                        </a>
-                        <span className="text-slate-600">Tropicana Ave & Buffalo Dr • ETA 20–30 min.</span>
-                      </li>
-                      <li>
-                        <a href="/summerlin-south/" onClick={(e) => { e.preventDefault(); onNavigate('summerlin-south'); }} className="font-bold text-[#1E70B8] hover:underline block text-sm">
-                          Summerlin South & 215 Beltway (89135 / 89148)
-                        </a>
-                        <span className="text-slate-600">Town Center Dr & Maule Ave • ETA 30–40 min.</span>
-                      </li>
-                      <li>
-                        <a href="/rhodes-ranch/" onClick={(e) => { e.preventDefault(); onNavigate('rhodes-ranch'); }} className="font-bold text-[#1E70B8] hover:underline block text-sm">
-                          Rhodes Ranch & Sunset Corridor (89148)
-                        </a>
-                        <span className="text-slate-600">Durango Dr & Sunset Rd • ETA 30–40 min.</span>
-                      </li>
+                    <ul className="space-y-2 text-xs">
+                      {[
+                        { slug: 'las-vegas', title: 'Las Vegas Metro (Downtown, Paradise, Enterprise, Summerlin)', desc: 'All Las Vegas ZIP codes 89101–89149 • LVVWD & slab repair.' },
+                        { slug: 'henderson', title: 'Henderson & Green Valley (89002–89074)', desc: 'Anthem, Seven Hills, Inspirada, Lake Las Vegas & Whitney Ranch.' },
+                        { slug: 'north-las-vegas', title: 'North Las Vegas (89030–89086)', desc: 'Aliante, Eldorado, Craig Ranch, Tule Springs & Apex.' },
+                        { slug: 'reno', title: 'Reno & Lake Tahoe (89501–89523 / 89451)', desc: 'Midtown, South Reno, Damonte Ranch, Somersett, Verdi & Incline Village.' },
+                        { slug: 'sparks', title: 'Sparks & Spanish Springs (89431–89441)', desc: 'Wingfield Springs, Sun Valley & Sparks Marina.' },
+                        { slug: 'carson-city', title: 'Carson City, Minden & Dayton (89701 / 89423)', desc: 'State Capital corridor, Carson Valley & Gardnerville.' },
+                        { slug: 'pahrump', title: 'Pahrump & Nye County (89048 / 89060 / 89061)', desc: 'Well water mains, desert slabs & propane lines.' },
+                        { slug: 'mesquite', title: 'Mesquite & Virgin Valley (89027)', desc: 'Sun City Mesquite, Bunkerville & resort golf pools.' },
+                        { slug: 'boulder-city', title: 'Boulder City & Laughlin (89005 / 89029)', desc: 'Historic Downtown mains & Colorado River corridor.' },
+                        { slug: 'elko-rural-nevada', title: 'Elko, Fernley, Fallon & Rural NV (89801 / 89408)', desc: 'Spring Creek, Winnemucca, Lovelock, Battle Mountain & Ely.' },
+                        { slug: 'spring-valley-center', title: 'Spring Valley Core & Rainbow Corridor (89103)', desc: 'Headquarters hub at 6875 Groveview Ln.' },
+                        { slug: 'the-lakes', title: 'The Lakes & Peccole Ranch (89117)', desc: 'Sahara Ave & Fort Apache Rd.' },
+                        { slug: 'spanish-trail', title: 'Spanish Trail Estates (89113)', desc: 'Guard-gated estate slab & pool diagnostics.' },
+                        { slug: 'summerlin-south', title: 'Summerlin South & 215 Beltway (89135 / 89148)', desc: 'Town Center Dr & Desert Foothills.' },
+                        { slug: 'rhodes-ranch', title: 'Rhodes Ranch & Sunset Corridor (89148)', desc: 'Durango Dr & Sunset Rd.' },
+                      ].map((loc) => (
+                        <li key={loc.slug}>
+                          <a href={`/${loc.slug}/`} onClick={(e) => { e.preventDefault(); onNavigate(loc.slug); }} className="font-bold text-[#1E70B8] hover:underline block text-sm">
+                            {loc.title}
+                          </a>
+                          <span className="text-slate-600">{loc.desc}</span>
+                        </li>
+                      ))}
                     </ul>
                   </div>
 
@@ -1221,10 +1315,10 @@ export const PageRenderer: React.FC<PageRendererProps> = ({
                   <div>
                     <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-amber-700 font-display">
                       <BookOpen className="w-4 h-4 text-amber-600" />
-                      <span>Spring Valley Diagnostic Knowledge Base</span>
+                      <span>Nevada Diagnostic Knowledge Base</span>
                     </div>
                     <h2 className="text-xl sm:text-2xl font-bold text-slate-900 mt-1 font-display">
-                      Additional Southern Nevada Prevention &amp; Utility Guides
+                      Additional Nevada Prevention &amp; Utility Guides
                     </h2>
                   </div>
                   <a
@@ -1326,13 +1420,13 @@ export const PageRenderer: React.FC<PageRendererProps> = ({
             <section className="p-8 rounded-2xl bg-linear-to-br from-[#0F2942] to-slate-900 text-white space-y-6 shadow-xl">
               <div className="max-w-2xl space-y-2">
                 <span className="text-xs font-bold uppercase tracking-wider text-amber-400 font-display">
-                  24/7 Rapid Emergency Response
+                  24/7 Nevada Statewide Dispatch
                 </span>
                 <h3 className="text-2xl sm:text-3xl font-extrabold tracking-tight font-display">
                   Need Immediate Help With {page.name}?
                 </h3>
                 <p className="text-sm text-slate-300 leading-relaxed">
-                  Avoid catastrophic water, gas, slab, or pool damage to your Spring Valley property. Our licensed technicians arrive promptly with advanced non-invasive diagnostic tools.
+                  Protect your Nevada property from costly water, gas, slab, or pool damage. Connect 24/7 with NSCB-licensed specialists equipped with non-invasive diagnostic tools.
                 </p>
               </div>
 
@@ -1360,7 +1454,7 @@ export const PageRenderer: React.FC<PageRendererProps> = ({
             
             {/* Interactive Inline Emergency Call & Callback Card */}
             <SidebarDispatchForm
-              currentLocationName={page.type === 'location' ? page.navTitle : 'Spring Valley Core'}
+              currentLocationName={page.type === 'location' ? page.navTitle : 'All Nevada Cities'}
               currentServiceType={page.type === 'service' ? page.name : 'Water Leak (Indoor / Wall)'}
             />
 
@@ -1386,7 +1480,7 @@ export const PageRenderer: React.FC<PageRendererProps> = ({
                   </a>
                 </div>
                 <p className="text-xs text-slate-700 leading-relaxed">
-                  Step-by-step DIY diagnostic procedures, Las Vegas leak cost guides, and utility leak credit steps.
+                  Step-by-step DIY diagnostic procedures, Nevada leak cost guides, and utility leak credit steps.
                 </p>
                 {page.slug === '' ? (
                   <a
@@ -1452,11 +1546,11 @@ export const PageRenderer: React.FC<PageRendererProps> = ({
                 </div>
               )}
 
-              {/* Related Spring Valley Neighborhoods Box */}
+              {/* Related Nevada Cities Box */}
               {page.relatedLocations && page.relatedLocations.length > 0 && (
                 <div className="pt-4 border-t border-slate-100 space-y-3">
                   <h5 className="text-xs font-bold uppercase tracking-wider text-slate-700 font-display">
-                    Spring Valley & Nearby Areas
+                    Nevada Cities &amp; Service Areas
                   </h5>
                   <div className="space-y-1.5">
                     {page.relatedLocations.map((rl) => (
@@ -1483,7 +1577,7 @@ export const PageRenderer: React.FC<PageRendererProps> = ({
               {/* Link back to Homepage Anchor */}
               {page.slug !== '' && (
                 <div className="pt-4 border-t border-slate-100 text-xs text-slate-500">
-                  <span>Explore full solutions on our </span>
+                  <span>Explore all cities and services on our </span>
                   <a
                     href="/"
                     onClick={(e) => {
@@ -1492,7 +1586,7 @@ export const PageRenderer: React.FC<PageRendererProps> = ({
                     }}
                     className="text-[#1E70B8] font-bold hover:underline"
                   >
-                    Spring Valley leak detection
+                    Nevada leak detection
                   </a>
                   <span> main hub.</span>
                 </div>
