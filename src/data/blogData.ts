@@ -508,7 +508,7 @@ export const BLOG_POSTS: BlogPost[] = [
           answer: 'Secure all pets, ensure unobstructed access to the main water shutoff valve (garage or front hose bib) and the front yard street water meter box, and have a copy of your recent LVVWD water bill handy.'
         }
       ],
-      conclusion: 'Think You Have a Leak? Don’t wait for a ceiling stain or warped floorboards to appear. Our master leak specialists serve Spring Valley and all nearby Las Vegas neighborhoods 24 hours a day, 7 days a week. Call (725) 313-0108, visit our dispatch office at 6875 Groveview Ln, Las Vegas, NV 89103, or schedule service online at www.leakdetectionnv.com.'
+      conclusion: 'Think You Have a Leak? Don’t wait for a ceiling stain or warped floorboards to appear. Our master leak specialists serve Nevada homeowners 24 hours a day, 7 days a week. Call (725) 313-0108, visit our office at 210 Rawhide Way, Carson City, NV 89701, USA, or schedule service online at www.leakdetectionnv.com.'
     }
   },
   {
@@ -626,7 +626,7 @@ export const BLOG_POSTS: BlogPost[] = [
           answer: 'Shut off your main house water shutoff valve (usually in the garage or near the front wall) and watch the street water meter. If the meter stops moving, the leak is indoors. If it keeps spinning, the leak is in your outdoor supply line or sprinkler manifold.'
         }
       ],
-      conclusion: 'Need Help Finding a Backyard, Pool, or Sprinkler Leak? Contact Leak Detection Pro in Spring Valley for fast, non-invasive diagnostics. Call (725) 313-0108, visit 6875 Groveview Ln, Las Vegas, NV 89103, or reach us online at www.leakdetectionnv.com.'
+      conclusion: 'Need Help Finding a Backyard, Pool, or Sprinkler Leak? Contact Leak Detection NV for fast, non-invasive diagnostics. Call (725) 313-0108, visit 210 Rawhide Way, Carson City, NV 89701, USA, or reach us online at www.leakdetectionnv.com.'
     }
   }
 ];

@@ -50,10 +50,10 @@ export const DOMAIN_URL = "https://www.leakdetectionnv.com";
 export const BRAND_NAME = "Leak Detection NV";
 export const FACEBOOK_URL = "https://www.facebook.com/profile.php?id=61595284141007";
 export const BUSINESS_ADDRESS = {
-  streetAddress: "6875 Groveview Ln",
-  addressLocality: "Las Vegas",
+  streetAddress: "210 Rawhide Way",
+  addressLocality: "Carson City",
   addressRegion: "NV",
-  postalCode: "89103",
+  postalCode: "89701",
   targetArea: "Carson City, NV",
   telephone: "+1-725-313-0108",
 };
@@ -745,7 +745,7 @@ export const sitePages: Record<string, PageContent> = {
     h1: "Leak Detection & Repair in Central Spring Valley, NV",
     heroKicker: "Serving 89103, 89147, Rainbow Blvd & Flamingo Rd",
     heroSubheadline: "From established residential subdivisions to busy commercial corridors along Rainbow and Sahara, dispatched technicians provide non-invasive water, gas, slab, and swimming pool leak diagnostics across central Spring Valley.",
-    directAnswer: "If you need leak detection in central Spring Valley, our dispatch desk at 6875 Groveview Ln connects you with local technicians experienced with local residential slab foundations, older copper piping, commercial strip malls, and backyard swimming pools. Call (725) 313-0108 for fast dispatch.",
+    directAnswer: "If you need leak detection in central Spring Valley, our dispatch desk connects you with local technicians experienced with local residential slab foundations, older copper piping, commercial strip malls, and backyard swimming pools. Call (725) 313-0108 for fast dispatch.",
     featuredImage: "/images/hero_emergency_plumbing_1791566119640.webp",
     imageAlt: "Technician performing leak detection in Spring Valley neighborhood",
     imageCaption: "Rapid service response across Rainbow Blvd, Flamingo Rd, and surrounding Spring Valley neighborhoods.",
@@ -960,7 +960,7 @@ export const sitePages: Record<string, PageContent> = {
     name: "Rhodes Ranch & Southwest Las Vegas Leak Detection",
     navTitle: "Rhodes Ranch",
     metaTitle: "Leak Detection Rhodes Ranch NV | Southwest Las Vegas Water & Pool Leaks",
-    metaDescription: "Precision water, gas, slab & pool leak detection in Rhodes Ranch, NV 89148. 24/7 emergency dispatch. Call (725) 313-0108. 6875 Groveview Ln.",
+    metaDescription: "Precision water, gas, slab & pool leak detection in Rhodes Ranch, NV 89148. 24/7 emergency dispatch. Call (725) 313-0108.",
     primaryKeyword: "leak detection Rhodes Ranch NV",
     secondaryKeywords: [
       "pool leak repair Rhodes Ranch",
@@ -1074,7 +1074,8 @@ export const sitePages: Record<string, PageContent> = {
       { name: "North Carson & Silver Oak (89706)", slug: "north-carson-silver-oak", context: "Lompa Lane & Northridge slabs." },
       { name: "South Carson & Clearview (89705)", slug: "south-carson-clearview", context: "S Carson St & Snyder Ave corridor." }
     ],
-    schemaType: "LocalBusiness"
+    schemaType: "LocalBusiness",
+    showMap: true
   },
 
   // 12C. CARSON CITY DISTRICT 2: WESTSIDE, KINGS CANYON & LAKEVIEW (89703)
@@ -1467,7 +1468,7 @@ export const sitePages: Record<string, PageContent> = {
       "about Leak Detection NV",
       "leak detection specialists Carson City Nevada",
       "water gas slab pool leak repair Carson City",
-      "6875 Groveview Ln Las Vegas"
+      "210 Rawhide Way Carson City"
     ],
     semanticEntities: [
       "Carson City, Nevada local dispatch",
@@ -1478,7 +1479,7 @@ export const sitePages: Record<string, PageContent> = {
     h1: "About Leak Detection NV — Carson City Licensed Specialist Network",
     heroKicker: "Precision Non-Invasive Diagnostics • Serving Carson City, Nevada",
     heroSubheadline: "Coordinating 24/7 emergency water, gas, slab, well-line, and swimming pool leak detection across Downtown Carson City, Westside, Silver Oak, Clearview, and Empire Ranch.",
-    directAnswer: "Leak Detection NV connects residential and commercial property owners in Carson City, Nevada with pre-screened, independent Nevada State Contractors Board (NSCB) licensed leak detection specialists. Coordinated 24/7 from our dispatch desk at 6875 Groveview Ln, Las Vegas, NV 89103, our network matches Carson City calls with acoustic, thermal, tracer-gas, and hydrophone diagnostics. Call (725) 313-0108.",
+    directAnswer: "Leak Detection NV connects residential and commercial property owners in Carson City, Nevada with pre-screened, independent Nevada State Contractors Board (NSCB) licensed leak detection specialists. Coordinated 24/7 from our office at 210 Rawhide Way, Carson City, NV 89701, USA, our network matches Carson City calls with acoustic, thermal, tracer-gas, and hydrophone diagnostics. Call (725) 313-0108.",
     featuredImage: "/images/hero_emergency_plumbing_1791566119640.webp",
     imageAlt: "Leak Detection NV diagnostic equipment and technical standards for Carson City",
     imageCaption: "Matching Carson City property owners 24/7 with NSCB-licensed acoustic and thermal leak specialists.",
@@ -1501,7 +1502,7 @@ export const sitePages: Record<string, PageContent> = {
         heading: "Verified Licensing & Transparent Upfront Estimates",
         subheading: "Strict Nevada State Contractors Board verification",
         paragraphs: [
-          "From our coordination office at 6875 Groveview Ln, Las Vegas, NV 89103, our intake desk routes urgent and scheduled inspections directly to qualified contractors serving Carson City.",
+          "From our coordination office at 210 Rawhide Way, Carson City, NV 89701, USA, our intake desk routes urgent and scheduled inspections directly to qualified contractors serving Carson City.",
           "All servicing contractors are responsible for adhering to Carson City Building Division codes and providing transparent written quotes before repair work commences."
         ]
       }
@@ -1541,36 +1542,36 @@ export const sitePages: Record<string, PageContent> = {
     primaryKeyword: "contact Leak Detection NV Carson City",
     secondaryKeywords: [
       "Leak Detection NV phone number",
-      "6875 Groveview Ln Las Vegas NV 89103",
+      "210 Rawhide Way Carson City NV 89701",
       "call leak detection Carson City NV",
       "emergency leak repair phone Carson City"
     ],
     semanticEntities: [
       "Telephone: (725) 313-0108",
-      "Business office address: 6875 Groveview Ln, Las Vegas, NV 89103",
+      "Business office address: 210 Rawhide Way, Carson City, NV 89701, USA",
       "Target service area: Carson City, Nevada (89701–89706)",
       "24/7 emergency dispatch coordination"
     ],
     h1: "Contact Leak Detection NV — 24/7 Carson City Dispatch",
-    heroKicker: "24/7 Emergency Line: (725) 313-0108 • Serving Carson City, NV (89701–89706)",
+    heroKicker: "24/7 Emergency Line: (725) 313-0108 • 210 Rawhide Way, Carson City, NV 89701",
     heroSubheadline: "Have an active water leak, freeze-burst pipe, natural gas odor, or sub-slab rupture in Carson City, Nevada? Call our 24/7 dispatch desk directly for immediate local matching.",
-    directAnswer: "For urgent water, gas, slab, well-line, and swimming pool leaks in Carson City, NV, calling directly gives you the fastest triage. Dial (725) 313-0108 to reach our 24/7 dispatch desk (business office: 6875 Groveview Ln, Las Vegas, NV 89103) for rapid contractor matching across 89701, 89702, 89703, 89705, and 89706.",
+    directAnswer: "For urgent water, gas, slab, well-line, and swimming pool leaks in Carson City, NV, calling directly gives you the fastest triage. Dial (725) 313-0108 to reach our 24/7 dispatch desk (business office: 210 Rawhide Way, Carson City, NV 89701, USA) for rapid contractor matching across 89701, 89702, 89703, 89705, and 89706.",
     featuredImage: "/images/contact_office_1791662625889.webp",
-    imageAlt: "Leak Detection NV dispatch office and coordination center",
-    imageCaption: "Live 24/7 emergency telephone support serving Carson City, Nevada.",
+    imageAlt: "Leak Detection NV dispatch office and coordination center in Carson City",
+    imageCaption: "Live 24/7 emergency telephone support serving Carson City, Nevada from 210 Rawhide Way.",
     sections: [
       {
         heading: "Official Business Information & Carson City Dispatch",
         subheading: "24/7 live triage for Carson City homes and businesses",
         paragraphs: [
           "Leak Detection NV operates 24 hours a day, 7 days a week. When you call (725) 313-0108 from Carson City, our desk immediately triages your issue, shares main shutoff safety guidance, and matches your address with a licensed specialist serving your neighborhood.",
-          "Our administrative dispatch office is located at 6875 Groveview Ln, Las Vegas, NV 89103, coordinating dedicated NSCB-licensed technicians throughout Carson City (89701–89706)."
+          "Our Carson City business office is located at 210 Rawhide Way, Carson City, NV 89701, USA, coordinating dedicated NSCB-licensed technicians throughout Carson City (89701–89706)."
         ],
         bulletPoints: [
           "Company Name: Leak Detection NV",
           "Target Service City: Carson City, Nevada (89701, 89702, 89703, 89705, 89706)",
           "Primary 24/7 Telephone: (725) 313-0108",
-          "Administrative Office: 6875 Groveview Ln, Las Vegas, NV 89103",
+          "Business Address: 210 Rawhide Way, Carson City, NV 89701, USA",
           "Operating Hours: 24 Hours a Day, 7 Days a Week, 365 Days a Year",
           "Core Services: Water Leak Detection, Slab Leak Detection, Well & Yard Lines, Pool & Gas Leak Detection"
         ]
@@ -1648,7 +1649,7 @@ export const sitePages: Record<string, PageContent> = {
     primaryKeyword: "Leak Detection NV privacy policy",
     secondaryKeywords: [
       "leak detection privacy policy",
-      "6875 Groveview Ln privacy Las Vegas",
+      "210 Rawhide Way privacy Carson City",
       "customer data protection policy"
     ],
     semanticEntities: [
@@ -1657,9 +1658,9 @@ export const sitePages: Record<string, PageContent> = {
       "Nevada consumer privacy regulations"
     ],
     h1: "Privacy Policy for Leak Detection NV",
-    heroKicker: "Effective Date: October 2026 • Office: 6875 Groveview Ln, Las Vegas, NV 89103",
+    heroKicker: "Effective Date: October 2026 • Office: 210 Rawhide Way, Carson City, NV 89701, USA",
     heroSubheadline: "This Privacy Policy describes how Leak Detection NV collects, uses, and safeguards information when you visit our website or contact our Carson City service line.",
-    directAnswer: "Leak Detection NV maintains its business office at 6875 Groveview Ln, Las Vegas, NV 89103. We collect only necessary contact and property information (name, telephone number, Carson City service address, and leak description) to coordinate leak detection and repair services.",
+    directAnswer: "Leak Detection NV maintains its business office at 210 Rawhide Way, Carson City, NV 89701, USA. We collect only necessary contact and property information (name, telephone number, Carson City service address, and leak description) to coordinate leak detection and repair services.",
     sections: [
       {
         heading: "1. Information We Collect",
@@ -1696,7 +1697,7 @@ export const sitePages: Record<string, PageContent> = {
         heading: "5. Contact Information for Privacy Concerns",
         subheading: "How to reach our office",
         paragraphs: [
-          "If you have questions regarding this Privacy Policy or wish to request deletion or correction of your contact records, contact: Leak Detection NV, 6875 Groveview Ln, Las Vegas, NV 89103, Phone: (725) 313-0108."
+          "If you have questions regarding this Privacy Policy or wish to request deletion or correction of your contact records, contact: Leak Detection NV, 210 Rawhide Way, Carson City, NV 89701, USA, Phone: (725) 313-0108."
         ]
       }
     ],
@@ -1707,7 +1708,7 @@ export const sitePages: Record<string, PageContent> = {
       },
       {
         question: "How do I request deletion of my contact records?",
-        answer: "Call (725) 313-0108 or write to 6875 Groveview Ln, Las Vegas, NV 89103."
+        answer: "Call (725) 313-0108 or write to 210 Rawhide Way, Carson City, NV 89701, USA."
       }
     ],
     relatedServices: [
@@ -1777,7 +1778,7 @@ export const sitePages: Record<string, PageContent> = {
         heading: "4. Business Office & Questions",
         subheading: "Contact our administrative office",
         paragraphs: [
-          "If you have questions regarding these licensing disclosures or service policies, contact our office at 6875 Groveview Ln, Las Vegas, NV 89103, or call (725) 313-0108."
+          "If you have questions regarding these licensing disclosures or service policies, contact our office at 210 Rawhide Way, Carson City, NV 89701, USA, or call (725) 313-0108."
         ]
       }
     ],
@@ -1880,7 +1881,7 @@ export const sitePages: Record<string, PageContent> = {
         heading: "Company Information & Legal",
         subheading: "Office details, licensing, and policies",
         paragraphs: [
-          "Transparency and compliance information for Leak Detection NV (office: 6875 Groveview Ln, Las Vegas, NV 89103; telephone: (725) 313-0108):"
+          "Transparency and compliance information for Leak Detection NV (office: 210 Rawhide Way, Carson City, NV 89701, USA; telephone: (725) 313-0108):"
         ],
         bulletPoints: [
           "About Us: Carson City Licensed Specialist Network",

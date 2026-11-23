@@ -290,7 +290,7 @@ export const SeoAuditModal: React.FC<SeoAuditModalProps> = ({
                   <li>/summerlin-south/ (Summerlin South 89135)</li>
                   <li>/rhodes-ranch/ (Rhodes Ranch & SW Vegas)</li>
                   <li>/how-it-works/ (How Leak Detection & Repair Works)</li>
-                  <li>/contact/ (Contact & NAP at 6875 Groveview Ln)</li>
+                  <li>/contact/ (Contact & NAP at 210 Rawhide Way, Carson City, NV 89701)</li>
                   <li>/blog/ (Knowledge Base & Leak Prevention Guides)</li>
                   <li>/privacy-policy/ (Privacy Policy & Terms)</li>
                 </ul>

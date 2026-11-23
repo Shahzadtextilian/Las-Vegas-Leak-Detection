@@ -344,7 +344,7 @@ export const PageRenderer: React.FC<PageRendererProps> = ({
                 </span>
                 <span className="flex items-center gap-1.5">
                   <MapPin className="w-4 h-4 text-amber-600" />
-                  6875 Groveview Ln, Las Vegas, NV 89103
+                  210 Rawhide Way, Carson City, NV 89701, USA
                 </span>
               </div>
 
@@ -510,7 +510,7 @@ export const PageRenderer: React.FC<PageRendererProps> = ({
                       <p className="text-xs text-slate-500 mt-0.5">Operations &amp; dispatch desk</p>
                     </div>
                     <div className="text-xs font-semibold text-slate-800 leading-snug">
-                      6875 Groveview Ln<br />Las Vegas, NV 89103
+                      210 Rawhide Way<br />Carson City, NV 89701, USA
                     </div>
                   </div>
 
@@ -540,12 +540,12 @@ export const PageRenderer: React.FC<PageRendererProps> = ({
                       <span>Carson City Coverage &amp; Office Location</span>
                     </div>
                     <h3 className="text-xl sm:text-2xl font-bold text-slate-900 font-display">
-                      Dispatch Office &amp; Carson City Service Map
+                      Carson City Office &amp; Service Location Map
                     </h3>
                   </div>
                   <div className="text-xs text-slate-600 sm:text-right">
-                    <span className="font-semibold text-slate-900 block font-mono">6875 Groveview Ln</span>
-                    <span>Las Vegas, NV 89103 • Serving Carson City, NV</span>
+                    <span className="font-semibold text-slate-900 block font-mono">210 Rawhide Way</span>
+                    <span>Carson City, NV 89701, USA</span>
                   </div>
                 </div>
 
@@ -557,7 +557,7 @@ export const PageRenderer: React.FC<PageRendererProps> = ({
                   </div>
                   <div>
                     <span className="text-slate-400 block font-medium uppercase tracking-wider text-[10px]">Business Address</span>
-                    <strong className="text-slate-900 block mt-0.5">6875 Groveview Ln, Las Vegas, NV 89103</strong>
+                    <strong className="text-slate-900 block mt-0.5">210 Rawhide Way, Carson City, NV 89701, USA</strong>
                   </div>
                   <div>
                     <span className="text-slate-400 block font-medium uppercase tracking-wider text-[10px]">Telephone &amp; Hours</span>
@@ -572,14 +572,14 @@ export const PageRenderer: React.FC<PageRendererProps> = ({
                 {/* Embedded Responsive Google Map */}
                 <div className="w-full h-80 sm:h-96 rounded-xl overflow-hidden border border-slate-200 shadow-inner bg-slate-100">
                   <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d228.32573332633928!2d-115.24263393980249!3d36.10665393950978!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c8c718b3b90839%3A0x478991a6983539e5!2s6875%20Groveview%20Ln%2C%20Las%20Vegas%2C%20NV%2089103%2C%20USA!5e0!3m2!1sen!2sve!4v1791569926749!5m2!1sen!2sve"
-                    width="100%"
-                    height="100%"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d514.9007394062144!2d-119.7561931948919!3d39.16527494953757!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80990a9d480784a1%3A0xbb23c5bfd540b61c!2s210%20Rawhide%20Way%2C%20Carson%20City%2C%20NV%2089701%2C%20USA!5e1!3m2!1sen!2s!4v1795438478784!5m2!1sen!2s"
+                    width="600"
+                    height="450"
                     style={{ border: 0 }}
-                    allowFullScreen={false}
+                    allowFullScreen
                     loading="lazy"
                     referrerPolicy="strict-origin-when-cross-origin"
-                    title="Leak Detection NV Headquarters - 6875 Groveview Ln, Las Vegas, NV 89103"
+                    title="Leak Detection NV - 210 Rawhide Way, Carson City, NV 89701, USA"
                     className="w-full h-full"
                   />
                 </div>
@@ -1153,7 +1153,7 @@ export const PageRenderer: React.FC<PageRendererProps> = ({
                         { slug: 'north-carson-silver-oak', title: 'North Carson, Lompa & Silver Oak (89706)', desc: 'Post-tension slabs, golf-course pools & Northridge subdivisions.' },
                         { slug: 'south-carson-clearview', title: 'South Carson, Clearview & Stewart (89701 / 89705)', desc: 'Carson River corridor, high water table & S Carson St commercial lines.' },
                         { slug: 'east-carson-empire-ranch', title: 'East Carson, Empire Ranch & Pinion Hills', desc: 'Highway 50 E corridor, private well mains & buried propane lines.' },
-                        { slug: 'spring-valley-center', title: 'Spring Valley Core & Rainbow Corridor (89103)', desc: 'Office dispatch hub at 6875 Groveview Ln, Las Vegas, NV.' },
+                        { slug: 'spring-valley-center', title: 'Spring Valley Core & Rainbow Corridor (89103)', desc: 'Legacy Clark County community page.' },
                         { slug: 'the-lakes', title: 'The Lakes & Peccole Ranch (89117)', desc: 'Legacy Clark County community page.' },
                         { slug: 'spanish-trail', title: 'Spanish Trail Estates (89113)', desc: 'Legacy Clark County estate page.' },
                         { slug: 'summerlin-south', title: 'Summerlin South (89135 / 89148)', desc: 'Legacy Clark County community page.' },
@@ -1229,7 +1229,7 @@ export const PageRenderer: React.FC<PageRendererProps> = ({
                         <a href="/contact/" onClick={(e) => { e.preventDefault(); onNavigate('contact'); }} className="font-bold text-[#1E70B8] hover:underline block text-sm">
                           Contact & Location Details
                         </a>
-                        <span className="text-slate-600">6875 Groveview Ln, Las Vegas, NV 89103 • Phone: (725) 313-0108.</span>
+                        <span className="text-slate-600">210 Rawhide Way, Carson City, NV 89701, USA • Phone: (725) 313-0108.</span>
                       </li>
                       <li>
                         <a href="/privacy-policy/" onClick={(e) => { e.preventDefault(); onNavigate('privacy-policy'); }} className="font-bold text-[#1E70B8] hover:underline block text-sm">

@@ -113,7 +113,7 @@ export function generateSchemaForPage(page: PageContent, blogPost?: BlogPost | n
     "sameAs": [
       FACEBOOK_URL,
       "https://en.wikipedia.org/wiki/Carson_City,_Nevada",
-      "https://www.google.com/maps/place/6875+Groveview+Ln,+Las+Vegas,+NV+89103"
+      "https://www.google.com/maps/place/210+Rawhide+Way,+Carson+City,+NV+89701"
     ],
     "address": {
       "@type": "PostalAddress",
@@ -125,15 +125,15 @@ export function generateSchemaForPage(page: PageContent, blogPost?: BlogPost | n
     },
     "geo": {
       "@type": "GeoCoordinates",
-      "latitude": 36.1105,
-      "longitude": -115.2415
+      "latitude": 39.165275,
+      "longitude": -119.756193
     },
     "serviceArea": {
       "@type": "GeoCircle",
       "geoMidpoint": {
         "@type": "GeoCoordinates",
-        "latitude": 39.1638,
-        "longitude": -119.7674
+        "latitude": 39.165275,
+        "longitude": -119.756193
       },
       "geoRadius": "25000"
     },
@@ -221,7 +221,7 @@ export function generateSchemaForPage(page: PageContent, blogPost?: BlogPost | n
     },
     "paymentAccepted": "Cash, Credit Card, Debit Card, Visa, Mastercard, American Express, Discover, Insurance Claims, Check",
     "currenciesAccepted": "USD",
-    "hasMap": "https://www.google.com/maps/place/6875+Groveview+Ln,+Las+Vegas,+NV+89103",
+    "hasMap": "https://www.google.com/maps/place/210+Rawhide+Way,+Carson+City,+NV+89701",
     "openingHoursSpecification": [
       {
         "@type": "OpeningHoursSpecification",

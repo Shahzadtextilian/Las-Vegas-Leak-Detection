@@ -84,7 +84,7 @@ export const SidebarDispatchForm: React.FC<SidebarDispatchFormProps> = ({
         </div>
         <div className="flex items-center gap-2">
           <MapPin className="w-3.5 h-3.5 text-amber-500 shrink-0" />
-          <span>Office: 6875 Groveview Ln, Las Vegas, NV 89103</span>
+          <span>Office: 210 Rawhide Way, Carson City, NV 89701</span>
         </div>
       </div>
     </div>
