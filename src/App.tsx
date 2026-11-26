@@ -48,8 +48,8 @@ export default function App({ initialSlug }: AppProps) {
     if (rawPath === 'disclaimer') return 'disclaimer';
     if (rawPath === 'sitemap') return 'sitemap';
     if (rawPath === 'services' || rawPath === 'locations' || rawPath === 'service-areas') return '';
-    if (['las-vegas', 'henderson', 'north-las-vegas', 'reno', 'sparks', 'pahrump', 'mesquite', 'boulder-city', 'elko-rural-nevada'].includes(rawPath)) {
-      return 'carson-city';
+    if (['carson-city', 'west-carson-lakeview', 'north-carson-silver-oak', 'south-carson-clearview', 'east-carson-empire-ranch', 'henderson', 'north-las-vegas', 'reno', 'sparks', 'pahrump', 'mesquite', 'boulder-city', 'elko-rural-nevada'].includes(rawPath)) {
+      return 'las-vegas';
     }
     if (sitePages[rawPath]) return rawPath;
     return '404';
@@ -123,7 +123,7 @@ export default function App({ initialSlug }: AppProps) {
 
     // Determine dynamic title and description
     const metaTitle = currentBlogPost
-      ? (currentBlogPost.metaTitle || `${currentBlogPost.title} | Leak Detection NV`)
+      ? (currentBlogPost.metaTitle || `${currentBlogPost.title} | Las Vegas Leak Detection Services`)
       : currentPage.metaTitle;
     const metaDescription = currentBlogPost
       ? (currentBlogPost.metaDescription || currentBlogPost.excerpt)

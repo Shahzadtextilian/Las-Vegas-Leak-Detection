@@ -8,7 +8,7 @@ interface SidebarDispatchFormProps {
 }
 
 export const SidebarDispatchForm: React.FC<SidebarDispatchFormProps> = ({
-  currentLocationName = 'Carson City, NV',
+  currentLocationName = 'Las Vegas, NV',
   currentServiceType = 'Water Leak (Indoor / Wall)',
 }) => {
   return (
@@ -20,7 +20,7 @@ export const SidebarDispatchForm: React.FC<SidebarDispatchFormProps> = ({
             <span className="w-2 h-2 rounded-full bg-amber-400 animate-pulse"></span>
             24/7 Emergency Dispatch
           </span>
-          <span className="text-slate-300 font-normal">Carson City, NV</span>
+          <span className="text-slate-300 font-normal">Las Vegas, NV</span>
         </div>
         
         <div>
@@ -42,7 +42,7 @@ export const SidebarDispatchForm: React.FC<SidebarDispatchFormProps> = ({
 
         <div className="flex items-center justify-center gap-1.5 text-[11px] text-slate-300 pt-1">
           <Clock className="w-3.5 h-3.5 text-amber-400" />
-          <span>Fast Carson City dispatch • 89701–89706</span>
+          <span>Fast Las Vegas dispatch • 89129 &amp; Metro ZIPs</span>
         </div>
       </div>
 
@@ -63,7 +63,7 @@ export const SidebarDispatchForm: React.FC<SidebarDispatchFormProps> = ({
             <Clock className="w-4 h-4 text-[#1E70B8] shrink-0 mt-0.5" />
             <div>
               <strong className="text-slate-900 block">Round-The-Clock Standby</strong>
-              <span>Available 24 hours a day across Carson City, weekends &amp; holidays included</span>
+              <span>Available 24 hours a day across Las Vegas, weekends &amp; holidays included</span>
             </div>
           </div>
           <div className="flex items-start gap-2.5 p-2.5 rounded-lg bg-slate-50 border border-slate-100">
@@ -84,7 +84,7 @@ export const SidebarDispatchForm: React.FC<SidebarDispatchFormProps> = ({
         </div>
         <div className="flex items-center gap-2">
           <MapPin className="w-3.5 h-3.5 text-amber-500 shrink-0" />
-          <span>Office: 210 Rawhide Way, Carson City, NV 89701</span>
+          <span>Office: 3320 N Pioneer Way, Las Vegas, NV 89129</span>
         </div>
       </div>
     </div>

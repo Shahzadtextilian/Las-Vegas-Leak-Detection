@@ -24,12 +24,12 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
                 </svg>
               </div>
               <span className="text-lg font-bold text-white tracking-tight font-display">
-                {BRAND_NAME} — Carson City
+                {BRAND_NAME}
               </span>
             </div>
             
             <p className="text-sm text-slate-400 leading-relaxed max-w-sm">
-              24/7 non-invasive water, gas, slab, and swimming pool leak detection in Carson City, Nevada—serving Downtown &amp; Capitol District (89701), Westside &amp; Kings Canyon (89703), North Carson &amp; Silver Oak (89706), Clearview (89705), and Empire Ranch.
+              24/7 non-invasive water, gas, slab, and swimming pool leak detection in Las Vegas, Nevada—serving Northwest Las Vegas &amp; Lone Mountain (89129), Centennial Hills, Summerlin, The Lakes, Spring Valley, Spanish Trail, Rhodes Ranch, Paradise, and Downtown Las Vegas.
             </p>
 
             <div className="pt-2 flex flex-col gap-2 text-xs text-slate-400">
@@ -130,55 +130,55 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
             </ul>
           </div>
 
-          {/* Column 3: Carson City Areas Served */}
+          {/* Column 3: Las Vegas Areas Served */}
           <div>
             <h4 className="text-xs font-semibold uppercase tracking-wider text-slate-100 mb-4 font-display">
-              Carson City Areas
+              Las Vegas Areas
             </h4>
             <ul className="space-y-2 text-sm">
               <li>
                 <a
-                  href="/carson-city/"
-                  onClick={(e) => { e.preventDefault(); onNavigate('carson-city'); }}
+                  href="/las-vegas/"
+                  onClick={(e) => { e.preventDefault(); onNavigate('las-vegas'); }}
                   className="hover:text-white transition-colors"
                 >
-                  Downtown &amp; Capitol (89701)
+                  Northwest &amp; Lone Mtn (89129)
                 </a>
               </li>
               <li>
                 <a
-                  href="/west-carson-lakeview/"
-                  onClick={(e) => { e.preventDefault(); onNavigate('west-carson-lakeview'); }}
+                  href="/centennial-hills/"
+                  onClick={(e) => { e.preventDefault(); onNavigate('centennial-hills'); }}
                   className="hover:text-white transition-colors"
                 >
-                  Westside &amp; Kings Canyon (89703)
+                  Centennial Hills (89131 / 89149)
                 </a>
               </li>
               <li>
                 <a
-                  href="/north-carson-silver-oak/"
-                  onClick={(e) => { e.preventDefault(); onNavigate('north-carson-silver-oak'); }}
+                  href="/summerlin-south/"
+                  onClick={(e) => { e.preventDefault(); onNavigate('summerlin-south'); }}
                   className="hover:text-white transition-colors"
                 >
-                  North Carson &amp; Silver Oak (89706)
+                  Summerlin South &amp; The Lakes
                 </a>
               </li>
               <li>
                 <a
-                  href="/south-carson-clearview/"
-                  onClick={(e) => { e.preventDefault(); onNavigate('south-carson-clearview'); }}
+                  href="/spring-valley-center/"
+                  onClick={(e) => { e.preventDefault(); onNavigate('spring-valley-center'); }}
                   className="hover:text-white transition-colors"
                 >
-                  South Carson &amp; Clearview (89705)
+                  Spring Valley &amp; Spanish Trail
                 </a>
               </li>
               <li>
                 <a
-                  href="/east-carson-empire-ranch/"
-                  onClick={(e) => { e.preventDefault(); onNavigate('east-carson-empire-ranch'); }}
+                  href="/downtown-las-vegas/"
+                  onClick={(e) => { e.preventDefault(); onNavigate('downtown-las-vegas'); }}
                   className="hover:text-white transition-colors"
                 >
-                  Empire Ranch &amp; Pinion Hills
+                  Downtown &amp; Paradise (89101)
                 </a>
               </li>
             </ul>
@@ -324,11 +324,11 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
           </div>
         </div>
 
-        {/* Quality Standards & Carson City Service Notice */}
+        {/* Quality Standards & Las Vegas Service Notice */}
         <div className="pt-8 space-y-4 text-xs text-slate-400 leading-relaxed">
           <div className="p-4 rounded-xl bg-slate-900/60 border border-slate-800 text-slate-400">
-            <span className="font-semibold text-slate-200">Carson City, Nevada Service Notice: </span>
-            {BRAND_NAME} coordinates 24/7 non-invasive leak detection and repair across Carson City, Nevada—including Downtown Capitol District (89701), Westside &amp; Kings Canyon (89703), North Carson &amp; Silver Oak (89706), South Carson &amp; Clearview (89705), and Empire Ranch. Main office located at {BUSINESS_ADDRESS.streetAddress}, {BUSINESS_ADDRESS.addressLocality}, {BUSINESS_ADDRESS.addressRegion} {BUSINESS_ADDRESS.postalCode}. Work is performed by independent licensed contractors adhering to Nevada State Contractors Board (NSCB) standards.
+            <span className="font-semibold text-slate-200">Las Vegas, Nevada Service Notice: </span>
+            {BRAND_NAME} coordinates 24/7 non-invasive leak detection and repair across Las Vegas, Nevada—including Northwest Las Vegas &amp; Lone Mountain (89129), Centennial Hills (89131 / 89149), Summerlin (89135 / 89144), The Lakes (89117), Spring Valley (89103 / 89147), Spanish Trail (89113), Rhodes Ranch (89148), Paradise, and Downtown Las Vegas (89101). Main office located at {BUSINESS_ADDRESS.streetAddress}, {BUSINESS_ADDRESS.addressLocality}, {BUSINESS_ADDRESS.addressRegion} {BUSINESS_ADDRESS.postalCode}, USA. Work is performed by independent licensed contractors adhering to Nevada State Contractors Board (NSCB) standards.
           </div>
 
           <div className="flex flex-col sm:flex-row items-center justify-between gap-4 text-slate-500 pt-2">
@@ -336,7 +336,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
               © 2026 {BRAND_NAME}. All rights reserved.
             </div>
             <div className="flex items-center gap-4">
-              <span>Carson City, Nevada (89701–89706)</span>
+              <span>Las Vegas, Nevada (Metro ZIPs 89101–89149)</span>
               <span>•</span>
               <span>24/7 Emergency Line: {PHONE_NUMBER}</span>
             </div>

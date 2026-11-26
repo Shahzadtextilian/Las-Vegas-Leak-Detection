@@ -214,7 +214,7 @@ export const SeoAuditModal: React.FC<SeoAuditModalProps> = ({
                   Homepage Authority Reinforcement
                 </h4>
                 <p className="text-xs text-blue-950 leading-relaxed">
-                  Per the ranking architecture requirement, this supporting page contextually passes topical and local authority back to the homepage <code className="bg-blue-100 px-1 py-0.5 rounded text-blue-900 font-mono">/</code> using natural semantic variations (e.g. <em>leak detection in Spring Valley</em>, <em>Spring Valley leak detection</em>, <em>local leak specialists in Spring Valley</em>).
+                  Per the ranking architecture requirement, this supporting page contextually passes topical and local authority back to the homepage <code className="bg-blue-100 px-1 py-0.5 rounded text-blue-900 font-mono">/</code> using natural semantic variations (e.g. <em>leak detection in Las Vegas</em>, <em>Las Vegas leak detection</em>, <em>local leak specialists in Las Vegas</em>).
                 </p>
               </div>
 
@@ -240,7 +240,7 @@ export const SeoAuditModal: React.FC<SeoAuditModalProps> = ({
 
               <div className="space-y-3 pt-2">
                 <h4 className="text-xs font-bold uppercase tracking-wider text-slate-500">
-                  Related Spring Valley Service Sectors Interlinked:
+                  Related Las Vegas Service Sectors Interlinked:
                 </h4>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
                   {page.relatedLocations?.map((loc) => (
@@ -284,13 +284,17 @@ export const SeoAuditModal: React.FC<SeoAuditModalProps> = ({
                   <li>/pool-leak-detection/ (Swimming Pool & Spa Plumbing)</li>
                   <li>/underground-leak-detection/ (Buried Main & Irrigation Lines)</li>
                   <li>/emergency-leak-repair/ (24/7 Rapid Shutoff Dispatch)</li>
+                  <li>/las-vegas/ (Northwest Las Vegas & Lone Mountain 89129)</li>
+                  <li>/centennial-hills/ (Centennial Hills & Skye Canyon)</li>
+                  <li>/downtown-las-vegas/ (Downtown Las Vegas & Charleston)</li>
+                  <li>/paradise-enterprise/ (Paradise, Silverado & Enterprise)</li>
                   <li>/spring-valley-center/ (Spring Valley Core 89103)</li>
                   <li>/the-lakes/ (The Lakes & Peccole Ranch)</li>
                   <li>/spanish-trail/ (Spanish Trail Estates)</li>
                   <li>/summerlin-south/ (Summerlin South 89135)</li>
                   <li>/rhodes-ranch/ (Rhodes Ranch & SW Vegas)</li>
                   <li>/how-it-works/ (How Leak Detection & Repair Works)</li>
-                  <li>/contact/ (Contact & NAP at 210 Rawhide Way, Carson City, NV 89701)</li>
+                  <li>/contact/ (Contact & NAP at 3320 N Pioneer Way, Las Vegas, NV 89129)</li>
                   <li>/blog/ (Knowledge Base & Leak Prevention Guides)</li>
                   <li>/privacy-policy/ (Privacy Policy & Terms)</li>
                 </ul>

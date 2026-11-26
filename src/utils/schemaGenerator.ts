@@ -8,15 +8,7 @@ export function generateSchemaForPage(page: PageContent, blogPost?: BlogPost | n
 
   const schemas: any[] = [];
 
-  // 1. Breadcrumbs Schema (Nevada > Carson City > Page)
-  const legacySpringValleySlugs = new Set([
-    "spring-valley-center",
-    "the-lakes",
-    "spanish-trail",
-    "summerlin-south",
-    "rhodes-ranch",
-  ]);
-
+  // 1. Breadcrumbs Schema (Nevada > Clark County > Las Vegas > Page)
   const breadcrumbItems: Array<{ "@type": string; position: number; name: string; item: string }> = [
     {
       "@type": "ListItem",
@@ -43,30 +35,23 @@ export function generateSchemaForPage(page: PageContent, blogPost?: BlogPost | n
     breadcrumbItems.push({
       "@type": "ListItem",
       "position": 2,
-      "name": "Carson City, NV",
-      "item": `${DOMAIN_URL}/#carson-city-areas`
-    });
-  } else if (legacySpringValleySlugs.has(page.slug)) {
-    breadcrumbItems.push({
-      "@type": "ListItem",
-      "position": 2,
       "name": "Clark County",
-      "item": `${DOMAIN_URL}/spring-valley-center/`
+      "item": `${DOMAIN_URL}/#las-vegas-areas`
     });
     breadcrumbItems.push({
       "@type": "ListItem",
       "position": 3,
-      "name": page.navTitle,
-      "item": pageUrl
+      "name": "Las Vegas, NV",
+      "item": `${DOMAIN_URL}/las-vegas/`
     });
   } else if (page.type === "location") {
     breadcrumbItems.push({
       "@type": "ListItem",
       "position": 2,
-      "name": "Carson City",
-      "item": `${DOMAIN_URL}/carson-city/`
+      "name": "Las Vegas, NV",
+      "item": `${DOMAIN_URL}/las-vegas/`
     });
-    if (page.slug !== "carson-city") {
+    if (page.slug !== "las-vegas") {
       breadcrumbItems.push({
         "@type": "ListItem",
         "position": 3,
@@ -78,7 +63,7 @@ export function generateSchemaForPage(page: PageContent, blogPost?: BlogPost | n
     breadcrumbItems.push({
       "@type": "ListItem",
       "position": 2,
-      "name": "Carson City",
+      "name": "Las Vegas, NV",
       "item": `${DOMAIN_URL}/`
     });
     breadcrumbItems.push({
@@ -95,15 +80,15 @@ export function generateSchemaForPage(page: PageContent, blogPost?: BlogPost | n
     "itemListElement": breadcrumbItems
   });
 
-  // 2. Base Plumber / LocalBusiness Schema targeting Carson City, Nevada
+  // 2. Base Plumber / LocalBusiness Schema targeting Las Vegas, Nevada
   const localBusinessSchema = {
     "@context": "https://schema.org",
     "@type": ["Plumber", "LocalBusiness"],
     "@id": `${DOMAIN_URL}/#organization`,
     "name": BRAND_NAME,
     "alternateName": [
-      "Carson City Leak Detection & Repair",
-      "Carson City Water, Slab & Gas Leak Specialists"
+      "Las Vegas Leak Detection",
+      "Las Vegas Water, Slab & Gas Leak Specialists"
     ],
     "url": `${DOMAIN_URL}/`,
     "logo": `${DOMAIN_URL}/logo.svg`,
@@ -112,8 +97,8 @@ export function generateSchemaForPage(page: PageContent, blogPost?: BlogPost | n
     "priceRange": "$$",
     "sameAs": [
       FACEBOOK_URL,
-      "https://en.wikipedia.org/wiki/Carson_City,_Nevada",
-      "https://www.google.com/maps/place/210+Rawhide+Way,+Carson+City,+NV+89701"
+      "https://en.wikipedia.org/wiki/Las_Vegas",
+      "https://www.google.com/maps/place/3320+N+Pioneer+Way,+Las+Vegas,+NV+89129"
     ],
     "address": {
       "@type": "PostalAddress",
@@ -125,55 +110,61 @@ export function generateSchemaForPage(page: PageContent, blogPost?: BlogPost | n
     },
     "geo": {
       "@type": "GeoCoordinates",
-      "latitude": 39.165275,
-      "longitude": -119.756193
+      "latitude": 36.220801,
+      "longitude": -115.255708
     },
     "serviceArea": {
       "@type": "GeoCircle",
       "geoMidpoint": {
         "@type": "GeoCoordinates",
-        "latitude": 39.165275,
-        "longitude": -119.756193
+        "latitude": 36.220801,
+        "longitude": -115.255708
       },
       "geoRadius": "25000"
     },
-    "description": "24/7 non-invasive water, gas, slab, well-main, and swimming pool leak detection in Carson City, Nevada—serving Downtown Capitol District, Westside, Kings Canyon, Lakeview, Silver Oak, Clearview, and Empire Ranch (89701–89706).",
+    "description": "24/7 non-invasive water, gas, slab, underground main, and swimming pool leak detection in Las Vegas, Nevada—serving Northwest Las Vegas & Lone Mountain (89129), Centennial Hills, Summerlin, The Lakes, Spring Valley, Spanish Trail, Rhodes Ranch, Paradise, and Downtown Las Vegas.",
     "speakable": {
       "@type": "SpeakableSpecification",
       "cssSelector": ["#hero-headline", "#direct-answer-summary", ".speakable-answer"]
     },
     "areaServed": [
-      { "@type": "City", "name": "Carson City", "sameAs": "https://en.wikipedia.org/wiki/Carson_City,_Nevada" },
-      { "@type": "Place", "name": "Downtown Carson City & Capitol District" },
-      { "@type": "Place", "name": "Westside Historic District" },
-      { "@type": "Place", "name": "Kings Canyon & Lakeview" },
-      { "@type": "Place", "name": "North Carson, Lompa Lane & Silver Oak" },
-      { "@type": "Place", "name": "South Carson, Clearview & Stewart" },
-      { "@type": "Place", "name": "East Carson, Empire Ranch & Pinion Hills" },
-      { "@type": "GeoShape", "postalCode": "89701" },
-      { "@type": "GeoShape", "postalCode": "89702" },
-      { "@type": "GeoShape", "postalCode": "89703" },
-      { "@type": "GeoShape", "postalCode": "89705" },
-      { "@type": "GeoShape", "postalCode": "89706" }
+      { "@type": "City", "name": "Las Vegas", "sameAs": "https://en.wikipedia.org/wiki/Las_Vegas" },
+      { "@type": "Place", "name": "Northwest Las Vegas & Lone Mountain" },
+      { "@type": "Place", "name": "Centennial Hills & Skye Canyon" },
+      { "@type": "Place", "name": "Summerlin & The Lakes" },
+      { "@type": "Place", "name": "Spring Valley & Spanish Trail" },
+      { "@type": "Place", "name": "Rhodes Ranch, Paradise & Downtown Las Vegas" },
+      { "@type": "GeoShape", "postalCode": "89129" },
+      { "@type": "GeoShape", "postalCode": "89108" },
+      { "@type": "GeoShape", "postalCode": "89128" },
+      { "@type": "GeoShape", "postalCode": "89131" },
+      { "@type": "GeoShape", "postalCode": "89149" },
+      { "@type": "GeoShape", "postalCode": "89117" },
+      { "@type": "GeoShape", "postalCode": "89103" },
+      { "@type": "GeoShape", "postalCode": "89113" },
+      { "@type": "GeoShape", "postalCode": "89135" },
+      { "@type": "GeoShape", "postalCode": "89147" },
+      { "@type": "GeoShape", "postalCode": "89148" },
+      { "@type": "GeoShape", "postalCode": "89101" }
     ],
     "knowsAbout": [
       "Non-Invasive Electronic Water Leak Detection",
-      "Carson City Freeze-Thaw Crawlspace & Slab Diagnostics",
-      "Combustible Natural Gas and Propane Leak Sniffing",
+      "Post-Tension Concrete Slab Leak Diagnostics",
+      "Desert Caliche Soil Underground Pipe Stress",
+      "Combustible Natural Gas Leak Sniffing (Southwest Gas Standards)",
       "Swimming Pool Hydrophone & Dye Leak Testing",
-      "Private Well & Underground Yard Main Pressure Testing",
-      "Carson City Public Works Water Utility Leak Reports",
+      "Las Vegas Valley Water District (LVVWD) Leak Credit Documentation",
       "Nevada State Contractors Board (NSCB) Compliance"
     ],
     "hasOfferCatalog": {
       "@type": "OfferCatalog",
-      "name": "Carson City Leak Detection & Repair Services",
+      "name": "Las Vegas Leak Detection & Repair Services",
       "itemListElement": [
         {
           "@type": "Offer",
           "itemOffered": {
             "@type": "Service",
-            "name": "Water Leak Detection & Repair in Carson City, NV",
+            "name": "Water Leak Detection & Repair in Las Vegas, NV",
             "url": `${DOMAIN_URL}/water-leak-detection/`
           }
         },
@@ -181,7 +172,7 @@ export function generateSchemaForPage(page: PageContent, blogPost?: BlogPost | n
           "@type": "Offer",
           "itemOffered": {
             "@type": "Service",
-            "name": "Slab Leak Detection & Foundation Repair in Carson City, NV",
+            "name": "Slab Leak Detection & Foundation Repair in Las Vegas, NV",
             "url": `${DOMAIN_URL}/slab-leak-detection/`
           }
         },
@@ -189,7 +180,7 @@ export function generateSchemaForPage(page: PageContent, blogPost?: BlogPost | n
           "@type": "Offer",
           "itemOffered": {
             "@type": "Service",
-            "name": "Swimming Pool Leak Detection in Carson City, NV",
+            "name": "Swimming Pool Leak Detection in Las Vegas, NV",
             "url": `${DOMAIN_URL}/pool-leak-detection/`
           }
         },
@@ -197,7 +188,7 @@ export function generateSchemaForPage(page: PageContent, blogPost?: BlogPost | n
           "@type": "Offer",
           "itemOffered": {
             "@type": "Service",
-            "name": "Combustible Gas Leak Detection & Shutoff in Carson City, NV",
+            "name": "Combustible Gas Leak Detection & Shutoff in Las Vegas, NV",
             "url": `${DOMAIN_URL}/gas-leak-detection/`
           }
         },
@@ -205,7 +196,7 @@ export function generateSchemaForPage(page: PageContent, blogPost?: BlogPost | n
           "@type": "Offer",
           "itemOffered": {
             "@type": "Service",
-            "name": "Underground Main & Well Line Leak Detection in Carson City, NV",
+            "name": "Underground Main & Irrigation Leak Detection in Las Vegas, NV",
             "url": `${DOMAIN_URL}/underground-leak-detection/`
           }
         },
@@ -213,7 +204,7 @@ export function generateSchemaForPage(page: PageContent, blogPost?: BlogPost | n
           "@type": "Offer",
           "itemOffered": {
             "@type": "Service",
-            "name": "24/7 Emergency Leak Repair Dispatch in Carson City, NV",
+            "name": "24/7 Emergency Leak Repair Dispatch in Las Vegas, NV",
             "url": `${DOMAIN_URL}/emergency-leak-repair/`
           }
         }
@@ -221,7 +212,7 @@ export function generateSchemaForPage(page: PageContent, blogPost?: BlogPost | n
     },
     "paymentAccepted": "Cash, Credit Card, Debit Card, Visa, Mastercard, American Express, Discover, Insurance Claims, Check",
     "currenciesAccepted": "USD",
-    "hasMap": "https://www.google.com/maps/place/210+Rawhide+Way,+Carson+City,+NV+89701",
+    "hasMap": "https://www.google.com/maps/place/3320+N+Pioneer+Way,+Las+Vegas,+NV+89129",
     "openingHoursSpecification": [
       {
         "@type": "OpeningHoursSpecification",
@@ -249,7 +240,7 @@ export function generateSchemaForPage(page: PageContent, blogPost?: BlogPost | n
         : blogPost.slug === 'spring-valley-leak-detection-guide'
         ? "2026-11-05T07:00:00-08:00"
         : "2026-10-08T08:00:00-07:00",
-      "dateModified": "2026-11-22T08:25:00-08:00",
+      "dateModified": "2026-11-26T08:25:00-08:00",
       "author": {
         "@type": "Organization",
         "name": blogPost.author,
@@ -293,18 +284,16 @@ export function generateSchemaForPage(page: PageContent, blogPost?: BlogPost | n
       },
       "areaServed": {
         "@type": "City",
-        "name": "Carson City",
-        "sameAs": "https://en.wikipedia.org/wiki/Carson_City,_Nevada"
+        "name": "Las Vegas",
+        "sameAs": "https://en.wikipedia.org/wiki/Las_Vegas"
       },
       "description": page.metaDescription,
       "url": pageUrl
     });
   } else if (page.type === 'location') {
-    const areaName = legacySpringValleySlugs.has(page.slug)
-      ? `${page.navTitle}, Las Vegas, Nevada`
-      : page.slug === 'carson-city'
-      ? `Carson City, Nevada`
-      : `${page.navTitle}, Carson City, Nevada`;
+    const areaName = page.slug === 'las-vegas'
+      ? `Las Vegas, Nevada`
+      : `${page.navTitle}, Las Vegas, Nevada`;
 
     schemas.push({
       "@context": "https://schema.org",

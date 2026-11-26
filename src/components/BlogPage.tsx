@@ -70,7 +70,7 @@ export const BlogPage: React.FC<BlogPageProps> = ({ onNavigate, activePostSlug }
                 }}
                 className="hover:text-[#1E70B8] transition-colors"
               >
-                Carson City, NV
+                Las Vegas, NV
               </a>
               <span className="text-slate-300">&gt;</span>
               <a
@@ -132,7 +132,7 @@ export const BlogPage: React.FC<BlogPageProps> = ({ onNavigate, activePostSlug }
                 </div>
                 <div>
                   <div className="text-sm font-bold text-slate-900">{selectedPost.author}</div>
-                  <div className="text-xs text-slate-500">{selectedPost.authorRole} • Carson City, NV</div>
+                  <div className="text-xs text-slate-500">{selectedPost.authorRole} • Las Vegas, NV</div>
                 </div>
               </div>
 
@@ -265,7 +265,7 @@ export const BlogPage: React.FC<BlogPageProps> = ({ onNavigate, activePostSlug }
               <div className="p-6 sm:p-8 rounded-2xl bg-[#0F2942] text-white space-y-4 shadow-lg">
                 <div className="flex items-center gap-2 text-amber-400 text-xs font-bold uppercase tracking-wider">
                   <ShieldCheck className="w-4 h-4 text-amber-400" />
-                  <span>Carson City Diagnostic Team Conclusion</span>
+                  <span>Las Vegas Diagnostic Team Conclusion</span>
                 </div>
                 <p className="text-sm sm:text-base text-slate-200 leading-relaxed">
                   {selectedPost.content.conclusion}
@@ -312,7 +312,7 @@ export const BlogPage: React.FC<BlogPageProps> = ({ onNavigate, activePostSlug }
                   Explore More Diagnostic & Prevention Guides
                 </h3>
                 <p className="text-xs text-slate-500 mb-6">
-                  Recommended reading from our leak detection specialists serving Carson City, NV:
+                  Recommended reading from our leak detection specialists serving Las Vegas, NV:
                 </p>
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -354,10 +354,10 @@ export const BlogPage: React.FC<BlogPageProps> = ({ onNavigate, activePostSlug }
                   <span>24/7 Leak Assistance</span>
                 </div>
                 <h3 className="text-lg font-bold text-slate-900 font-display">
-                  Have an Active Leak in Carson City?
+                  Have an Active Leak in Las Vegas?
                 </h3>
                 <p className="text-xs text-slate-600 leading-relaxed">
-                  Don't let hidden moisture damage your crawlspace, slab, or foundation. Connect 24/7 with NSCB-licensed specialists serving Carson City, NV.
+                  Don't let hidden moisture damage your slab, flooring, or foundation. Connect 24/7 with NSCB-licensed specialists serving Las Vegas, NV.
                 </p>
                 <a
                   href={PHONE_HREF}
@@ -434,13 +434,13 @@ export const BlogPage: React.FC<BlogPageProps> = ({ onNavigate, activePostSlug }
           <div className="max-w-3xl">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-50 text-amber-900 text-xs font-bold border border-amber-200/80 mb-3 font-display">
               <BookOpen className="w-3.5 h-3.5 text-amber-600" />
-              <span>Carson City Leak Knowledge Base</span>
+              <span>Las Vegas Leak Knowledge Base</span>
             </div>
             <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-950 tracking-tight leading-tight mb-4 font-display">
               Leak Detection Guides &amp; Expert Prevention Tips
             </h1>
             <p className="text-base sm:text-lg text-slate-600 leading-relaxed">
-              Technical insights, DIY diagnostic procedures, and emergency safety protocols for water, gas, slab, and swimming pool leaks in Carson City, Nevada.
+              Technical insights, DIY diagnostic procedures, and emergency safety protocols for water, gas, slab, and swimming pool leaks in Las Vegas, Nevada.
             </p>
           </div>
 
@@ -583,7 +583,7 @@ export const BlogPage: React.FC<BlogPageProps> = ({ onNavigate, activePostSlug }
               Suspect an Active Leak on Your Property?
             </h3>
             <p className="text-xs sm:text-sm text-slate-300 leading-relaxed">
-              Don't wait for moisture to damage foundations or spike your utility bills. Speak directly with our 24/7 Carson City dispatch desk today.
+              Don't wait for moisture to damage foundations or spike your utility bills. Speak directly with our 24/7 Las Vegas dispatch desk today.
             </p>
           </div>
 

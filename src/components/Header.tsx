@@ -26,11 +26,15 @@ export const Header: React.FC<HeaderProps> = ({
   ];
 
   const locations = [
-    { name: 'Downtown & Capitol District (89701)', slug: 'carson-city' },
-    { name: 'Westside, Kings Canyon & Lakeview (89703)', slug: 'west-carson-lakeview' },
-    { name: 'North Carson, Lompa & Silver Oak (89706)', slug: 'north-carson-silver-oak' },
-    { name: 'South Carson, Clearview & Stewart (89705)', slug: 'south-carson-clearview' },
-    { name: 'East Carson, Empire Ranch & Pinion Hills', slug: 'east-carson-empire-ranch' },
+    { name: 'Northwest Las Vegas & Lone Mountain (89129)', slug: 'las-vegas' },
+    { name: 'Centennial Hills & Skye Canyon (89131 / 89149)', slug: 'centennial-hills' },
+    { name: 'Downtown Las Vegas & Charleston (89101)', slug: 'downtown-las-vegas' },
+    { name: 'Paradise, Silverado & Enterprise (89123)', slug: 'paradise-enterprise' },
+    { name: 'Spring Valley Core (89103 / 89147)', slug: 'spring-valley-center' },
+    { name: 'Summerlin South (89135 / 89148)', slug: 'summerlin-south' },
+    { name: 'The Lakes & Peccole Ranch (89117)', slug: 'the-lakes' },
+    { name: 'Spanish Trail Estates (89113)', slug: 'spanish-trail' },
+    { name: 'Rhodes Ranch (89148)', slug: 'rhodes-ranch' },
   ];
 
   return (
@@ -40,8 +44,8 @@ export const Header: React.FC<HeaderProps> = ({
         <div className="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-2">
           <div className="flex items-center gap-2">
             <span className="inline-block w-2 h-2 rounded-full bg-emerald-400"></span>
-            <span className="font-medium text-slate-100">Carson City, NV Line:</span>
-            <span className="text-slate-300">Licensed NSCB leak specialists serving Carson City, Nevada 24/7</span>
+            <span className="font-medium text-slate-100">Las Vegas, NV Line:</span>
+            <span className="text-slate-300">Licensed NSCB leak specialists serving Las Vegas, Nevada 24/7</span>
           </div>
           <div className="flex items-center gap-4">
             <span className="text-slate-300 flex items-center gap-1.5 text-xs">
@@ -78,7 +82,7 @@ export const Header: React.FC<HeaderProps> = ({
                 onNavigate('');
               }}
               className="flex items-center gap-3 group"
-              aria-label="Leak Detection NV - Carson City, Nevada Home"
+              aria-label="Las Vegas Leak Detection Services - Las Vegas, Nevada Home"
             >
               <div className="w-10 h-10 rounded-xl bg-linear-to-br from-[#0F2942] to-[#1E70B8] flex items-center justify-center text-white font-black shadow-sm group-hover:scale-105 transition-transform">
                 <svg className="w-6 h-6" viewBox="0 0 48 48" fill="none">
@@ -93,7 +97,7 @@ export const Header: React.FC<HeaderProps> = ({
                   {BRAND_NAME}
                 </span>
                 <span className="block text-xs font-semibold text-[#1E70B8] tracking-wider uppercase">
-                  Carson City, NV • Water • Slab • Gas
+                  Las Vegas, NV • Water • Slab • Gas
                 </span>
               </div>
             </a>
@@ -142,19 +146,19 @@ export const Header: React.FC<HeaderProps> = ({
               </div>
             </div>
 
-            {/* Carson City Areas Dropdown */}
+            {/* Las Vegas Areas Dropdown */}
             <div className="relative group">
               <button
                 onClick={() => setLocationsOpen(!locationsOpen)}
                 className="flex items-center gap-1 hover:text-[#1E70B8] transition-colors whitespace-nowrap shrink-0 cursor-pointer py-2"
               >
-                <span>Carson City Areas</span>
+                <span>Las Vegas Areas</span>
                 <ChevronDown className="w-4 h-4 text-slate-400 group-hover:text-[#1E70B8] transition-transform duration-200" />
               </button>
 
               <div className="absolute top-full left-0 w-80 bg-white rounded-xl shadow-xl border border-slate-200 py-2 hidden group-hover:block transition-all max-h-[75vh] overflow-y-auto">
                 <div className="px-4 py-1.5 text-xs font-semibold uppercase tracking-wider text-slate-400">
-                  Carson City, NV Neighborhoods
+                  Las Vegas, NV Neighborhoods
                 </div>
                 {locations.map((item) => (
                   <a
@@ -265,7 +269,7 @@ export const Header: React.FC<HeaderProps> = ({
                 onClick={() => { onNavigate(''); setMobileMenuOpen(false); }}
                 className="w-full text-left px-3 py-2 text-base font-medium text-slate-800 hover:bg-slate-50 rounded-lg"
               >
-                Overview (Carson City Home)
+                Overview (Las Vegas Home)
               </button>
               <button
                 onClick={() => { onNavigate('how-it-works'); setMobileMenuOpen(false); }}
@@ -320,7 +324,7 @@ export const Header: React.FC<HeaderProps> = ({
             </div>
 
             <div className="space-y-1 border-t border-slate-100 pt-2">
-              <div className="text-xs font-semibold text-slate-400 uppercase tracking-wider px-3 py-1">Carson City Areas Served</div>
+              <div className="text-xs font-semibold text-slate-400 uppercase tracking-wider px-3 py-1">Las Vegas Areas Served</div>
               {locations.map((loc) => (
                 <button
                   key={loc.slug}
