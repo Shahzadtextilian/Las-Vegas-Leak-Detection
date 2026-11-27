@@ -48,7 +48,7 @@ export const PHONE_NUMBER = "(725) 313-0108";
 export const PHONE_HREF = "tel:+17253130108";
 export const DOMAIN_URL = "https://www.leakdetectionnv.com";
 export const BRAND_NAME = "Las Vegas Leak Detection Services";
-export const FACEBOOK_URL = "https://www.facebook.com/profile.php?id=61595284141007";
+export const FACEBOOK_URL = "https://www.facebook.com/profile.php?id=61596668115271";
 export const BUSINESS_ADDRESS = {
   streetAddress: "3320 N Pioneer Way",
   addressLocality: "Las Vegas",
@@ -230,7 +230,7 @@ export const sitePages: Record<string, PageContent> = {
     name: "Water Leak Detection & Repair",
     navTitle: "Water Leaks",
     metaTitle: "Water Leak Detection Las Vegas, NV | No Digging (725) 313-0108",
-    metaDescription: "High LVVWD water bill or wet spots in Las Vegas, NV? Acoustic and thermal imaging pinpoints wall, yard & slab pipe leaks without tearing up floors. Call (725) 313-0108.",
+    metaDescription: "High LVVWD bill or wet spots in Las Vegas, NV? Acoustic & thermal imaging pinpoints wall, yard & slab leaks without tearing up floors. Call (725) 313-0108.",
     primaryKeyword: "water leak detection Las Vegas NV",
     secondaryKeywords: [
       "hidden water leak repair Las Vegas Nevada",
@@ -319,7 +319,7 @@ export const sitePages: Record<string, PageContent> = {
     name: "Gas Leak Detection & Emergency Repair",
     navTitle: "Gas Leaks",
     metaTitle: "Gas Leak Detection Las Vegas, NV | 24/7 Emergency (725) 313-0108",
-    metaDescription: "Smell gas in Las Vegas, NV? Leave the home and call 911 or Southwest Gas first. Then call (725) 313-0108 for licensed gas leak testing across 89129 & Las Vegas.",
+    metaDescription: "Smell gas in Las Vegas, NV? Leave home and call 911 or Southwest Gas first. Call (725) 313-0108 for licensed gas leak testing in 89129 & Las Vegas.",
     primaryKeyword: "gas leak detection Las Vegas NV",
     secondaryKeywords: [
       "gas leak repair Las Vegas Nevada",
@@ -1287,7 +1287,7 @@ export const sitePages: Record<string, PageContent> = {
     name: "How Leak Detection & Repair Works",
     navTitle: "How It Works",
     metaTitle: "How It Works | Las Vegas Non-Invasive Leak Detection (725) 313-0108",
-    metaDescription: "Our 5-step non-invasive leak detection process for water, gas, slab & pool leaks in Las Vegas, Nevada. Acoustic, thermal & hydrophone testing. Call (725) 313-0108.",
+    metaDescription: "Our 5-step non-invasive leak detection for water, gas, slab & pool leaks in Las Vegas, NV. Acoustic, thermal & hydrophone testing. Call (725) 313-0108.",
     primaryKeyword: "how leak detection works Las Vegas NV",
     secondaryKeywords: [
       "leak detection process Las Vegas",
@@ -1395,7 +1395,7 @@ export const sitePages: Record<string, PageContent> = {
     name: "About Las Vegas Leak Detection Services | Licensed Specialist Network",
     navTitle: "About Us",
     metaTitle: "About Las Vegas Leak Detection Services | Licensed Plumber Network",
-    metaDescription: "We connect Las Vegas, Nevada property owners with pre-screened, NSCB-licensed leak detection specialists serving 89129 & metro Las Vegas. Call (725) 313-0108.",
+    metaDescription: "We connect Las Vegas, NV property owners with pre-screened, NSCB-licensed leak detection specialists serving 89129 & metro Las Vegas. Call (725) 313-0108.",
     primaryKeyword: "Las Vegas Leak Detection Services",
     secondaryKeywords: [
       "about Las Vegas Leak Detection Services",
@@ -1547,7 +1547,7 @@ export const sitePages: Record<string, PageContent> = {
     name: "Leak Detection Blog & Knowledge Base",
     navTitle: "Blog",
     metaTitle: "Leak Detection Cost & Homeowner Guides (2026) | Las Vegas Leak Detection Services",
-    metaDescription: "How much does leak detection cost in Las Vegas? See 2026 price ranges, DIY meter checks, pool bucket test steps, gas emergency protocols & LVVWD leak credit guides.",
+    metaDescription: "How much does leak detection cost in Las Vegas? See 2026 price ranges, DIY meter checks, bucket test steps, gas safety & LVVWD leak credit guides.",
     primaryKeyword: "Las Vegas leak detection blog",
     secondaryKeywords: [
       "slab leak warning signs",
@@ -1664,7 +1664,7 @@ export const sitePages: Record<string, PageContent> = {
     name: "Legal Disclaimer & Licensing",
     navTitle: "Disclaimer",
     metaTitle: "Legal Disclaimer & Licensing | Las Vegas Leak Detection Services",
-    metaDescription: "Las Vegas Leak Detection Services is a referral service. Work in Las Vegas, NV is performed by independent licensed contractors. Read our licensing and service terms.",
+    metaDescription: "Las Vegas Leak Detection Services is a referral service. Work in Las Vegas, NV is performed by independent licensed contractors. Read our service terms.",
     primaryKeyword: "Las Vegas Leak Detection Services disclaimer licensing",
     secondaryKeywords: [
       "leak detection referral service",
@@ -1745,7 +1745,7 @@ export const sitePages: Record<string, PageContent> = {
     name: "Sitemap | Las Vegas Leak Detection Services",
     navTitle: "Sitemap",
     metaTitle: "Sitemap | Las Vegas Leak Detection Services Directory",
-    metaDescription: "Browse every Las Vegas Leak Detection Services page: water, gas, slab & pool leak detection, plus Las Vegas, NV neighborhood pages across 89129 & metro valley.",
+    metaDescription: "Browse every Las Vegas Leak Detection Services page: water, gas, slab & pool leak detection, plus Las Vegas, NV neighborhood pages across 89129 & metro.",
     primaryKeyword: "Las Vegas Leak Detection Services sitemap",
     secondaryKeywords: [
       "Las Vegas leak detection directory",
@@ -1854,7 +1854,7 @@ export const sitePages: Record<string, PageContent> = {
     name: "Spring Valley Leak Detection: A Desert Homeowner’s Guide",
     navTitle: "Desert Leak Guide",
     metaTitle: "Spring Valley Leak Detection: A Desert Homeowner’s Guide",
-    metaDescription: "Rising water bill in Spring Valley, Las Vegas? Learn where desert homes hide leaks, what a pro visit involves, and what shapes pricing. Call (725) 313-0108.",
+    metaDescription: "Rising water bill in Spring Valley, Las Vegas? Learn where desert homes hide leaks, what a pro visit involves, and pricing factors. Call (725) 313-0108.",
     primaryKeyword: "Spring Valley leak detection guide",
     secondaryKeywords: [
       "desert home leak detection",
