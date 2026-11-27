@@ -18,11 +18,13 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
           {/* Brand & Mission Column */}
           <div className="lg:col-span-2 space-y-4">
             <div className="flex items-center gap-3">
-              <div className="w-9 h-9 rounded-lg bg-[#1E70B8] flex items-center justify-center text-white font-bold">
-                <svg className="w-5 h-5" viewBox="0 0 48 48" fill="none">
-                  <path d="M24 10C24 10 14 21.5 14 27.5C14 33.02 18.48 37.5 24 37.5C29.52 37.5 34 33.02 34 27.5C34 21.5 24 10 24 10Z" fill="#FFFFFF"/>
-                </svg>
-              </div>
+              <img
+                src="/assets/aistudio/Las_Vegas_Leak_Detection_Badge_eed65358.png"
+                alt="Las Vegas Leak Detection Services Logo"
+                width={44}
+                height={44}
+                className="w-11 h-11 rounded-full object-contain shrink-0"
+              />
               <span className="text-lg font-bold text-white tracking-tight font-display">
                 {BRAND_NAME}
               </span>

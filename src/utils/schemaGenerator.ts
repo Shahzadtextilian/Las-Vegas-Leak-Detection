@@ -91,7 +91,7 @@ export function generateSchemaForPage(page: PageContent, blogPost?: BlogPost | n
       "Las Vegas Water, Slab & Gas Leak Specialists"
     ],
     "url": `${DOMAIN_URL}/`,
-    "logo": `${DOMAIN_URL}/logo.svg`,
+    "logo": `${DOMAIN_URL}/assets/aistudio/Las_Vegas_Leak_Detection_Badge_eed65358.png`,
     "image": `${DOMAIN_URL}/images/hero_emergency_plumbing_1791566119640.webp`,
     "telephone": BUSINESS_ADDRESS.telephone,
     "priceRange": "$$",
@@ -251,7 +251,7 @@ export function generateSchemaForPage(page: PageContent, blogPost?: BlogPost | n
         "name": BRAND_NAME,
         "logo": {
           "@type": "ImageObject",
-          "url": `${DOMAIN_URL}/logo.svg`
+          "url": `${DOMAIN_URL}/assets/aistudio/Las_Vegas_Leak_Detection_Badge_eed65358.png`
         }
       },
       "mainEntityOfPage": {

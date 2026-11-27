@@ -84,13 +84,13 @@ export const Header: React.FC<HeaderProps> = ({
               className="flex items-center gap-2.5 sm:gap-3 group min-w-0"
               aria-label="Las Vegas Leak Detection Services - Las Vegas, Nevada Home"
             >
-              <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-linear-to-br from-[#0F2942] to-[#1E70B8] flex items-center justify-center text-white font-black shadow-sm group-hover:scale-105 transition-transform shrink-0">
-                <svg className="w-5 h-5 sm:w-6 sm:h-6" viewBox="0 0 48 48" fill="none">
-                  <path d="M24 8C24 8 12 21 12 28C12 34.6274 17.3726 40 24 40C30.6274 40 36 34.6274 36 28C36 21 24 8 24 8Z" fill="#38BDF8"/>
-                  <path d="M24 14C24 14 16 23.5 16 28.5C16 32.9183 19.5817 36.5 24 36.5C28.4183 36.5 32 32.9183 32 28.5C32 23.5 24 14 24 14Z" fill="#FFFFFF" fillOpacity="0.85"/>
-                  <circle cx="21" cy="25" r="2" fill="#0284C7"/>
-                </svg>
-              </div>
+              <img
+                src="/assets/aistudio/Las_Vegas_Leak_Detection_Badge_eed65358.png"
+                alt="Las Vegas Leak Detection Services Logo"
+                width={48}
+                height={48}
+                className="w-11 h-11 sm:w-12 sm:h-12 rounded-full object-contain shrink-0 group-hover:scale-105 transition-transform"
+              />
 
               <div className="leading-tight min-w-0">
                 <span className="font-extrabold text-sm sm:text-[15px] lg:text-sm xl:text-[15px] 2xl:text-lg text-slate-900 tracking-tight block font-display lg:max-w-[165px] xl:max-w-none xl:whitespace-nowrap">
