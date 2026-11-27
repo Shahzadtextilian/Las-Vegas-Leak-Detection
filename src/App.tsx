@@ -182,7 +182,7 @@ export default function App({ initialSlug }: AppProps) {
   }, [currentPage, currentBlogPost, currentSlug]);
 
   return (
-    <div className="min-h-screen flex flex-col bg-slate-50 font-sans text-slate-900">
+    <div className="min-h-screen flex flex-col bg-slate-50 font-sans text-slate-900 overflow-x-clip">
       
       {/* 3-Zone Contract Header */}
       <Header
