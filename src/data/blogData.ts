@@ -70,8 +70,9 @@ export const BLOG_POSTS: BlogPost[] = [
     category: 'Slab Leaks',
     date: 'October 8, 2026',
     readTime: '6 min read',
+    metaDescription: 'Warm floor tiles or a high LVVWD bill in Las Vegas? Learn the 5 early warning signs of a sub-slab leak and protect your foundation.',
     excerpt: 'Detecting underground copper pipe ruptures beneath concrete foundations before extensive structural damage and mold occur.',
-    author: 'Spring Valley Diagnostic Team',
+    author: 'Las Vegas Leak Detection Diagnostic Team',
     authorRole: 'Master Leak Specialists',
     featuredImage: '/images/slab_leak_inspection_1791566136409.webp',
     tags: ['Slab Leak', 'Foundation', 'Las Vegas Plumbing', 'Caliche Soil'],
@@ -118,7 +119,21 @@ export const BLOG_POSTS: BlogPost[] = [
           ]
         }
       ],
-      conclusion: 'If you recognize any of these symptoms in your Spring Valley property, shut off your main water valve and call Spring Valley Leak Detection & Repair immediately at (725) 313-0108 for non-invasive acoustic localization and same-day repair.'
+      conclusion: 'If you recognize any of these symptoms in your Las Vegas or Spring Valley property, shut off your main water valve and call Las Vegas Leak Detection Services immediately at (725) 313-0108 for non-invasive acoustic localization and same-day repair.',
+      faqs: [
+        {
+          question: 'Why does a slab leak make my Las Vegas tile floor feel warm?',
+          answer: 'Hot water escaping a pressurized copper line beneath concrete radiates heat directly upward into porcelain tile, travertine, or luxury vinyl plank—often before any visible water reaches the baseboards.'
+        },
+        {
+          question: 'How fast can a pinhole slab leak spike my LVVWD water bill?',
+          answer: 'Even a 1/16-inch pinhole at 80 PSI discharges hundreds of gallons daily, frequently pushing monthly LVVWD usage into punitive Tier-3 and Tier-4 conservation pricing within a single billing cycle.'
+        },
+        {
+          question: 'Do technicians have to jackhammer my floor just to find a slab leak?',
+          answer: 'No. Non-invasive acoustic ground microphones and FLIR thermal imaging locate the leak within inches through tile and post-tension slabs before any repair opening is made.'
+        }
+      ]
     }
   },
   {
@@ -128,11 +143,12 @@ export const BLOG_POSTS: BlogPost[] = [
     category: 'Pool Leaks',
     date: 'October 5, 2026',
     readTime: '5 min read',
+    metaDescription: 'Learn the 24-hour swimming pool bucket test to separate Las Vegas desert evaporation from underground pipe or skimmer leaks.',
     excerpt: 'Learn the definitive DIY calibration test to distinguish normal desert evaporation from underground pool plumbing ruptures.',
-    author: 'Spring Valley Diagnostic Team',
+    author: 'Las Vegas Leak Detection Diagnostic Team',
     authorRole: 'Pool Hydraulics Specialist',
     featuredImage: '/images/pool_leak_detection_1791567711591.webp',
-    tags: ['Pool Leak Detection', 'Bucket Test', 'Evaporation', 'Spring Valley Pools'],
+    tags: ['Pool Leak Detection', 'Bucket Test', 'Evaporation', 'Las Vegas Pools'],
     content: {
       introduction: 'During Southern Nevada summers, intense dry desert winds and ambient temperatures exceeding 105°F cause rapid swimming pool evaporation. Homeowners often wonder: is my pool water drop normal evaporation, or do I have a crack in my pool plumbing or shell? The simple 24-Hour Bucket Test provides the answer.',
       sections: [
@@ -166,7 +182,21 @@ export const BLOG_POSTS: BlogPost[] = [
           ]
         }
       ],
-      conclusion: 'If your bucket test confirms water loss exceeding evaporation, professional electronic hydrophone listening and dye injection can pinpoint underground cracked PVC lines or failing light niches without draining your pool. Call (725) 313-0108.'
+      conclusion: 'If your bucket test confirms water loss exceeding evaporation, professional electronic hydrophone listening and dye injection can pinpoint underground cracked PVC lines or failing light niches without draining your pool. Call Las Vegas Leak Detection Services at (725) 313-0108.',
+      faqs: [
+        {
+          question: 'How much pool evaporation is normal per day in Las Vegas?',
+          answer: 'Dry Mohave Desert winds and summer temperatures over 105°F typically evaporate 1/4 to 1/2 inch of pool water per day. Drops approaching 1 inch or more within 24 hours usually point to an active plumbing or shell leak.'
+        },
+        {
+          question: 'Should I turn off the pool autofill valve before running the bucket test?',
+          answer: 'Yes. Disabling the automatic pool leveler is mandatory during the 24-hour bucket test so fresh municipal water does not mask ongoing pool water loss.'
+        },
+        {
+          question: 'Can a leaking pool be tested without draining the water in desert heat?',
+          answer: 'Yes. Never drain a Las Vegas pool in hot weather unless instructed, as direct sun can crack plaster. Specialists use underwater hydrophones, dye syringes, and line pressure testing with the pool full.'
+        }
+      ]
     }
   },
   {
@@ -176,8 +206,9 @@ export const BLOG_POSTS: BlogPost[] = [
     category: 'Gas Leaks',
     date: 'October 1, 2026',
     readTime: '4 min read',
-    excerpt: 'Critical life-safety steps to take immediately when natural gas or propane odors are detected in your Spring Valley residence.',
-    author: 'Spring Valley Diagnostic Team',
+    metaDescription: 'Smell rotten eggs or sulfur in Las Vegas? Follow immediate gas evacuation steps, Southwest Gas contact protocols, and safe line testing.',
+    excerpt: 'Critical life-safety steps to take immediately when natural gas or propane odors are detected in your Las Vegas residence.',
+    author: 'Las Vegas Leak Detection Diagnostic Team',
     authorRole: 'Certified Gas Piping Inspector',
     featuredImage: '/images/gas_leak_detection_1791567732913.webp',
     tags: ['Gas Leak', 'Home Safety', 'Southwest Gas', 'Emergency Protocol'],
@@ -212,7 +243,21 @@ export const BLOG_POSTS: BlogPost[] = [
           ]
         }
       ],
-      conclusion: 'For gas leak emergencies, evacuate immediately and call 911 or Southwest Gas from outside, then call our 24/7 emergency line at (725) 313-0108 for code-compliant gas line testing and repair.'
+      conclusion: 'For gas leak emergencies in Las Vegas, evacuate immediately and call 911 or Southwest Gas from outside, then call Las Vegas Leak Detection Services 24/7 at (725) 313-0108 for code-compliant gas line testing and repair.',
+      faqs: [
+        {
+          question: 'Why should I avoid flipping light switches if I smell natural gas?',
+          answer: 'Even a microscopic electrical arc inside a wall switch, thermostat, or garage door opener can ignite accumulated natural gas or propane vapor inside an enclosed room.'
+        },
+        {
+          question: 'Who locks and unlocks my gas meter in Las Vegas?',
+          answer: 'Southwest Gas locks and red-tags leaking meters for safety. An NSCB C-1 licensed contractor must locate and repair the leak and pass pressure inspection before Southwest Gas unlocks service.'
+        },
+        {
+          question: 'Can backyard pool heaters and built-in BBQ islands develop gas leaks?',
+          answer: 'Yes. Buried patio gas lines and black iron risers exposed to desert soil moisture frequently corrode and leak outdoors before odor is noticed indoors.'
+        }
+      ]
     }
   },
   {
@@ -222,8 +267,9 @@ export const BLOG_POSTS: BlogPost[] = [
     category: 'Water Leaks',
     date: 'September 26, 2026',
     readTime: '6 min read',
+    metaDescription: 'Understand Las Vegas & Spring Valley desert geology and how dense caliche layers and hard water trigger subterranean plumbing failures.',
     excerpt: 'Understand Las Vegas & Spring Valley desert geology and how dense caliche layers and hard water trigger subterranean plumbing failures.',
-    author: 'Spring Valley Diagnostic Team',
+    author: 'Las Vegas Leak Detection Diagnostic Team',
     authorRole: 'Geological Plumbing Consultant',
     featuredImage: '/images/drain_hydro_jetting_1791566153107.webp',
     tags: ['Caliche Soil', 'Clark County', 'Hard Water', 'Pipe Corrosion'],
@@ -257,7 +303,21 @@ export const BLOG_POSTS: BlogPost[] = [
           ]
         }
       ],
-      conclusion: 'If your home is over 15 years old and you suspect an underground line leak, call Spring Valley Leak Detection & Repair at (725) 313-0108 to diagnose your system and discuss durable PEX reroute options.'
+      conclusion: 'If your Las Vegas home is over 15 years old and you suspect an underground line leak, call Las Vegas Leak Detection Services at (725) 313-0108 to diagnose your system and discuss durable overhead PEX reroute options.',
+      faqs: [
+        {
+          question: 'How hard is Las Vegas municipal tap water from Lake Mead?',
+          answer: 'LVVWD water typically measures 16 to 22 grains per gallon (278+ ppm), making it among the hardest municipal water supplies in the United States and accelerating internal copper scaling and turbulence pitting.'
+        },
+        {
+          question: 'Why does caliche rock cause copper slab leaks?',
+          answer: 'Caliche cements desert gravel into concrete-hard shelves. As hot pressurized water makes buried copper pipes expand and contract, they rub against razor-sharp caliche edges until pinholes open.'
+        },
+        {
+          question: 'Which Las Vegas neighborhoods have the heaviest caliche and gypsum pipe wear?',
+          answer: 'Foothill zones like Summerlin South, Northwest Las Vegas (89129), and Centennial Hills face dense caliche hardpan, while Paradise and Enterprise contend with sulfate-rich gypsum silt.'
+        }
+      ]
     }
   },
   {
@@ -267,8 +327,9 @@ export const BLOG_POSTS: BlogPost[] = [
     category: 'Prevention & Tips',
     date: 'September 20, 2026',
     readTime: '4 min read',
+    metaDescription: 'Use your front yard LVVWD water meter box to test your home plumbing system for hidden indoor, slab, or yard leaks in under 15 minutes.',
     excerpt: 'Use your front yard LVVWD water meter box to test your home plumbing system for hidden indoor, slab, or yard leaks in under 15 minutes.',
-    author: 'Spring Valley Diagnostic Team',
+    author: 'Las Vegas Leak Detection Diagnostic Team',
     authorRole: 'Water Conservation Specialist',
     featuredImage: '/images/diagnostic_tech_1791662650738.webp',
     tags: ['Water Meter', 'LVVWD', 'Leak Prevention', 'Water Conservation'],
@@ -303,7 +364,17 @@ export const BLOG_POSTS: BlogPost[] = [
           ]
         }
       ],
-      conclusion: 'Whether your leak is buried in your front yard or hidden beneath your slab foundation, our non-invasive acoustic locators can find it quickly. Call (725) 313-0108 for emergency diagnostics.'
+      conclusion: 'Whether your leak is buried in your front yard or hidden beneath your slab foundation in Las Vegas, our non-invasive acoustic locators can find it quickly. Call Las Vegas Leak Detection Services at (725) 313-0108 for emergency diagnostics.',
+      faqs: [
+        {
+          question: 'What does a flashing faucet icon on an LVVWD digital water meter mean?',
+          answer: 'On newer smart ultrasonic LVVWD meters, a continuously displayed or blinking faucet/plus icon signals steady water flow over 24 hours—strong confirmation of an active leak even if it is as slow as a trickle.'
+        },
+        {
+          question: 'How do I tell whether a leak is in my yard main or under my house slab?',
+          answer: 'Shut off your main house valve (typically in the garage or front exterior wall) and recheck the street meter. If the meter stops moving, the leak is inside or under your slab; if it keeps moving, the break is underground between the curb meter and the house.'
+        }
+      ]
     }
   },
   {
@@ -313,11 +384,12 @@ export const BLOG_POSTS: BlogPost[] = [
     category: 'Prevention & Tips',
     date: 'October 19, 2026',
     readTime: '7 min read',
+    metaDescription: 'Step-by-step instructions for Las Vegas homeowners to claim an LVVWD high water bill leak credit and cut excess water penalties after repairing a leak.',
     excerpt: 'Step-by-step instructions for Las Vegas homeowners to claim an LVVWD high water bill leak credit and cut excess water penalties after repairing a leak.',
-    author: 'Spring Valley Diagnostic Team',
+    author: 'Las Vegas Leak Detection Diagnostic Team',
     authorRole: 'Utility Billing & Leak Specialist',
     featuredImage: '/images/diagnostic_tech_1791662650738.webp',
-    tags: ['LVVWD Leak Credit', 'High Water Bill', 'Water Rebate', 'Las Vegas Plumbing', 'Spring Valley NV'],
+    tags: ['LVVWD Leak Credit', 'High Water Bill', 'Water Rebate', 'Las Vegas Plumbing'],
     content: {
       introduction: 'Opening a monthly Las Vegas Valley Water District (LVVWD) bill to discover charges of $600, $1,200, or even $3,000 is a homeowner’s nightmare. In Clark County, tiered conservation water rates penalize high consumption severely. Fortunately, the LVVWD provides an official Leak Credit Adjustment Policy that can refund or credit up to 50% of the excessive water charges—provided you follow the correct verification and licensed contractor documentation procedure.',
       sections: [
@@ -359,12 +431,12 @@ export const BLOG_POSTS: BlogPost[] = [
           heading: '4. What Documentation Does LVVWD Require on Contractor Invoices?',
           body: [
             'The number one reason LVVWD denies leak credit applications is inadequate or incomplete documentation. Hand-written receipts or generic handyman invoices that lack specific diagnostic details are routinely rejected.',
-            'Spring Valley Leak Detection & Repair provides dedicated, standardized LVVWD Compliance Reports that include: Nevada State Contractors Board license number, technician certification, exact GPS coordinates/address, pre-repair acoustic test readings, post-repair static pressure test verification, and itemized materials deployed.',
+            'Las Vegas Leak Detection Services contractors provide dedicated, standardized LVVWD Compliance Reports that include: Nevada State Contractors Board license number, technician certification, exact service address, pre-repair acoustic test readings, post-repair static pressure test verification, and itemized materials deployed.',
             'Having this complete audit-ready documentation guarantees smooth approval through the water district review committee.'
           ],
           keyTakeaways: [
             'Generic handyman receipts without license numbers are rejected by LVVWD',
-            'Our standardized diagnostic reports include pressure decay tests and license credentials'
+            'Standardized diagnostic reports include pressure decay tests and NSCB license credentials'
           ]
         },
         {
@@ -376,7 +448,21 @@ export const BLOG_POSTS: BlogPost[] = [
           ]
         }
       ],
-      conclusion: 'If an unexpected high water bill arrived in your mailbox or LVVWD sent a continuous flow alert, don’t wait. Call Spring Valley Leak Detection & Repair 24/7 at (725) 313-0108. We will locate your hidden leak non-invasively, perform emergency repairs, and supply the official documentation needed to claim your LVVWD refund.'
+      conclusion: 'If an unexpected high water bill arrived in your mailbox or LVVWD sent a continuous flow alert, don’t wait. Call Las Vegas Leak Detection Services 24/7 at (725) 313-0108. We coordinate non-invasive leak locating, emergency repairs, and the itemized contractor documentation needed to claim your LVVWD leak credit.',
+      faqs: [
+        {
+          question: 'How long do I have to file for an LVVWD leak credit in Las Vegas?',
+          answer: 'LVVWD generally requires homeowners to repair the leak promptly and submit the adjustment application within 90 calendar days of the disputed billing statement date.'
+        },
+        {
+          question: 'Are swimming pool leaks and running toilets covered by LVVWD leak credits?',
+          answer: 'Concealed underground pool supply/autofill pipe ruptures may qualify with licensed contractor documentation, whereas neglected dripping faucets or minor flapper wear often face stricter review—making an itemized diagnostic invoice essential.'
+        },
+        {
+          question: 'Does the contractor need an active NSCB license for my LVVWD credit?',
+          answer: 'Yes. Itemized invoices bearing an active Nevada State Contractors Board (NSCB) license number, repair date, property address, and exact pipe failure description provide the strongest verification for LVVWD approval.'
+        }
+      ]
     }
   },
   {
@@ -390,7 +476,7 @@ export const BLOG_POSTS: BlogPost[] = [
     date: 'November 5, 2026',
     readTime: '6 min read',
     excerpt: 'Rising water bill in Spring Valley, Las Vegas? Learn where desert homes hide leaks, what a pro visit involves, and pricing factors. Call (725) 313-0108.',
-    author: 'Spring Valley Diagnostic Team',
+    author: 'Las Vegas Leak Detection Diagnostic Team',
     authorRole: 'Master Leak Specialists',
     featuredImage: '/images/desert_home_leak_guide.webp',
     featuredImageAlt: 'Spring Valley leak detection specialist with thermal camera and acoustic locator near desert stucco home',
@@ -523,7 +609,7 @@ export const BLOG_POSTS: BlogPost[] = [
     date: 'November 18, 2026',
     readTime: '5 min read',
     excerpt: 'Sinking pool level or soggy patches in the yard? Learn how to spot pool, sprinkler, and outdoor line leaks in Spring Valley. Call (725) 313-0108.',
-    author: 'Leak Detection Pro Diagnostic Team',
+    author: 'Las Vegas Leak Detection Diagnostic Team',
     authorRole: 'Pool & Irrigation Leak Specialists',
     featuredImage: '/images/pool_backyard_leak_guide.webp',
     featuredImageAlt: 'Uniformed leak detection specialist inspecting a Spring Valley backyard swimming pool deck with an acoustic listening sensor',
@@ -627,6 +713,165 @@ export const BLOG_POSTS: BlogPost[] = [
         }
       ],
       conclusion: 'Need Help Finding a Backyard, Pool, or Sprinkler Leak? Contact Las Vegas Leak Detection Services for fast, non-invasive diagnostics. Call (725) 313-0108, visit 3320 N Pioneer Way, Las Vegas, NV 89129, USA, or reach us online at www.leakdetectionnv.com.'
+    }
+  },
+  {
+    id: 'post-tension-slab-pex-reroute',
+    slug: 'post-tension-slab-leak-repair-las-vegas-pex-reroute',
+    title: 'Post-Tension Slab Leak Repair in Las Vegas: Spot Patch vs. Overhead PEX Re-Route',
+    metaTitle: 'Post-Tension Slab Leak Repair Las Vegas | Spot Fix vs. PEX Re-Route',
+    metaDescription: 'Have a slab leak under a Las Vegas post-tension foundation? Compare surgical spot repair vs. overhead PEX-A reroutes without risking tension cables.',
+    h1: 'Post-Tension Slab Leak Repair in Las Vegas: Spot Repair vs. Overhead PEX Re-Route',
+    category: 'Slab Leaks',
+    date: 'November 24, 2026',
+    readTime: '7 min read',
+    excerpt: 'Compare surgical slab spot repairs vs. overhead PEX-A rerouting for Las Vegas post-tension concrete foundations and aging copper manifolds.',
+    author: 'Las Vegas Leak Detection Diagnostic Team',
+    authorRole: 'Post-Tension Slab & Repipe Specialists',
+    featuredImage: '/images/slab_leak_inspection_1791566136409.webp',
+    featuredImageAlt: 'Technician marking a post-tension concrete slab leak location cleanly in a Las Vegas home',
+    tags: ['Post-Tension Slab', 'PEX Re-Route', 'Slab Leak Repair', 'Las Vegas Plumbing'],
+    content: {
+      introduction: 'Most homes built across Northwest Las Vegas (89129), Centennial Hills, Summerlin, Spanish Trail, and Rhodes Ranch sit on engineered post-tension concrete slabs. High-tensile steel cables run inside the slab under thousands of pounds of tension to resist desert caliche and clay movement. When an under-slab copper water line fails, choosing the wrong repair strategy can damage steel cables or invite repeat leaks months later.',
+      sections: [
+        {
+          heading: 'Why Cutting Blindly Into a Las Vegas Post-Tension Slab Is Dangerous',
+          body: [
+            'Post-tension slabs contain grease-sheathed steel tendons stressed to roughly 33,000 pounds of force. Nicking or severing a live tendon during exploratory jackhammering compromises structural foundation tension and creates severe jobsite safety hazards.',
+            'Even when a slab contains standard rebar, tearing out porcelain tile, natural travertine, or engineered hardwood adds thousands in restoration bills. That is why every slab leak repair in Las Vegas starts with non-invasive ultrasonic acoustic localization and FLIR thermal imaging to mark the break within a 6-to-12-inch zone before any concrete work is considered.'
+          ],
+          keyTakeaways: [
+            'Post-tension tendons must be avoided or scanned before concrete saw-cutting',
+            'Acoustic + thermal pinpointing eliminates guesswork floor demolition'
+          ]
+        },
+        {
+          heading: 'Option 1: Direct Surgical Spot Repair Through the Slab',
+          body: [
+            'During a direct spot repair, an NSCB-licensed plumber opens one small concrete patch directly above the acoustically marked pinhole, removes the corroded 12-to-24-inch copper section, and brazes in sleeved Type-L copper.',
+            'Spot repairs work best when the property is relatively new, the failure resulted from an isolated installation nick or sharp caliche contact, and you have spare matching flooring tile on hand.'
+          ],
+          bulletPoints: [
+            'Lower upfront cost when only a single isolated copper elbow has failed',
+            'Fastest same-day restoration for accessible garage or utility-closet breaks',
+            'Does not replace other aging under-slab copper segments experiencing hard-water pitting'
+          ]
+        },
+        {
+          heading: 'Option 2: Overhead PEX-A Re-Route (Bypassing the Slab Permanently)',
+          body: [
+            'When a Las Vegas home built between 1985 and 2005 suffers its first or second hot-water copper slab leak, internal mineral erosion and desert caliche abrasion usually mean neighboring under-slab runs are already thinning.',
+            'An overhead PEX re-route permanently caps both ends of the leaking subterranean pipe and threads flexible, freeze-and-scale-resistant PEX-A tubing through attic chases and interior drywall cavities. No concrete jackhammering is required, post-tension cables stay untouched, and future caliche friction beneath the slab is eliminated forever.'
+          ],
+          keyTakeaways: [
+            'Zero concrete cutting or post-tension cable risk',
+            'Eliminates future sub-slab copper corrosion in hard Las Vegas water',
+            'Pairs seamlessly with PRV replacement to keep static pressure under 60–75 PSI'
+          ]
+        },
+        {
+          heading: 'Check Your PRV (Pressure Reducing Valve) After Any Slab Leak',
+          body: [
+            'Foothill neighborhoods in Northwest Las Vegas (89129), Centennial Hills, and Summerlin South frequently see street main pressures above 80–110 PSI. When a failing brass PRV lets street pressure surge into your home, hot-water copper loops endure extreme velocity erosion.',
+            'Testing static water pressure at a front hose bib after every slab leak repair ensures your home stays within Clark County / City of Las Vegas code (under 80 PSI, ideally 55–65 PSI).'
+          ]
+        }
+      ],
+      faqs: [
+        {
+          question: 'Which is better in Las Vegas: a slab spot repair or an overhead PEX reroute?',
+          answer: 'If your home has aging copper pipes from the 1980s–2000s or has already had a prior slab leak, an overhead PEX-A reroute is usually the smarter long-term investment because it removes piping from corrosive desert caliche soil permanently.'
+        },
+        {
+          question: 'How do technicians avoid hitting post-tension cables when opening a slab?',
+          answer: 'Licensed contractors locate slab stamp markings, trace cable spacing, use concrete scanning tools when needed, and isolate the leak within inches using acoustic sensors—or bypass the slab altogether with an overhead PEX reroute.'
+        },
+        {
+          question: 'Can I still qualify for an LVVWD 50% leak credit if I choose a PEX reroute?',
+          answer: 'Yes. As long as the failed sub-slab pipe is permanently abandoned/capped off and documented on an NSCB-licensed contractor invoice with post-repair meter verification, LVVWD accepts both spot repairs and reroutes for leak credit review.'
+        },
+        {
+          question: 'How long does an overhead single-line PEX reroute take?',
+          answer: 'Most single-line hot or cold slab reroutes in Las Vegas are completed in one day, leaving only minimal small drywall access points rather than torn-up tile floors.'
+        }
+      ],
+      conclusion: 'Suspect a sub-slab leak under your Las Vegas home? Call Las Vegas Leak Detection Services 24/7 at (725) 313-0108 from our 3320 N Pioneer Way, Las Vegas, NV 89129 dispatch desk for non-invasive acoustic isolation and upfront spot-repair vs. PEX reroute comparisons.'
+    }
+  },
+  {
+    id: 'southwest-gas-red-tag-pressure-test',
+    slug: 'southwest-gas-meter-red-tag-pressure-test-las-vegas',
+    title: 'Southwest Gas Red-Tag Meter Lockout in Las Vegas: Pressure Testing & Unlock Guide',
+    metaTitle: 'Southwest Gas Red-Tag Meter Lockout Las Vegas | Pressure Test Guide',
+    metaDescription: 'Did Southwest Gas lock and red-tag your Las Vegas gas meter? Learn the step-by-step pressure-decay test, city green-tag, and safe unlock process.',
+    h1: 'Southwest Gas Red-Tag Meter Lockout in Las Vegas: Pressure Testing & Unlock Guide',
+    category: 'Gas Leaks',
+    date: 'November 25, 2026',
+    readTime: '6 min read',
+    excerpt: 'Did Southwest Gas lock your Las Vegas gas meter? Follow the certified pressure-decay test and city inspection steps to restore gas safely.',
+    author: 'Las Vegas Leak Detection Diagnostic Team',
+    authorRole: 'Certified Gas Piping & Pressure Specialist',
+    featuredImage: '/images/gas_leak_detection_1791567732913.webp',
+    featuredImageAlt: 'Certified gas technician using electronic PPM gas detector and pressure gauge on Las Vegas gas meter',
+    tags: ['Southwest Gas', 'Gas Meter Red Tag', 'Gas Pressure Test', 'Las Vegas NV'],
+    content: {
+      introduction: 'When Southwest Gas responds to a rotten-egg mercaptan odor in Las Vegas and confirms gas loss on your property, their field technician must lock and red-tag the exterior gas meter for safety. Until an NSCB C-1 licensed contractor isolates the leak, repairs the piping to code, and completes pressure certification, your furnace, water heater, stove, and pool heater remain without fuel.',
+      sections: [
+        {
+          heading: 'Why Southwest Gas Places a Red-Tag Lock on Residential Meters',
+          body: [
+            'Southwest Gas owns and maintains service up to the outlet side of the meter. Any piping from the meter house-line into your attic, kitchen range, garage water heater, backyard pool heater, or built-in BBQ island belongs to the property owner.',
+            'If a clock test at the meter dial or a combustible gas sniffer detects any drop, Southwest Gas shuts off the valve, installs a physical lock, and issues a red warning tag detailing why service cannot resume until certified repairs pass inspection.'
+          ],
+          keyTakeaways: [
+            'Never cut or tamper with a Southwest Gas meter lock yourself',
+            'Homeowner-side piping includes attic black iron, CSST runs, and outdoor BBQ/pool risers'
+          ]
+        },
+        {
+          heading: 'Step 1: Electronic PPM Pinpointing & Pipe Isolation',
+          body: [
+            'Dispatched NSCB C-1 technicians attach calibrated digital manometers and test gauges at the meter tree, then isolate indoor appliances from outdoor patio lines. Using digital parts-per-million (PPM) combustible gas sniffers and acoustic detectors, specialists pinpoint leaking threaded unions, cracked brass appliance valves, unbonded CSST punctures, or corroded underground pool-heater risers.'
+          ]
+        },
+        {
+          heading: 'Step 2: Code-Compliant Repair & Manometer Pressure-Decay Testing',
+          body: [
+            'Once the leaking black iron pipe, sediment trap, flex connector, or buried coated-steel riser is repaired or replaced, the entire gas system is isolated and pressurized with air on a precision pressure gauge (typically 10–15 PSI for welded/threaded runs per Clark County / City of Las Vegas code) to verify zero pressure drop over the required test window.'
+          ],
+          bulletPoints: [
+            'Inspecting appliance shutoff valves, drip legs, and CSST electrical bonding',
+            'Replacing rusted exterior meter risers and underground patio gas lines',
+            'Pulling City of Las Vegas or Clark County plumbing permits when required for green-tag inspection',
+            'Coordinating final Southwest Gas meter unlock and appliance pilot relighting'
+          ]
+        },
+        {
+          heading: 'Common Las Vegas Hidden Gas Leak Hotspots',
+          body: [
+            'Across older homes in Downtown Las Vegas, Spring Valley, and Paradise—as well as pool-equipped properties in Northwest Las Vegas (89129), Summerlin, and Rhodes Ranch—four locations trigger most red-tag calls: underground gas lines to pool heaters, built-in outdoor BBQ islands, corroded garage water-heater flex connectors, and attic furnace union fittings.'
+          ]
+        }
+      ],
+      faqs: [
+        {
+          question: 'How fast can I get my gas meter unlocked in Las Vegas after a red-tag?',
+          answer: 'In many cases, an NSCB-licensed contractor can pressure-test, pinpoint, and repair minor valve or union leaks the same day, coordinating municipal inspection and Southwest Gas unlock promptly.'
+        },
+        {
+          question: 'Why does a buried backyard pool-heater gas line cause my indoor meter to fail?',
+          answer: 'Your pool heater and outdoor kitchen branch directly off the same residential meter. Even if the leak is outdoors in desert soil, Southwest Gas must lock the whole meter until the leaking branch is repaired or legally capped off.'
+        },
+        {
+          question: 'Do I need a City of Las Vegas or Clark County permit for a gas meter unlock?',
+          answer: 'Major gas piping repairs and system-wide pressure tests typically require a municipal green-tag inspection before Southwest Gas removes the lock. Your licensed contractor handles the permit and gauge setup.'
+        },
+        {
+          question: 'Is soapy water enough to pass a gas leak inspection?',
+          answer: 'No. Soap bubbles only spot visible surface leaks on accessible joints; concealed attic, wall, and underground leaks require a calibrated manometer pressure-decay test and electronic PPM sniffing.'
+        }
+      ],
+      conclusion: 'Locked out by a Southwest Gas red tag in Las Vegas? Call Las Vegas Leak Detection Services 24/7 at (725) 313-0108 (office: 3320 N Pioneer Way, Las Vegas, NV 89129) for immediate gas leak testing, code-compliant repairs, and green-tag pressure certification.'
     }
   }
 ];

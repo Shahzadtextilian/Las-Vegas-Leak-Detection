@@ -150,8 +150,11 @@ export function generateSchemaForPage(page: PageContent, blogPost?: BlogPost | n
     "knowsAbout": [
       "Non-Invasive Electronic Water Leak Detection",
       "Post-Tension Concrete Slab Leak Diagnostics",
+      "Overhead PEX-A Slab Re-Routing",
       "Desert Caliche Soil Underground Pipe Stress",
+      "Las Vegas PRV Static Water Pressure Diagnostics",
       "Combustible Natural Gas Leak Sniffing (Southwest Gas Standards)",
+      "Southwest Gas Red-Tag Clearance & Manometer Testing",
       "Swimming Pool Hydrophone & Dye Leak Testing",
       "Las Vegas Valley Water District (LVVWD) Leak Credit Documentation",
       "Nevada State Contractors Board (NSCB) Compliance"
@@ -235,12 +238,16 @@ export function generateSchemaForPage(page: PageContent, blogPost?: BlogPost | n
       "name": blogPost.metaTitle || blogPost.title,
       "description": blogPost.metaDescription || blogPost.excerpt,
       "image": blogPost.featuredImage ? `${DOMAIN_URL}${blogPost.featuredImage}` : `${DOMAIN_URL}/images/hero_emergency_plumbing_1791566119640.webp`,
-      "datePublished": blogPost.slug === 'pool-irrigation-leak-detection-spring-valley'
+      "datePublished": blogPost.slug === 'southwest-gas-meter-red-tag-pressure-test-las-vegas'
+        ? "2026-11-25T08:00:00-08:00"
+        : blogPost.slug === 'post-tension-slab-leak-repair-las-vegas-pex-reroute'
+        ? "2026-11-24T08:00:00-08:00"
+        : blogPost.slug === 'pool-irrigation-leak-detection-spring-valley'
         ? "2026-11-18T08:00:00-08:00"
         : blogPost.slug === 'spring-valley-leak-detection-guide'
         ? "2026-11-05T07:00:00-08:00"
         : "2026-10-08T08:00:00-07:00",
-      "dateModified": "2026-11-26T08:25:00-08:00",
+      "dateModified": "2026-11-27T08:00:00-08:00",
       "author": {
         "@type": "Organization",
         "name": blogPost.author,

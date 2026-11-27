@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { BLOG_POSTS, BlogPost, getBlogPostUrlPath, getBlogPostNavSlug } from '../data/blogData';
 import { PHONE_NUMBER, PHONE_HREF } from '../data/siteData';
+import { linkifyText } from '../utils/linkifyContent';
 import {
   BookOpen,
   Calendar,
@@ -185,7 +186,7 @@ export const BlogPage: React.FC<BlogPageProps> = ({ onNavigate, activePostSlug }
                   </h2>
                   <div className="space-y-3 text-slate-700 leading-relaxed text-sm sm:text-base">
                     {section.body.map((b, bIdx) => (
-                      <p key={bIdx}>{b}</p>
+                      <p key={bIdx}>{linkifyText(b, getBlogPostNavSlug(selectedPost), onNavigate, 3)}</p>
                     ))}
                   </div>
 
@@ -194,7 +195,7 @@ export const BlogPage: React.FC<BlogPageProps> = ({ onNavigate, activePostSlug }
                       {section.bulletPoints.map((bp, bpIdx) => (
                         <li key={bpIdx} className="flex items-start gap-2.5">
                           <CheckCircle className="w-5 h-5 text-[#1E70B8] shrink-0 mt-0.5" />
-                          <span>{bp}</span>
+                          <span>{linkifyText(bp, getBlogPostNavSlug(selectedPost), onNavigate, 2)}</span>
                         </li>
                       ))}
                     </ul>
@@ -253,7 +254,7 @@ export const BlogPage: React.FC<BlogPageProps> = ({ onNavigate, activePostSlug }
                           {faq.question}
                         </h3>
                         <p className="text-sm text-slate-600 leading-relaxed">
-                          {faq.answer}
+                          {linkifyText(faq.answer, getBlogPostNavSlug(selectedPost), onNavigate, 2)}
                         </p>
                       </div>
                     ))}
@@ -366,6 +367,35 @@ export const BlogPage: React.FC<BlogPageProps> = ({ onNavigate, activePostSlug }
                   <Phone className="w-4 h-4 text-amber-400" />
                   <span>{PHONE_NUMBER}</span>
                 </a>
+              </div>
+
+              {/* Core Service Pillars (Cluster -> Pillar Authority Links) */}
+              <div className="bg-white rounded-2xl p-6 border border-slate-200 shadow-xs space-y-3">
+                <h4 className="text-xs font-bold uppercase tracking-wider text-slate-700 font-display">
+                  Las Vegas Service Pillars
+                </h4>
+                <div className="space-y-2">
+                  {[
+                    { slug: 'slab-leak-detection', title: 'Slab Leak Detection & PEX Re-Routes' },
+                    { slug: 'water-leak-detection', title: 'Water Leak Detection & PRV Checks' },
+                    { slug: 'pool-leak-detection', title: 'Pool Hydrophone & Dye Testing' },
+                    { slug: 'gas-leak-detection', title: 'Gas Leak & Southwest Gas Unlocks' },
+                    { slug: 'underground-leak-detection', title: 'Underground Yard & Drip Mains' },
+                  ].map((svc) => (
+                    <a
+                      key={svc.slug}
+                      href={`/${svc.slug}/`}
+                      onClick={(e) => {
+                        e.preventDefault();
+                        onNavigate(svc.slug);
+                      }}
+                      className="flex items-center justify-between p-2.5 rounded-lg border border-slate-100 hover:border-[#1E70B8] hover:bg-slate-50 text-xs font-bold text-slate-800 hover:text-[#1E70B8] transition-colors no-underline"
+                    >
+                      <span>{svc.title}</span>
+                      <ArrowRight className="w-3.5 h-3.5 text-slate-400" />
+                    </a>
+                  ))}
+                </div>
               </div>
 
               {/* Other Articles (Sidebar Inlinks) */}

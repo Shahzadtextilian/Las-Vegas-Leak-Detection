@@ -282,6 +282,19 @@ export const sitePages: Record<string, PageContent> = {
           "If the low-flow indicator on your LVVWD water meter keeps spinning while every indoor faucet and appliance is turned off, water is escaping between the curb box and your home or underneath your slab.",
           "Dispatched technicians isolate whether the leak sits on your customer service main or indoors and issue an itemized repair invoice suitable for Las Vegas Valley Water District 50% leak credit review."
         ]
+      },
+      {
+        heading: "Las Vegas Static Pressure (PRV) & Smart Meter Isolation Testing",
+        subheading: "Preventing repeat pipe failures in high-PSI valley zones",
+        paragraphs: [
+          "Municipal elevation changes across Northwest Las Vegas, Summerlin, and Centennial Hills drive residential street pressures above 80–110 PSI. When a home's Pressure Reducing Valve (PRV) fails, excess pressure hammers water-heater relief valves, ice-maker lines, and sub-slab copper elbows.",
+          "Every comprehensive water leak detection inspection includes static hose-bib pressure checks and street-meter low-flow clock tests—separating indoor supply leaks from exterior drip manifolds cleanly."
+        ],
+        bulletPoints: [
+          "Digital static PSI verification (safe Las Vegas target: 55–65 PSI)",
+          "Thermal imaging scans across tiled shower pans, kitchen islands, and ceiling joists",
+          "Same-day copper spot repairs, PEX-A sections, or failing PRV replacement"
+        ]
       }
     ],
     faqs: [
@@ -296,6 +309,10 @@ export const sitePages: Record<string, PageContent> = {
       {
         question: "How long does a typical water leak inspection take in Las Vegas?",
         answer: "Most residential water leak inspections take 1.5 to 3 hours, including pressure decay testing and exact target marking."
+      },
+      {
+        question: "How do I tell if a high water bill is caused by a running toilet or a hidden pipe leak?",
+        answer: "Run a 15-minute zero-consumption test at your front yard LVVWD water meter box after shutting off interior toilet angle stops. If the low-flow dial keeps spinning with toilets isolated, a concealed supply or yard pipe leak is active."
       }
     ],
     relatedServices: [
@@ -370,6 +387,19 @@ export const sitePages: Record<string, PageContent> = {
         paragraphs: [
           "Whether servicing commercial kitchens in Downtown Las Vegas and Paradise or buried backyard gas lines for pool heaters, fire bowls, and built-in grills in Northwest Las Vegas (89129), Centennial Hills, and Summerlin, dispatched technicians pressure-verify every run to strict Nevada code standards."
         ]
+      },
+      {
+        heading: "Digital Manometer Pressure-Decay Testing & CSST Bonding",
+        subheading: "Isolating residential distribution trees for Clark County & City green-tag clearance",
+        paragraphs: [
+          "Tracing elusive gas leaks requires isolating the meter outlet riser, garage water-heater drop, attic furnace leg, and patio risers section by section using calibrated manometers and electronic PPM sniffers.",
+          "Technicians also inspect Corrugated Stainless Steel Tubing (CSST) electrical bonding clamps, sediment drip legs, and exterior black-iron corrosion so your entire system passes City of Las Vegas or Clark County green-tag inspection on the first check."
+        ],
+        bulletPoints: [
+          "Electronic combustible gas sniffing calibrated down to 5–10 parts per million (PPM)",
+          "Full-system air-pressure test gauge setup for Southwest Gas red-tag meter unlocks",
+          "Replacement of corroded underground coated-steel pool heater and BBQ island risers"
+        ]
       }
     ],
     faqs: [
@@ -384,6 +414,10 @@ export const sitePages: Record<string, PageContent> = {
       {
         question: "Are technicians licensed to work on gas lines in Las Vegas?",
         answer: "Yes. All gas piping diagnostics and repairs are routed to independent contractors holding active Nevada State Contractors Board (NSCB) C-1 plumbing/heating credentials."
+      },
+      {
+        question: "Do I need a municipal permit to clear a Southwest Gas red-tag in Las Vegas?",
+        answer: "System-wide gas line repairs and pressure tests generally require a City of Las Vegas or Clark County green-tag inspection before Southwest Gas unlocks the meter; your licensed contractor coordinates testing and gauge setup."
       }
     ],
     relatedServices: [
@@ -466,6 +500,19 @@ export const sitePages: Record<string, PageContent> = {
           "Once acoustic sensors isolate the break within inches, contractors review clear options with you. A Direct Spot Repair opens a small localized patch above the pipe segment to braze or replace the damaged section.",
           "If your home has aging copper prone to repeat pinholes beneath a post-tension slab, an Overhead PEX Re-Route abandons the under-slab line and runs durable PEX through conditioned attic or interior wall chases—avoiding tension cables entirely."
         ]
+      },
+      {
+        heading: "Post-Tension Tendon Safety & Copper Type-L vs. PEX-A Diagnostics",
+        subheading: "Protecting structural tension cables across Las Vegas single-family slabs",
+        paragraphs: [
+          "Modern and 1990s-era Las Vegas subdivisions sit atop post-tensioned concrete slabs laced with steel cables carrying 30,000+ pounds of force. Guessing with a jackhammer risks snapping a structural cable or ruining continuous porcelain tile.",
+          "By combining electromagnetic pipe line-tracing, FLIR thermal imaging of hot-water loops, and acoustic listening discs, specialists pinpoint whether the leak sits on a manifold, hot supply, or cold drop before recommending a surgical spot repair or permanent overhead PEX-A reroute."
+        ],
+        bulletPoints: [
+          "Zero exploratory concrete breaking across post-tension garage or living-room slabs",
+          "Line-isolation pressure drops separating hot-water recirculating loops from cold mains",
+          "Written NSCB-licensed invoice details accepted for LVVWD 50% leak credit claims"
+        ]
       }
     ],
     faqs: [
@@ -480,6 +527,10 @@ export const sitePages: Record<string, PageContent> = {
       {
         question: "Is an overhead PEX re-route safer than breaking a post-tension slab?",
         answer: "Yes. Most Las Vegas slabs contain high-tension steel cables. An overhead insulated PEX re-route avoids cutting near tension cables and preserves finished tile or marble flooring."
+      },
+      {
+        question: "Can a slab leak qualify for an LVVWD 50% high water bill credit?",
+        answer: "Yes. Once an NSCB-licensed plumber isolates and repairs or caps off the leaking under-slab line and verifies zero meter spin, the itemized repair report supports your LVVWD leak credit filing."
       }
     ],
     relatedServices: [
@@ -547,6 +598,19 @@ export const sitePages: Record<string, PageContent> = {
           "Draining a swimming pool in Las Vegas desert sun rapidly dries out and cracks expensive plaster or pebble finishes. Dispatched specialists perform all leak testing with your pool completely full.",
           "Technicians inspect light conduits, main drains, and skimmer throats with inert dye syringes while isolating underground suction and return lines with pneumatic gauges."
         ]
+      },
+      {
+        heading: "Isolating Suction, Return, Autofill & Spa Spillway Leaks",
+        subheading: "Pinpointing buried pool plumbing beneath travertine, cool-deck, and pavers",
+        paragraphs: [
+          "Pool leaks behave differently depending on whether your filtration pump is running or off. Higher water loss with the pump running points to pressurized return jets, water features, or heater bypass manifolds; water loss with the pump shut off points to suction lines, skimmer seals, light conduits, or structural plaster cracks.",
+          "Dispatched specialists test each underground PVC loop individually with rubber test plugs, air-water acoustic injection, and submersible hydrophones so any deck repair stays limited to one small marked paver."
+        ],
+        bulletPoints: [
+          "Isolated pressure testing on skimmer suction, main drain, sweep, and return lines",
+          "Autofill float valve, Jandy actuator, and multiport backwash seal inspections",
+          "Non-staining underwater dye checks around tile lines, hydro-therapy jets, and light niches"
+        ]
       }
     ],
     faqs: [
@@ -561,6 +625,10 @@ export const sitePages: Record<string, PageContent> = {
       {
         question: "Can caliche shifting crack underground pool plumbing in Las Vegas?",
         answer: "Yes. Caliche expansion and deck settling frequently stress skimmer throats and PVC glue joints beneath pavers, triggering quiet water loss."
+      },
+      {
+        question: "Why does my pool lose water only when the spa spillover or pump turns on?",
+        answer: "Water loss occurring strictly while circulation runs typically indicates a pressurized return line fracture, a leaking waterfall/sheer-descent manifold, or a worn backwash valve allowing water to escape down the waste line."
       }
     ],
     relatedServices: [
@@ -627,6 +695,19 @@ export const sitePages: Record<string, PageContent> = {
         paragraphs: [
           "Pressurized water eroding desert silt beneath driveways, sidewalks, and courtyard pavers creates hidden voids that cause concrete settlement and cracking. Early acoustic pinpointing saves landscaping and decorative stone."
         ]
+      },
+      {
+        heading: "Tracer Gas Physics & Curb-to-House Service Main Diagnostics",
+        subheading: "Finding silent Schedule-40 PVC and copper breaks deep below desert rock",
+        paragraphs: [
+          "Plastic PVC and polyethylene irrigation mains often transmit minimal acoustic noise compared to rigid metal pipe. Dispatched specialists inject a safe, non-toxic 95% nitrogen / 5% hydrogen tracer gas blend into the isolated yard line.",
+          "Because hydrogen molecules are lighter than air, tracer gas escapes the buried pipe breach and rises straight through caliche gravel, synthetic turf, and interlocking pavers to surface sensors—allowing surgical repairs or trenchless HDPE pipe pulling."
+        ],
+        bulletPoints: [
+          "Differentiates customer main yard breaks from pressurized drip irrigation zones",
+          "Backflow PVB assembly, anti-siphon valve, and smart-controller solenoid testing",
+          "LVVWD compliance documentation verifying permanent repair and zero curb-meter spin"
+        ]
       }
     ],
     faqs: [
@@ -637,6 +718,10 @@ export const sitePages: Record<string, PageContent> = {
       {
         question: "Can a broken underground main be repaired without digging up my entire driveway?",
         answer: "Yes. Pinpointing the break restricts digging to a single targeted access pit, or contractors can use trenchless pipe pulling for aging lines."
+      },
+      {
+        question: "How do I verify if my underground leak is between the LVVWD street meter and my house?",
+        answer: "Turn off your home's main water shutoff valve (usually in the garage or near the front hose bib) and watch the low-flow indicator at the curb meter box. If the meter dial continues moving, the break is underground in your yard service line."
       }
     ],
     relatedServices: [
@@ -695,6 +780,14 @@ export const sitePages: Record<string, PageContent> = {
           "For gas odors: evacuate outdoors immediately, touch no switches, and call 911 / Southwest Gas / (725) 313-0108",
           "Keep your phone line open for the dispatched technician's arrival update"
         ]
+      },
+      {
+        heading: "Curb Meter Shutoff & Preventing Sub-Slab Heave or Mold",
+        subheading: "Controlling secondary structural damage in desert climates",
+        paragraphs: [
+          "Even in arid Las Vegas heat, trapped water beneath vinyl plank flooring, cabinets, or drywall paper creates rapid microbial growth within 24 to 48 hours and can soften clay pockets beneath foundation footings.",
+          "On-call NSCB-licensed contractors carry heavy curb-meter keys, full-port quarter-turn ball valves, copper/PEX press fittings, and emergency isolation manifolds to stop active leaks immediately—day, night, weekends, or holidays."
+        ]
       }
     ],
     faqs: [
@@ -705,6 +798,10 @@ export const sitePages: Record<string, PageContent> = {
       {
         question: "Which Las Vegas areas do you cover for emergency service?",
         answer: "We coordinate 24/7 coverage across Las Vegas including Northwest (89129 / 89108), Centennial Hills (89131 / 89149), Summerlin, Spring Valley, Downtown Las Vegas, Paradise, and Enterprise."
+      },
+      {
+        question: "What if my indoor main shutoff gate valve is stuck or corroded?",
+        answer: "Do not force an older frozen gate valve stem, which can snap under pressure. On-call technicians arrive with curb-box meter keys to shut water off cleanly at the street and upgrade failing shutoffs to reliable quarter-turn ball valves."
       }
     ],
     relatedServices: [
@@ -757,12 +854,28 @@ export const sitePages: Record<string, PageContent> = {
           "Central Spring Valley features a dense mix of established single-family neighborhoods built predominantly between 1980 and 2005. Homes in this area often feature original copper water lines that have endured decades of hard Las Vegas water.",
           "Dispatched specialists regularly resolve slab leaks under tile floors, hidden leaks behind drywall, aging swimming pool skimmer cracks, and underground gas lines serving pool heaters and kitchen ranges."
         ]
+      },
+      {
+        heading: "Caliche Sub-Slab Copper Fatigue & Overhead PEX Re-Routes in 89103 / 89147",
+        subheading: "Non-invasive diagnostics along Rainbow Blvd, Flamingo Rd & Tropicana Ave",
+        paragraphs: [
+          "Because many Spring Valley homes built in the late 1980s and 1990s have buried hot-water copper loops resting on cemented caliche shelves, spot patches alone can leave neighboring copper segments vulnerable. Acoustic listening and thermal imaging isolate the exact failure so contractors can advise transparently between a targeted spot fix and a permanent overhead PEX-A reroute.",
+          "We also verify post-repair meter stillness and supply NSCB-licensed invoices ready for LVVWD 50% leak credit filing."
+        ]
       }
     ],
     faqs: [
       {
         question: "How fast can you dispatch to homes near Rainbow Blvd and Flamingo Rd?",
-        answer: "Dispatched mobile technicians typically arrive within 30 to 45 minutes across central Spring Valley."
+        answer: "Dispatched mobile technicians typically respond rapidly across central Spring Valley (89103 / 89147), arriving with acoustic, thermal, and pressure-testing gear on board."
+      },
+      {
+        question: "Why do 1990s homes in Spring Valley develop warm spots on tile floors?",
+        answer: "Hard Las Vegas water scale combined with continuous hot-water recirculation thins buried under-slab copper tubing until a pinhole opens beneath tile or travertine."
+      },
+      {
+        question: "Can you test both backyard swimming pools and indoor plumbing in one Spring Valley visit?",
+        answer: "Yes. Specialists isolate your domestic curb meter from backyard pool autofill and circulation loops to identify every source of excessive LVVWD water consumption."
       }
     ],
     relatedServices: [
@@ -815,12 +928,28 @@ export const sitePages: Record<string, PageContent> = {
           "Developed in the late 1980s, The Lakes features custom lakeside homes, mature trees, and private backyard pools. Over time, shifting soils and root pressure can cause underground PVC pool lines and domestic copper supply lines to fracture.",
           "Dispatched technicians bring specialized pool hydrophones and electronic gas sniffers to quickly identify and isolate leaks without property destruction."
         ]
+      },
+      {
+        heading: "Lake Sahara Water Table & Pool Deck Settlement Diagnostics (89117)",
+        subheading: "Separating structural shell cracks, skimmer seals, and sub-slab copper pinholes",
+        paragraphs: [
+          "Homes bordering Lake Sahara and the Peccole Ranch greenbelts contend with mature root systems, poolside concrete decking, and moist subsurface soils that can mask early domestic main and pool-return leaks.",
+          "Using submersible hydrophones, fluorescent dye testing around skimmer throats and light niches, and pressure-decay testing on autofill and return lines, dispatched specialists locate leaks while keeping your pool completely full."
+        ]
       }
     ],
     faqs: [
       {
         question: "Can you detect a pool leak that is hidden beneath concrete pavers?",
         answer: "Yes. Dispatched specialists utilize acoustic hydrophones and line-pressure testing to pinpoint underground pipe ruptures beneath pool decking and pavers."
+      },
+      {
+        question: "How do I tell if my pool in The Lakes is leaking or evaporating in desert heat?",
+        answer: "Complete a 24-hour bucket test with the autofill valve switched off. If the pool water drops noticeably further than the water level inside the bucket, schedule hydrophone and dye testing."
+      },
+      {
+        question: "Do tree roots along Peccole Ranch greenbelts damage underground water or irrigation mains?",
+        answer: "Yes. Mature ficus, mesquite, and palm roots frequently squeeze PVC irrigation manifolds and older street-to-house supply mains, which we locate non-invasively using tracer gas."
       }
     ],
     relatedServices: [
@@ -873,12 +1002,27 @@ export const sitePages: Record<string, PageContent> = {
           "Spanish Trail estates feature multi-thousand-square-foot floor plans with complex plumbing configurations: multiple water heaters, recirculating loops, expansive post-tension slabs, and custom swimming pool and water feature arrays.",
           "Dispatched contractors use non-invasive acoustic locators and floor-protection runners to safeguard imported marble and hardwood finishes while pinpointing sub-slab and pool line breaks."
         ]
+      },
+      {
+        heading: "Multi-Zone Recirculation Loops & Estate Gas Feature Testing (89113)",
+        subheading: "Comprehensive diagnostics for multi-heater residences and resort pools",
+        paragraphs: [
+          "Large Spanish Trail estates frequently operate zoned domestic hot-water recirculation loops, dual water heaters, outdoor misting lines, and natural-gas fire features. When pressure drops occur, ultrasonic correlators and FLIR infrared cameras isolate the exact hot loop or patio riser without disturbing stone flooring or custom millwork."
+        ]
       }
     ],
     faqs: [
       {
         question: "Can dispatched technicians access guard-gated communities in Spanish Trail?",
         answer: "Yes. Dispatched contractors are licensed and insured, coordinating gate clearance directly with property owners and security personnel for smooth access."
+      },
+      {
+        question: "How do you locate slab leaks under marble or travertine flooring in 89113 estates?",
+        answer: "FLIR thermal imaging and non-invasive acoustic listening locate sub-slab leaks directly through dense stone tile without exploratory cutting, enabling surgical spot access or an overhead PEX reroute."
+      },
+      {
+        question: "Can you test outdoor BBQ islands, fire bowls, and pool heaters for gas leaks?",
+        answer: "Yes. Technicians use calibrated PPM electronic gas sniffers and manometer pressure-decay gauges to inspect all patio and equipment-pad gas lines."
       }
     ],
     relatedServices: [
@@ -931,12 +1075,27 @@ export const sitePages: Record<string, PageContent> = {
           "Properties in Summerlin South sit atop heavy caliche and limestone strata. Ground vibrations and thermal shifts can cause friction between buried pipes and subsurface rock, leading to slab leaks and broken irrigation lines.",
           "Dispatched technicians utilize high-precision electronic locators to find leaks without excavating manicured landscaping or breaking concrete unnecessarily."
         ]
+      },
+      {
+        heading: "Foothill Static Water Pressure & Drip Irrigation Mains in 89135 / 89148",
+        subheading: "Managing elevated booster zone PSI and rocky caliche trenches",
+        paragraphs: [
+          "Higher elevation neighborhoods toward Red Rock Canyon and The Ridges receive boosted LVVWD delivery pressure that rapidly strains aging residential Pressure Reducing Valves (PRVs) and copper manifolds. Dispatched specialists check static PSI alongside acoustic and nitrogen tracer-gas testing across backyard pools, travertine decks, and concealed drip irrigation lines."
+        ]
       }
     ],
     faqs: [
       {
         question: "How fast can a technician arrive in Summerlin South?",
-        answer: "Average response times in Summerlin South typically range from 30 to 50 minutes."
+        answer: "Mobile dispatch teams serving West Las Vegas and Summerlin South respond rapidly 24/7 with full acoustic, thermal, and hydrophone diagnostic kits."
+      },
+      {
+        question: "Why do water leaks in Summerlin South yards rarely leave puddles?",
+        answer: "Coarse foothill gravel and cemented caliche pockets channel escaping irrigation and main-line water deep underground rather than pooling on desert rock. Tracer gas pinpoints these buried breaks within inches."
+      },
+      {
+        question: "Can you test post-tension concrete slabs in Summerlin South without risking tension cables?",
+        answer: "Yes. Non-invasive acoustic sensors and infrared thermography isolate the break location before any access decision, and overhead PEX reroutes bypass tension cables entirely."
       }
     ],
     relatedServices: [
@@ -989,12 +1148,28 @@ export const sitePages: Record<string, PageContent> = {
           "Rhodes Ranch is known for its resort-style atmosphere, where nearly every home features an in-ground swimming pool or spa. The desert sun and hard water put heavy wear on pool plumbing and automatic water levelers.",
           "Dispatched technicians identify underground pool pipe breaks, leaking autofill valves, slab leaks, and gas heater lines with pinpoint accuracy."
         ]
+      },
+      {
+        heading: "Golf-Course Post-Tension Slabs & Pool Heater Gas Lines in 89148",
+        subheading: "Protecting Southwest Las Vegas homes from hard-water scaling and autofill waste",
+        paragraphs: [
+          "Homes across Rhodes Ranch and Nevada Trails combine post-tension concrete slabs with high-demand backyard pools, heated spas, and desert drip manifolds. Unchecked pool autofill or sub-slab pinholes can trigger dramatic Tier-3 and Tier-4 LVVWD water bill spikes within one month.",
+          "Dispatched specialists test pool hydraulics, indoor copper/PEX runs, and Southwest Gas heater risers on a single diagnostic visit."
+        ]
       }
     ],
     faqs: [
       {
         question: "Can you fix an autofill valve that is constantly filling my pool?",
         answer: "Yes. An autofill that runs continuously is either miscalibrated, defective, or concealing a significant pool leak. Dispatched technicians inspect the autofill line and perform complete pool leak diagnostics."
+      },
+      {
+        question: "Do you inspect pool heater gas leaks in Rhodes Ranch?",
+        answer: "Yes. Using electronic PPM combustible gas sniffers and pressure gauges, NSCB-licensed technicians locate leaking underground or equipment-pad gas lines serving heaters and outdoor kitchens."
+      },
+      {
+        question: "Can Rhodes Ranch homeowners claim an LVVWD leak credit after fixing a hidden yard or slab leak?",
+        answer: "Yes. Dispatched contractors supply itemized repair invoices and post-repair meter zero-flow verification formatted for LVVWD leak credit review."
       }
     ],
     relatedServices: [
@@ -1052,6 +1227,13 @@ export const sitePages: Record<string, PageContent> = {
           "Post-tension slab acoustic localization protecting tension cables and tile floors",
           "LVVWD high-bill diagnostic reports and PRV pressure verification"
         ]
+      },
+      {
+        heading: "Cheyenne & Durango High-PSI Protection & Older vs. Modern Builds",
+        subheading: "Diagnosing 1990s copper manifolds and newer PEX residential developments",
+        paragraphs: [
+          "From 1990s copper-plumbed subdivisions near Cheyenne & Buffalo to newer master-planned blocks off Lone Mountain & Durango, Northwest Las Vegas homes face both mineral scaling and elevated delivery pressure. Dispatched technicians check static PSI, inspect yard main lines from the LVVWD curb box, and locate pool or spa pipe ruptures cleanly without trenching pavers."
+        ]
       }
     ],
     faqs: [
@@ -1062,6 +1244,10 @@ export const sitePages: Record<string, PageContent> = {
       {
         question: "Do your diagnostic reports support LVVWD high water bill adjustments?",
         answer: "Yes. Technicians perform meter-isolation testing and furnish an itemized location and repair report formatted for Las Vegas Valley Water District (LVVWD) leak credit reviews."
+      },
+      {
+        question: "How do I know if high water pressure in 89129 caused my slab or heater leak?",
+        answer: "If your static pressure at an exterior hose bib exceeds 75–80 PSI, a worn Pressure Reducing Valve (PRV) is overloading gaskets and copper joints. Technicians test static pressure during every Northwest Las Vegas leak visit."
       }
     ],
     relatedServices: [
@@ -1120,6 +1306,13 @@ export const sitePages: Record<string, PageContent> = {
           "Buried drip irrigation & yard main tracer gas pinpointing",
           "PRV high-pressure diagnostics & backyard swimming pool hydrophone testing"
         ]
+      },
+      {
+        heading: "Skye Canyon & Providence Pool Decks, Autofills & Copper-to-PEX Risers",
+        subheading: "Eliminating hidden desert water waste across north-valley estates",
+        paragraphs: [
+          "Larger backyard footprints in Centennial Hills, Providence, and Skye Canyon pair custom pools and travertine decking with multi-zone desert irrigation timers. Dispatched technicians isolate pool return lines, autofill valves, and exterior PRV risers using hydrophone listening and tracer gas—pinpointing leaks cleanly without uprooting landscaping."
+        ]
       }
     ],
     faqs: [
@@ -1130,6 +1323,10 @@ export const sitePages: Record<string, PageContent> = {
       {
         question: "Can tracer gas find water leaks under paved driveways or desert rock?",
         answer: "Yes. Safe nitrogen-hydrogen tracer gas rises cleanly through desert rock, caliche soil, and concrete pavers so electronic sensors pinpoint the leak within inches."
+      },
+      {
+        question: "Do you inspect swimming pool and spa leaks in Skye Canyon and Providence?",
+        answer: "Yes. Submersible hydrophones, dye testing, and line pressure testing locate suction, return, and skimmer leaks across north-valley pools without draining water."
       }
     ],
     relatedServices: [
@@ -1187,6 +1384,13 @@ export const sitePages: Record<string, PageContent> = {
           "Downtown Las Vegas, Fremont & Arts District commercial water & gas testing",
           "Southwest Gas red-tag clearance and LVVWD high-bill documentation"
         ]
+      },
+      {
+        heading: "Historic Curb-to-House Supply Lines & Commercial Red-Tag Clearances",
+        subheading: "Protecting Downtown Las Vegas residences and hospitality properties",
+        paragraphs: [
+          "Aging steel and thin-wall copper mains beneath historic Downtown Las Vegas lawns and paved alleys frequently develop slow pinholes along threaded couplings and curb meter tails. Likewise, commercial hospitality and restaurant operators along Fremont Street and Charleston Blvd rely on rapid manometer pressure-decay testing whenever Southwest Gas issues a safety lock."
+        ]
       }
     ],
     faqs: [
@@ -1197,6 +1401,10 @@ export const sitePages: Record<string, PageContent> = {
       {
         question: "Can you locate gas or water leaks for commercial businesses near Charleston Blvd?",
         answer: "Yes. NSCB C-1 contractors handle commercial supply lines, backflow/meter leaks, and manometer gas pressure certification for commercial unlocks."
+      },
+      {
+        question: "Can older homes in Scotch 80s and Huntridge receive overhead PEX reroutes instead of cutting vintage floors?",
+        answer: "Yes. When historic terrazzo, hardwood, or concrete slabs hide repeated copper failures, an overhead PEX-A reroute routes new supply lines cleanly through attic spaces to preserve original flooring."
       }
     ],
     relatedServices: [
@@ -1254,6 +1462,13 @@ export const sitePages: Record<string, PageContent> = {
           "Paradise & Maryland Pkwy residential, HOA & commercial main locating",
           "LVVWD 50% leak credit reporting and Southwest Gas PPM safety testing"
         ]
+      },
+      {
+        heading: "Commercial Backflow, Multi-Family Slabs & Backyard Pool Shells (89119–89139)",
+        subheading: "Comprehensive South Las Vegas non-invasive water, pool & gas support",
+        paragraphs: [
+          "Whether tracing a leaking pool autofill line in Enterprise, isolating a pressurized riser in a Paradise multi-unit complex, or marking a sub-slab copper rupture in Silverado Ranch, dispatched NSCB-licensed specialists deliver surgical pinpointing and clean documentation for insurers and LVVWD."
+        ]
       }
     ],
     faqs: [
@@ -1264,6 +1479,10 @@ export const sitePages: Record<string, PageContent> = {
       {
         question: "Do you test residential pools and commercial mains along Eastern Ave and Flamingo?",
         answer: "Yes. Dispatched NSCB C-1 contractors perform full-pool hydrophone diagnostics as well as commercial water and gas main isolation across South Las Vegas."
+      },
+      {
+        question: "Why do copper pipes in Paradise and Enterprise corrode from the outside?",
+        answer: "South-central valley soils often contain elevated sulfate and gypsum salts that chemically pit bare copper tubing sitting beneath concrete slabs or damp utility trenches."
       }
     ],
     relatedServices: [
@@ -1811,7 +2030,9 @@ export const sitePages: Record<string, PageContent> = {
           "What to Do When You Smell Natural Gas in Your Home: Step-by-Step Safety Guide",
           "How Caliche & Subsurface Soil Impact Underground Plumbing",
           "How to Read Your Water Meter to Detect Hidden Leaks Before a High Bill",
-          "How to Get a Utility Leak Credit on High Water Bills"
+          "How to Get a Utility Leak Credit on High Water Bills",
+          "Post-Tension Slab Leak Repair in Las Vegas: Spot Patch vs. Overhead PEX Re-Route",
+          "Southwest Gas Red-Tag Meter Lockout in Las Vegas: Pressure Testing & Unlock Guide"
         ]
       },
       {

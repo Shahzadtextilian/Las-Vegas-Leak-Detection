@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { PageContent, PHONE_NUMBER, PHONE_HREF, BRAND_NAME, BUSINESS_ADDRESS, FACEBOOK_URL } from '../data/siteData';
 import { BLOG_POSTS, getComplementaryGuides, getBlogPostUrlPath, getBlogPostNavSlug } from '../data/blogData';
+import { linkifyText } from '../utils/linkifyContent';
 import {
   Phone,
   ShieldCheck,
@@ -151,67 +152,9 @@ export const PageRenderer: React.FC<PageRendererProps> = ({
     setOpenFaq(openFaq === idx ? null : idx);
   };
 
-  // Helper to render text with contextual in-paragraph links
+  // Helper to render text with contextual multi-target hub-and-spoke internal links
   const renderParagraphWithLinks = (text: string) => {
-    const linkReplacements: { phrase: string; slug: string }[] = [
-      { phrase: 'Las Vegas Leak Detection Services', slug: '' },
-      { phrase: 'water leak detection', slug: 'water-leak-detection' },
-      { phrase: 'Water Leak Detection', slug: 'water-leak-detection' },
-      { phrase: 'gas leak detection', slug: 'gas-leak-detection' },
-      { phrase: 'Gas Leak Detection', slug: 'gas-leak-detection' },
-      { phrase: 'slab leak detection', slug: 'slab-leak-detection' },
-      { phrase: 'Slab Leak Detection', slug: 'slab-leak-detection' },
-      { phrase: 'pool leak detection', slug: 'pool-leak-detection' },
-      { phrase: 'swimming pool leak detection', slug: 'pool-leak-detection' },
-      { phrase: 'Swimming Pool Leak Detection', slug: 'pool-leak-detection' },
-      { phrase: 'underground leak detection', slug: 'underground-leak-detection' },
-      { phrase: 'emergency leak repair', slug: 'emergency-leak-repair' },
-      { phrase: 'Northwest Las Vegas', slug: 'las-vegas' },
-      { phrase: 'Lone Mountain', slug: 'las-vegas' },
-      { phrase: 'Centennial Hills', slug: 'centennial-hills' },
-      { phrase: 'Skye Canyon', slug: 'centennial-hills' },
-      { phrase: 'Downtown Las Vegas', slug: 'downtown-las-vegas' },
-      { phrase: 'Enterprise', slug: 'paradise-enterprise' },
-      { phrase: 'Paradise', slug: 'paradise-enterprise' },
-      { phrase: 'Las Vegas', slug: 'las-vegas' },
-      { phrase: 'Spring Valley Center', slug: 'spring-valley-center' },
-      { phrase: 'The Lakes', slug: 'the-lakes' },
-      { phrase: 'Peccole Ranch', slug: 'the-lakes' },
-      { phrase: 'Spanish Trail', slug: 'spanish-trail' },
-      { phrase: 'Summerlin South', slug: 'summerlin-south' },
-      { phrase: 'Rhodes Ranch', slug: 'rhodes-ranch' },
-    ];
-
-    for (const item of linkReplacements) {
-      if (item.slug === page.slug) continue;
-
-      const regex = new RegExp(`\\b(${item.phrase})\\b`, 'i');
-      const match = text.match(regex);
-      if (match && match.index !== undefined) {
-        const before = text.substring(0, match.index);
-        const matchedText = match[0];
-        const after = text.substring(match.index + matchedText.length);
-
-        return (
-          <>
-            {before}
-            <a
-              href={item.slug === '' ? '/' : `/${item.slug}/`}
-              onClick={(e) => {
-                e.preventDefault();
-                onNavigate(item.slug);
-              }}
-              className="text-[#1E70B8] hover:text-[#0F2942] underline underline-offset-2 font-medium transition-colors cursor-pointer"
-            >
-              {matchedText}
-            </a>
-            {after}
-          </>
-        );
-      }
-    }
-
-    return text;
+    return linkifyText(text, page.slug, onNavigate, 3);
   };
 
   return (
@@ -912,6 +855,79 @@ export const PageRenderer: React.FC<PageRendererProps> = ({
               </section>
             )}
 
+            {/* HOMEPAGE TOPICAL AUTHORITY MATRIX: LAS VEGAS PIPE METALLURGY, SOIL & DIAGNOSTIC BENCHMARKS */}
+            {page.slug === '' && (
+              <section className="bg-white rounded-2xl p-6 sm:p-8 border border-slate-200 shadow-xs space-y-6">
+                <div>
+                  <div className="flex items-center gap-2 text-xs font-bold text-[#1E70B8] uppercase tracking-wider font-display mb-1">
+                    <Radio className="w-4 h-4 text-amber-500" />
+                    <span>Las Vegas Plumbing Engineering Reference</span>
+                  </div>
+                  <h3 className="text-xl sm:text-2xl font-bold text-slate-900 font-display">
+                    Pipe Material, Desert Soil &amp; Non-Invasive Diagnostic Protocol Matrix
+                  </h3>
+                  <p className="text-xs sm:text-sm text-slate-600 mt-1 leading-relaxed">
+                    Different pipe materials across Las Vegas neighborhoods fail for distinct chemical and mechanical reasons. Dispatched technicians match instrumentation directly to each line type:
+                  </p>
+                </div>
+
+                <div className="overflow-x-auto">
+                  <table className="w-full text-xs text-left border border-slate-200 rounded-xl overflow-hidden">
+                    <thead className="bg-slate-900 text-white">
+                      <tr>
+                        <th className="py-3 px-4 font-bold">System &amp; Pipe Material</th>
+                        <th className="py-3 px-4 font-bold">Primary Las Vegas Failure Driver</th>
+                        <th className="py-3 px-4 font-bold">Electronic Diagnostic Method</th>
+                        <th className="py-3 px-4 font-bold text-amber-300">Permanent Fix Option</th>
+                      </tr>
+                    </thead>
+                    <tbody className="divide-y divide-slate-200 bg-white">
+                      <tr className="hover:bg-slate-50">
+                        <td className="py-3 px-4 font-bold text-slate-900">Sub-Slab Type-L / Type-M Copper</td>
+                        <td className="py-3 px-4 text-slate-600">Hard-water pitting (16–22 GPG), caliche rock abrasion &amp; 80+ PSI surge</td>
+                        <td className="py-3 px-4 text-slate-800 font-medium">FLIR thermal scan + ultrasonic ground geophone</td>
+                        <td className="py-3 px-4 text-[#1E70B8] font-semibold">
+                          <a href="/blog/post-tension-slab-leak-repair-las-vegas-pex-reroute/" onClick={(e) => { e.preventDefault(); onNavigate('blog/post-tension-slab-leak-repair-las-vegas-pex-reroute'); }} className="hover:underline">
+                            Overhead PEX-A Re-Route or Spot Patch
+                          </a>
+                        </td>
+                      </tr>
+                      <tr className="hover:bg-slate-50">
+                        <td className="py-3 px-4 font-bold text-slate-900">Schedule-40 PVC Pool &amp; Spa Lines</td>
+                        <td className="py-3 px-4 text-slate-600">Caliche deck shifting, skimmer throat cracks &amp; brittle glue joints</td>
+                        <td className="py-3 px-4 text-slate-800 font-medium">Submersible hydrophone + pneumatic line plugs + dye</td>
+                        <td className="py-3 px-4 text-[#1E70B8] font-semibold">
+                          <a href="/pool-leak-detection/" onClick={(e) => { e.preventDefault(); onNavigate('pool-leak-detection'); }} className="hover:underline">
+                            Surgical Deck/Skimmer Seal (Pool Full)
+                          </a>
+                        </td>
+                      </tr>
+                      <tr className="hover:bg-slate-50">
+                        <td className="py-3 px-4 font-bold text-slate-900">Black Iron &amp; CSST Natural Gas</td>
+                        <td className="py-3 px-4 text-slate-600">Unbonded CSST stress, corroded yard risers &amp; dry union thread seals</td>
+                        <td className="py-3 px-4 text-slate-800 font-medium">PPM combustible gas sniffer + digital manometer test</td>
+                        <td className="py-3 px-4 text-[#1E70B8] font-semibold">
+                          <a href="/blog/southwest-gas-meter-red-tag-pressure-test-las-vegas/" onClick={(e) => { e.preventDefault(); onNavigate('blog/southwest-gas-meter-red-tag-pressure-test-las-vegas'); }} className="hover:underline">
+                            NSCB C-1 Repair &amp; Green-Tag Unlock
+                          </a>
+                        </td>
+                      </tr>
+                      <tr className="hover:bg-slate-50">
+                        <td className="py-3 px-4 font-bold text-slate-900">Curb-to-Home Water &amp; Drip Mains</td>
+                        <td className="py-3 px-4 text-slate-600">Gypsum silt corrosion, tree root squeeze &amp; driveway settlement</td>
+                        <td className="py-3 px-4 text-slate-800 font-medium">95/5 Nitrogen-Hydrogen tracer gas + pipe sonde</td>
+                        <td className="py-3 px-4 text-[#1E70B8] font-semibold">
+                          <a href="/underground-leak-detection/" onClick={(e) => { e.preventDefault(); onNavigate('underground-leak-detection'); }} className="hover:underline">
+                            Single-Pit Spot Fix or Trenchless Pull
+                          </a>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </section>
+            )}
+
             {/* HOMEPAGE VERIFIABLE TRUST SIGNALS: LICENSING, DISPATCH & DIAGNOSTIC SPECS */}
             {page.slug === '' && (
               <section className="bg-white rounded-2xl p-6 sm:p-8 border border-slate-200 shadow-xs space-y-6">
@@ -1269,7 +1285,7 @@ export const PageRenderer: React.FC<PageRendererProps> = ({
                     }}
                     className="text-xs font-bold text-[#1E70B8] hover:underline flex items-center gap-1 shrink-0"
                   >
-                    <span>View All 8 Guides</span>
+                    <span>View All {BLOG_POSTS.length} Guides</span>
                     <ArrowRight className="w-3.5 h-3.5" />
                   </a>
                 </div>
@@ -1307,49 +1323,92 @@ export const PageRenderer: React.FC<PageRendererProps> = ({
                 </div>
               </section>
             ) : page.type === 'service' ? (
-              <section className="bg-amber-50/80 rounded-2xl p-6 sm:p-8 border border-amber-200 space-y-4">
-                <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-amber-900 font-display">
-                  <BookOpen className="w-4 h-4 text-amber-700" />
-                  <span>Recommended Diagnostic Guide for This Service</span>
+              <section className="bg-amber-50/80 rounded-2xl p-6 sm:p-8 border border-amber-200 space-y-5">
+                <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+                  <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-amber-900 font-display">
+                    <BookOpen className="w-4 h-4 text-amber-700" />
+                    <span>Supporting Diagnostic &amp; Cost Guides (Topic Cluster)</span>
+                  </div>
+                  <a
+                    href="/blog/"
+                    onClick={(e) => {
+                      e.preventDefault();
+                      onNavigate('blog');
+                    }}
+                    className="text-xs font-bold text-[#1E70B8] hover:underline flex items-center gap-1"
+                  >
+                    <span>All {BLOG_POSTS.length} Guides</span>
+                    <ArrowRight className="w-3 h-3" />
+                  </a>
                 </div>
                 {(() => {
-                  const matchedPost =
-                    page.slug === 'pool-leak-detection'
-                      ? BLOG_POSTS.find((p) => p.slug === 'how-swimming-pool-bucket-test-works')
-                      : page.slug === 'gas-leak-detection'
-                      ? BLOG_POSTS.find((p) => p.slug === 'what-to-do-when-you-smell-gas')
-                      : page.slug === 'slab-leak-detection'
-                      ? BLOG_POSTS.find((p) => p.slug === 'signs-of-slab-leak-in-las-vegas-homes')
-                      : page.slug === 'underground-leak-detection'
-                      ? BLOG_POSTS.find((p) => p.slug === 'desert-caliche-soil-pipe-damage')
-                      : BLOG_POSTS.find((p) => p.slug === 'how-to-read-water-meter-for-hidden-leaks');
+                  const clusterSlugsMap: Record<string, string[]> = {
+                    'pool-leak-detection': [
+                      'how-swimming-pool-bucket-test-works',
+                      'pool-irrigation-leak-detection-spring-valley',
+                      'how-to-get-lvvwd-leak-credit-water-bill',
+                    ],
+                    'gas-leak-detection': [
+                      'what-to-do-when-you-smell-gas',
+                      'southwest-gas-meter-red-tag-pressure-test-las-vegas',
+                      'spring-valley-leak-detection-guide',
+                    ],
+                    'slab-leak-detection': [
+                      'signs-of-slab-leak-in-las-vegas-homes',
+                      'post-tension-slab-leak-repair-las-vegas-pex-reroute',
+                      'desert-caliche-soil-pipe-damage',
+                    ],
+                    'underground-leak-detection': [
+                      'desert-caliche-soil-pipe-damage',
+                      'how-to-read-water-meter-for-hidden-leaks',
+                      'how-to-get-lvvwd-leak-credit-water-bill',
+                    ],
+                    'emergency-leak-repair': [
+                      'what-to-do-when-you-smell-gas',
+                      'how-to-read-water-meter-for-hidden-leaks',
+                      'post-tension-slab-leak-repair-las-vegas-pex-reroute',
+                    ],
+                  };
+                  const targetSlugs = clusterSlugsMap[page.slug] || [
+                    'how-to-read-water-meter-for-hidden-leaks',
+                    'how-to-get-lvvwd-leak-credit-water-bill',
+                    'spring-valley-leak-detection-guide',
+                  ];
+                  const matchedPosts = targetSlugs
+                    .map((s) => BLOG_POSTS.find((p) => p.slug === s))
+                    .filter((p): p is NonNullable<typeof p> => Boolean(p));
 
-                  if (!matchedPost) return null;
+                  if (matchedPosts.length === 0) return null;
 
                   return (
-                    <div className="bg-white rounded-xl p-5 border border-amber-200/80 shadow-xs flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
-                      <div className="space-y-1 max-w-xl">
-                        <span className="text-[10px] font-bold text-amber-700 uppercase tracking-wider">
-                          {matchedPost.category} • {matchedPost.readTime}
-                        </span>
-                        <h3 className="text-base font-bold text-slate-900 font-display">
-                          {matchedPost.title}
-                        </h3>
-                        <p className="text-xs text-slate-600 line-clamp-2">
-                          {matchedPost.excerpt}
-                        </p>
-                      </div>
-                      <a
-                        href={getBlogPostUrlPath(matchedPost)}
-                        onClick={(e) => {
-                          e.preventDefault();
-                          onNavigate(getBlogPostNavSlug(matchedPost));
-                        }}
-                        className="px-4 py-2.5 bg-[#0F2942] hover:bg-[#1E70B8] text-white text-xs font-bold rounded-lg transition-colors shrink-0 flex items-center gap-1.5 no-underline"
-                      >
-                        <span>Read Technical Guide</span>
-                        <ArrowRight className="w-3.5 h-3.5" />
-                      </a>
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                      {matchedPosts.map((matchedPost) => (
+                        <a
+                          key={matchedPost.id}
+                          href={getBlogPostUrlPath(matchedPost)}
+                          onClick={(e) => {
+                            e.preventDefault();
+                            onNavigate(getBlogPostNavSlug(matchedPost));
+                          }}
+                          className="bg-white rounded-xl p-4 border border-amber-200/80 hover:border-[#1E70B8] shadow-xs flex flex-col justify-between gap-3 group no-underline text-inherit transition-all"
+                        >
+                          <div className="space-y-1.5">
+                            <span className="text-[10px] font-bold text-amber-800 uppercase tracking-wider block">
+                              {matchedPost.category} • {matchedPost.readTime}
+                            </span>
+                            <h3 className="text-sm font-bold text-slate-900 group-hover:text-[#1E70B8] font-display leading-snug line-clamp-2">
+                              {matchedPost.title}
+                            </h3>
+                            <p className="text-xs text-slate-600 line-clamp-2 leading-relaxed">
+                              {matchedPost.excerpt}
+                            </p>
+                          </div>
+                          <span className="text-xs font-bold text-[#1E70B8] flex items-center gap-1 pt-2 border-t border-slate-100">
+                            <span>Read Guide</span>
+                            <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform" />
+                          </span>
+                        </a>
+                      ))}
                     </div>
                   );
                 })()}
@@ -1431,7 +1490,7 @@ export const PageRenderer: React.FC<PageRendererProps> = ({
                     }}
                     className="flex items-center justify-between p-2.5 rounded-lg bg-white hover:bg-slate-50 border border-amber-200/70 hover:border-[#1E70B8] text-xs font-bold text-[#0F2942] transition-colors no-underline"
                   >
-                    <span>Browse All 8 Homeowner Guides</span>
+                    <span>Browse All {BLOG_POSTS.length} Homeowner Guides</span>
                     <ArrowRight className="w-3.5 h-3.5 text-[#1E70B8]" />
                   </a>
                 ) : (
